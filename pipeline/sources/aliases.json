@@ -1,0 +1,15 @@
+{
+  "cities": { "Vegas": "Las Vegas", "LV": "Las Vegas", "LA": "Los Angeles", "NYC": "New York", "SF": "San Francisco" },
+  "venues": {
+    "LVCC": "Las Vegas Convention Center",
+    "Las Vegas Convention & Visitors Authority": "Las Vegas Convention Center",
+    "The Venetian Expo": "Venetian Expo",
+    "Venetian Expo and Caesars Forum": "Venetian Expo",
+    "Sands Expo": "Venetian Expo",
+    "Mandalay Bay": "Mandalay Bay Convention Center",
+    "LACC": "Los Angeles Convention Center",
+    "OCCC": "Orange County Convention Center",
+    "ACC": "Anaheim Convention Center",
+    "GRB": "George R. Brown Convention Center"
+  }
+}
