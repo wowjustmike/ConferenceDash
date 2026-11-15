@@ -3,3 +3,5 @@ dist
 web/public/events.json
 .env*
 .superpowers/
+pipeline/out
+pipeline/.cache

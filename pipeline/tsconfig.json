@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "es2023", "module": "esnext", "moduleResolution": "bundler", "strict": true, "noEmit": true,
+    "skipLibCheck": true, "esModuleInterop": true, "types": ["node", "vitest/globals"], "allowImportingTsExtensions": true,
+    "noUnusedLocals": true, "noUnusedParameters": true, "resolveJsonModule": true
+  },
+  "include": ["src", "test", "../web/src/lib/schema.ts"]
+}
