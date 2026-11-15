@@ -102,10 +102,11 @@ a { color: var(--accent); text-decoration: none; }
 .cal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
 .cal-dow { display: grid; grid-template-columns: repeat(7, 1fr); background: var(--surface-2); font-size: 11px; text-transform: uppercase; color: var(--muted); letter-spacing: .06em; }
 .cal-dow div { padding: 8px 10px; }
-.cal-week { position: relative; display: grid; grid-template-columns: repeat(7, 1fr); grid-auto-rows: minmax(26px, auto); min-height: 92px; border-top: 1px solid var(--border); }
-.cal-day { grid-row: 1 / -1; border-right: 1px solid var(--border); padding: 6px 8px; font-weight: 600; color: var(--muted); }
+.cal-week { position: relative; display: grid; grid-template-columns: repeat(7, 1fr); min-height: 92px; border-top: 1px solid var(--border); align-content: start; }
+.cal-day { border-right: 1px solid var(--border); padding: 6px 8px; font-weight: 600; color: var(--muted); }
 .cal-day.in { color: var(--text); } .cal-day:last-child { border-right: 0; }
-.cal-bar { position: relative; z-index: 1; margin: 26px 3px 0; padding: 2px 8px; background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 6px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); cursor: pointer; text-align: left; height: 22px; }
+.cal-bar { position: relative; z-index: 1; margin: 1px 3px; padding: 2px 8px; background: var(--accent-soft); border: 1px solid var(--accent-border); border-radius: 6px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); cursor: pointer; text-align: left; height: 22px; }
+.cal-bar.sel { outline: 2px solid var(--accent); }
 .cal-bar.tbc { background: var(--amber-soft); border: 1px dashed var(--amber); color: var(--amber); }
 .agenda h3 { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 .agenda-item { display: block; width: 100%; text-align: left; border: 1px solid var(--border); background: var(--surface); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
