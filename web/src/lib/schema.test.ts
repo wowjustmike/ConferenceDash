@@ -44,3 +44,10 @@ test('seed data parses with skipped === 0', () => {
   expect(r.skipped).toBe(0)
   expect(r.events.length).toBe(24)
 })
+
+test('non-http(s) official_url is rejected', () => {
+  vi.spyOn(console, 'warn').mockImplementation(() => {})
+  for (const u of ['javascript:alert(1)', 'data:text/html,x', 'vbscript:x'])
+    expect(parseEvents([{ ...base, official_url: u }]).skipped).toBe(1)
+  expect(parseEvents([{ ...base, official_url: 'http://ok.example' }]).skipped).toBe(0)
+})

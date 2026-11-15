@@ -30,3 +30,11 @@ test('overlaps true when event starts before range but ends inside', () => {
   expect(overlaps(ev, new Date(2026, 10, 15), new Date(2026, 10, 30))).toBe(true)
   expect(overlaps(ev, new Date(2026, 10, 19), new Date(2026, 10, 30))).toBe(false)
 })
+
+test('startLabel distinguishes upcoming, in progress and ended', async () => {
+  const { startLabel } = await import('./dates')
+  expect(startLabel({ start_date: '2026-11-20', end_date: '2026-11-22' }, today)).toBe('In 5 days')
+  expect(startLabel({ start_date: '2026-11-14', end_date: '2026-11-16' }, today)).toBe('Now')
+  expect(startLabel({ start_date: '2026-11-15', end_date: '2026-11-15' }, today)).toBe('Now')
+  expect(startLabel({ start_date: '2026-10-10', end_date: '2026-10-12' }, today)).toBe('Ended')
+})

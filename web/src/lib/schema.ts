@@ -21,7 +21,7 @@ export const EventSchema = z
     organizer: z.string(),
     topics: z.array(z.enum(TOPICS)),
     est_attendance: z.number().nullable(),
-    official_url: z.string().url(),
+    official_url: z.string().url().refine((u) => /^https?:\/\//i.test(u), { message: 'official_url must be http(s)' }),
     sources: z.array(z.object({ url: z.string(), type: z.string(), fetched_at: z.string() })),
     last_verified: isoDate,
     confidence: z.number().min(0).max(1),

@@ -45,3 +45,9 @@ export function presetRange(p: Preset, today: Date): { from: Date; to: Date } | 
 export function overlaps(ev: { start_date: string; end_date: string }, from: Date, to: Date): boolean {
   return parseLocalDate(ev.start_date) <= to && parseLocalDate(ev.end_date) >= from
 }
+
+export function startLabel(ev: { start_date: string; end_date: string }, today: Date): string {
+  const d = daysUntil(ev.start_date, today)
+  if (d > 0) return `In ${d} days`
+  return daysUntil(ev.end_date, today) >= 0 ? 'Now' : 'Ended'
+}

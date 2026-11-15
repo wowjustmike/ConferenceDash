@@ -15,3 +15,11 @@ test('ics has all-day start, exclusive end, summary, location and url', () => {
 test('ics end date rolls over month boundaries', () => {
   expect(buildIcs({ ...ev, start_date: '2026-11-30', end_date: '2026-12-31' })).toContain('DTEND;VALUE=DATE:20270101')
 })
+
+test('semicolons and commas in text fields are escaped', () => {
+  const s = buildIcs({ ...ev, name: 'Foo; Bar' })
+  expect(s).toContain('SUMMARY:Foo\; Bar')
+})
+test('DTSTAMP is a UTC timestamp', () => {
+  expect(buildIcs(ev)).toMatch(/DTSTAMP:\d{8}T\d{6}Z/)
+})

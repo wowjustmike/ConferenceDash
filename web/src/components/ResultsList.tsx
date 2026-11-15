@@ -1,4 +1,4 @@
-import { formatRange, daysUntil } from '../lib/dates'
+import { formatRange, startLabel } from '../lib/dates'
 import { badgesFor } from '../lib/badges'
 import type { SortBy } from '../lib/filters'
 import type { ConfEvent } from '../lib/schema'
@@ -50,7 +50,7 @@ export function ResultsList({ events, today, sort, onSort, onSelect, selectedId 
                 <div className="tags">{e.topics.map((t) => <span key={t} className="tag">{t}</span>)}</div>
               </td>
               <td><strong>{formatRange(e.start_date, e.end_date)}</strong>
-                <div className="muted">{daysUntil(e.start_date, today) > 0 ? `In ${daysUntil(e.start_date, today)} days` : 'Now'}</div></td>
+                <div className="muted">{startLabel(e, today)}</div></td>
               <td><strong>{e.city}, {stateAbbr(e.state)}</strong><div className="muted">{e.venue}</div></td>
               <td>{e.organizer}</td>
               <td className="num"><strong>{size(e.est_attendance)}</strong></td>
