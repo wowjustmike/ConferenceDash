@@ -1,0 +1,6 @@
+[
+  {"name":"HalfStack Phoenix","url":"https://halfstackconf.com/phoenix","startDate":"2027-02-05","endDate":"2027-02-05","city":"Phoenix, AZ","country":"U.S.A.","online":false},
+  {"name":"CityJS Singapore","url":"https://singapore.cityjsconf.org","startDate":"2027-02-04","endDate":"2027-02-06","city":"Singapore","country":"Singapore","online":false},
+  {"name":"Online Only Conf","url":"https://online.example","startDate":"2027-03-01","endDate":"2027-03-02","city":"Online","country":"U.S.A.","online":true},
+  {"name":"No State City","url":"https://x.example","startDate":"2027-03-01","endDate":"2027-03-02","city":"Springfield","country":"U.S.A.","online":false}
+]
