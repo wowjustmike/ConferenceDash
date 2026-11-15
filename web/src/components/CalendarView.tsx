@@ -28,9 +28,9 @@ export function CalendarView({ events, month, onMonthChange, onSelect, selectedI
         <div className="cal">
           <div className="cal-dow">{DOW.map((d) => <div key={d}>{d}</div>)}</div>
           {rows.map((r, i) => (
-            <div key={i} className="cal-week" style={{ gridTemplateRows: `28px repeat(${Math.max(r.lanes, 1)}, 26px)` }}>
+            <div key={i} className="cal-week" style={{ gridTemplateRows: `28px repeat(${Math.max(r.lanes, 1)}, 26px) minmax(0, 1fr)` }}>
               {r.days.map((d, c) => (
-                <div key={c} className={`cal-day ${d.getMonth() === m ? 'in' : ''}`} style={{ gridColumn: c + 1, gridRow: `1 / ${Math.max(r.lanes, 1) + 2}` }}>{d.getDate()}</div>
+                <div key={c} className={`cal-day ${d.getMonth() === m ? 'in' : ''}`} style={{ gridColumn: c + 1, gridRow: `1 / ${Math.max(r.lanes, 1) + 3}` }}>{d.getDate()}</div>
               ))}
               {r.segments.map((s) => (
                 <button

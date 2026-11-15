@@ -10,7 +10,7 @@ export function TopBar({ q, onQ, theme, onToggleTheme, onSubmit }: Props) {
         className="search" type="search" value={q} placeholder="Search conferences, venues, organizers"
         aria-label="Search conferences" onChange={(e) => onQ(e.target.value)}
       />
-      <a className="btn" href="mailto:?subject=ConferenceDash%20event%20submission" onClick={onSubmit}>+ Submit your event</a>
+      <a className="btn" href="mailto:?subject=ConferenceDash%20event%20submission" onClick={onSubmit}><span>+ Submit<span className="long"> your event</span></span></a>
       <button className="btn icon" onClick={onToggleTheme} aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
         {theme === 'dark' ? '☀' : '☾'}
       </button>

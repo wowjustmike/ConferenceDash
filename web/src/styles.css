@@ -9,7 +9,7 @@
   --green: #4cc38a; --shadow: none;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.4 Inter, system-ui, -apple-system, sans-serif; }
+html, body { overflow-x: hidden; margin: 0; background: var(--bg); color: var(--text); font: 14px/1.4 Inter, system-ui, -apple-system, sans-serif; }
 h1, h2, h3, h4 { margin: 0; }
 h1 { font-size: 26px; letter-spacing: -.02em; }
 button { font: inherit; color: inherit; cursor: pointer; }
@@ -66,7 +66,7 @@ a { color: var(--accent); text-decoration: none; }
 .results td { padding: 12px 14px; border-top: 1px solid var(--border); vertical-align: top; }
 .results tr { cursor: pointer; }
 .results tbody tr:hover, .results tr.selected { background: var(--accent-soft); }
-.results .ver { white-space: nowrap; }
+.results .ver, .results td:last-child { white-space: nowrap; }
 .name { background: none; border: 0; padding: 0; font-weight: 500; font-size: 15px; text-align: left; color: var(--text); }
 .tags { display: flex; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
 .tag { font-size: 11px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; color: var(--muted); }
@@ -149,7 +149,7 @@ a { color: var(--accent); text-decoration: none; }
 .cards { display: grid; }
 .card { background: var(--surface); border-bottom: 1px solid var(--border); padding: 14px 16px; text-align: left; width: 100%; border-left: 0; border-right: 0; border-top: 0; }
 .card .top { display: flex; justify-content: space-between; gap: 8px; font-weight: 600; font-size: 15px; }
-.card .meta { color: var(--muted); margin: 3px 0 8px; }
+.card .meta { color: var(--muted); margin: 3px 0 8px; overflow-wrap: anywhere; }
 .card .bottom { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
 @media (max-width: 767px) {
@@ -162,7 +162,9 @@ a { color: var(--accent); text-decoration: none; }
   .mobile-only { display: flex; }
   .mobile-bar { gap: 8px; align-items: center; margin-bottom: 4px; }
   .mobile-bar .btn.primary { padding: 9px 14px; }
-  .mobile-bar .seg { flex: 1; } .mobile-bar .seg button { flex: 1; }
+  .mobile-bar .seg { flex: 1; min-width: 0; } .mobile-bar .seg button { flex: 1; padding: 6px 4px; min-width: 0; }
+  .btn .long { display: none; }
+  .chips { margin: 6px 0; }
   .legend, .view-tools .compare-link { display: none; }
   .results { display: none; }
   .cal-wrap, .map-wrap, .empty { grid-template-columns: 1fr; }
