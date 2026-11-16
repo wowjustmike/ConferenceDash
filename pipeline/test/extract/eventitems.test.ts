@@ -29,3 +29,20 @@ test('exclude patterns drop matching names (case-insensitive)', () => {
 test('a page without event cards returns []', () => {
   expect(parseEventItems('<html><body>nothing</body></html>', src)).toEqual([])
 })
+
+describe('Carbonhouse-style cards with categories and organizer websites (Dallas)', () => {
+  const dallas = readFileSync(new URL('../fixtures/dallas-items.html', import.meta.url), 'utf8')
+  const dsrc = { url: 'https://www.dallasconventioncenter.com/events/', type: 'html' as const, fetched_at: '2026-11-15T00:00:00Z' }
+  test('reads dotted months, the category, and prefers the Event Website link as the official url', () => {
+    const r = parseEventItems(dallas, dsrc, { venue: 'Kay Bailey Hutchison Convention Center', city: 'Dallas', state: 'TX' })
+    const hy = r.find((c) => /HYROX/i.test(c.name))!
+    expect(hy).toMatchObject({ start_date: '2026-11-18', end_date: '2026-11-22', state: 'Texas' })
+    expect(hy.official_url).toBe('https://hyrox.com/event/hyrox-dallas/')
+    expect(r.find((c) => /BMW/i.test(c.name))).toBeTruthy()
+  })
+  test('excludeCategories drops cards whose category matches (case-insensitive)', () => {
+    const r = parseEventItems(dallas, dsrc, {}, [], ['sporting event', 'special event'])
+    expect(r.some((c) => /HYROX|BMW/i.test(c.name))).toBe(false)
+    expect(r.some((c) => /OUTDOORS EXTRAVAGANZA/i.test(c.name))).toBe(true)
+  })
+})

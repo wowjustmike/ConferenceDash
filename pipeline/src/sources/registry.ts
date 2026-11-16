@@ -8,6 +8,7 @@ import { parseEventItems } from '../extract/eventitems'
 import type { BrowserFetcher } from '../net/browser'
 import { fetchDataTable, parseDataTableRows } from './datatable'
 import { fetchExpoAssist } from './expoassist'
+import { fetchLoadMore } from './loadmore'
 import { fetchMoscone } from './moscone'
 import { fetchSimpleviewCalendar, fetchSimpleviewRange, parseSimpleviewItems, parseSimpleviewListItems } from './simpleview'
 import { parseJsonLd } from '../extract/jsonld'
@@ -17,7 +18,7 @@ import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
   id: z.string().min(1),
-  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range']),
+  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range', 'loadmore']),
   url: z.string().url(),
   type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
@@ -26,6 +27,7 @@ const Entry = z.object({
   /** simpleview only: last date to list (YYYY-MM-DD), set through the page's date picker. */
   end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
   max_pages: z.number().int().positive().optional(),
+  exclude_categories: z.array(z.string()).optional(),
 })
 export type RegistryEntry = z.infer<typeof Entry>
 
@@ -44,6 +46,7 @@ export interface RunDeps {
   simpleview?: typeof fetchSimpleviewCalendar
   datatable?: typeof fetchDataTable
   moscone?: typeof fetchMoscone
+  loadmore?: typeof fetchLoadMore
   simpleviewRange?: typeof fetchSimpleviewRange
 }
 
@@ -59,6 +62,14 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   const ref = (url: string, type: SourceRef['type']): SourceRef => ({ url, type, fetched_at: deps.now().toISOString() })
   let candidates: Candidate[] = []
   let fetchedAny = false
+  if (entry.kind === 'loadmore') {
+    if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
+    const r = await (deps.loadmore ?? fetchLoadMore)(deps.browser, entry.url, { maxClicks: entry.max_pages })
+    if (!r) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
+    const found = parseEventItems(r.html, ref(entry.url, 'html'), defaults, entry.exclude, entry.exclude_categories)
+    if (found.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'no events found' } }
+    return { candidates: found, health: { id: entry.id, ok: true, count: found.length } }
+  }
   if (entry.kind === 'simpleview-range') {
     if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
     const start = deps.now().toISOString().slice(0, 10)

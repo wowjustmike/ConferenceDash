@@ -2,14 +2,25 @@
 # Page entries use the cascade JSON-LD -> iCal link -> LLM extraction. See docs/SOURCING.md for rejected sources.
 sources:
   - id: lacc
-    kind: page
+    kind: loadmore
     type: html
     url: https://www.laconventioncenter.com/events/
-    # Consumer/private bookings that are not conferences or trade shows (manual list; revisit when category data is available).
-    exclude: [party, cheer, futsal, conversation, holiday, graduation, quincea, wedding, gala]
     venue: Los Angeles Convention Center
     city: Los Angeles
     state: CA
+    max_pages: 25
+    # Consumer/private bookings that are not conferences or trade shows (manual list; revisit when category data is available).
+    exclude: [party, cheer, futsal, conversation, holiday, graduation, quincea, wedding, gala]
+  - id: dallas-kbhccd
+    kind: loadmore
+    type: html
+    url: https://www.dallasconventioncenter.com/events/
+    venue: Kay Bailey Hutchison Convention Center
+    city: Dallas
+    state: TX
+    max_pages: 25
+    exclude_categories: [sporting event, special event]
+    exclude: [party, cheer, marathon, gala, graduation]
   - id: occc
     kind: simpleview-range
     type: html

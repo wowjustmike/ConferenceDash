@@ -23,7 +23,7 @@ const pair = (a: string | null, b: string | null) => (a && b && b >= a ? { start
 
 /** Reads the common convention-center card layout: `.eventItem` with a `.date` line and an `h3.title a` link. */
 export function parseEventItems(
-  html: string, source: SourceRef, defaults: { venue?: string; city?: string; state?: string } = {}, exclude: string[] = [],
+  html: string, source: SourceRef, defaults: { venue?: string; city?: string; state?: string } = {}, exclude: string[] = [], excludeCategories: string[] = [],
 ): Candidate[] {
   const $ = cheerio.load(html)
   const bad = exclude.map((p) => new RegExp(p, 'i'))
@@ -32,11 +32,18 @@ export function parseEventItems(
     const card = $(el)
     const a = card.find('h3.title a, .title a').first()
     const name = a.text().replace(/\s+/g, ' ').trim()
-    const range = parseDateRangeText(card.find('.date').first().text())
-    if (!name || !range || bad.some((re) => re.test(name))) return
+    const range = parseDateRangeText(card.find('.date').first().text().replace(/\./g, '. ').replace(/\s+\./g, '.'))
+    const category = card.find('.event_category').first().text().replace(/\s+/g, ' ').trim().toLowerCase()
+    if (!name || !range || bad.some((re) => re.test(name)) || (category && excludeCategories.some((c) => category.includes(c.toLowerCase())))) return
+    // Some cards link the organizer's own site ("Event Website"); prefer it over the venue's detail page.
+    let organizerSite: string | undefined
+    card.find('.buttons a').each((_, el) => {
+      const t = $(el).text().trim()
+      if (/event website/i.test(t) && !organizerSite) { try { const u = new URL($(el).attr('href') ?? '', source.url); if (u.protocol === 'http:' || u.protocol === 'https:') organizerSite = u.toString() } catch { /* none */ } }
+    })
     let url: string | undefined
     try { const u = new URL(a.attr('href') ?? '', source.url); if (u.protocol === 'http:' || u.protocol === 'https:') url = u.toString() } catch { /* no url */ }
-    const c = toCandidateClean({ name, start_date: range.start, end_date: range.end, ...defaults, ...(url ? { official_url: url } : {}), source })
+    const c = toCandidateClean({ name, start_date: range.start, end_date: range.end, ...defaults, ...((organizerSite ?? url) ? { official_url: organizerSite ?? url } : {}), source })
     if (c) out.push(c)
   })
   return out

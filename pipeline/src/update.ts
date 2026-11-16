@@ -122,7 +122,7 @@ async function main() {
   const here = new URL('.', import.meta.url).pathname
   const existing = readExistingExport(config.eventsPath)
   const registry = loadRegistry(join(here, '../sources/registry.yaml'))
-  const browser = registry.some((e) => e.kind === 'simpleview' || e.kind === 'datatable' || e.kind === 'moscone' || e.kind === 'simpleview-range') ? createBrowserFetcher({ userAgent: config.userAgent, canFetch: fetcher.canFetch }) : undefined
+  const browser = registry.some((e) => e.kind === 'simpleview' || e.kind === 'datatable' || e.kind === 'moscone' || e.kind === 'simpleview-range' || e.kind === 'loadmore') ? createBrowserFetcher({ userAgent: config.userAgent, canFetch: fetcher.canFetch }) : undefined
   const summary = await runUpdate({
     db, exportDir: config.dataDir, tier, dryRun: argv.includes('--dry-run'), today, exportOpts,
     deps: {

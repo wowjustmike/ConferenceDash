@@ -130,3 +130,11 @@ test('simpleview results whose date range was not applied are reported as a fail
   expect(r.candidates).toEqual([])
   expect(r.health).toEqual({ id: 'lvcc', ok: false, count: 0, error: 'date range not applied' })
 })
+
+test('loadmore entries parse every loaded card and honor category exclusions', async () => {
+  const card = (n: string, c: string) => `<div class="eventItem"><div class="date">Mar. 8 - 10, 2027</div><div class="event_category">${c}</div><h3 class="title"><a href="/e/${n}">${n}</a></h3></div>`
+  const d = { ...deps({}), browser: { withPage: async () => null }, loadmore: (async () => ({ html: `<div>${card('Good Show', 'Consumer Show')}${card('Big Game', 'Sporting Event')}</div>`, clicks: 3 })) as never }
+  const r = await runEntry(entry({ kind: 'loadmore', exclude_categories: ['sporting event'] }), d)
+  expect(r.candidates.map((c) => c.name)).toEqual(['Good Show'])
+  expect(r.health).toEqual({ id: 'lvcc', ok: true, count: 1 })
+})
