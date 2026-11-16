@@ -86,7 +86,8 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   const owner = new Map<MergedEventRef, string>()
   type MergedEventRef = (typeof merged)[number]
   const verifications = new Map<string, Verification>()
-  const venueHosts = new Map<string, Set<string>>()
+  const venueFamilies = new Map<string, Set<string>>()
+  const cred = loadCredibility()
   for (const m of merged) {
     const id = reuseId(m.candidate, existing) ?? eventId(m.candidate)
     if (excludedKeys.has(id)) continue
@@ -112,13 +113,14 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
       if ('kind' in cls) final.kind = cls.kind as string
       fresh.push(final)
       owner.set(m, final.id)
-      venueHosts.set(final.id, new Set(m.members.filter((c) => KIND[c.source.type] === 'venue-calendar').map((c) => hostOf(c.source.url))))
+      venueFamilies.set(final.id, new Set(m.members.filter((c) => KIND[c.source.type] === 'venue-calendar').map((c) => familyOf(hostOf(c.source.url), cred))))
     }
   }
 
   const excludedIds = new Set(excludeExisting.map((x) => x.id))
   const result = mergeIntoExisting(existing.filter((e) => !excludedIds.has(e.id)), fresh, {
-    today: d.today, healthy: !report.allSourcesFailed, dropSeed: report.sources.filter((x) => usable(x) && x.count > 0).length >= 3 ? 'all' : 'matched',
+    // Sample events are only replaced when a real event matches them; the export threshold decides when the rest are hidden.
+    today: d.today, healthy: !report.allSourcesFailed, dropSeed: 'matched',
   })
   report.published = fresh.filter((f) => f.confidence >= config.publishThreshold).length
   report.quarantined = result.quarantined.length
@@ -128,7 +130,6 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   if (!args.dryRun && !report.allSourcesFailed) {
     try {
       withTransaction(db, () => {
-        const cred = loadCredibility()
         const register = (type: string, url: string) => {
           const host = hostOf(url)
           const kind = KIND[type] ?? 'aggregator'
@@ -152,7 +153,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
           const ev = fresh.find((f) => f.id === id)!
           const host = hostOf(ev.official_url)
           // A confirmation found on the venue's own listing page is venue-calendar evidence, not the organizer's site.
-          const hosted = venueHosts.get(id)?.has(host) ?? false
+          const hosted = venueFamilies.get(id)?.has(familyOf(host, cred)) ?? false
           const evKind = hosted ? 'venue-calendar' : 'official-site'
           const sourceId = `official:${host}`
           upsertSource(db, { id: sourceId, kind: hosted ? 'venue-calendar' : 'organizer-site', family: familyOf(host, cred), credibility: cred.points[evKind] })

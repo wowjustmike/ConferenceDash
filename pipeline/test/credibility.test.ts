@@ -13,7 +13,7 @@ test.each([
   ['official site confirming this edition', [ev('org', 'official-site')], 3, 3],
   ['official site showing only last year', [ev('org', 'official-site', { confirmsEdition: false })], 0, 1],
   ['confirmed ticketing listing', [ev('tm', 'ticketing')], 3, 3],
-  ['unconfirmed ticketing listing', [ev('tm', 'ticketing', { confirmsEdition: false })], 0, 1],
+  ['a dated ticketing listing counts for its own edition even without a separate confirmation', [ev('tm', 'ticketing', { confirmsEdition: false })], 3, 3],
   ['venue calendar alone', [ev('lvcva', 'venue-calendar')], 2, 2],
   ['venue calendar plus directory', [ev('lvcva', 'venue-calendar'), ev('confs.tech', 'directory')], 3, 3],
   ['sample data only', [ev('seed', 'seed')], 0, 1],

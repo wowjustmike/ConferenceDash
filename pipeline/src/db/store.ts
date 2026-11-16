@@ -28,7 +28,8 @@ export function addObservation(db: Db, o: ObservationInput): { id: number; inser
     .get(o.sourceId, o.rawName, o.startDate ?? '', o.city ?? '', o.url ?? '', o.evidenceKind) as { id: number } | undefined
   const confirms = o.confirmsEdition ? 1 : 0
   if (existing) {
-    db.prepare('update observations set seen_at = max(seen_at, ?), confirms_edition = max(confirms_edition, ?), fetch_id = coalesce(?, fetch_id) where id = ?')
+    // The latest check wins: a later check that no longer confirms revokes an earlier confirmation.
+    db.prepare('update observations set seen_at = max(seen_at, ?), confirms_edition = ?, fetch_id = coalesce(?, fetch_id) where id = ?')
       .run(o.seenAt, confirms, n(o.fetchId), existing.id)
     return { id: existing.id, inserted: false }
   }

@@ -6,7 +6,7 @@ import type { ConfEvent } from '../../web/src/lib/schema'
 
 export const KIND: Record<string, EvidenceKind> = {
   'confs.tech': 'directory', html: 'venue-calendar', jsonld: 'venue-calendar', ical: 'venue-calendar', api: 'ticketing',
-  aggregator: 'aggregator', llm: 'aggregator', submission: 'aggregator', seed: 'seed',
+  aggregator: 'aggregator', llm: 'venue-calendar', submission: 'aggregator', seed: 'seed', // llm: LLM extraction only runs on registry venue pages; registry aggregators are typed 'aggregator'
 }
 export const hostOf = (u: string) => { try { return new URL(u).host } catch { return 'unknown' } }
 
@@ -31,7 +31,7 @@ export function importEventsJson(db: Db, events: ConfEvent[]): { events: number;
       if (e.dates_confirmed && !isSampleEvent(e)) {
         const host = hostOf(e.official_url)
         // The "official" page may really be the venue's own listing; that is venue-calendar evidence (2 pts), not the organizer's site (3 pts).
-        const hosted = e.sources.some((s) => KIND[s.type] === 'venue-calendar' && hostOf(s.url) === host)
+        const hosted = e.sources.some((s) => KIND[s.type] === 'venue-calendar' && familyOf(hostOf(s.url), cred) === familyOf(host, cred))
         const evKind: EvidenceKind = hosted ? 'venue-calendar' : 'official-site'
         const sourceId = `official:${host}`
         upsertSource(db, { id: sourceId, kind: hosted ? 'venue-calendar' : 'organizer-site', family: familyOf(host, cred), credibility: cred.points[evKind] })

@@ -31,7 +31,8 @@ export function familyOf(host: string, c: Credibility): string {
   return h
 }
 
-const POINT_KINDS = new Set<EvidenceKind>(['official-site', 'ticketing'])
+// Only an organizer-site check must confirm THIS edition. A dated ticketing listing (e.g. Ticketmaster) is for a specific upcoming date, so it counts for its own edition.
+const POINT_KINDS = new Set<EvidenceKind>(['official-site'])
 
 export function scoreSignal(evidence: Evidence[], opts: { conflictingDates: boolean; today: Date; c?: Credibility }): Signal {
   const c = opts.c ?? loadCredibility()

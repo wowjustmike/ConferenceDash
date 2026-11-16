@@ -105,3 +105,40 @@ test('an organizer-hosted official page on a different host still counts as offi
   const kinds = (d.db.prepare('select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id').all() as { k: string }[]).map((x) => x.k)
   expect(kinds).toContain('official-site')
 })
+
+test('sample events are never deleted by a run just because several sources are healthy (the export threshold governs)', async () => {
+  const feed = (name: string, n: string) => ({ id: name, kind: 'ical' as const, url: `https://${name}.example/feed.ics`, type: 'ical' as const, venue: 'V', city: 'Las Vegas', state: 'NV', _n: n })
+  const ics2 = (n: string) => `BEGIN:VEVENT\nSUMMARY:Extra Expo ${n}\nDTSTART;VALUE=DATE:2027040${n}\nDTEND;VALUE=DATE:2027040${Number(n) + 1}\nURL:https://extra${n}.example\nEND:VEVENT`
+  const seed = (id: string): ConfEvent => ({ id, name: `Sample ${id}`, start_date: '2027-05-01', end_date: '2027-05-02', dates_confirmed: false, city: 'Austin', state: 'Texas', venue: '', organizer: '', topics: ['Tech'], est_attendance: null, official_url: `https://${id}.example`, sources: [{ url: `https://${id}.example`, type: 'seed', fetched_at: '2026-11-01T00:00:00Z' }], last_verified: '2026-11-01', confidence: 0.5, status: 'active' })
+  const d = deps({
+    registry: [feed('a', '1'), feed('b', '2'), feed('c', '3')],
+    fetchText: async (u) => (u === 'https://a.example/feed.ics' ? ics2('1') : u === 'https://b.example/feed.ics' ? ics2('2') : u === 'https://c.example/feed.ics' ? ics2('3') : u.startsWith('https://extra') ? `<html><body>April ${u.slice(-9, -8) || '1'}, 2027 Las Vegas</body></html>` : null),
+    existing: [seed('s1'), seed('s2'), seed('s3')], confsTopics: [],
+  })
+  await run(d)
+  const ids = loadEvents(d.db).map((e) => e.id)
+  expect(ids).toEqual(expect.arrayContaining(['s1', 's2', 's3']))
+})
+test('a venue page on www.host counts as venue evidence for an official url on the bare host (same family)', async () => {
+  const venueIcs = 'BEGIN:VEVENT\nSUMMARY:Www Expo\nDTSTART;VALUE=DATE:20270201\nDTEND;VALUE=DATE:20270203\nURL:https://venue.example/events/www-expo\nEND:VEVENT'
+  const d = deps({
+    registry: [{ id: 'v', kind: 'ical', url: 'https://www.venue.example/feed.ics', type: 'ical', venue: 'V', city: 'Las Vegas', state: 'NV' }],
+    fetchText: async (u) => (u === 'https://www.venue.example/feed.ics' ? venueIcs : u === 'https://venue.example/events/www-expo' ? '<html><body>Feb 1-2, 2027 Las Vegas</body></html>' : null), confsTopics: [],
+  })
+  await run(d)
+  const kinds = (d.db.prepare('select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id').all() as { k: string }[]).map((x) => x.k)
+  expect(kinds).not.toContain('official-site')
+})
+test('a venue page read through LLM extraction is still venue evidence, not an organizer site', async () => {
+  const text = '<html><body><p>LLM Venue Expo 2027 runs February 1-2, 2027 in Las Vegas.</p></body></html>'
+  const client: LlmClient = { extract: async () => ({ events: [{ name: 'LLM Venue Expo', start_date: '2027-02-01', end_date: '2027-02-02', official_url: 'https://venue.example/events/llm-expo' }] }) }
+  const d = deps({
+    llm: client, confsTopics: [],
+    registry: [{ id: 'v', kind: 'page', url: 'https://venue.example/events', type: 'jsonld', venue: 'V', city: 'Las Vegas', state: 'NV' }],
+    fetchText: async (u) => (u === 'https://venue.example/events' ? text : u === 'https://venue.example/events/llm-expo' ? '<html><body>Feb 1-2, 2027 Las Vegas</body></html>' : null),
+  })
+  await run(d)
+  const kinds = (d.db.prepare('select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id').all() as { k: string }[]).map((x) => x.k)
+  expect(kinds.length).toBeGreaterThan(0)
+  expect(kinds).not.toContain('official-site')
+})

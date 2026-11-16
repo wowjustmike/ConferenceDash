@@ -22,10 +22,12 @@ test('addObservation is idempotent and refreshes seen_at', () => {
   const rows = db.prepare('select seen_at from observations').all() as { seen_at: string }[]
   expect(rows).toEqual([{ seen_at: '2026-11-09' }])
 })
-test('addObservation keeps the strongest confirms_edition across re-sightings', () => {
+test('the latest check wins: a later non-confirming check revokes an earlier confirmation', () => {
   const db = setup()
-  addObservation(db, { ...base, confirmsEdition: true })
-  addObservation(db, { ...base, confirmsEdition: false })
+  addObservation(db, { ...base, confirmsEdition: true, seenAt: '2026-01-01' })
+  addObservation(db, { ...base, confirmsEdition: false, seenAt: '2026-11-15' })
+  expect(db.prepare('select confirms_edition c, seen_at s from observations').get()).toEqual({ c: 0, s: '2026-11-15' })
+  addObservation(db, { ...base, confirmsEdition: true, seenAt: '2026-11-20' })
   expect((db.prepare('select confirms_edition c from observations').get() as { c: number }).c).toBe(1)
 })
 test('recordFetch derives the host and returns an id', () => {

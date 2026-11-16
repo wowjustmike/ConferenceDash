@@ -96,3 +96,13 @@ test('writeExport sharded: manifest + shard files, stale shards removed, switchi
   expect(Array.isArray(JSON.parse(readFileSync(join(dir, 'events.json'), 'utf8')))).toBe(true)
   expect(existsSync(join(dir, 'events'))).toBe(false)
 })
+
+test('a confirmation revoked by a later non-confirming check no longer earns points or looks fresh', () => {
+  const db = openDb(':memory:'); seedSources(db)
+  saveEvents(db, [mk('revoked')])
+  observe(db, 'revoked', 'org', 'official-site', { confirms: true, seen: '2026-01-01' })
+  observe(db, 'revoked', 'org', 'official-site', { confirms: false, seen: '2026-11-15' })
+  recomputeSignals(db, today)
+  const row = db.prepare('select signal_bars b, signal_points p from events').get() as { b: number; p: number }
+  expect(row).toEqual({ b: 1, p: 0 })
+})
