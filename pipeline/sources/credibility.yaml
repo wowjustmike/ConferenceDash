@@ -1,0 +1,18 @@
+# Credibility rules for signal strength. Points are per distinct source FAMILY (the real publisher).
+points:
+  official-site: 3      # organizer's own site confirms this edition's dates and city (verified by us)
+  ticketing: 3          # organizer-run ticketing/registration listing (Ticketmaster, Eventbrite organizer page, Cvent)
+  venue-calendar: 2     # venue or convention-bureau official calendar
+  directory: 1          # curated directory (Confs.tech)
+  aggregator: 1         # aggregator / scraped list
+  seed: 0               # sample data
+penalties:
+  conflicting_dates: 1
+  stale: 1
+stale_days: 60
+# Hosts that publish (or copy) the same data share one family so they count once.
+families:
+  confs.tech: [confs.tech, raw.githubusercontent.com]
+  ticketmaster: [ticketmaster.com, app.ticketmaster.com, livenation.com]
+  eventbrite: [eventbrite.com, eventbrite.co.uk]
+  10times: [10times.com]
