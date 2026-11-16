@@ -17,7 +17,7 @@ import { normalizeState } from '../normalize'
 import { htmlToText } from '../text'
 import type { Candidate, SourceHealth, SourceRef } from '../types'
 
-const Entry = z.object({
+export const EntrySchema = z.object({
   id: z.string().min(1),
   kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range', 'loadmore', 'cards']),
   url: z.string().url(),
@@ -33,12 +33,12 @@ const Entry = z.object({
   item: z.string().optional(), title: z.string().optional(), date: z.string().optional(), link: z.string().optional(),
   render: z.boolean().optional(), scrolls: z.number().int().nonnegative().optional(), next: z.string().optional(),
 }).refine((e) => e.kind !== 'cards' || (e.item && e.title && e.date), { message: 'cards entries need item, title and date selectors' })
-export type RegistryEntry = z.infer<typeof Entry>
+export type RegistryEntry = z.infer<typeof EntrySchema>
 
 export function loadRegistry(path: string): RegistryEntry[] {
   let doc: unknown
   try { doc = parse(readFileSync(path, 'utf8')) } catch (e) { throw new Error(`Invalid registry ${path}: ${(e as Error).message}`) }
-  const r = z.object({ sources: z.array(Entry) }).safeParse(doc)
+  const r = z.object({ sources: z.array(EntrySchema) }).safeParse(doc)
   if (!r.success) throw new Error(`Invalid registry ${path}: ${r.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ')}`)
   return r.data.sources
 }

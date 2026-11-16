@@ -37,7 +37,9 @@ export function isPrivateIp(ip: string): boolean {
   return false
 }
 
-export function createFetcher(opts: FetcherOptions): { fetchText(url: string): Promise<string | null>; canFetch(url: string): Promise<boolean> } {
+export interface Fetcher { fetchText(url: string): Promise<string | null>; canFetch(url: string): Promise<boolean>; /** Status of the last fetchText response (null when it threw, timed out or the target was refused). */ lastStatus(): number | null }
+
+export function createFetcher(opts: FetcherOptions): Fetcher {
   const interval = opts.minIntervalMs ?? 1000
   const timeout = opts.timeoutMs ?? 15000
   const maxBytes = opts.maxBytes ?? 5 * 1024 * 1024
@@ -49,6 +51,7 @@ export function createFetcher(opts: FetcherOptions): { fetchText(url: string): P
   const lastAt = new Map<string, number>()
   const robots = new Map<string, Robots | null>()
   const memCache = new Map<string, CacheEntry>()
+  let last: number | null = null
   if (opts.cacheDir) mkdirSync(opts.cacheDir, { recursive: true })
 
   const cacheFile = (url: string) => join(opts.cacheDir!, `${createHash('sha1').update(url).digest('hex')}.json`)
@@ -108,7 +111,9 @@ export function createFetcher(opts: FetcherOptions): { fetchText(url: string): P
     async canFetch(url: string): Promise<boolean> {
       try { return (await safeTarget(url)) !== null && (await allowed(url)) } catch { return false }
     },
+    lastStatus: () => last,
     async fetchText(url: string): Promise<string | null> {
+      last = null
       try {
         const original = url
         let current = url
@@ -127,6 +132,7 @@ export function createFetcher(opts: FetcherOptions): { fetchText(url: string): P
             r = await request(current, headers)
           }
           if (!r) return null
+          last = r.status
           if (REDIRECTS.has(r.status)) {
             const loc = r.headers.get('location')
             if (!loc) return null

@@ -11,6 +11,7 @@
     "unexclude": "tsx src/update.ts unexclude",
     "unalias": "tsx src/update.ts unalias",
     "capture": "tsx src/tools/capture.ts",
+    "probe": "tsx src/tools/probe.ts",
     "ingest": "tsx src/update.ts ingest",
     "inbox": "tsx src/update.ts inbox",
     "topics": "tsx src/update.ts topics",
