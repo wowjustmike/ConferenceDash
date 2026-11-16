@@ -123,3 +123,11 @@ test('oversized bodies are refused (content-length and streamed)', async () => {
   expect(await f.fetchText('https://a.example/big')).toBeNull()
   expect((await f.fetchText('https://a.example/ok'))!.length).toBe(1000)
 })
+
+test('canFetch combines the public-address guard with robots.txt', async () => {
+  const { f } = setup({ 'https://a.example/robots.txt': () => res(200, 'User-agent: *\nDisallow: /private') })
+  expect(await f.canFetch('https://a.example/public')).toBe(true)
+  expect(await f.canFetch('https://a.example/private/x')).toBe(false)
+  expect(await f.canFetch('http://127.0.0.1/x')).toBe(false)
+  expect(await f.canFetch('file:///etc/passwd')).toBe(false)
+})

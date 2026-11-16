@@ -37,7 +37,7 @@ export function isPrivateIp(ip: string): boolean {
   return false
 }
 
-export function createFetcher(opts: FetcherOptions): { fetchText(url: string): Promise<string | null> } {
+export function createFetcher(opts: FetcherOptions): { fetchText(url: string): Promise<string | null>; canFetch(url: string): Promise<boolean> } {
   const interval = opts.minIntervalMs ?? 1000
   const timeout = opts.timeoutMs ?? 15000
   const maxBytes = opts.maxBytes ?? 5 * 1024 * 1024
@@ -104,6 +104,10 @@ export function createFetcher(opts: FetcherOptions): { fetchText(url: string): P
   }
 
   return {
+    /** True when the URL is public http(s) and robots.txt allows our bot (used by the browser fetcher). */
+    async canFetch(url: string): Promise<boolean> {
+      try { return (await safeTarget(url)) !== null && (await allowed(url)) } catch { return false }
+    },
     async fetchText(url: string): Promise<string | null> {
       try {
         const original = url
