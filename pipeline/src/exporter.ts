@@ -1,13 +1,13 @@
 import { existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs'
 import { join } from 'node:path'
-import { loadCredibility, scoreSignal, type Signal } from './credibility'
+import { loadCredibility, scoreSignal } from './credibility'
 import type { Db } from './db/db'
 import { evidenceFor, loadEvents, type StoredEvent } from './db/store'
 import { inWindow } from './classify'
 import { atomicWrite, validateEvents } from './publish'
 import { isSampleEvent } from './sample'
 
-export type ExportEvent = StoredEvent & { signal: Signal }
+export type ExportEvent = StoredEvent & { signal: NonNullable<StoredEvent['signal']> }
 
 export function recomputeSignals(db: Db, today: Date): number {
   const cred = loadCredibility()

@@ -1,8 +1,9 @@
 import type { ConfEvent } from '../../../web/src/lib/schema'
-import type { Evidence, EvidenceKind, Signal } from '../credibility'
+import type { Evidence, EvidenceKind } from '../credibility'
 import { withTransaction, type Db } from './db'
 
-export type StoredEvent = ConfEvent & { kind?: string | null; signal?: Signal | null }
+/** The web app's event shape, including the optional computed `signal` and `kind`. */
+export type StoredEvent = ConfEvent
 export interface ObservationInput {
   sourceId: string; fetchId?: number; rawName: string; startDate?: string; endDate?: string; city?: string; state?: string; venue?: string
   organizer?: string; url?: string; evidenceKind: EvidenceKind; confirmsEdition?: boolean; seenAt: string; extractor: string
