@@ -2102,7 +2102,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Entertainment"
     ],
     "est_attendance": null,
     "official_url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_S",
@@ -2132,92 +2132,6 @@
         {
           "label": "Ticketing listing (ticketmaster)",
           "family": "ticketmaster",
-          "kind": "ticketing",
-          "points": 3,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2026-anaheim",
-    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
-    "start_date": "2026-12-30",
-    "end_date": "2026-12-30",
-    "dates_confirmed": false,
-    "city": "Anaheim",
-    "state": "California",
-    "venue": "Anaheim Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-    "sources": [
-      {
-        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-        "type": "api",
-        "fetched_at": "2026-11-16T02:14:49.044Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.3,
-    "status": "active",
-    "kind": "convention",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Ticketing listing (universe.com)",
-          "family": "universe.com",
-          "kind": "ticketing",
-          "points": 3,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2027-anaheim",
-    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
-    "start_date": "2027-01-02",
-    "end_date": "2027-01-02",
-    "dates_confirmed": false,
-    "city": "Anaheim",
-    "state": "California",
-    "venue": "Anaheim Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-    "sources": [
-      {
-        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-        "type": "api",
-        "fetched_at": "2026-11-16T02:14:49.044Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.3,
-    "status": "active",
-    "kind": "convention",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Ticketing listing (universe.com)",
-          "family": "universe.com",
           "kind": "ticketing",
           "points": 3,
           "seenAt": "2026-11-16"
