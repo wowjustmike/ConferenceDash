@@ -6,6 +6,7 @@ import { extractWithLlm, type LlmBudget, type LlmClient } from '../extract/llm'
 import { parseIcs } from '../extract/ical'
 import { parseJsonLd } from '../extract/jsonld'
 import { normalizeState } from '../normalize'
+import { htmlToText } from '../text'
 import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
@@ -27,12 +28,6 @@ export function loadRegistry(path: string): RegistryEntry[] {
 }
 
 export interface RunDeps { fetchText: (url: string) => Promise<string | null>; llm: LlmClient; budget: LlmBudget; now: () => Date }
-
-function pageText(html: string): string {
-  const $ = cheerio.load(html)
-  $('script, style, noscript, svg').remove()
-  return $('body').text().replace(/\s+/g, ' ').trim()
-}
 
 function icalLink(html: string, base: string): string | null {
   const $ = cheerio.load(html)
@@ -60,7 +55,7 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
         const feed = link ? await deps.fetchText(link) : null
         if (link && feed !== null) found = parseIcs(feed, ref(link, 'ical'), defaults)
       }
-      if (found.length === 0) found = await extractWithLlm(deps.llm, deps.budget, { url, text: pageText(text) }, ref(url, 'llm'), defaults, deps.now())
+      if (found.length === 0) found = await extractWithLlm(deps.llm, deps.budget, { url, text: htmlToText(text) }, ref(url, 'llm'), defaults, deps.now())
     }
     candidates.push(...found)
   }
