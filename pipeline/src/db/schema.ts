@@ -20,7 +20,7 @@ create unique index observations_unique on observations(source_id, raw_name, coa
 create table events (
   id text primary key, name text not null, start_date text not null, end_date text not null, dates_confirmed integer not null default 0,
   city text not null, state text not null, venue text not null default '', organizer text not null default '', topics_json text not null default '[]',
-  kind text, est_attendance integer, official_url text not null, status text not null default 'active', last_verified text not null,
+  kind text, est_attendance integer, official_url text not null, status text not null default 'active' check (status in ('active','cancelled','past')), last_verified text not null,
   confidence real not null default 0, signal_points integer not null default 0, signal_bars integer not null default 1, signal_json text,
   excluded_reason text, is_sample integer not null default 0, sources_json text not null default '[]'
 );
