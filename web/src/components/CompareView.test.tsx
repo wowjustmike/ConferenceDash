@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { CompareView } from './CompareView'
 import { parseEvents } from '../lib/schema'
 
-const { events } = parseEvents(JSON.parse(readFileSync('../data/events.json', 'utf8')))
+const { events } = parseEvents(JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8')))
 const today = new Date(2026, 10, 15)
 
 test('defaults to top three cities and shows the glance table', () => {

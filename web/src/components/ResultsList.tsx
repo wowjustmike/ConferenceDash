@@ -1,6 +1,7 @@
 import { formatRange, startLabel } from '../lib/dates'
 import { badgesFor } from '../lib/badges'
 import type { SortBy } from '../lib/filters'
+import { isSample } from '../lib/sample'
 import type { ConfEvent } from '../lib/schema'
 
 interface Props { events: ConfEvent[]; today: Date; sort: SortBy; onSort: (s: SortBy) => void; onSelect: (e: ConfEvent) => void; selectedId?: string }
@@ -47,7 +48,7 @@ export function ResultsList({ events, today, sort, onSort, onSelect, selectedId 
             <tr key={e.id} data-testid="event-row" className={e.id === selectedId ? 'selected' : ''} onClick={() => onSelect(e)}>
               <td>
                 <button className="name" onClick={(ev) => { ev.stopPropagation(); onSelect(e) }}>{e.name}</button>
-                <div className="tags">{e.topics.map((t) => <span key={t} className="tag">{t}</span>)}</div>
+                <div className="tags">{e.topics.map((t) => <span key={t} className="tag">{t}</span>)}{isSample(e) && <span className="tag sample" title="Placeholder data">Sample</span>}</div>
               </td>
               <td><strong>{formatRange(e.start_date, e.end_date)}</strong>
                 <div className="muted">{startLabel(e, today)}</div></td>

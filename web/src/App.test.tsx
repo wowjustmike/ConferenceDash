@@ -3,7 +3,7 @@ import { render, screen, within, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from './App'
 
-const raw = JSON.parse(readFileSync('../data/events.json', 'utf8'))
+const raw = JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8'))
 const today = new Date(2026, 10, 15)
 const ok = () => Promise.resolve(raw)
 
@@ -103,5 +103,20 @@ test('theme toggle sets data-theme and persists', async () => {
 
 test('sample data notice is visible', async () => {
   render(<App today={today} load={ok} />)
-  await waitFor(() => expect(screen.getAllByText(/Sample data/).length).toBeGreaterThan(0))
+  await waitFor(() => expect(screen.getAllByText(/sample events/i).length).toBeGreaterThan(0))
+})
+
+test('mixed data: only sample rows are tagged and the footer counts them; real-only data has no notice', async () => {
+  const real = { ...raw[0], id: 'real-1', name: 'Real Conf', sources: [{ url: 'https://x.example', type: 'confs.tech', fetched_at: '2026-11-01T00:00:00Z' }] }
+  const { unmount } = render(<App today={today} load={() => Promise.resolve([real, ...raw])} />)
+  await screen.findByRole('heading', { name: '25 conferences' })
+  const rows = screen.getAllByTestId('event-row')
+  const realRow = rows.find((r) => within(r).queryByText('Real Conf'))!
+  expect(within(realRow).queryByText('Sample')).toBeNull()
+  expect(within(rows.find((r) => within(r).queryByText('CES 2027'))!).getByText('Sample')).toBeInTheDocument()
+  expect(screen.getByText(/Includes 24 sample events/)).toBeInTheDocument()
+  unmount()
+  render(<App today={today} load={() => Promise.resolve([real])} />)
+  await screen.findByRole('heading', { name: '1 conference' })
+  expect(screen.queryByText(/sample/i)).toBeNull()
 })

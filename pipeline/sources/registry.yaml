@@ -9,8 +9,10 @@ sources:
     state: NV
   - id: lacc
     kind: page
-    type: jsonld
-    url: https://www.lacclink.com/events/
+    type: html
+    url: https://www.laconventioncenter.com/events/
+    # Consumer/private bookings that are not conferences or trade shows (manual list; revisit when category data is available).
+    exclude: [party, cheer, futsal, conversation, holiday, graduation, quincea, wedding, gala]
     venue: Los Angeles Convention Center
     city: Los Angeles
     state: CA

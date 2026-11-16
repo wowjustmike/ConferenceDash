@@ -1,5 +1,141 @@
 [
   {
+    "id": "ai-coding-edition-new-york-2026-new-york",
+    "name": "AI Coding Summit New York Edition",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-19",
+    "dates_confirmed": false,
+    "city": "New York",
+    "state": "New York",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://aicodingsummit.com/nyc",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2026/javascript.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:10.297Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active"
+  },
+  {
+    "id": "iaapa-expo-2026",
+    "name": "IAAPA Expo",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-20",
+    "dates_confirmed": true,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "IAAPA",
+    "topics": [
+      "Entertainment",
+      "Hospitality"
+    ],
+    "est_attendance": 30000,
+    "official_url": "https://www.iaapa.org/expos",
+    "sources": [
+      {
+        "url": "https://www.iaapa.org/expos",
+        "type": "seed",
+        "fetched_at": "2026-11-12T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-12",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "jsnation-2026-new-york",
+    "name": "JSNation US",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-19",
+    "dates_confirmed": false,
+    "city": "New York",
+    "state": "New York",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://jsnation.us",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2026/javascript.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:10.297Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active"
+  },
+  {
+    "id": "la-auto-show-2026",
+    "name": "LA Auto Show 2026",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-29",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Automotive"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/la-auto-show-2026",
+    "sources": [
+      {
+        "url": "https://laautoshow.com",
+        "type": "seed",
+        "fetched_at": "2026-11-09T12:00:00Z"
+      },
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T00:28:07.880Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "rsna-annual-meeting-2026",
+    "name": "RSNA Annual Meeting",
+    "start_date": "2026-11-29",
+    "end_date": "2026-12-03",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "Radiological Society of North America",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": 45000,
+    "official_url": "https://www.rsna.org",
+    "sources": [
+      {
+        "url": "https://www.rsna.org",
+        "type": "seed",
+        "fetched_at": "2026-11-10T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-10",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
     "id": "aws-re-invent-2026",
     "name": "AWS re:Invent",
     "start_date": "2026-11-30",
@@ -52,6 +188,136 @@
     "status": "active"
   },
   {
+    "id": "leader-tech-2026-clearwater",
+    "name": "Tech Leader Summit",
+    "start_date": "2026-12-02",
+    "end_date": "2026-12-04",
+    "dates_confirmed": false,
+    "city": "Clearwater",
+    "state": "Florida",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://techleadersummit.io",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2026/leadership.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:32.329Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active"
+  },
+  {
+    "id": "devfestmn-2026-minneapolis",
+    "name": "DevFestMN",
+    "start_date": "2026-12-05",
+    "end_date": "2026-12-05",
+    "dates_confirmed": false,
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://devfest.mn",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2026/general.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:29.333Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active"
+  },
+  {
+    "id": "archconf-2026-clearwater",
+    "name": "ArchConf",
+    "start_date": "2026-12-07",
+    "end_date": "2026-12-10",
+    "dates_confirmed": true,
+    "city": "Clearwater",
+    "state": "Florida",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://archconf.com",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2026/general.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:29.333Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "by-conversations-craft-cto-new-roadshow-york-2026-new-york",
+    "name": "Conversations Roadshow: New York by CTO Craft",
+    "start_date": "2026-12-08",
+    "end_date": "2026-12-09",
+    "dates_confirmed": false,
+    "city": "New York",
+    "state": "New York",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://conversations.ctocraft.com/new-york",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2026/general.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:29.333Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active"
+  },
+  {
+    "id": "a-angeles-collect-con-los-2026-los-angeles",
+    "name": "Collect-A-Con Los Angeles",
+    "start_date": "2026-12-19",
+    "end_date": "2026-12-20",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/collect-a-con-los-angeles-december-2026",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T00:28:07.880Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
     "id": "ces-2027-2027",
     "name": "CES 2027",
     "start_date": "2027-01-06",
@@ -75,6 +341,168 @@
       }
     ],
     "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "pga-merchandise-show-2027",
+    "name": "PGA Merchandise Show",
+    "start_date": "2027-01-26",
+    "end_date": "2027-01-29",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "PGA of America",
+    "topics": [
+      "Sports",
+      "Retail"
+    ],
+    "est_attendance": 40000,
+    "official_url": "https://www.pgamerchandiseshow.com",
+    "sources": [
+      {
+        "url": "https://www.pgamerchandiseshow.com",
+        "type": "seed",
+        "fetched_at": "2026-10-21T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-21",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "compute-daytona-2027-san-francisco",
+    "name": "Daytona Compute",
+    "start_date": "2027-02-03",
+    "end_date": "2027-02-04",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://compute.daytona.io",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/data.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:40.339Z"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/security.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:41.342Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "halfstack-phoenix-2027-phoenix",
+    "name": "HalfStack Phoenix",
+    "start_date": "2027-02-05",
+    "end_date": "2027-02-05",
+    "dates_confirmed": true,
+    "city": "Phoenix",
+    "state": "Arizona",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://halfstackconf.com/phoenix",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/javascript.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:37.345Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "developer-week-2027-santa-clara",
+    "name": "Developer Week",
+    "start_date": "2027-02-09",
+    "end_date": "2027-02-11",
+    "dates_confirmed": true,
+    "city": "Santa Clara",
+    "state": "California",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.developerweek.com",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/general.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:56.373Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "chicago-auto-show-2027",
+    "name": "Chicago Auto Show",
+    "start_date": "2027-02-13",
+    "end_date": "2027-02-22",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "Chicago Automobile Trade Association",
+    "topics": [
+      "Automotive"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.chicagoautoshow.com",
+    "sources": [
+      {
+        "url": "https://www.chicagoautoshow.com",
+        "type": "seed",
+        "fetched_at": "2026-10-16T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-16",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "natural-products-expo-west-2027",
+    "name": "Natural Products Expo West",
+    "start_date": "2027-03-02",
+    "end_date": "2027-03-05",
+    "dates_confirmed": true,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "New Hope Network",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": 65000,
+    "official_url": "https://www.expowest.com",
+    "sources": [
+      {
+        "url": "https://www.expowest.com",
+        "type": "seed",
+        "fetched_at": "2026-11-05T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-05",
     "confidence": 0.9,
     "status": "active"
   },
@@ -106,6 +534,87 @@
     "status": "active"
   },
   {
+    "id": "sxsw-edu-2027",
+    "name": "SXSW EDU",
+    "start_date": "2027-03-08",
+    "end_date": "2027-03-11",
+    "dates_confirmed": true,
+    "city": "Austin",
+    "state": "Texas",
+    "venue": "Austin Convention Center",
+    "organizer": "SXSW LLC",
+    "topics": [
+      "Education",
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.sxswedu.com",
+    "sources": [
+      {
+        "url": "https://www.sxswedu.com",
+        "type": "seed",
+        "fetched_at": "2026-11-08T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-08",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "sxsw-2027-2027",
+    "name": "SXSW 2027",
+    "start_date": "2027-03-12",
+    "end_date": "2027-03-20",
+    "dates_confirmed": true,
+    "city": "Austin",
+    "state": "Texas",
+    "venue": "Austin Convention Center",
+    "organizer": "SXSW LLC",
+    "topics": [
+      "Tech",
+      "Media",
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.sxsw.com",
+    "sources": [
+      {
+        "url": "https://www.sxsw.com",
+        "type": "seed",
+        "fetched_at": "2026-11-08T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-08",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "ceraweek-2027-2027",
+    "name": "CERAWeek 2027",
+    "start_date": "2027-03-22",
+    "end_date": "2027-03-26",
+    "dates_confirmed": true,
+    "city": "Houston",
+    "state": "Texas",
+    "venue": "Hilton Americas-Houston",
+    "organizer": "S&P Global",
+    "topics": [
+      "Energy"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://ceraweek.com",
+    "sources": [
+      {
+        "url": "https://ceraweek.com",
+        "type": "seed",
+        "fetched_at": "2026-11-04T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-04",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
     "id": "adobe-summit-2027",
     "name": "Adobe Summit",
     "start_date": "2027-03-23",
@@ -130,6 +639,58 @@
     ],
     "last_verified": "2026-10-02",
     "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "scale-2027-pasadena",
+    "name": "SCaLE",
+    "start_date": "2027-04-01",
+    "end_date": "2027-04-04",
+    "dates_confirmed": true,
+    "city": "Pasadena",
+    "state": "California",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.socallinuxexpo.org/scale/24x",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/networking.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:58.375Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "sunseccon-2027-pasadena",
+    "name": "SunSecCon",
+    "start_date": "2027-04-01",
+    "end_date": "2027-04-02",
+    "dates_confirmed": true,
+    "city": "Pasadena",
+    "state": "California",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.sunseccon.org/2027",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/security.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:41.342Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
     "status": "active"
   },
   {
@@ -182,6 +743,112 @@
       }
     ],
     "last_verified": "2026-10-26",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "national-restaurant-association-show-2027",
+    "name": "National Restaurant Association Show",
+    "start_date": "2027-05-22",
+    "end_date": "2027-05-25",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "National Restaurant Association",
+    "topics": [
+      "Hospitality",
+      "Retail"
+    ],
+    "est_attendance": 55000,
+    "official_url": "https://www.nationalrestaurantshow.com",
+    "sources": [
+      {
+        "url": "https://www.nationalrestaurantshow.com",
+        "type": "seed",
+        "fetched_at": "2026-09-18T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-09-18",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "america-centre-data-north-2027-san-jose",
+    "name": "Data Centre North America",
+    "start_date": "2027-06-16",
+    "end_date": "2027-06-17",
+    "dates_confirmed": true,
+    "city": "San Jose",
+    "state": "California",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://datacentrecongress.com/northamerica",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/data.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:40.339Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "america-north-techex-2027-san-jose",
+    "name": "TechEx North America",
+    "start_date": "2027-06-16",
+    "end_date": "2027-06-17",
+    "dates_confirmed": true,
+    "city": "San Jose",
+    "state": "California",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://techexevent.com/northamerica",
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/tech-conferences/conference-data/main/conferences/2027/general.json",
+        "type": "confs.tech",
+        "fetched_at": "2026-11-16T00:27:56.373Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "anime-expo-2027-2027",
+    "name": "Anime Expo 2027",
+    "start_date": "2027-07-01",
+    "end_date": "2027-07-04",
+    "dates_confirmed": false,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "Society for the Promotion of Japanese Animation",
+    "topics": [
+      "Entertainment",
+      "Gaming"
+    ],
+    "est_attendance": 110000,
+    "official_url": "https://www.anime-expo.org",
+    "sources": [
+      {
+        "url": "https://www.anime-expo.org",
+        "type": "seed",
+        "fetched_at": "2026-10-31T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-31",
     "confidence": 0.5,
     "status": "active"
   },
@@ -264,6 +931,32 @@
     "status": "active"
   },
   {
+    "id": "gartner-it-symposium-xpo-2027",
+    "name": "Gartner IT Symposium/Xpo",
+    "start_date": "2027-10-18",
+    "end_date": "2027-10-21",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Walt Disney World Dolphin",
+    "organizer": "Gartner",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://www.gartner.com/en/conferences",
+    "sources": [
+      {
+        "url": "https://www.gartner.com/en/conferences",
+        "type": "seed",
+        "fetched_at": "2026-10-05T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-05",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
     "id": "nbaa-bace-2027-2027",
     "name": "NBAA-BACE 2027",
     "start_date": "2027-10-19",
@@ -313,325 +1006,6 @@
       }
     ],
     "last_verified": "2026-10-18",
-    "confidence": 0.5,
-    "status": "active"
-  },
-  {
-    "id": "la-auto-show-2026",
-    "name": "LA Auto Show",
-    "start_date": "2026-11-20",
-    "end_date": "2026-11-29",
-    "dates_confirmed": true,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "LA Auto Show",
-    "topics": [
-      "Automotive"
-    ],
-    "est_attendance": null,
-    "official_url": "https://laautoshow.com",
-    "sources": [
-      {
-        "url": "https://laautoshow.com",
-        "type": "seed",
-        "fetched_at": "2026-11-09T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-09",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "anime-expo-2027-2027",
-    "name": "Anime Expo 2027",
-    "start_date": "2027-07-01",
-    "end_date": "2027-07-04",
-    "dates_confirmed": false,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "Society for the Promotion of Japanese Animation",
-    "topics": [
-      "Entertainment",
-      "Gaming"
-    ],
-    "est_attendance": 110000,
-    "official_url": "https://www.anime-expo.org",
-    "sources": [
-      {
-        "url": "https://www.anime-expo.org",
-        "type": "seed",
-        "fetched_at": "2026-10-31T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-10-31",
-    "confidence": 0.5,
-    "status": "active"
-  },
-  {
-    "id": "natural-products-expo-west-2027",
-    "name": "Natural Products Expo West",
-    "start_date": "2027-03-02",
-    "end_date": "2027-03-05",
-    "dates_confirmed": true,
-    "city": "Anaheim",
-    "state": "California",
-    "venue": "Anaheim Convention Center",
-    "organizer": "New Hope Network",
-    "topics": [
-      "Retail"
-    ],
-    "est_attendance": 65000,
-    "official_url": "https://www.expowest.com",
-    "sources": [
-      {
-        "url": "https://www.expowest.com",
-        "type": "seed",
-        "fetched_at": "2026-11-05T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-05",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "sxsw-2027-2027",
-    "name": "SXSW 2027",
-    "start_date": "2027-03-12",
-    "end_date": "2027-03-20",
-    "dates_confirmed": true,
-    "city": "Austin",
-    "state": "Texas",
-    "venue": "Austin Convention Center",
-    "organizer": "SXSW LLC",
-    "topics": [
-      "Tech",
-      "Media",
-      "Entertainment"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.sxsw.com",
-    "sources": [
-      {
-        "url": "https://www.sxsw.com",
-        "type": "seed",
-        "fetched_at": "2026-11-08T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-08",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "sxsw-edu-2027",
-    "name": "SXSW EDU",
-    "start_date": "2027-03-08",
-    "end_date": "2027-03-11",
-    "dates_confirmed": true,
-    "city": "Austin",
-    "state": "Texas",
-    "venue": "Austin Convention Center",
-    "organizer": "SXSW LLC",
-    "topics": [
-      "Education",
-      "Tech"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.sxswedu.com",
-    "sources": [
-      {
-        "url": "https://www.sxswedu.com",
-        "type": "seed",
-        "fetched_at": "2026-11-08T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-08",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "ceraweek-2027-2027",
-    "name": "CERAWeek 2027",
-    "start_date": "2027-03-22",
-    "end_date": "2027-03-26",
-    "dates_confirmed": true,
-    "city": "Houston",
-    "state": "Texas",
-    "venue": "Hilton Americas-Houston",
-    "organizer": "S&P Global",
-    "topics": [
-      "Energy"
-    ],
-    "est_attendance": 10000,
-    "official_url": "https://ceraweek.com",
-    "sources": [
-      {
-        "url": "https://ceraweek.com",
-        "type": "seed",
-        "fetched_at": "2026-11-04T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-04",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "iaapa-expo-2026",
-    "name": "IAAPA Expo",
-    "start_date": "2026-11-16",
-    "end_date": "2026-11-20",
-    "dates_confirmed": true,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "IAAPA",
-    "topics": [
-      "Entertainment",
-      "Hospitality"
-    ],
-    "est_attendance": 30000,
-    "official_url": "https://www.iaapa.org/expos",
-    "sources": [
-      {
-        "url": "https://www.iaapa.org/expos",
-        "type": "seed",
-        "fetched_at": "2026-11-12T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-12",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "pga-merchandise-show-2027",
-    "name": "PGA Merchandise Show",
-    "start_date": "2027-01-26",
-    "end_date": "2027-01-29",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "PGA of America",
-    "topics": [
-      "Sports",
-      "Retail"
-    ],
-    "est_attendance": 40000,
-    "official_url": "https://www.pgamerchandiseshow.com",
-    "sources": [
-      {
-        "url": "https://www.pgamerchandiseshow.com",
-        "type": "seed",
-        "fetched_at": "2026-10-21T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-10-21",
-    "confidence": 0.5,
-    "status": "active"
-  },
-  {
-    "id": "gartner-it-symposium-xpo-2027",
-    "name": "Gartner IT Symposium/Xpo",
-    "start_date": "2027-10-18",
-    "end_date": "2027-10-21",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Walt Disney World Dolphin",
-    "organizer": "Gartner",
-    "topics": [
-      "Tech"
-    ],
-    "est_attendance": 10000,
-    "official_url": "https://www.gartner.com/en/conferences",
-    "sources": [
-      {
-        "url": "https://www.gartner.com/en/conferences",
-        "type": "seed",
-        "fetched_at": "2026-10-05T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-10-05",
-    "confidence": 0.5,
-    "status": "active"
-  },
-  {
-    "id": "rsna-annual-meeting-2026",
-    "name": "RSNA Annual Meeting",
-    "start_date": "2026-11-29",
-    "end_date": "2026-12-03",
-    "dates_confirmed": true,
-    "city": "Chicago",
-    "state": "Illinois",
-    "venue": "McCormick Place",
-    "organizer": "Radiological Society of North America",
-    "topics": [
-      "Healthcare"
-    ],
-    "est_attendance": 45000,
-    "official_url": "https://www.rsna.org",
-    "sources": [
-      {
-        "url": "https://www.rsna.org",
-        "type": "seed",
-        "fetched_at": "2026-11-10T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-11-10",
-    "confidence": 0.9,
-    "status": "active"
-  },
-  {
-    "id": "chicago-auto-show-2027",
-    "name": "Chicago Auto Show",
-    "start_date": "2027-02-13",
-    "end_date": "2027-02-22",
-    "dates_confirmed": false,
-    "city": "Chicago",
-    "state": "Illinois",
-    "venue": "McCormick Place",
-    "organizer": "Chicago Automobile Trade Association",
-    "topics": [
-      "Automotive"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.chicagoautoshow.com",
-    "sources": [
-      {
-        "url": "https://www.chicagoautoshow.com",
-        "type": "seed",
-        "fetched_at": "2026-10-16T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-10-16",
-    "confidence": 0.5,
-    "status": "active"
-  },
-  {
-    "id": "national-restaurant-association-show-2027",
-    "name": "National Restaurant Association Show",
-    "start_date": "2027-05-22",
-    "end_date": "2027-05-25",
-    "dates_confirmed": false,
-    "city": "Chicago",
-    "state": "Illinois",
-    "venue": "McCormick Place",
-    "organizer": "National Restaurant Association",
-    "topics": [
-      "Hospitality",
-      "Retail"
-    ],
-    "est_attendance": 55000,
-    "official_url": "https://www.nationalrestaurantshow.com",
-    "sources": [
-      {
-        "url": "https://www.nationalrestaurantshow.com",
-        "type": "seed",
-        "fetched_at": "2026-09-18T12:00:00Z"
-      }
-    ],
-    "last_verified": "2026-09-18",
     "confidence": 0.5,
     "status": "active"
   }

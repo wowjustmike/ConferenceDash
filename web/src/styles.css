@@ -172,3 +172,5 @@ a { color: var(--accent); text-decoration: none; }
   .drawer { width: 100%; }
   .tl-row { grid-template-columns: 110px 1fr; }
 }
+
+.tag.sample { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { CalendarView } from './CalendarView'
 import { parseEvents } from '../lib/schema'
 
-const { events } = parseEvents(JSON.parse(readFileSync('../data/events.json', 'utf8')))
+const { events } = parseEvents(JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8')))
 
 test('TBC events get the tbc class; confirmed do not', () => {
   render(<CalendarView events={events} month={new Date(2027, 2, 1)} onMonthChange={() => {}} onSelect={() => {}} />)

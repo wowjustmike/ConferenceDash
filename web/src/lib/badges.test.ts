@@ -24,6 +24,11 @@ test('coordsFor', () => {
   expect(coordsFor('Nowhere', 'Nevada')).toBeNull()
 })
 test('every seed city has coordinates', () => {
-  const { events } = parseEvents(JSON.parse(readFileSync('../data/events.json', 'utf8')))
+  const { events } = parseEvents(JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8')))
   for (const e of events) expect(coordsFor(e.city, e.state), `${e.city}, ${e.state}`).not.toBeNull()
+})
+
+test('common US conference cities have coordinates', () => {
+  for (const [c, s] of [['New York', 'New York'], ['San Francisco', 'California'], ['San Jose', 'California'], ['Pasadena', 'California'], ['Santa Clara', 'California'], ['Phoenix', 'Arizona'], ['Seattle', 'Washington'], ['Denver', 'Colorado'], ['Atlanta', 'Georgia'], ['Boston', 'Massachusetts'], ['Washington', 'District of Columbia'], ['Minneapolis', 'Minnesota'], ['Clearwater', 'Florida'], ['San Diego', 'California'], ['Dallas', 'Texas'], ['Nashville', 'Tennessee'], ['New Orleans', 'Louisiana'], ['Salt Lake City', 'Utah'], ['Portland', 'Oregon'], ['Miami', 'Florida']])
+    expect(coordsFor(c, s), `${c}, ${s}`).not.toBeNull()
 })

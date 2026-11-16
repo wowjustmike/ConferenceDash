@@ -39,7 +39,7 @@ test('cancelled status still parses', () => {
 })
 test('taxonomy has 16 topics', () => { expect(TOPICS).toHaveLength(16) })
 test('seed data parses with skipped === 0', () => {
-  const raw = JSON.parse(readFileSync('../data/events.json', 'utf8'))
+  const raw = JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8'))
   const r = parseEvents(raw)
   expect(r.skipped).toBe(0)
   expect(r.events.length).toBe(24)

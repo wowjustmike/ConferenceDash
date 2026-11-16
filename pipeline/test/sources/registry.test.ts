@@ -38,6 +38,14 @@ test('page with no structured data calls the LLM exactly once', async () => {
   expect(r.candidates).toHaveLength(1)
   expect(r.candidates[0].source.type).toBe('llm')
 })
+test('pages with eventItem cards use the DOM reader, not the LLM, and honor entry exclude patterns', async () => {
+  const cards = '<div class="eventItem"><div class="date">Nov 20 - 29, 2026</div><h3 class="title"><a href="/e/a">Auto Show</a></h3></div><div class="eventItem"><div class="date">Dec 10, 2026</div><h3 class="title"><a href="/e/b">Holiday Party</a></h3></div>'
+  const d = deps({ 'https://venue.example/events': `<html><body>${cards}</body></html>` })
+  const r = await runEntry(entry({ exclude: ['party'] }), d)
+  expect(d.llm.calls).toBe(0)
+  expect(r.candidates.map((c) => c.name)).toEqual(['Auto Show'])
+  expect(r.candidates[0].official_url).toBe('https://venue.example/e/a')
+})
 test('ical entries parse directly', async () => {
   const r = await runEntry(entry({ kind: 'ical', url: 'https://venue.example/feed.ics' }), deps({ 'https://venue.example/feed.ics': icsText }))
   expect(r.candidates).toHaveLength(1)

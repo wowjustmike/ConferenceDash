@@ -17,6 +17,7 @@ import { filtersToParams, paramsToFilters } from './lib/url'
 import { useEvents, defaultLoad, type Loader } from './lib/useEvents'
 import { useMedia } from './lib/useMedia'
 import { useTheme } from './lib/theme'
+import { isSample } from './lib/sample'
 import type { ConfEvent } from './lib/schema'
 
 interface Props { today?: Date; load?: Loader }
@@ -52,6 +53,7 @@ export default function App({ today: todayProp, load = defaultLoad }: Props) {
     return first ? new Date(+first.slice(0, 4), +first.slice(5, 7) - 1, 1) : new Date(today.getFullYear(), today.getMonth(), 1)
   }, [month, results, today])
 
+  const sampleCount = useMemo(() => events.filter(isSample).length, [events])
   const count = results.length === 1 ? '1 conference' : `${results.length} conferences`
   const drawer = selected && <EventDrawer event={selected} events={events} today={today} onClose={() => setSelected(null)} onSelect={setSelected} />
   const sidebar = <FilterSidebar events={events} filters={filters} onChange={setFilters} today={today} />
@@ -119,7 +121,7 @@ export default function App({ today: todayProp, load = defaultLoad }: Props) {
               </>
             )}
             {body}
-            {view !== 'compare' && <p className="muted foot">Showing {results.length} · Sample data for design review</p>}
+            {view !== 'compare' && <p className="muted foot">Showing {results.length}{sampleCount > 0 && ` · Includes ${sampleCount} sample event${sampleCount === 1 ? '' : 's'} with placeholder data`}</p>}
           </main>
         </div>
       )}

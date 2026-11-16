@@ -4,6 +4,7 @@ import { parse } from 'yaml'
 import { z } from 'zod'
 import { extractWithLlm, type LlmBudget, type LlmClient } from '../extract/llm'
 import { parseIcs } from '../extract/ical'
+import { parseEventItems } from '../extract/eventitems'
 import { parseJsonLd } from '../extract/jsonld'
 import { normalizeState } from '../normalize'
 import { htmlToText } from '../text'
@@ -13,9 +14,10 @@ const Entry = z.object({
   id: z.string().min(1),
   kind: z.enum(['ical', 'page']),
   url: z.string().url(),
-  type: z.enum(['confs.tech', 'ical', 'jsonld', 'llm', 'api', 'aggregator', 'seed', 'submission']),
+  type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
   pages: z.array(z.string().url()).optional(),
+  exclude: z.array(z.string()).optional(),
 })
 export type RegistryEntry = z.infer<typeof Entry>
 
@@ -55,6 +57,7 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
         const feed = link ? await deps.fetchText(link) : null
         if (link && feed !== null) found = parseIcs(feed, ref(link, 'ical'), defaults)
       }
+      if (found.length === 0) found = parseEventItems(text, ref(url, 'html'), defaults, entry.exclude)
       if (found.length === 0) found = await extractWithLlm(deps.llm, deps.budget, { url, text: htmlToText(text) }, ref(url, 'llm'), defaults, deps.now())
     }
     candidates.push(...found)

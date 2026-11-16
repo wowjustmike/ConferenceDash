@@ -1,0 +1,638 @@
+[
+  {
+    "id": "aws-re-invent-2026",
+    "name": "AWS re:Invent",
+    "start_date": "2026-11-30",
+    "end_date": "2026-12-04",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Venetian Expo",
+    "organizer": "Amazon Web Services",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 60000,
+    "official_url": "https://reinvent.awsevents.com",
+    "sources": [
+      {
+        "url": "https://reinvent.awsevents.com",
+        "type": "seed",
+        "fetched_at": "2026-11-14T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-14",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "mjbizcon-2026",
+    "name": "MJBizCon",
+    "start_date": "2026-12-01",
+    "end_date": "2026-12-04",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "MJBiz",
+    "topics": [
+      "Cannabis"
+    ],
+    "est_attendance": 30000,
+    "official_url": "https://mjbizconference.com",
+    "sources": [
+      {
+        "url": "https://mjbizconference.com",
+        "type": "seed",
+        "fetched_at": "2026-11-11T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-11",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "ces-2027-2027",
+    "name": "CES 2027",
+    "start_date": "2027-01-06",
+    "end_date": "2027-01-09",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "Consumer Technology Association",
+    "topics": [
+      "Tech",
+      "Entertainment"
+    ],
+    "est_attendance": 140000,
+    "official_url": "https://www.ces.tech",
+    "sources": [
+      {
+        "url": "https://www.ces.tech",
+        "type": "seed",
+        "fetched_at": "2026-11-15T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "himss27-global-conference-2027",
+    "name": "HIMSS27 Global Conference",
+    "start_date": "2027-03-08",
+    "end_date": "2027-03-11",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Venetian Expo",
+    "organizer": "HIMSS",
+    "topics": [
+      "Healthcare",
+      "Tech"
+    ],
+    "est_attendance": 28000,
+    "official_url": "https://www.himss.org",
+    "sources": [
+      {
+        "url": "https://www.himss.org",
+        "type": "seed",
+        "fetched_at": "2026-10-08T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-08",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "adobe-summit-2027",
+    "name": "Adobe Summit",
+    "start_date": "2027-03-23",
+    "end_date": "2027-03-25",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Venetian Expo",
+    "organizer": "Adobe",
+    "topics": [
+      "Marketing",
+      "Tech"
+    ],
+    "est_attendance": 12000,
+    "official_url": "https://business.adobe.com/summit",
+    "sources": [
+      {
+        "url": "https://business.adobe.com/summit",
+        "type": "seed",
+        "fetched_at": "2026-10-02T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-02",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "nab-show-2027-2027",
+    "name": "NAB Show 2027",
+    "start_date": "2027-04-17",
+    "end_date": "2027-04-21",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "National Association of Broadcasters",
+    "topics": [
+      "Media",
+      "Tech"
+    ],
+    "est_attendance": 60000,
+    "official_url": "https://nabshow.com",
+    "sources": [
+      {
+        "url": "https://nabshow.com",
+        "type": "seed",
+        "fetched_at": "2026-11-03T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-03",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "google-cloud-next-2027",
+    "name": "Google Cloud Next",
+    "start_date": "2027-04-21",
+    "end_date": "2027-04-23",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center",
+    "organizer": "Google Cloud",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 30000,
+    "official_url": "https://cloud.withgoogle.com/next",
+    "sources": [
+      {
+        "url": "https://cloud.withgoogle.com/next",
+        "type": "seed",
+        "fetched_at": "2026-10-26T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-26",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "black-hat-usa-2027-2027",
+    "name": "Black Hat USA 2027",
+    "start_date": "2027-08-01",
+    "end_date": "2027-08-06",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center",
+    "organizer": "Informa Tech",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 22000,
+    "official_url": "https://www.blackhat.com",
+    "sources": [
+      {
+        "url": "https://www.blackhat.com",
+        "type": "seed",
+        "fetched_at": "2026-11-06T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-06",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "re-2027-2027",
+    "name": "RE+ 2027",
+    "start_date": "2027-09-13",
+    "end_date": "2027-09-16",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "SEIA and SMART",
+    "topics": [
+      "Energy"
+    ],
+    "est_attendance": 35000,
+    "official_url": "https://www.re-plus.com",
+    "sources": [
+      {
+        "url": "https://www.re-plus.com",
+        "type": "seed",
+        "fetched_at": "2026-09-26T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-09-26",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "g2e-global-gaming-expo-2027",
+    "name": "G2E Global Gaming Expo",
+    "start_date": "2027-10-05",
+    "end_date": "2027-10-07",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Venetian Expo",
+    "organizer": "American Gaming Association",
+    "topics": [
+      "Gaming"
+    ],
+    "est_attendance": 25000,
+    "official_url": "https://www.globalgamingexpo.com",
+    "sources": [
+      {
+        "url": "https://www.globalgamingexpo.com",
+        "type": "seed",
+        "fetched_at": "2026-10-13T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-13",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "nbaa-bace-2027-2027",
+    "name": "NBAA-BACE 2027",
+    "start_date": "2027-10-19",
+    "end_date": "2027-10-21",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "NBAA",
+    "topics": [
+      "Aviation"
+    ],
+    "est_attendance": 25000,
+    "official_url": "https://nbaa.org/events",
+    "sources": [
+      {
+        "url": "https://nbaa.org/events",
+        "type": "seed",
+        "fetched_at": "2026-10-11T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-11",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "money20-20-usa-2027-2027",
+    "name": "Money20/20 USA 2027",
+    "start_date": "2027-10-24",
+    "end_date": "2027-10-27",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Venetian Expo",
+    "organizer": "Money20/20",
+    "topics": [
+      "Finance",
+      "Tech"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://us.money2020.com",
+    "sources": [
+      {
+        "url": "https://us.money2020.com",
+        "type": "seed",
+        "fetched_at": "2026-10-18T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-18",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "la-auto-show-2026",
+    "name": "LA Auto Show",
+    "start_date": "2026-11-20",
+    "end_date": "2026-11-29",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "LA Auto Show",
+    "topics": [
+      "Automotive"
+    ],
+    "est_attendance": null,
+    "official_url": "https://laautoshow.com",
+    "sources": [
+      {
+        "url": "https://laautoshow.com",
+        "type": "seed",
+        "fetched_at": "2026-11-09T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-09",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "anime-expo-2027-2027",
+    "name": "Anime Expo 2027",
+    "start_date": "2027-07-01",
+    "end_date": "2027-07-04",
+    "dates_confirmed": false,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "Society for the Promotion of Japanese Animation",
+    "topics": [
+      "Entertainment",
+      "Gaming"
+    ],
+    "est_attendance": 110000,
+    "official_url": "https://www.anime-expo.org",
+    "sources": [
+      {
+        "url": "https://www.anime-expo.org",
+        "type": "seed",
+        "fetched_at": "2026-10-31T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-31",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "natural-products-expo-west-2027",
+    "name": "Natural Products Expo West",
+    "start_date": "2027-03-02",
+    "end_date": "2027-03-05",
+    "dates_confirmed": true,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "New Hope Network",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": 65000,
+    "official_url": "https://www.expowest.com",
+    "sources": [
+      {
+        "url": "https://www.expowest.com",
+        "type": "seed",
+        "fetched_at": "2026-11-05T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-05",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "sxsw-2027-2027",
+    "name": "SXSW 2027",
+    "start_date": "2027-03-12",
+    "end_date": "2027-03-20",
+    "dates_confirmed": true,
+    "city": "Austin",
+    "state": "Texas",
+    "venue": "Austin Convention Center",
+    "organizer": "SXSW LLC",
+    "topics": [
+      "Tech",
+      "Media",
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.sxsw.com",
+    "sources": [
+      {
+        "url": "https://www.sxsw.com",
+        "type": "seed",
+        "fetched_at": "2026-11-08T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-08",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "sxsw-edu-2027",
+    "name": "SXSW EDU",
+    "start_date": "2027-03-08",
+    "end_date": "2027-03-11",
+    "dates_confirmed": true,
+    "city": "Austin",
+    "state": "Texas",
+    "venue": "Austin Convention Center",
+    "organizer": "SXSW LLC",
+    "topics": [
+      "Education",
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.sxswedu.com",
+    "sources": [
+      {
+        "url": "https://www.sxswedu.com",
+        "type": "seed",
+        "fetched_at": "2026-11-08T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-08",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "ceraweek-2027-2027",
+    "name": "CERAWeek 2027",
+    "start_date": "2027-03-22",
+    "end_date": "2027-03-26",
+    "dates_confirmed": true,
+    "city": "Houston",
+    "state": "Texas",
+    "venue": "Hilton Americas-Houston",
+    "organizer": "S&P Global",
+    "topics": [
+      "Energy"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://ceraweek.com",
+    "sources": [
+      {
+        "url": "https://ceraweek.com",
+        "type": "seed",
+        "fetched_at": "2026-11-04T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-04",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "iaapa-expo-2026",
+    "name": "IAAPA Expo",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-20",
+    "dates_confirmed": true,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "IAAPA",
+    "topics": [
+      "Entertainment",
+      "Hospitality"
+    ],
+    "est_attendance": 30000,
+    "official_url": "https://www.iaapa.org/expos",
+    "sources": [
+      {
+        "url": "https://www.iaapa.org/expos",
+        "type": "seed",
+        "fetched_at": "2026-11-12T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-12",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "pga-merchandise-show-2027",
+    "name": "PGA Merchandise Show",
+    "start_date": "2027-01-26",
+    "end_date": "2027-01-29",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "PGA of America",
+    "topics": [
+      "Sports",
+      "Retail"
+    ],
+    "est_attendance": 40000,
+    "official_url": "https://www.pgamerchandiseshow.com",
+    "sources": [
+      {
+        "url": "https://www.pgamerchandiseshow.com",
+        "type": "seed",
+        "fetched_at": "2026-10-21T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-21",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "gartner-it-symposium-xpo-2027",
+    "name": "Gartner IT Symposium/Xpo",
+    "start_date": "2027-10-18",
+    "end_date": "2027-10-21",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Walt Disney World Dolphin",
+    "organizer": "Gartner",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://www.gartner.com/en/conferences",
+    "sources": [
+      {
+        "url": "https://www.gartner.com/en/conferences",
+        "type": "seed",
+        "fetched_at": "2026-10-05T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-05",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "rsna-annual-meeting-2026",
+    "name": "RSNA Annual Meeting",
+    "start_date": "2026-11-29",
+    "end_date": "2026-12-03",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "Radiological Society of North America",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": 45000,
+    "official_url": "https://www.rsna.org",
+    "sources": [
+      {
+        "url": "https://www.rsna.org",
+        "type": "seed",
+        "fetched_at": "2026-11-10T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-11-10",
+    "confidence": 0.9,
+    "status": "active"
+  },
+  {
+    "id": "chicago-auto-show-2027",
+    "name": "Chicago Auto Show",
+    "start_date": "2027-02-13",
+    "end_date": "2027-02-22",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "Chicago Automobile Trade Association",
+    "topics": [
+      "Automotive"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.chicagoautoshow.com",
+    "sources": [
+      {
+        "url": "https://www.chicagoautoshow.com",
+        "type": "seed",
+        "fetched_at": "2026-10-16T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-10-16",
+    "confidence": 0.5,
+    "status": "active"
+  },
+  {
+    "id": "national-restaurant-association-show-2027",
+    "name": "National Restaurant Association Show",
+    "start_date": "2027-05-22",
+    "end_date": "2027-05-25",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "National Restaurant Association",
+    "topics": [
+      "Hospitality",
+      "Retail"
+    ],
+    "est_attendance": 55000,
+    "official_url": "https://www.nationalrestaurantshow.com",
+    "sources": [
+      {
+        "url": "https://www.nationalrestaurantshow.com",
+        "type": "seed",
+        "fetched_at": "2026-09-18T12:00:00Z"
+      }
+    ],
+    "last_verified": "2026-09-18",
+    "confidence": 0.5,
+    "status": "active"
+  }
+]

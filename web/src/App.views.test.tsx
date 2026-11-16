@@ -3,7 +3,7 @@ import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from './App'
 
-const raw = JSON.parse(readFileSync('../data/events.json', 'utf8'))
+const raw = JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8'))
 const today = new Date(2026, 10, 15)
 const ok = () => Promise.resolve(raw)
 

@@ -12,7 +12,7 @@ vi.mock('react-leaflet', () => ({
   ),
 }))
 
-const { events } = parseEvents(JSON.parse(readFileSync('../data/events.json', 'utf8')))
+const { events } = parseEvents(JSON.parse(readFileSync('src/test-data/seed-events.json', 'utf8')))
 
 test('one pin per metro; selecting Las Vegas shows its events and attendee total', async () => {
   render(<MapView events={events} onSelect={() => {}} />)
