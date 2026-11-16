@@ -86,6 +86,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   const owner = new Map<MergedEventRef, string>()
   type MergedEventRef = (typeof merged)[number]
   const verifications = new Map<string, Verification>()
+  const venueHosts = new Map<string, Set<string>>()
   for (const m of merged) {
     const id = reuseId(m.candidate, existing) ?? eventId(m.candidate)
     if (excludedKeys.has(id)) continue
@@ -111,6 +112,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
       if ('kind' in cls) final.kind = cls.kind as string
       fresh.push(final)
       owner.set(m, final.id)
+      venueHosts.set(final.id, new Set(m.members.filter((c) => KIND[c.source.type] === 'venue-calendar').map((c) => hostOf(c.source.url))))
     }
   }
 
@@ -149,11 +151,14 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
         for (const [id, v] of verifications) {
           const ev = fresh.find((f) => f.id === id)!
           const host = hostOf(ev.official_url)
+          // A confirmation found on the venue's own listing page is venue-calendar evidence, not the organizer's site.
+          const hosted = venueHosts.get(id)?.has(host) ?? false
+          const evKind = hosted ? 'venue-calendar' : 'official-site'
           const sourceId = `official:${host}`
-          upsertSource(db, { id: sourceId, kind: 'organizer-site', family: familyOf(host, cred), credibility: cred.points['official-site'] })
+          upsertSource(db, { id: sourceId, kind: hosted ? 'venue-calendar' : 'organizer-site', family: familyOf(host, cred), credibility: cred.points[evKind] })
           const o = addObservation(db, {
             sourceId, rawName: ev.name, startDate: ev.start_date, endDate: ev.end_date, city: ev.city, state: ev.state, url: ev.official_url,
-            evidenceKind: 'official-site', confirmsEdition: v.datesConfirmed && v.editionYearSeen && !v.cancelled, seenAt: todayIso, extractor: 'verify',
+            evidenceKind: evKind, confirmsEdition: v.datesConfirmed && v.editionYearSeen && !v.cancelled, seenAt: todayIso, extractor: 'verify',
           })
           links.push({ eventId: id, obs: o.id })
         }

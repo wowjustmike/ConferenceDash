@@ -23,7 +23,29 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.65,
-    "status": "active"
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (aicodingsummit.com)",
+          "family": "aicodingsummit.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "iaapa-expo-2026",
@@ -50,7 +72,21 @@
     ],
     "last_verified": "2026-11-12",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "iaapa.org",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-12"
+        }
+      ]
+    }
   },
   {
     "id": "jsnation-2026-new-york",
@@ -76,7 +112,29 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.65,
-    "status": "active"
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (jsnation.us)",
+          "family": "jsnation.us",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "la-auto-show-2026",
@@ -107,7 +165,29 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "laautoshow.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-09"
+        },
+        {
+          "label": "Confirmed on the official site (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "rsna-annual-meeting-2026",
@@ -133,7 +213,21 @@
     ],
     "last_verified": "2026-11-10",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "rsna.org",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-10"
+        }
+      ]
+    }
   },
   {
     "id": "aws-re-invent-2026",
@@ -159,7 +253,21 @@
     ],
     "last_verified": "2026-11-14",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "reinvent.awsevents.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-14"
+        }
+      ]
+    }
   },
   {
     "id": "mjbizcon-2026",
@@ -185,7 +293,21 @@
     ],
     "last_verified": "2026-11-11",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "mjbizconference.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-11"
+        }
+      ]
+    }
   },
   {
     "id": "leader-tech-2026-clearwater",
@@ -211,7 +333,29 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.65,
-    "status": "active"
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (techleadersummit.io)",
+          "family": "techleadersummit.io",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "devfestmn-2026-minneapolis",
@@ -237,7 +381,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.65,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (devfest.mn)",
+          "family": "devfest.mn",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "archconf-2026-clearwater",
@@ -263,7 +428,29 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (archconf.com)",
+          "family": "archconf.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "by-conversations-craft-cto-new-roadshow-york-2026-new-york",
@@ -289,7 +476,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.65,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (conversations.ctocraft.com)",
+          "family": "conversations.ctocraft.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "a-angeles-collect-con-los-2026-los-angeles",
@@ -315,7 +523,22 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "kind": "fan_con",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "ces-2027-2027",
@@ -342,7 +565,21 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "ces.tech",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "pga-merchandise-show-2027",
@@ -369,7 +606,21 @@
     ],
     "last_verified": "2026-10-21",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "pgamerchandiseshow.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-21"
+        }
+      ]
+    }
   },
   {
     "id": "compute-daytona-2027-san-francisco",
@@ -400,7 +651,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (compute.daytona.io)",
+          "family": "compute.daytona.io",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "halfstack-phoenix-2027-phoenix",
@@ -426,7 +698,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (halfstackconf.com)",
+          "family": "halfstackconf.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "developer-week-2027-santa-clara",
@@ -452,7 +745,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (developerweek.com)",
+          "family": "developerweek.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "chicago-auto-show-2027",
@@ -478,7 +792,21 @@
     ],
     "last_verified": "2026-10-16",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "chicagoautoshow.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-16"
+        }
+      ]
+    }
   },
   {
     "id": "natural-products-expo-west-2027",
@@ -504,7 +832,21 @@
     ],
     "last_verified": "2026-11-05",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "expowest.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-05"
+        }
+      ]
+    }
   },
   {
     "id": "himss27-global-conference-2027",
@@ -531,7 +873,21 @@
     ],
     "last_verified": "2026-10-08",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "himss.org",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-08"
+        }
+      ]
+    }
   },
   {
     "id": "sxsw-edu-2027",
@@ -558,7 +914,21 @@
     ],
     "last_verified": "2026-11-08",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "sxswedu.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-08"
+        }
+      ]
+    }
   },
   {
     "id": "sxsw-2027-2027",
@@ -586,7 +956,21 @@
     ],
     "last_verified": "2026-11-08",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "sxsw.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-08"
+        }
+      ]
+    }
   },
   {
     "id": "ceraweek-2027-2027",
@@ -612,7 +996,21 @@
     ],
     "last_verified": "2026-11-04",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "ceraweek.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-04"
+        }
+      ]
+    }
   },
   {
     "id": "adobe-summit-2027",
@@ -639,7 +1037,21 @@
     ],
     "last_verified": "2026-10-02",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "business.adobe.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-02"
+        }
+      ]
+    }
   },
   {
     "id": "scale-2027-pasadena",
@@ -665,7 +1077,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (socallinuxexpo.org)",
+          "family": "socallinuxexpo.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "sunseccon-2027-pasadena",
@@ -691,7 +1124,29 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (sunseccon.org)",
+          "family": "sunseccon.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "nab-show-2027-2027",
@@ -718,7 +1173,21 @@
     ],
     "last_verified": "2026-11-03",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "nabshow.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-03"
+        }
+      ]
+    }
   },
   {
     "id": "google-cloud-next-2027",
@@ -744,7 +1213,21 @@
     ],
     "last_verified": "2026-10-26",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "cloud.withgoogle.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-26"
+        }
+      ]
+    }
   },
   {
     "id": "national-restaurant-association-show-2027",
@@ -771,7 +1254,21 @@
     ],
     "last_verified": "2026-09-18",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "nationalrestaurantshow.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-09-18"
+        }
+      ]
+    }
   },
   {
     "id": "america-centre-data-north-2027-san-jose",
@@ -797,7 +1294,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (datacentrecongress.com)",
+          "family": "datacentrecongress.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "america-north-techex-2027-san-jose",
@@ -823,7 +1341,28 @@
     ],
     "last_verified": "2026-11-15",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (confs.tech)",
+          "family": "confs.tech",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (techexevent.com)",
+          "family": "techexevent.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
   },
   {
     "id": "anime-expo-2027-2027",
@@ -850,7 +1389,21 @@
     ],
     "last_verified": "2026-10-31",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "anime-expo.org",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-31"
+        }
+      ]
+    }
   },
   {
     "id": "black-hat-usa-2027-2027",
@@ -876,7 +1429,21 @@
     ],
     "last_verified": "2026-11-06",
     "confidence": 0.9,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "blackhat.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-11-06"
+        }
+      ]
+    }
   },
   {
     "id": "re-2027-2027",
@@ -902,7 +1469,21 @@
     ],
     "last_verified": "2026-09-26",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "re-plus.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-09-26"
+        }
+      ]
+    }
   },
   {
     "id": "g2e-global-gaming-expo-2027",
@@ -928,7 +1509,21 @@
     ],
     "last_verified": "2026-10-13",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "globalgamingexpo.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-13"
+        }
+      ]
+    }
   },
   {
     "id": "gartner-it-symposium-xpo-2027",
@@ -954,7 +1549,21 @@
     ],
     "last_verified": "2026-10-05",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "gartner.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-05"
+        }
+      ]
+    }
   },
   {
     "id": "nbaa-bace-2027-2027",
@@ -980,7 +1589,21 @@
     ],
     "last_verified": "2026-10-11",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "nbaa.org",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-11"
+        }
+      ]
+    }
   },
   {
     "id": "money20-20-usa-2027-2027",
@@ -1007,6 +1630,20 @@
     ],
     "last_verified": "2026-10-18",
     "confidence": 0.5,
-    "status": "active"
+    "status": "active",
+    "signal": {
+      "points": 0,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "us.money2020.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-18"
+        }
+      ]
+    }
   }
 ]

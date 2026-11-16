@@ -84,3 +84,24 @@ test('existing events are imported on first use and a matching real event replac
   expect(loadEvents(d.db).find((e) => e.id === 'ces-2027-2027')!.sources.some((s) => s.type !== 'seed')).toBe(true)
   expect(ids).toContain('other-seed')          // unmatched sample survives with only one productive source
 })
+
+test('verifying against the venue\'s own listing page counts as a venue calendar (2 pts), not an organizer site (3 pts)', async () => {
+  const venueIcs = 'BEGIN:VEVENT\nSUMMARY:Venue Hosted Expo\nDTSTART;VALUE=DATE:20270201\nDTEND;VALUE=DATE:20270203\nURL:https://venue.example/events/hosted-expo\nEND:VEVENT'
+  const d = deps({
+    fetchText: async (u) => (u === 'https://venue.example/feed.ics' ? venueIcs : u === 'https://venue.example/events/hosted-expo' ? '<html><body>Feb 1-2, 2027 Las Vegas</body></html>' : null),
+    confsTopics: [],
+  })
+  await run(d)
+  const kinds = d.db.prepare("select o.evidence_kind k, o.confirms_edition c from event_observations eo join observations o on o.id = eo.observation_id").all() as { k: string; c: number }[]
+  expect(kinds.map((x) => x.k)).not.toContain('official-site')
+  expect(kinds.every((x) => x.k === 'venue-calendar')).toBe(true)
+  const { recomputeSignals } = await import('../src/exporter')
+  recomputeSignals(d.db, today)
+  expect((d.db.prepare('select signal_bars b from events').get() as { b: number }).b).toBe(2)
+})
+test('an organizer-hosted official page on a different host still counts as official-site', async () => {
+  const d = deps()
+  await run(d)
+  const kinds = (d.db.prepare('select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id').all() as { k: string }[]).map((x) => x.k)
+  expect(kinds).toContain('official-site')
+})

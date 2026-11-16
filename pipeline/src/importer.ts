@@ -30,11 +30,14 @@ export function importEventsJson(db: Db, events: ConfEvent[]): { events: number;
       }
       if (e.dates_confirmed && !isSampleEvent(e)) {
         const host = hostOf(e.official_url)
+        // The "official" page may really be the venue's own listing; that is venue-calendar evidence (2 pts), not the organizer's site (3 pts).
+        const hosted = e.sources.some((s) => KIND[s.type] === 'venue-calendar' && hostOf(s.url) === host)
+        const evKind: EvidenceKind = hosted ? 'venue-calendar' : 'official-site'
         const sourceId = `official:${host}`
-        upsertSource(db, { id: sourceId, kind: 'organizer-site', family: familyOf(host, cred), credibility: cred.points['official-site'] })
+        upsertSource(db, { id: sourceId, kind: hosted ? 'venue-calendar' : 'organizer-site', family: familyOf(host, cred), credibility: cred.points[evKind] })
         const o = addObservation(db, {
           sourceId, rawName: e.name, startDate: e.start_date, endDate: e.end_date, city: e.city, state: e.state, url: e.official_url,
-          evidenceKind: 'official-site', confirmsEdition: true, seenAt: e.last_verified, extractor: 'import',
+          evidenceKind: evKind, confirmsEdition: true, seenAt: e.last_verified, extractor: 'import',
         })
         if (o.inserted) observations++
         linkObservation(db, e.id, o.id, 'rule')

@@ -56,3 +56,12 @@ test('importing twice is idempotent', () => {
   expect(again.observations).toBe(0)
   expect(loadEvents(db)).toHaveLength(4)
 })
+
+test('a verified event whose official url is on a venue-calendar host is venue-calendar evidence, not official-site', () => {
+  const db = openDb(':memory:')
+  const e = mk('hosted', ['html'], { dates_confirmed: true, official_url: 'https://src0.example/events/hosted' })
+  importEventsJson(db, [e])
+  const ev = evidenceFor(db, 'hosted')
+  expect(ev.map((x) => x.kind)).not.toContain('official-site')
+  expect(new Set(ev.map((x) => x.family)).size).toBe(1) // same family, so it counts once
+})
