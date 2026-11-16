@@ -2,7 +2,7 @@ import { config } from './config'
 import type { LlmBudget, LlmClient } from './extract/llm'
 import type { Candidate, SourceRef } from './types'
 
-export interface MergedEvent { candidate: Candidate; sources: SourceRef[]; agreeing: number; conflictingDates: boolean }
+export interface MergedEvent { candidate: Candidate; sources: SourceRef[]; agreeing: number; conflictingDates: boolean; members: Candidate[] }
 
 const NOISE = new Set(['international', 'annual', 'the', 'usa', 'us', 'conference', 'conf', 'expo', 'exposition', 'show', 'summit', 'global', 'world', 'congress'])
 const NON_OFFICIAL = new Set(['aggregator', 'api'])
@@ -82,7 +82,7 @@ function mergeGroup(group: Candidate[]): MergedEvent {
   const same = group.filter((c) => c.start_date === best.start_date && c.end_date === best.end_date)
   const seen = new Set<string>()
   const sources = group.map((c) => c.source).filter((s) => { const k = `${s.type}|${s.url}`; if (seen.has(k)) return false; seen.add(k); return true })
-  return { candidate: best, sources, agreeing: new Set(same.map((c) => host(c.source.url))).size, conflictingDates: ranges.size > 1 }
+  return { candidate: best, sources, agreeing: new Set(same.map((c) => host(c.source.url))).size, conflictingDates: ranges.size > 1, members: group }
 }
 
 export function mergeCandidates(list: Candidate[], judged?: Map<string, boolean>): MergedEvent[] {

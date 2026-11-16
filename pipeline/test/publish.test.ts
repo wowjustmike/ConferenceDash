@@ -59,7 +59,7 @@ test('ids are stable across name variants', () => {
 test('toConfEvent builds a valid event, or null when incomplete', () => {
   const m: MergedEvent = {
     candidate: { name: 'CES 2027', start_date: '2027-01-06', end_date: '2027-01-09', city: 'Las Vegas', state: 'Nevada', official_url: 'https://www.ces.tech', source: { url: 'https://a.example', type: 'jsonld', fetched_at: '2026-11-01T00:00:00Z' } },
-    sources: [{ url: 'https://a.example', type: 'jsonld', fetched_at: '2026-11-01T00:00:00Z' }], agreeing: 2, conflictingDates: false,
+    sources: [{ url: 'https://a.example', type: 'jsonld', fetched_at: '2026-11-01T00:00:00Z' }], agreeing: 2, conflictingDates: false, members: [],
   }
   const e = toConfEvent(m, { reachable: true, datesConfirmed: true, cancelled: false, cityMatches: true, editionYearSeen: true }, today)!
   expect(e).toMatchObject({ id: 'ces-2027-las-vegas', dates_confirmed: true, last_verified: '2026-11-15', status: 'active', topics: ['Tech'] })
@@ -105,6 +105,6 @@ test('reuseId keeps an existing event id when the same event arrives under anoth
   expect(reuseId({ ...c, city: 'Austin' }, existing)).toBeNull()
 })
 test('toConfEvent honors an id override', () => {
-  const m = { candidate: { name: 'CES 2027', start_date: '2027-01-06', end_date: '2027-01-09', city: 'Las Vegas', state: 'Nevada', official_url: 'https://www.ces.tech', source: { url: 'https://a.example', type: 'jsonld' as const, fetched_at: '2026-11-01T00:00:00Z' } }, sources: [{ url: 'https://a.example', type: 'jsonld' as const, fetched_at: '2026-11-01T00:00:00Z' }], agreeing: 1, conflictingDates: false }
+  const m = { candidate: { name: 'CES 2027', start_date: '2027-01-06', end_date: '2027-01-09', city: 'Las Vegas', state: 'Nevada', official_url: 'https://www.ces.tech', source: { url: 'https://a.example', type: 'jsonld' as const, fetched_at: '2026-11-01T00:00:00Z' } }, sources: [{ url: 'https://a.example', type: 'jsonld' as const, fetched_at: '2026-11-01T00:00:00Z' }], agreeing: 1, conflictingDates: false, members: [] }
   expect(toConfEvent(m, undefined, today, 'my-id')!.id).toBe('my-id')
 })

@@ -32,6 +32,9 @@ create table inbox (
   id integer primary key autoincrement, url text not null, source_id text references sources(id), path text,
   status text not null default 'pending', notes text, created_at text not null
 );
+create table exclusions (
+  event_key text primary key, reason text not null, name text not null, seen_at text not null
+);
 create table runs (
   id integer primary key autoincrement, started_at text not null, finished_at text, report_json text
 );

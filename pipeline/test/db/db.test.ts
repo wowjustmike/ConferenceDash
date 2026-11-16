@@ -15,7 +15,7 @@ const obs = (db: ReturnType<typeof openDb>, o: Record<string, unknown> = {}) => 
 
 test('openDb creates all tables and sets user_version 1', () => {
   const db = openDb(':memory:')
-  expect(tables(db)).toEqual(['event_observations', 'events', 'fetches', 'inbox', 'observations', 'runs', 'sources'])
+  expect(tables(db)).toEqual(['event_observations', 'events', 'exclusions', 'fetches', 'inbox', 'observations', 'runs', 'sources'])
   expect((db.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(1)
 })
 test('migrate is idempotent and keeps data', () => {

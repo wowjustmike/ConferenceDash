@@ -4,11 +4,11 @@ import { addObservation, linkObservation, saveEvents, upsertSource } from './db/
 import { isSampleEvent } from './sample'
 import type { ConfEvent } from '../../web/src/lib/schema'
 
-const KIND: Record<string, EvidenceKind> = {
+export const KIND: Record<string, EvidenceKind> = {
   'confs.tech': 'directory', html: 'venue-calendar', jsonld: 'venue-calendar', ical: 'venue-calendar', api: 'ticketing',
   aggregator: 'aggregator', llm: 'aggregator', submission: 'aggregator', seed: 'seed',
 }
-const hostOf = (u: string) => { try { return new URL(u).host } catch { return 'unknown' } }
+export const hostOf = (u: string) => { try { return new URL(u).host } catch { return 'unknown' } }
 
 export function importEventsJson(db: Db, events: ConfEvent[]): { events: number; observations: number } {
   const cred = loadCredibility()

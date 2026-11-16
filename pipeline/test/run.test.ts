@@ -1,3 +1,5 @@
+import { openDb } from '../src/db/db'
+import { loadEvents } from '../src/db/store'
 import { runPipeline, type RunDeps } from '../src/run'
 import { LlmBudget, type LlmClient } from '../src/extract/llm'
 import type { ConfEvent } from '../../web/src/lib/schema'
@@ -16,16 +18,15 @@ const pages: Record<string, string | null> = {
 }
 const fakeLlm = (): LlmClient & { calls: number } => { const c = { calls: 0, extract: async () => { c.calls++; return { events: [] } } }; return c as LlmClient & { calls: number } }
 
-function deps(over: Partial<RunDeps> = {}): RunDeps & { written: ConfEvent[][]; out: Record<string, unknown> } {
-  const written: ConfEvent[][] = []
+function deps(over: Partial<RunDeps> = {}): RunDeps & { out: Record<string, unknown> } {
   const out: Record<string, unknown> = {}
   const d: RunDeps = {
     fetchText: async (u) => (u in pages ? pages[u] : null), fetchJson: async () => null, llm: fakeLlm(), budget: new LlmBudget(300), now: () => NOW, today,
     registry: [{ id: 'venue-feed', kind: 'ical', url: 'https://venue.example/feed.ics', type: 'ical', venue: 'Las Vegas Convention Center', city: 'Las Vegas', state: 'NV' }],
     existing: [], confsYears: [2027], confsTopics: ['javascript'], tmKey: undefined, tmVenues: [],
-    writeEvents: (e) => { written.push(e) }, writeOut: (n, data) => { out[n] = data }, ...over,
+    db: openDb(':memory:'), writeOut: (n, data) => { out[n] = data }, ...over,
   }
-  return Object.assign(d, { written, out })
+  return Object.assign(d, { out })
 }
 
 test('end to end: verified event published, unverifiable event quarantined, report filled', async () => {
@@ -38,23 +39,24 @@ test('end to end: verified event published, unverifiable event quarantined, repo
   expect(r.published).toBe(1)
   expect(r.quarantined).toBe(1)
   expect(r.allSourcesFailed).toBe(false)
-  expect(d.written).toHaveLength(1)
-  expect(d.written[0][0]).toMatchObject({ name: 'CES 2027', dates_confirmed: true, state: 'Nevada' })
+  expect(loadEvents(d.db)).toHaveLength(1)
+  expect(loadEvents(d.db)[0]).toMatchObject({ name: 'CES 2027', dates_confirmed: true, state: 'Nevada' })
   expect(d.out['report.json']).toBeTruthy()
   expect(d.out['quarantine.json']).toBeTruthy()
 })
 test('all sources failing leaves events untouched and flags failure', async () => {
-  const existing = [{ id: 'keep', name: 'Keep', start_date: '2027-05-01', end_date: '2027-05-02', status: 'active' } as ConfEvent]
-  const d = deps({ fetchText: async () => null, existing })
+  const keep: ConfEvent = { id: 'keep', name: 'Keep', start_date: '2027-05-01', end_date: '2027-05-02', dates_confirmed: true, city: 'Austin', state: 'Texas', venue: '', organizer: '', topics: ['Tech'], est_attendance: null, official_url: 'https://keep.example', sources: [{ url: 'https://keep.example', type: 'jsonld', fetched_at: '2026-11-01T00:00:00Z' }], last_verified: '2026-11-01', confidence: 0.9, status: 'active' }
+  const d = deps({ fetchText: async () => null, existing: [keep] })
   const r = await runPipeline({ tier: 'weekly', dryRun: false, deps: d })
   expect(r.allSourcesFailed).toBe(true)
-  expect(d.written).toHaveLength(0)
+  expect(loadEvents(d.db).map((e) => e.id)).toEqual(['keep'])
 })
 test('dry run never writes events', async () => {
   const d = deps()
   const r = await runPipeline({ tier: 'weekly', dryRun: true, deps: d })
   expect(r.published).toBe(1)
-  expect(d.written).toHaveLength(0)
+  expect(loadEvents(d.db)).toHaveLength(0)
+  expect((d.db.prepare('select count(*) c from observations').get() as { c: number }).c).toBe(0)
   expect(d.out['report.json']).toBeTruthy()
 })
 test('LLM calls never exceed the budget', async () => {

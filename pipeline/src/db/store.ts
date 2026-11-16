@@ -93,3 +93,16 @@ export function evidenceFor(db: Db, eventId: string): Evidence[] {
 export function markExcluded(db: Db, eventId: string, reason: string): void {
   db.prepare('update events set excluded_reason = ? where id = ?').run(reason, eventId)
 }
+
+/** Removes non-excluded events that are no longer part of the published set (e.g. sample events replaced by real ones). */
+export function deleteMissingEvents(db: Db, keepIds: Set<string>): number {
+  const rows = db.prepare('select id from events where excluded_reason is null').all() as { id: string }[]
+  const gone = rows.map((r) => r.id).filter((id) => !keepIds.has(id))
+  withTransaction(db, () => {
+    for (const id of gone) {
+      db.prepare('delete from event_observations where event_id = ?').run(id)
+      db.prepare('delete from events where id = ?').run(id)
+    }
+  })
+  return gone.length
+}
