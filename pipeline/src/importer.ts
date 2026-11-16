@@ -6,6 +6,7 @@ import type { ConfEvent } from '../../web/src/lib/schema'
 
 export const KIND: Record<string, EvidenceKind> = {
   'confs.tech': 'directory', html: 'venue-calendar', jsonld: 'venue-calendar', ical: 'venue-calendar', api: 'ticketing',
+  'claude-venue-calendar': 'venue-calendar', 'claude-directory': 'directory', 'claude-aggregator': 'aggregator',
   aggregator: 'aggregator', llm: 'venue-calendar', submission: 'aggregator', seed: 'seed', // llm: LLM extraction only runs on registry venue pages; registry aggregators are typed 'aggregator'
 }
 export const hostOf = (u: string) => { try { return new URL(u).host } catch { return 'unknown' } }

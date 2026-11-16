@@ -4,6 +4,8 @@ import { pathToFileURL } from 'node:url'
 import { config } from './config'
 import { openDb, type Db } from './db/db'
 import { unexclude } from './db/store'
+import { ingestBatch } from './ingest'
+import { listInbox, markInbox } from './inbox'
 import { buildExport, planShards, recomputeSignals, writeExport } from './exporter'
 import { createAnthropicClient, LlmBudget, type LlmClient } from './extract/llm'
 import { createFetcher } from './net/http'
@@ -70,6 +72,20 @@ function loadDotEnv(path: string): void {
 async function main() {
   const argv = process.argv.slice(2)
   loadDotEnv(join(config.dataDir, '../.env'))
+  if (argv[0] === 'inbox') {
+    const db = openDb(config.dbPath)
+    if (argv[1] === 'done' || argv[1] === 'skip') { markInbox(db, Number(argv[2]), argv[1] === 'done' ? 'done' : 'skipped', argv.slice(3).join(' ') || undefined); return }
+    for (const i of listInbox(db, argv[1] ?? 'pending')) console.log(`#${i.id} [${i.status}] ${i.url}\n    ${i.path}${i.notes ? `  (${i.notes})` : ''}`)
+    return
+  }
+  if (argv[0] === 'ingest') {
+    const file = argv[1]
+    if (!file) throw new Error('usage: npm run ingest -- <batch.json>')
+    const db = openDb(config.dbPath)
+    const r = ingestBatch(db, JSON.parse(readFileSync(file, 'utf8')), { window: { start: config.windowStart, end: config.windowEnd }, today: new Date() })
+    console.log(JSON.stringify(r, null, 2))
+    return
+  }
   if (argv[0] === 'unexclude') {
     const key = argv[1]
     if (!key) throw new Error('usage: npm run unexclude -- <event-key>')
@@ -94,7 +110,7 @@ async function main() {
   const here = new URL('.', import.meta.url).pathname
   const existing = readExistingExport(config.eventsPath)
   const registry = loadRegistry(join(here, '../sources/registry.yaml'))
-  const browser = registry.some((e) => e.kind === 'simpleview') ? createBrowserFetcher({ userAgent: config.userAgent, canFetch: fetcher.canFetch }) : undefined
+  const browser = registry.some((e) => e.kind === 'simpleview' || e.kind === 'datatable') ? createBrowserFetcher({ userAgent: config.userAgent, canFetch: fetcher.canFetch }) : undefined
   const summary = await runUpdate({
     db, exportDir: config.dataDir, tier, dryRun: argv.includes('--dry-run'), today, exportOpts,
     deps: {

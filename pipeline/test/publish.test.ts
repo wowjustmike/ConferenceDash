@@ -41,7 +41,7 @@ test('ended events become past (and are counted)', () => {
   expect(r.archived).toBe(1)
 })
 test('below-threshold fresh events are quarantined, not published', () => {
-  const r = run([], [mk({ confidence: 0.4 })])
+  const r = run([], [mk({ confidence: 0.2 })])
   expect(r.events).toHaveLength(0)
   expect(r.quarantined).toHaveLength(1)
 })

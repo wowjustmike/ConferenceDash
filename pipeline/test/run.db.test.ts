@@ -31,10 +31,10 @@ const run = (d: RunDeps) => runPipeline({ tier: 'weekly', dryRun: false, deps: d
 test('one run stores observations, links them to published events and records the run', async () => {
   const d = deps()
   await run(d)
-  expect(loadEvents(d.db).map((e) => e.name)).toEqual(['CES 2027'])
+  expect(loadEvents(d.db).map((e) => e.name).sort()).toEqual(['CES 2027', 'HalfStack Phoenix'])
   expect(count(d.db, 'observations')).toBeGreaterThanOrEqual(3)
   const links = d.db.prepare("select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id").all() as { k: string }[]
-  expect(links.map((l) => l.k).sort()).toEqual(['official-site', 'venue-calendar'])
+  expect(links.map((l) => l.k).sort()).toEqual(['directory', 'official-site', 'venue-calendar'])
   expect(count(d.db, 'runs')).toBe(1)
 })
 test('a second identical run adds no events and no observations', async () => {
@@ -141,4 +141,27 @@ test('a venue page read through LLM extraction is still venue evidence, not an o
   const kinds = (d.db.prepare('select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id').all() as { k: string }[]).map((x) => x.k)
   expect(kinds.length).toBeGreaterThan(0)
   expect(kinds).not.toContain('official-site')
+})
+
+test('events ingested in-session are merged, link to their listing page, and are not counted as verifying themselves', async () => {
+  const { mkdtempSync } = await import('node:fs')
+  const { tmpdir } = await import('node:os')
+  const { join } = await import('node:path')
+  const { saveToInbox } = await import('../src/inbox')
+  const { ingestBatch } = await import('../src/ingest')
+  const d = deps({ confsTopics: [], registry: [] })
+  const page = 'Craft Brewers Conference Apr 12-15, 2027 Music City Center Nashville'
+  saveToInbox(d.db, mkdtempSync(join(tmpdir(), 'ing-')), { url: 'https://venue.example/events', sourceId: 'venue.example', text: page })
+  ingestBatch(d.db, { source: { url: 'https://venue.example/events', kind: 'venue-calendar' }, events: [
+    { name: 'Craft Brewers Conference', start_date: '2027-04-12', end_date: '2027-04-15', city: 'Nashville', state: 'TN', venue: 'Music City Center', evidence: 'Craft Brewers Conference Apr 12-15, 2027' },
+  ] }, { window: { start: '2026-11-15', end: '2027-12-31' }, today: NOW })
+  let fetched: string[] = []
+  const r = await run({ ...d, fetchText: async (u) => { fetched.push(u); return null } })
+  const ev = loadEvents(d.db)[0]
+  expect(ev).toMatchObject({ name: 'Craft Brewers Conference', state: 'Tennessee', official_url: 'https://venue.example/events' })
+  expect(fetched).not.toContain('https://venue.example/events') // never verified against itself
+  expect(r.sources.find((s) => s.id === 'in-session')).toMatchObject({ ok: true, count: 1 })
+  const kinds = (d.db.prepare('select o.evidence_kind k from event_observations eo join observations o on o.id = eo.observation_id').all() as { k: string }[]).map((x) => x.k)
+  expect(kinds).toEqual(['venue-calendar'])
+  fetched = []
 })

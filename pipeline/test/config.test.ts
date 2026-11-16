@@ -2,7 +2,7 @@ import { loadConfig } from '../src/config'
 
 test('defaults', () => {
   const c = loadConfig({})
-  expect(c.publishThreshold).toBe(0.6)
+  expect(c.publishThreshold).toBe(0.3)
   expect(c.maxLlmCalls).toBe(300)
   expect(c.extractModel).toBe('claude-haiku-5-5')
   expect(c.adjudicateModel).toBe('claude-sonnet-5-5')

@@ -97,3 +97,11 @@ test('simpleview fetch failure is unhealthy', async () => {
   const d = { ...deps({}), browser: { withPage: async () => null }, simpleview: (async () => null) as never }
   expect((await runEntry(entry({ kind: 'simpleview' }), d)).health).toMatchObject({ ok: false, error: 'fetch failed' })
 })
+
+test('datatable entries use the browser adapter', async () => {
+  const row = '<tr><td><a class="list-view-title" href="/e/1">Chi Expo</a></td><td><div class="multi-day-start-month-word">Mar</div><div class="multi-day-start-day-number">8</div><div class="multi-day-start-year">2027</div><div class="multi-day-end-month-word">Mar</div><div class="multi-day-end-day-number">10</div><div class="multi-day-end-year">2027</div></td></tr>'
+  const d = { ...deps({}), browser: { withPage: async () => null }, datatable: (async () => ({ rows: [row], total: 40 })) as never }
+  const r = await runEntry(entry({ kind: 'datatable', city: 'Chicago', state: 'IL' }), d)
+  expect(r.candidates[0]).toMatchObject({ name: 'Chi Expo', start_date: '2027-03-08', end_date: '2027-03-10', state: 'Illinois' })
+  expect(r.health.error).toBe('partial: 1 of 40')
+})

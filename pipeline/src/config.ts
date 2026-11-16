@@ -23,7 +23,7 @@ const num = (v: string | undefined, d: number) => {
 
 export function loadConfig(env: Record<string, string | undefined> = process.env): Config {
   return {
-    publishThreshold: num(env.PUBLISH_THRESHOLD, 0.6),
+    publishThreshold: num(env.PUBLISH_THRESHOLD, 0.3),
     maxLlmCalls: num(env.MAX_LLM_CALLS, 300),
     extractModel: env.EXTRACT_MODEL || 'claude-haiku-5-5',
     adjudicateModel: env.ADJUDICATE_MODEL || 'claude-sonnet-5-5',

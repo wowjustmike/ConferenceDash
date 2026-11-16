@@ -24,8 +24,8 @@ sources:
     city: Orlando
     state: FL
   - id: mccormick-place
-    kind: page
-    type: jsonld
+    kind: datatable
+    type: html
     url: https://www.mccormickplace.com/events/
     venue: McCormick Place
     city: Chicago

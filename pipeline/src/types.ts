@@ -1,6 +1,6 @@
 import type { Topic } from '../../web/src/lib/schema'
 
-export type SourceType = 'confs.tech' | 'ical' | 'jsonld' | 'html' | 'llm' | 'api' | 'aggregator' | 'seed' | 'submission'
+export type SourceType = 'confs.tech' | 'ical' | 'jsonld' | 'html' | 'llm' | 'claude-venue-calendar' | 'claude-directory' | 'claude-aggregator' | 'api' | 'aggregator' | 'seed' | 'submission'
 export interface SourceRef { url: string; type: SourceType; fetched_at: string }
 
 export interface Candidate {

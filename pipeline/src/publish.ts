@@ -24,16 +24,17 @@ export function reuseId(c: Candidate, existing: ConfEvent[]): string | null {
   return existing.find((e) => looksSame(c, asCandidate(e)))?.id ?? null
 }
 
-export function toConfEvent(m: MergedEvent, v: Verification | undefined, today: Date, idOverride?: string | null): ConfEvent | null {
+export function toConfEvent(m: MergedEvent, v: Verification | undefined, today: Date, idOverride?: string | null, fallbackUrl?: string): ConfEvent | null {
   const c = m.candidate
-  if (!c.start_date || !c.end_date || !c.city || !c.state || !c.official_url) return null
+  const url = c.official_url ?? fallbackUrl
+  if (!c.start_date || !c.end_date || !c.city || !c.state || !url) return null
   const earliestFetch = m.sources.map((s) => s.fetched_at.slice(0, 10)).sort()[0] ?? isoDay(today)
   const age = Math.max(0, Math.round((today.getTime() - new Date(earliestFetch).getTime()) / 864e5))
   const ev = {
     id: idOverride ?? eventId(c), name: c.name, start_date: c.start_date, end_date: c.end_date, dates_confirmed: v?.reachable === true && v.datesConfirmed && !v.cancelled,
     city: c.city, state: c.state, venue: c.venue ?? '', organizer: c.organizer ?? '',
     topics: (c.topics?.length ? c.topics : guessTopics(c.name)).filter((t) => (TOPICS as readonly string[]).includes(t)),
-    est_attendance: c.est_attendance ?? null, official_url: c.official_url, sources: m.sources,
+    est_attendance: c.est_attendance ?? null, official_url: url, sources: m.sources,
     last_verified: v?.reachable ? isoDay(today) : earliestFetch,
     confidence: confidence({ verification: v, agreeingSources: m.agreeing, hasOfficialUrl: true, conflictingDates: m.conflictingDates, ageDays: v?.reachable ? 0 : age }),
     status: v?.cancelled ? 'cancelled' : 'active',

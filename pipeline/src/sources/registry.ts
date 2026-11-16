@@ -6,6 +6,7 @@ import { extractWithLlm, type LlmBudget, type LlmClient } from '../extract/llm'
 import { parseIcs } from '../extract/ical'
 import { parseEventItems } from '../extract/eventitems'
 import type { BrowserFetcher } from '../net/browser'
+import { fetchDataTable, parseDataTableRows } from './datatable'
 import { fetchSimpleviewCalendar, parseSimpleviewItems } from './simpleview'
 import { parseJsonLd } from '../extract/jsonld'
 import { normalizeState } from '../normalize'
@@ -14,9 +15,9 @@ import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
   id: z.string().min(1),
-  kind: z.enum(['ical', 'page', 'simpleview']),
+  kind: z.enum(['ical', 'page', 'simpleview', 'datatable']),
   url: z.string().url(),
-  type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'api', 'aggregator', 'seed', 'submission']),
+  type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
   pages: z.array(z.string().url()).optional(),
   exclude: z.array(z.string()).optional(),
@@ -39,6 +40,7 @@ export interface RunDeps {
   /** Needed for `simpleview` entries (JavaScript calendars). */
   browser?: Pick<BrowserFetcher, 'withPage'>
   simpleview?: typeof fetchSimpleviewCalendar
+  datatable?: typeof fetchDataTable
 }
 
 function icalLink(html: string, base: string): string | null {
@@ -53,6 +55,15 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   const ref = (url: string, type: SourceRef['type']): SourceRef => ({ url, type, fetched_at: deps.now().toISOString() })
   let candidates: Candidate[] = []
   let fetchedAny = false
+  if (entry.kind === 'datatable') {
+    if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
+    const r = await (deps.datatable ?? fetchDataTable)(deps.browser, entry.url, { maxPages: entry.max_pages })
+    if (!r) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
+    const found = parseDataTableRows(r.rows, ref(entry.url, 'html'), defaults)
+    if (found.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'no events found' } }
+    const partial = r.total !== null && r.rows.length < r.total ? `partial: ${r.rows.length} of ${r.total}` : undefined
+    return { candidates: found, health: { id: entry.id, ok: true, count: found.length, ...(partial ? { error: partial } : {}) } }
+  }
   if (entry.kind === 'simpleview') {
     if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
     const [y, m, d] = (entry.end_date ?? '2027-12-31').split('-').map(Number)

@@ -15,8 +15,8 @@ const obs = (db: ReturnType<typeof openDb>, o: Record<string, unknown> = {}) => 
 
 test('openDb creates all tables and sets user_version 1', () => {
   const db = openDb(':memory:')
-  expect(tables(db)).toEqual(['event_observations', 'events', 'exclusions', 'fetches', 'inbox', 'observations', 'runs', 'sources'])
-  expect((db.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(2)
+  expect(tables(db)).toEqual(['event_observations', 'events', 'exclusions', 'fetches', 'inbox', 'ingested', 'observations', 'runs', 'sources'])
+  expect((db.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(3)
 })
 test('migrate is idempotent and keeps data', () => {
   const db = openDb(':memory:')
@@ -72,8 +72,8 @@ test('schema version 2 adds exclusions.rule_version; a v1 database migrates in p
   raw.exec('pragma user_version = 1')
   raw.prepare("insert into exclusions(event_key, reason, name, seen_at) values ('k', 'sports', 'N', '2026-11-01')").run()
   migrate(raw)
-  expect((raw.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(2)
+  expect((raw.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(3)
   expect(raw.prepare('select rule_version v from exclusions').get()).toEqual({ v: 1 })
   const fresh = openDb(':memory:')
-  expect((fresh.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(2)
+  expect((fresh.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(3)
 })

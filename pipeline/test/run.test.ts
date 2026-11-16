@@ -29,18 +29,19 @@ function deps(over: Partial<RunDeps> = {}): RunDeps & { out: Record<string, unkn
   return Object.assign(d, { out })
 }
 
-test('end to end: verified event published, unverifiable event quarantined, report filled', async () => {
+test('end to end: both events published (single-source ones included), report filled', async () => {
   const d = deps()
   const r = await runPipeline({ tier: 'weekly', dryRun: false, deps: d })
   expect(r.sources.map((s) => s.id).sort()).toEqual(['confs.tech', 'ticketmaster', 'venue-feed'])
   expect(r.candidates).toBe(2)
   expect(r.merged).toBe(2)
   expect(r.verified).toBe(1)
-  expect(r.published).toBe(1)
-  expect(r.quarantined).toBe(1)
+  expect(r.published).toBe(2)
+  expect(r.quarantined).toBe(0)
   expect(r.allSourcesFailed).toBe(false)
-  expect(loadEvents(d.db)).toHaveLength(1)
-  expect(loadEvents(d.db)[0]).toMatchObject({ name: 'CES 2027', dates_confirmed: true, state: 'Nevada' })
+  expect(loadEvents(d.db)).toHaveLength(2)
+  expect(loadEvents(d.db).find((e) => e.name === 'CES 2027')).toMatchObject({ dates_confirmed: true, state: 'Nevada' })
+  expect(loadEvents(d.db).find((e) => e.name === 'HalfStack Phoenix')?.dates_confirmed).toBe(false)
   expect(d.out['report.json']).toBeTruthy()
   expect(d.out['quarantine.json']).toBeTruthy()
 })
@@ -54,7 +55,7 @@ test('all sources failing leaves events untouched and flags failure', async () =
 test('dry run never writes events', async () => {
   const d = deps()
   const r = await runPipeline({ tier: 'weekly', dryRun: true, deps: d })
-  expect(r.published).toBe(1)
+  expect(r.published).toBe(2)
   expect(loadEvents(d.db)).toHaveLength(0)
   expect((d.db.prepare('select count(*) c from observations').get() as { c: number }).c).toBe(0)
   expect(d.out['report.json']).toBeTruthy()

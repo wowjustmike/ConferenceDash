@@ -5,6 +5,7 @@ import { familyOf, loadCredibility } from './credibility'
 import { withTransaction, type Db } from './db/db'
 import { addObservation, deleteMissingEvents, linkObservation, loadEvents, markExcluded, recordExclusion, reevaluateExclusions, saveEvents, upsertSource, type ObservationInput, type StoredEvent } from './db/store'
 import { hostOf, importEventsJson, KIND } from './importer'
+import { loadIngested } from './ingest'
 import { isSampleEvent } from './sample'
 import { findAmbiguous, mergeCandidates, pairKey, resolveAmbiguous } from './dedupe'
 import type { LlmBudget, LlmClient } from './extract/llm'
@@ -70,6 +71,9 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   await collect('confs.tech', () => fetchConfsTech(d.fetchText, d.confsYears, d.confsTopics))
   await collect('ticketmaster', () => fetchTicketmaster(d.fetchJson, d.tmKey, d.tmVenues))
   for (const entry of d.registry) await collect(entry.id, () => runEntry(entry, { fetchText: d.fetchText, llm: d.llm, budget: d.budget, now: d.now, browser: d.browser }))
+  // Events read in-session (npm run ingest) are merged on every run alongside the automatic sources.
+  const ingested = loadIngested(db)
+  if (ingested.length > 0) { candidates.push(...ingested); report.sources.push({ id: 'in-session', ok: true, count: ingested.length }) }
   report.candidates = candidates.length
   report.allSourcesFailed = !report.sources.some(usable)
 
@@ -101,10 +105,13 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
       if (known.has(id)) excludeExisting.push({ id, reason: cls.excluded })
       continue
     }
-    const prelim = toConfEvent(m, undefined, d.today, id)
+    // No organizer URL (e.g. read from a venue calendar): link to the page we found it on, but never count that page as verifying itself.
+    const listing = m.members.find((c) => c.source.type !== 'confs.tech' && c.source.type !== 'ical')?.source.url
+    const prelim = toConfEvent(m, undefined, d.today, id, listing)
     if (!prelim) { incomplete.push(m.candidate); continue }
     let v: Verification | undefined
-    if (!known.has(prelim.id) || dueForVerification(prelim, d.today, args.tier)) {
+    const selfListed = m.members.some((c) => c.source.url === prelim.official_url)
+    if (!selfListed && (!known.has(prelim.id) || dueForVerification(prelim, d.today, args.tier))) {
       try {
         v = await verifyOfficialSite(d.fetchText, d.llm, d.budget, { name: prelim.name, official_url: prelim.official_url, start_date: prelim.start_date, end_date: prelim.end_date, city: prelim.city })
         if (v.reachable) { report.verified++; verifications.set(prelim.id, v) }
@@ -112,7 +119,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
         report.errors.push(`verify ${prelim.id}: ${(e as Error).message}`)
       }
     }
-    const final: StoredEvent | null = toConfEvent(m, v, d.today, id)
+    const final: StoredEvent | null = toConfEvent(m, v, d.today, id, listing)
     if (final) {
       if ('kind' in cls) final.kind = cls.kind as string
       fresh.push(final)

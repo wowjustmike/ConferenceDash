@@ -1,4 +1,4 @@
-export const SCHEMA_VERSION = 2
+export const SCHEMA_VERSION = 3
 
 /** v2: remember which classifier version made each exclusion so rule-made exclusions can be re-checked. */
 export const SCHEMA_V2 = 'alter table exclusions add column rule_version integer not null default 1'
@@ -40,5 +40,12 @@ create table exclusions (
 );
 create table runs (
   id integer primary key autoincrement, started_at text not null, finished_at text, report_json text
+);
+`
+
+/** v3: candidates read in-session by Claude and imported with `npm run ingest` (re-merged on every update run). */
+export const SCHEMA_V3 = `
+create table ingested (
+  id integer primary key autoincrement, key text not null unique, candidate_json text not null, ingested_at text not null
 );
 `
