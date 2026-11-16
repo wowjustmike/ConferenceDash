@@ -49,8 +49,8 @@ export function createAnthropicClient(apiKey: string): LlmClient {
     async extract({ model, system, pageText, schema }) {
       const res = await client.messages.create({
         model, max_tokens: 4096, system,
-        tools: [{ name: 'record_events', description: 'Record the events found on the page.', input_schema: schema as never }],
-        tool_choice: { type: 'tool', name: 'record_events' },
+        tools: [{ name: 'respond', description: 'Respond with data matching the schema.', input_schema: schema as never }],
+        tool_choice: { type: 'tool', name: 'respond' },
         messages: [{ role: 'user', content: `<page_text>\n${pageText}\n</page_text>` }],
       })
       const block = res.content.find((b) => b.type === 'tool_use')
