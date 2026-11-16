@@ -9,6 +9,7 @@
     "update": "tsx src/update.ts",
     "export": "tsx src/update.ts export",
     "unexclude": "tsx src/update.ts unexclude",
+    "unalias": "tsx src/update.ts unalias",
     "capture": "tsx src/tools/capture.ts",
     "ingest": "tsx src/update.ts ingest",
     "inbox": "tsx src/update.ts inbox",

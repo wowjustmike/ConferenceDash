@@ -15,21 +15,37 @@ function tokens(name: string): string[] {
 const year = (c: Candidate) => c.start_date?.slice(0, 4) ?? (/\b(20\d{2})\b/.exec(c.name)?.[1] ?? 'na')
 const city = (c: Candidate) => c.city?.trim().toLowerCase() ?? 'na'
 const nameKey = (c: Candidate) => tokens(c.name).sort().join('-')
-const compact = (c: Candidate) => tokens(c.name).sort().join('').replace(/(?:conference|conf|expo|summit)$/, '')
+
+// Name tokens for *comparison only* (never ids): the event's own city, and its initialism ("LA"), carry no identity
+// because sameEvent already requires the same city.
+function cityWords(c: Candidate): Set<string> {
+  const words = (c.city ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').filter(Boolean)
+  const out = new Set(words)
+  if (words.length > 1) out.add(words.map((w) => w[0]).join(''))
+  if (words.join(' ') === 'new york') out.add('nyc')
+  return out
+}
+function cmpTokens(c: Candidate): string[] {
+  const t = tokens(c.name)
+  const cw = cityWords(c)
+  const rest = t.filter((x) => !cw.has(x))
+  return rest.length ? rest : t
+}
+const compact = (c: Candidate) => cmpTokens(c).sort().join('').replace(/(?:conference|conf|expo|summit)$/, '')
 
 export function matchKey(c: Candidate): string {
   return `${nameKey(c)}|${year(c)}|${city(c)}`
 }
 
 function similarity(a: Candidate, b: Candidate): number {
-  const A = new Set(tokens(a.name)), B = new Set(tokens(b.name))
+  const A = new Set(cmpTokens(a)), B = new Set(cmpTokens(b))
   const inter = [...A].filter((t) => B.has(t)).length
   const union = new Set([...A, ...B]).size
   return union ? inter / union : 0
 }
 
 function subset(a: Candidate, b: Candidate): boolean {
-  const A = new Set(tokens(a.name)), B = new Set(tokens(b.name))
+  const A = new Set(cmpTokens(a)), B = new Set(cmpTokens(b))
   return [...A].every((t) => B.has(t)) || [...B].every((t) => A.has(t))
 }
 
@@ -86,12 +102,16 @@ function mergeGroup(group: Candidate[]): MergedEvent {
 }
 
 export function mergeCandidates(list: Candidate[], judged?: Map<string, boolean>): MergedEvent[] {
+  // sameEvent can only be true within one year+city, so candidates are bucketed first: linear in the list, not quadratic.
   const groups: Candidate[][] = []
-  const withCity = list.filter((c) => c.city)
-  for (const c of withCity) {
-    const g = groups.find((grp) => grp.some((m) => sameEvent(m, c, judged)))
+  const byBucket = new Map<string, Candidate[][]>()
+  for (const c of list.filter((x) => x.city)) {
+    const key = `${year(c)}|${city(c)}`
+    const bucket = byBucket.get(key) ?? []
+    const g = bucket.find((grp) => grp.some((m) => sameEvent(m, c, judged)))
     if (g) g.push(c)
-    else groups.push([c])
+    else { const grp = [c]; bucket.push(grp); groups.push(grp) }
+    byBucket.set(key, bucket)
   }
   for (const c of list.filter((x) => !x.city)) {
     const matches = groups.filter((grp) => year(grp[0]) === year(c) && grp.some((m) => nameKey(m) === nameKey(c) || similarity(m, c) >= 0.8))

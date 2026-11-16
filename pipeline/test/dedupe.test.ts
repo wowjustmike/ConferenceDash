@@ -85,3 +85,22 @@ test('resolveAmbiguous: batches into one call; bad replies are conservative (fal
   expect(await resolveAmbiguous(bad, new LlmBudget(5), [[a, b]])).toEqual([false])
   expect(await resolveAmbiguous(client, new LlmBudget(0), [[a, b]])).toEqual([false])
 })
+
+const LA = { city: 'Los Angeles', state: 'California' }
+test('city abbreviation in a name matches the full city name (LA Auto Show)', () => {
+  const m = mergeCandidates([
+    c('LA Auto Show 2026', LA, 'aggregator', 'https://a.example/1'),
+    c('Los Angeles Auto Show 2026', LA, 'jsonld', 'https://b.example/2'),
+  ])
+  expect(m).toHaveLength(1)
+})
+test('a name that only adds the event city merges with the bare brand (Collect-A-Con)', () => {
+  const m = mergeCandidates([
+    c('Collect-A-Con Los Angeles', LA, 'jsonld', 'https://a.example/1'),
+    c('Collect-A-Con', LA, 'aggregator', 'https://b.example/2'),
+  ])
+  expect(m).toHaveLength(1)
+})
+test('city-stripping does not merge distinct events that share a city', () => {
+  expect(mergeCandidates([c('Los Angeles Auto Show', LA), c('Los Angeles Comic Con', LA)])).toHaveLength(2)
+})

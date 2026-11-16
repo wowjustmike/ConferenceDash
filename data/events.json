@@ -716,6 +716,11 @@
         "url": "https://www.laconventioncenter.com/events/",
         "type": "html",
         "fetched_at": "2026-11-16T00:28:07.880Z"
+      },
+      {
+        "url": "https://expoassist.net/event/los-angeles-auto-show",
+        "type": "aggregator",
+        "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -723,8 +728,8 @@
     "status": "active",
     "kind": "trade_show",
     "signal": {
-      "points": 2,
-      "bars": 2,
+      "points": 3,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -739,6 +744,13 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Aggregator listing (expoassist.net)",
+          "family": "expoassist.net",
+          "kind": "aggregator",
+          "points": 1,
           "seenAt": "2026-11-16"
         }
       ]
@@ -2021,6 +2033,16 @@
         "url": "https://www.universe.com/events/collect-a-con-los-angeles-2-ca-tickets-9NVCZT?ref=ticketmaster",
         "type": "api",
         "fetched_at": "2026-11-16T02:14:49.983Z"
+      },
+      {
+        "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_S",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.983Z"
+      },
+      {
+        "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_w",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.983Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -2028,7 +2050,7 @@
     "status": "active",
     "kind": "fan_con",
     "signal": {
-      "points": 4,
+      "points": 7,
       "bars": 3,
       "flags": [
         "conflicting-dates"
@@ -2047,47 +2069,12 @@
           "kind": "ticketing",
           "points": 3,
           "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "asi-orlando-2027-orlando",
-    "name": "ASI Show Orlando Expo 2027",
-    "start_date": "2027-01-05",
-    "end_date": "2027-01-07",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Marketing",
-      "Retail"
-    ],
-    "est_attendance": null,
-    "official_url": "https://expoassist.net/event/asi-show-orlando-expo",
-    "sources": [
-      {
-        "url": "https://expoassist.net/event/asi-show-orlando-expo",
-        "type": "aggregator",
-        "fetched_at": "2026-11-16T01:43:04.270Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "expo",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [],
-      "evidence": [
+        },
         {
-          "label": "Aggregator listing (expoassist.net)",
-          "family": "expoassist.net",
-          "kind": "aggregator",
-          "points": 1,
+          "label": "Ticketing listing (ticketmaster)",
+          "family": "ticketmaster",
+          "kind": "ticketing",
+          "points": 3,
           "seenAt": "2026-11-16"
         }
       ]
@@ -2114,6 +2101,11 @@
         "url": "https://www.occc.net/events/",
         "type": "html",
         "fetched_at": "2026-11-16T01:52:10.410Z"
+      },
+      {
+        "url": "https://expoassist.net/event/asi-show-orlando-expo",
+        "type": "aggregator",
+        "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -2123,8 +2115,17 @@
     "signal": {
       "points": 2,
       "bars": 2,
-      "flags": [],
+      "flags": [
+        "conflicting-dates"
+      ],
       "evidence": [
+        {
+          "label": "Aggregator listing (expoassist.net)",
+          "family": "expoassist.net",
+          "kind": "aggregator",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        },
         {
           "label": "Venue calendar (occc.net)",
           "family": "occc.net",
@@ -3496,6 +3497,11 @@
         "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
         "type": "html",
         "fetched_at": "2026-11-16T01:33:29.840Z"
+      },
+      {
+        "url": "https://expoassist.net/event/world-of-concrete-las-vegas-expo",
+        "type": "aggregator",
+        "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -3503,7 +3509,7 @@
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 5,
+      "points": 6,
       "bars": 3,
       "flags": [],
       "evidence": [
@@ -3520,42 +3526,7 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-15"
-        }
-      ]
-    }
-  },
-  {
-    "id": "concrete-las-of-vegas-2027-las-vegas",
-    "name": "World of Concrete Las Vegas Expo 2027",
-    "start_date": "2027-01-19",
-    "end_date": "2027-01-21",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Retail",
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://expoassist.net/event/world-of-concrete-las-vegas-expo",
-    "sources": [
-      {
-        "url": "https://expoassist.net/event/world-of-concrete-las-vegas-expo",
-        "type": "aggregator",
-        "fetched_at": "2026-11-16T01:43:04.270Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "expo",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [],
-      "evidence": [
+        },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
@@ -14764,6 +14735,11 @@
         "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
         "type": "html",
         "fetched_at": "2026-11-16T01:33:29.840Z"
+      },
+      {
+        "url": "https://expoassist.net/event/pack-las-vegas-expo",
+        "type": "aggregator",
+        "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -14771,7 +14747,7 @@
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 5,
+      "points": 6,
       "bars": 3,
       "flags": [],
       "evidence": [
@@ -14788,42 +14764,7 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-15"
-        }
-      ]
-    }
-  },
-  {
-    "id": "las-pack-vegas-2027-las-vegas",
-    "name": "Pack Las Vegas Expo 2027",
-    "start_date": "2027-09-27",
-    "end_date": "2027-09-29",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Retail",
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://expoassist.net/event/pack-las-vegas-expo",
-    "sources": [
-      {
-        "url": "https://expoassist.net/event/pack-las-vegas-expo",
-        "type": "aggregator",
-        "fetched_at": "2026-11-16T01:43:04.271Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "expo",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [],
-      "evidence": [
+        },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",

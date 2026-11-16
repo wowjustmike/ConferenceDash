@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { pathToFileURL } from 'node:url'
+import { collapseAliases, unalias, type AliasLink } from './alias'
 import { config } from './config'
 import { openDb, type Db } from './db/db'
 import { excludeEvents, setTopics, unexclude } from './db/store'
@@ -17,15 +18,16 @@ import type { ConfEvent } from '../../web/src/lib/schema'
 import type { RunReport } from './types'
 
 export interface ExportOpts { windowStart: string; windowEnd: string; sampleDropThreshold: number; maxBytes: number }
-export interface Summary { report?: RunReport; exported: number; byBars: Record<1 | 2 | 3, number>; signalsChanged: number; failed?: boolean }
+export interface Summary { report?: RunReport; exported: number; byBars: Record<1 | 2 | 3, number>; signalsChanged: number; aliased?: AliasLink[]; failed?: boolean }
 
 export async function runExport(a: { db: Db; exportDir: string; today: Date; exportOpts: ExportOpts }): Promise<Summary> {
+  const aliased = collapseAliases(a.db)
   const signalsChanged = recomputeSignals(a.db, a.today)
   const events = buildExport(a.db, { windowStart: a.exportOpts.windowStart, windowEnd: a.exportOpts.windowEnd, sampleDropThreshold: a.exportOpts.sampleDropThreshold, today: a.today })
   writeExport(a.exportDir, planShards(events, a.exportOpts.maxBytes))
   const byBars: Summary['byBars'] = { 1: 0, 2: 0, 3: 0 }
   for (const e of events) byBars[e.signal.bars]++
-  return { exported: events.length, byBars, signalsChanged }
+  return { exported: events.length, byBars, signalsChanged, aliased }
 }
 
 export async function runUpdate(a: {
@@ -96,6 +98,13 @@ async function main() {
     const db = openDb(config.dbPath)
     const r = ingestBatch(db, JSON.parse(readFileSync(file, 'utf8')), { window: { start: config.windowStart, end: config.windowEnd }, today: new Date() })
     console.log(JSON.stringify(r, null, 2))
+    return
+  }
+  if (argv[0] === 'unalias') {
+    const id = argv[1]
+    if (!id) throw new Error('usage: npm run unalias -- <event-id>')
+    const ok = unalias(openDb(config.dbPath), id)
+    console.log(ok ? `Restored ${id} as its own event (pair vetoed). Run: npm run export` : `${id} is not an alias`)
     return
   }
   if (argv[0] === 'unexclude') {

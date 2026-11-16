@@ -1,4 +1,4 @@
-export const SCHEMA_VERSION = 4
+export const SCHEMA_VERSION = 5
 
 /** v2: remember which classifier version made each exclusion so rule-made exclusions can be re-checked. */
 export const SCHEMA_V2 = 'alter table exclusions add column rule_version integer not null default 1'
@@ -52,3 +52,9 @@ create table ingested (
 
 /** v4: topics assigned in-session; applied at export so later automatic runs cannot overwrite them. */
 export const SCHEMA_V4 = `create table topic_overrides (event_id text primary key, topics_json text not null, set_at text not null)`
+
+/** v5: stored duplicates (same event under two names) are aliased to the surviving row at export; vetoes stop a wrong alias from recurring. */
+export const SCHEMA_V5 = `
+alter table events add column alias_of text references events(id);
+create table alias_vetoes (a text not null, b text not null, primary key (a, b));
+`

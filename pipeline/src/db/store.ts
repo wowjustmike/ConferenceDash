@@ -48,7 +48,7 @@ interface Row {
 }
 
 export function loadEvents(db: Db): StoredEvent[] {
-  const rows = db.prepare('select * from events where excluded_reason is null order by start_date, name').all() as unknown as Row[]
+  const rows = db.prepare('select * from events where excluded_reason is null and alias_of is null order by start_date, name').all() as unknown as Row[]
   return rows.map((r) => {
     const e: StoredEvent = {
       id: r.id, name: r.name, start_date: r.start_date, end_date: r.end_date, dates_confirmed: r.dates_confirmed === 1, city: r.city, state: r.state,
@@ -98,9 +98,9 @@ export function markExcluded(db: Db, eventId: string, reason: string): void {
   db.prepare('update events set excluded_reason = ? where id = ?').run(reason, eventId)
 }
 
-/** Removes non-excluded events that are no longer part of the published set (e.g. sample events replaced by real ones). */
+/** Removes non-excluded events that are no longer part of the published set (e.g. sample events replaced by real ones). Alias rows are kept. */
 export function deleteMissingEvents(db: Db, keepIds: Set<string>): number {
-  const rows = db.prepare('select id from events where excluded_reason is null').all() as { id: string }[]
+  const rows = db.prepare('select id from events where excluded_reason is null and alias_of is null').all() as { id: string }[]
   const gone = rows.map((r) => r.id).filter((id) => !keepIds.has(id))
   withTransaction(db, () => {
     for (const id of gone) {
