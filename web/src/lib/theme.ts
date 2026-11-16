@@ -3,7 +3,11 @@ import { useEffect, useState } from 'react'
 export type Theme = 'light' | 'dark'
 
 function read(): Theme {
-  try { return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light' } catch { return 'light' }
+  try {
+    const stored = localStorage.getItem('theme')
+    if (stored === 'dark' || stored === 'light') return stored
+  } catch { /* storage unavailable */ }
+  return typeof window.matchMedia === 'function' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
 export function useTheme() {

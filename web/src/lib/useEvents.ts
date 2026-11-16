@@ -4,6 +4,9 @@ import { parseEvents, type ConfEvent } from './schema'
 export type Loader = () => Promise<unknown>
 
 export const defaultLoad: Loader = async () => {
+  // A self-contained page (e.g. the shared dashboard) embeds its data instead of fetching it.
+  const embedded = (window as unknown as { __CONFERENCEDASH_EVENTS__?: unknown }).__CONFERENCEDASH_EVENTS__
+  if (embedded !== undefined) return embedded
   const base = import.meta.env.BASE_URL
   const res = await fetch(`${base}events.json`)
   if (!res.ok) throw new Error(`HTTP ${res.status}`)

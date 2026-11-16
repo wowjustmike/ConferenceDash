@@ -9,7 +9,8 @@
     "test": "vitest run",
     "predev": "node scripts/copy-data.mjs",
     "prebuild": "node scripts/copy-data.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "artifact": "vite build --base=./ && node scripts/make-artifact.mjs"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

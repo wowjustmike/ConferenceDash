@@ -22,3 +22,15 @@ test('a failing shard rejects the whole load (no partial list)', async () => {
   vi.stubGlobal('fetch', vi.fn(async (u: string) => (u.endsWith('events.json') ? json({ shards: ['events/a.json', 'events/b.json'] }) : u.endsWith('a.json') ? json([{ id: 'a' }]) : json([], false))))
   await expect(defaultLoad()).rejects.toThrow()
 })
+
+test('embedded data (a self-contained page) is used without any network request', async () => {
+  const fetchMock = vi.fn()
+  vi.stubGlobal('fetch', fetchMock)
+  ;(window as unknown as Record<string, unknown>).__CONFERENCEDASH_EVENTS__ = [{ id: 'embedded' }]
+  try {
+    expect(await defaultLoad()).toEqual([{ id: 'embedded' }])
+    expect(fetchMock).not.toHaveBeenCalled()
+  } finally {
+    delete (window as unknown as Record<string, unknown>).__CONFERENCEDASH_EVENTS__
+  }
+})
