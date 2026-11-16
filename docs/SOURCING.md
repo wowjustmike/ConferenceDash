@@ -95,3 +95,26 @@ Probed with `ConferenceDashBot/1.0`, honoring robots.txt. Registry: `pipeline/so
 3. Skip events that already ended. Verify new events immediately and existing ones when due for the tier.
 4. Score confidence; publish at >= 0.6, quarantine the rest (`pipeline/out/quarantine.json`).
 5. Never delete on an empty fetch, never lower confidence, never revert confirmed dates. Sample (`seed`) events are removed the first time a real event is published.
+
+
+## Wave 1-3 results (2026-11-16): headless browser, venue calendars, directories
+
+The browser tool is Playwright driving the installed Google Chrome (no separate download). It goes through the same guard as the HTTP fetcher: robots.txt, public addresses only, 1 request/second/host, images/fonts/media blocked.
+
+| Source | Result | In use |
+|---|---|---|
+| Las Vegas convention calendar (vegasmeansbusiness.com) | JavaScript calendar. Set the end date through the date picker (day, month and year views), paginate 12 at a time. 141 convention events through 2027-12-31, each with organizer name, venue, attendance and the organizer's own website | Yes (`simpleview`) |
+| Orange County Convention Center (occc.net) | JavaScript list with an airbnb-style range picker; 61 events through 2027 | Yes (`simpleview-range`) |
+| McCormick Place (mccormickplace.com) | DataTables list; 100 rows per page; 39 events | Yes (`datatable`) |
+| Moscone Center (moscone.com) | Month selector + one detail page per event for the dates; 20 events | Yes (`moscone`) |
+| LA Convention Center | Static card list; 2 events after excluding parties/cheer | Yes (`page`) |
+| ExpoAssist US listing (expoassist.net) | Server-rendered cards, 140 US events 2026-2027; city only, state from `pipeline/sources/cities.json`. Aggregator (1 point) | Yes (`expoassist`) |
+| Confs.tech | 71 US tech conferences (open data) | Yes |
+| Tradeshowz | Blocks automated visitors with a security service | **Rejected** (not bypassed) |
+| thetradeshowcalendar.com (embedded by Metro Exhibits) | robots.txt disallows `index.php`, the search page | **Rejected** |
+| Luminik | The guessed listing URL returned 404 | Not used |
+| Austin Convention Center | Events search returned "no results" | Dropped from the registry |
+| LVCVA events page | Superseded by the fuller convention calendar above | Dropped |
+| Ticketmaster | Needs the user's free key | Pending |
+
+Tools added: `npm run capture -- <url>` (render a page into `pipeline/inbox/`), `npm run inbox`, `npm run ingest -- <batch.json>` (validated import of events read in-session; every record needs a verbatim quote from the saved page containing the event name), `npm run topics -- <map.json>`, `npm run exclude -- <map.json>`.

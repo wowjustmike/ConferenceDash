@@ -163,3 +163,20 @@ export function setTopics(db: Db, map: Record<string, string[]>): { applied: num
 export function topicOverrides(db: Db): Map<string, string[]> {
   return new Map((db.prepare('select event_id i, topics_json j from topic_overrides').all() as { i: string; j: string }[]).map((r) => [r.i, JSON.parse(r.j)]))
 }
+
+/** Excludes events decided out of scope in-session (event id -> reason); remembered so later runs do not re-add them. */
+export function excludeEvents(db: Db, map: Record<string, string>, seenAt: string): { excluded: number; rejected: string[] } {
+  const rejected: string[] = []
+  let excluded = 0
+  const find = db.prepare('select name from events where id = ?')
+  withTransaction(db, () => {
+    for (const [id, reason] of Object.entries(map)) {
+      const row = find.get(id) as { name: string } | undefined
+      if (!row || !reason) { rejected.push(id); continue }
+      markExcluded(db, id, reason)
+      recordExclusion(db, id, reason, row.name, seenAt)
+      excluded++
+    }
+  })
+  return { excluded, rejected: rejected.sort() }
+}

@@ -100,3 +100,13 @@ test('unexclude removes a manual or rule exclusion and restores the event', () =
   expect(loadEvents(db)).toHaveLength(1)
   expect(unexclude(db, 'ces-2027-las-vegas')).toBe(false)
 })
+
+import { excludeEvents } from '../../src/db/store'
+test('excludeEvents hides events, records reasons so they are not re-added, and rejects unknown ids', () => {
+  const db = setup()
+  saveEvents(db, [mk(), mk({ id: 'tourney', name: 'Youth Volleyball Tournament' })])
+  expect(excludeEvents(db, { tourney: 'sports', ghost: 'sports' }, '2026-11-15')).toEqual({ excluded: 1, rejected: ['ghost'] })
+  expect(loadEvents(db).map((e) => e.id)).toEqual(['ces-2027-las-vegas'])
+  expect(db.prepare('select event_key k, reason r, name n from exclusions').all()).toEqual([{ k: 'tourney', r: 'sports', n: 'Youth Volleyball Tournament' }])
+  expect(excludeEvents(db, { tourney: 'sports' }, '2026-11-16')).toEqual({ excluded: 1, rejected: [] }) // idempotent
+})

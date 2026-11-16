@@ -21,7 +21,11 @@ Window: events overlapping **2026-11-15 .. 2027-12-31** (`WINDOW_START` / `WINDO
 
 `npm run update` accepts `--dry-run`. It reads `ANTHROPIC_API_KEY` and `TICKETMASTER_KEY` from the environment or a git-ignored `.env` file at the repo root; never print or commit them.
 
-**Coming next (separate plans):** a headless-browser fetcher, an `inbox/` of saved pages for Claude to read in-session, and a validated `ingest` command. Until those exist, only sources that return structured data are read automatically.
+**In-session tools (the free, no-API-key path):**
+- `npm run capture -- <url> [--wait text] [--scrolls n] [--links]` renders a page in headless Chrome (robots-checked, rate-limited) and saves its text to `pipeline/inbox/`; `npm run inbox` lists pending pages.
+- Read a saved page, write a batch file `{ "source": {"url": "...", "kind": "venue-calendar|directory|aggregator"}, "events": [ {name, start_date, end_date, city, state, venue?, organizer?, official_url?, topics?, est_attendance?, evidence, exclude?} ] }` and run `npm run ingest -- batch.json`. Every `evidence` must be a verbatim quote from the saved page that contains the event name; bad records are rejected with a reason. Ingested events are merged on every later update.
+- `npm run topics -- map.json` (event id -> topics) and `npm run exclude -- map.json` (event id -> reason) record judgment calls; they are applied at export and survive later runs. `npm run unexclude -- <event-id>` undoes an exclusion.
+- Automatic JavaScript-calendar adapters (Las Vegas, Orlando, Chicago, San Francisco) run inside `npm run update`; see `pipeline/sources/registry.yaml`.
 
 ## Signal strength (1-3 bars)
 

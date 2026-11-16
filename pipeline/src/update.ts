@@ -3,7 +3,7 @@ import { dirname, join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { config } from './config'
 import { openDb, type Db } from './db/db'
-import { setTopics, unexclude } from './db/store'
+import { excludeEvents, setTopics, unexclude } from './db/store'
 import { ingestBatch } from './ingest'
 import { listInbox, markInbox } from './inbox'
 import { buildExport, planShards, recomputeSignals, writeExport } from './exporter'
@@ -72,6 +72,12 @@ function loadDotEnv(path: string): void {
 async function main() {
   const argv = process.argv.slice(2)
   loadDotEnv(join(config.dataDir, '../.env'))
+  if (argv[0] === 'exclude') {
+    const file = argv[1]
+    if (!file) throw new Error('usage: npm run exclude -- <map.json>  (JSON object: event id -> reason)')
+    console.log(JSON.stringify(excludeEvents(openDb(config.dbPath), JSON.parse(readFileSync(file, 'utf8')), new Date().toISOString().slice(0, 10)), null, 2))
+    return
+  }
   if (argv[0] === 'topics') {
     const file = argv[1]
     if (!file) throw new Error('usage: npm run topics -- <map.json>  (JSON object: event id -> [topics])')

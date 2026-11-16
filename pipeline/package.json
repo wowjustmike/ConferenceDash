@@ -12,7 +12,8 @@
     "capture": "tsx src/tools/capture.ts",
     "ingest": "tsx src/update.ts ingest",
     "inbox": "tsx src/update.ts inbox",
-    "topics": "tsx src/update.ts topics"
+    "topics": "tsx src/update.ts topics",
+    "exclude": "tsx src/update.ts exclude"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
