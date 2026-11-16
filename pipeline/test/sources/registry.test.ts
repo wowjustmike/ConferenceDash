@@ -67,5 +67,7 @@ test('loadRegistry validates the file', () => {
   expect(loadRegistry(ok)).toHaveLength(1)
   const bad = join(dir, 'bad.yaml'); writeFileSync(bad, 'sources:\n  - {id: a, kind: nope}\n')
   expect(() => loadRegistry(bad)).toThrow(/Invalid registry/)
-  expect(loadRegistry(join(__dirname, '../../sources/registry.yaml'))).toEqual([])
+  const shipped = loadRegistry(join(__dirname, '../../sources/registry.yaml'))
+  expect(shipped.length).toBeGreaterThan(0)
+  expect(new Set(shipped.map((e) => e.id)).size).toBe(shipped.length)
 })

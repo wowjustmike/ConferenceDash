@@ -1,2 +1,44 @@
-# Declared event sources. See docs/SOURCING.md. Entries are added in Task 14 after each URL is verified.
-sources: []
+# Declared event sources. Each URL was probed (robots.txt allows ConferenceDashBot, page reachable) on 2026-11-15.
+# Page entries use the cascade JSON-LD -> iCal link -> LLM extraction. See docs/SOURCING.md for rejected sources.
+sources:
+  - id: lvcva-events
+    kind: page
+    type: jsonld
+    url: https://www.lvcva.com/events
+    city: Las Vegas
+    state: NV
+  - id: lacc
+    kind: page
+    type: jsonld
+    url: https://www.lacclink.com/events/
+    venue: Los Angeles Convention Center
+    city: Los Angeles
+    state: CA
+  - id: occc
+    kind: page
+    type: jsonld
+    url: https://www.occc.net/events/
+    venue: Orange County Convention Center
+    city: Orlando
+    state: FL
+  - id: mccormick-place
+    kind: page
+    type: jsonld
+    url: https://www.mccormickplace.com/events/
+    venue: McCormick Place
+    city: Chicago
+    state: IL
+  - id: austin-cc
+    kind: page
+    type: jsonld
+    url: https://www.austinconventioncenter.com/events
+    venue: Austin Convention Center
+    city: Austin
+    state: TX
+  - id: moscone
+    kind: page
+    type: jsonld
+    url: https://www.moscone.com/events
+    venue: Moscone Center
+    city: San Francisco
+    state: CA
