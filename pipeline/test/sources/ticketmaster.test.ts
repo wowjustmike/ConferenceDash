@@ -40,3 +40,11 @@ test('the API key is never included in health/error output', async () => {
   const r = await fetchTicketmaster(async () => null, 'SECRETKEY123', venues)
   expect(JSON.stringify(r.health)).not.toContain('SECRETKEY123')
 })
+
+test('each event keeps its own ticket page as the source url, never the API address or key', async () => {
+  const fetchJson = async () => page([ev('Expo A', 'Miscellaneous')])
+  const r = await fetchTicketmaster(fetchJson, 'SECRETKEY123', venues)
+  expect(r.candidates[0].source.url).toBe('https://ticketmaster.example/Expo A')
+  expect(JSON.stringify(r.candidates)).not.toContain('SECRETKEY123')
+  expect(JSON.stringify(r.candidates)).not.toContain('apikey')
+})

@@ -5,7 +5,7 @@ const SKIP_SEGMENTS = new Set(['music', 'sports', 'arts & theatre', 'film'])
 const PAGE_SIZE = 200
 const MAX_RESULTS = 1000 // Discovery API deep-paging cap: size x page < 1000
 
-interface TmEvent { name?: string; dates?: { start?: { localDate?: string }; end?: { localDate?: string } }; classifications?: { segment?: { name?: string } }[] }
+interface TmEvent { name?: string; url?: string; dates?: { start?: { localDate?: string }; end?: { localDate?: string } }; classifications?: { segment?: { name?: string } }[] }
 
 export async function fetchTicketmaster(
   fetchJson: (url: string) => Promise<unknown | null>,
@@ -31,7 +31,8 @@ export async function fetchTicketmaster(
           name: e.name ?? '', start_date: start, end_date: e.dates?.end?.localDate ?? start,
           venue: v.venue, city: v.city, state: v.state,
           // The ticketing page is not the organizer's site, so it is deliberately not kept as official_url.
-          source: { url: `https://app.ticketmaster.com/discovery/v2/events.json?venueId=${v.id}`, type: 'api', fetched_at: new Date().toISOString() },
+          // The event's own ticket page (never the API URL, which carries the key's query string).
+          source: { url: /^https?:\/\//.test(e.url ?? '') ? (e.url as string) : `https://www.ticketmaster.com/venue/${encodeURIComponent(v.id)}`, type: 'api', fetched_at: new Date().toISOString() },
         })
         if (c) candidates.push(c)
       }
