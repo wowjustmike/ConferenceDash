@@ -168,8 +168,8 @@
     "status": "active",
     "kind": "trade_show",
     "signal": {
-      "points": 3,
-      "bars": 3,
+      "points": 2,
+      "bars": 2,
       "flags": [],
       "evidence": [
         {
@@ -180,11 +180,11 @@
           "seenAt": "2026-11-09"
         },
         {
-          "label": "Confirmed on the official site (laconventioncenter.com)",
+          "label": "Venue calendar (laconventioncenter.com)",
           "family": "laconventioncenter.com",
-          "kind": "official-site",
-          "points": 3,
-          "seenAt": "2026-11-15"
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -526,16 +526,16 @@
     "status": "active",
     "kind": "fan_con",
     "signal": {
-      "points": 3,
-      "bars": 3,
+      "points": 2,
+      "bars": 2,
       "flags": [],
       "evidence": [
         {
-          "label": "Confirmed on the official site (laconventioncenter.com)",
+          "label": "Venue calendar (laconventioncenter.com)",
           "family": "laconventioncenter.com",
-          "kind": "official-site",
-          "points": 3,
-          "seenAt": "2026-11-15"
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
         }
       ]
     }
