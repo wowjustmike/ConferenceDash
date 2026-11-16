@@ -122,3 +122,11 @@ test('moscone entries use the browser adapter and keep its candidates', async ()
   expect(r.candidates).toHaveLength(1)
   expect((await runEntry(entry({ kind: 'moscone' }), deps({}))).health.error).toBe('browser unavailable')
 })
+
+test('simpleview results whose date range was not applied are reported as a failure, not as a complete list', async () => {
+  const card = '<article class="item convention-item" data-recid="a"><div class="mini-date-container"><div class="month">MAR</div><div class="day">8-11</div></div><h4 class="title">Short List Expo</h4></article>'
+  const d = { ...deps({}), browser: { withPage: async () => null }, simpleview: (async () => ({ items: [card], total: 19, rangeApplied: false })) as never }
+  const r = await runEntry(entry({ kind: 'simpleview' }), d)
+  expect(r.candidates).toEqual([])
+  expect(r.health).toEqual({ id: 'lvcc', ok: false, count: 0, error: 'date range not applied' })
+})

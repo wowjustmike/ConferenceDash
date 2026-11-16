@@ -92,6 +92,8 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
     const [y, m, d] = (entry.end_date ?? '2027-12-31').split('-').map(Number)
     const r = await (deps.simpleview ?? fetchSimpleviewCalendar)(deps.browser as BrowserFetcher, entry.url, { year: y, month: m, day: d }, { maxPages: entry.max_pages })
     if (!r) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
+    // A list that did not reach the requested end date is only the default 90-day window: report it instead of passing it off as complete.
+    if (r.rangeApplied === false) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'date range not applied' } }
     const found = parseSimpleviewItems(r.items, ref(entry.url, 'html'), deps.now(), defaults)
     const partial = r.total !== null && r.items.length < r.total ? `partial: ${r.items.length} of ${r.total}` : undefined
     if (found.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'no events found' } }

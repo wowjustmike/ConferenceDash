@@ -117,7 +117,7 @@
       }
     ],
     "last_verified": "2026-11-16",
-    "confidence": 0.3,
+    "confidence": 0.5,
     "status": "active",
     "signal": {
       "points": 1,
@@ -303,7 +303,7 @@
       }
     ],
     "last_verified": "2026-11-15",
-    "confidence": 0.7,
+    "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
     "signal": {
@@ -576,7 +576,7 @@
       }
     ],
     "last_verified": "2026-11-15",
-    "confidence": 0.45,
+    "confidence": 0.65,
     "status": "active",
     "signal": {
       "points": 1,
@@ -1200,7 +1200,7 @@
       }
     ],
     "last_verified": "2026-11-15",
-    "confidence": 0.45,
+    "confidence": 0.65,
     "status": "active",
     "kind": "expo",
     "signal": {
@@ -1886,7 +1886,7 @@
       }
     ],
     "last_verified": "2026-11-15",
-    "confidence": 0.3,
+    "confidence": 0.5,
     "status": "active",
     "kind": "expo",
     "signal": {
@@ -2056,6 +2056,11 @@
         "url": "https://www.laconventioncenter.com/events/",
         "type": "html",
         "fetched_at": "2026-11-16T00:28:07.880Z"
+      },
+      {
+        "url": "https://www.universe.com/events/collect-a-con-los-angeles-2-ca-tickets-9NVCZT?ref=ticketmaster",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.983Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -2063,15 +2068,158 @@
     "status": "active",
     "kind": "fan_con",
     "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
+      "points": 4,
+      "bars": 3,
+      "flags": [
+        "conflicting-dates"
+      ],
       "evidence": [
         {
           "label": "Venue calendar (laconventioncenter.com)",
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Ticketing listing (universe.com)",
+          "family": "universe.com",
+          "kind": "ticketing",
+          "points": 3,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a-collect-con-2026-los-angeles",
+    "name": "Collect-A-Con",
+    "start_date": "2026-12-20",
+    "end_date": "2026-12-20",
+    "dates_confirmed": false,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_S",
+    "sources": [
+      {
+        "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_S",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.983Z"
+      },
+      {
+        "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_w",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.983Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.3,
+    "status": "active",
+    "kind": "fan_con",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Ticketing listing (ticketmaster)",
+          "family": "ticketmaster",
+          "kind": "ticketing",
+          "points": 3,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2026-anaheim",
+    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
+    "start_date": "2026-12-30",
+    "end_date": "2026-12-30",
+    "dates_confirmed": false,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+    "sources": [
+      {
+        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.044Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.3,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Ticketing listing (universe.com)",
+          "family": "universe.com",
+          "kind": "ticketing",
+          "points": 3,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2027-anaheim",
+    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
+    "start_date": "2027-01-02",
+    "end_date": "2027-01-02",
+    "dates_confirmed": false,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+    "sources": [
+      {
+        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.044Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.3,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Ticketing listing (universe.com)",
+          "family": "universe.com",
+          "kind": "ticketing",
+          "points": 3,
           "seenAt": "2026-11-16"
         }
       ]
@@ -12878,6 +13026,68 @@
     }
   },
   {
+    "id": "cedia-2027-las-vegas",
+    "name": "CEDIA Expo 2027",
+    "start_date": "2027-09-07",
+    "end_date": "2027-09-10",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://expoassist.net/event/cedia-expo",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:55.414Z"
+      },
+      {
+        "url": "https://expoassist.net/event/cedia-expo",
+        "type": "aggregator",
+        "fetched_at": "2026-11-16T01:43:04.271Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (emeraldx.com)",
+          "family": "emeraldx.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        },
+        {
+          "label": "Aggregator listing (expoassist.net)",
+          "family": "expoassist.net",
+          "kind": "aggregator",
+          "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "biotechx-2027-boston",
     "name": "BioTechX USA 2027",
     "start_date": "2027-09-08",
@@ -12907,68 +13117,6 @@
       "bars": 1,
       "flags": [],
       "evidence": [
-        {
-          "label": "Aggregator listing (expoassist.net)",
-          "family": "expoassist.net",
-          "kind": "aggregator",
-          "points": 1,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "cedia-2027-las-vegas",
-    "name": "CEDIA Expo 2027",
-    "start_date": "2027-09-08",
-    "end_date": "2027-09-10",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Las Vegas Convention Center",
-    "organizer": "",
-    "topics": [
-      "Tech"
-    ],
-    "est_attendance": 15000,
-    "official_url": "http://www.emeraldx.com/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:55.414Z"
-      },
-      {
-        "url": "https://expoassist.net/event/cedia-expo",
-        "type": "aggregator",
-        "fetched_at": "2026-11-16T01:43:04.271Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.3,
-    "status": "active",
-    "kind": "expo",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-16"
-        },
-        {
-          "label": "Confirmed on the official site (emeraldx.com)",
-          "family": "emeraldx.com",
-          "kind": "official-site",
-          "points": 0,
-          "seenAt": "2026-11-15"
-        },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",

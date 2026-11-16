@@ -107,11 +107,13 @@ const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'Ju
  */
 export async function fetchSimpleviewCalendar(
   browser: BrowserFetcher, url: string, end: { year: number; month: number; day: number }, o: { maxPages?: number } = {},
-): Promise<{ items: string[]; total: number | null } | null> {
+): Promise<{ items: string[]; total: number | null; rangeApplied: boolean } | null> {
   return browser.withPage(url, async (page) => {
     await page.waitForSelector('article.convention-item')
     const endF = page.locator('.filter.date_end')
-    if ((await endF.count()) > 0) {
+    const wanted = `${end.month}/${end.day}/${end.year}`
+    let rangeApplied = (await endF.count()) === 0
+    for (let attempt = 0; attempt < 3 && !rangeApplied; attempt++) {
       await endF.locator('input').click()
       const cals = endF.locator('.vdp-datepicker__calendar')
       // The picker keeps separate (sometimes hidden) day, month and year views; dispatching clicks reaches all of them.
@@ -123,11 +125,13 @@ export async function fetchSimpleviewCalendar(
       await page.getByRole('button', { name: 'Search' }).last().click()
       await page.waitForFunction(() => /of\s+\d+/.test(document.querySelector('li.info')?.textContent ?? ''), undefined, { timeout: 10000 }).catch(() => {})
       await page.waitForTimeout(1500)
+      // The picker occasionally ignores the clicks; only trust the result when the end date field shows the date we set.
+      rangeApplied = (await endF.locator('input').inputValue().catch(() => '')) === wanted
     }
     const info = (await page.locator('li.info').first().textContent().catch(() => '')) ?? ''
     const total = /of\s+(\d+)/.exec(info)?.[1]
     const items = await collectPaged(page, { itemSelector: 'article.convention-item', nextSelector: '.pager a.nxt', idAttr: 'data-recid', maxPages: o.maxPages ?? 40 })
-    return { items, total: total ? Number(total) : null }
+    return { items, total: total ? Number(total) : null, rangeApplied }
   })
 }
 
