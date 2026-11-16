@@ -89,12 +89,20 @@ export function mergeIntoExisting(existing: ConfEvent[], fresh: ConfEvent[], opt
   return { events, quarantined, archived }
 }
 
-export function writeEventsAtomic(path: string, events: ConfEvent[]): void {
+export function validateEvents(events: ConfEvent[]): void {
   events.forEach((e, i) => {
     const r = EventSchema.safeParse(e)
     if (!r.success) throw new Error(`Refusing to write: event #${i} invalid: ${r.error.issues[0]?.message}`)
   })
+}
+
+export function atomicWrite(path: string, text: string): void {
   const tmp = `${path}.tmp-${process.pid}`
-  writeFileSync(tmp, JSON.stringify(events, null, 2) + '\n')
+  writeFileSync(tmp, text)
   renameSync(tmp, path)
+}
+
+export function writeEventsAtomic(path: string, events: ConfEvent[]): void {
+  validateEvents(events)
+  atomicWrite(path, JSON.stringify(events, null, 2) + '\n')
 }
