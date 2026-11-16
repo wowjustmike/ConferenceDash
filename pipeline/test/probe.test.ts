@@ -25,16 +25,25 @@ test('HTTP 403/429 -> blocked: bot protection, browser never used', async () => 
   expect(browser.render).not.toHaveBeenCalled()
   expect((await probeUrl('https://x.example/events', deps({ html: null, status: 429 }))).verdict).toBe('blocked: bot protection')
 })
-test('static JSON-LD page -> ok, kind page, entry without render, sample <= 5, browser not used', async () => {
-  const browser = noBrowser()
-  const r = await probeUrl('https://x.example/events', deps({ html: fx('event-jsonld.html'), browser }), { city: 'Denver', state: 'CO' })
+test('static JSON-LD page -> ok, kind page, entry without render, sample <= 5; no render without a browser', async () => {
+  const r = await probeUrl('https://x.example/events', deps({ html: fx('event-jsonld.html') }), { city: 'Denver', state: 'CO' })
   expect(r.verdict).toBe('ok')
   expect(r.entry).toMatchObject({ id: 'x', kind: 'page', type: 'html', url: 'https://x.example/events', city: 'Denver', state: 'CO' })
   expect(r.entry).not.toHaveProperty('render')
   expect(r.sample.length).toBeLessThanOrEqual(5)
   expect(r.sample.length).toBeGreaterThan(0)
   expect(r.usedBrowser).toBe(false)
-  expect(browser.render).not.toHaveBeenCalled()
+})
+test('with a browser, a static JSON-LD page is rendered anyway (JSON-LD is often a partial list); page stays when the render adds nothing', async () => {
+  const browser = { render: vi.fn(async () => ({ html: fx('event-jsonld.html'), text: '', finalUrl: 'https://x.example/events' })), withPage: vi.fn(async () => null) }
+  const r = await probeUrl('https://x.example/events', deps({ html: fx('event-jsonld.html'), browser }))
+  expect(browser.render).toHaveBeenCalledTimes(1)
+  expect(r.entry).toMatchObject({ kind: 'page' })
+  expect(r.entry).not.toHaveProperty('render')
+  // A static platform page is not re-rendered for detection.
+  const browser2 = { render: vi.fn(async () => null), withPage: vi.fn(async () => null) }
+  await probeUrl('https://x.example/events', deps({ html: fx('simpleview-items.html') + '<div class="filter date_end"></div>', browser: browser2 }))
+  expect(browser2.render).not.toHaveBeenCalled()
 })
 test('script-filled list -> browser render, then cards detection', async () => {
   const browser = { render: vi.fn(async () => ({ html: fx('cards-time.html'), text: '', finalUrl: 'https://x.example/events' })), withPage: vi.fn(async () => null) }

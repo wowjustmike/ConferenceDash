@@ -26,7 +26,7 @@ export interface ProbeResult {
 }
 
 const BLOCKED_STATUS = new Set([401, 403, 429, 503])
-const MIN_COUNT = 3
+const PLATFORM = new Set<Detection['kind']>(['loadmore', 'simpleview', 'simpleview-range', 'datatable'])
 
 /** Registry id from a host: `www.denverconvention.com` -> `denverconvention`, `events.visitphoenix.org` -> `events-visitphoenix`. */
 export function entryId(url: string): string {
@@ -74,14 +74,16 @@ export async function probeUrl(url: string, deps: ProbeDeps, meta: ProbeMeta = {
   const found = detectCalendar(html, url)
   let best = found[0]
   let usedBrowser = false
-  // Render when the static page is thin, or when any platform fingerprint is present: its list is filled by script and pages further than any JSON-LD on the page.
-  if ((best.count < MIN_COUNT || found.some((d) => d.needsBrowser && d.kind !== 'none')) && deps.browser) {
+  // Static HTML is only trusted when it already shows a platform list with items. Everything else is rendered: JSON-LD on a
+  // calendar page is often just the featured subset, and script-filled lists have no items until they run.
+  const platformWithItems = PLATFORM.has(best.kind) && best.count > 0
+  if (deps.browser && !platformWithItems) {
     const r = await deps.browser.render(url, { scrolls: 3 })
     if (r) {
       usedBrowser = true
       html = r.html
       const rendered = detectCalendar(html, url)[0]
-      if (rendered.kind !== 'none') best = rendered
+      if (rendered.kind !== 'none' && (PLATFORM.has(rendered.kind) || rendered.count >= best.count)) best = rendered
     }
   }
   if (best.kind === 'none') return { ...base, usedBrowser, detection: best }
