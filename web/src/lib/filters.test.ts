@@ -75,3 +75,17 @@ test('sortEvents', () => {
   const d = sortEvents([ev({ id: 'late', start_date: '2027-05-01', end_date: '2027-05-02' }), lv], 'date')
   expect(d[0].id).toBe('lv-tech')
 })
+
+const withBars = (id: string, bars: 1 | 2 | 3, o: Partial<ConfEvent> = {}) => ev({ id, signal: { points: bars, bars, flags: [], evidence: [] }, ...o } as Partial<ConfEvent>)
+test('minSignal keeps only events with at least that many bars (missing signal counts as 1)', () => {
+  const list = [withBars('b3', 3), withBars('b2', 2), withBars('b1', 1), ev({ id: 'none' })]
+  expect(applyFilters(list, F({ minSignal: 3 }), today).map((e) => e.id)).toEqual(['b3'])
+  expect(applyFilters(list, F({ minSignal: 2 }), today).map((e) => e.id).sort()).toEqual(['b2', 'b3'])
+  expect(applyFilters(list, F({ minSignal: 1 }), today)).toHaveLength(4)
+})
+test('sortEvents by signal puts stronger first, date breaks ties', () => {
+  const a = withBars('a', 2, { start_date: '2027-05-01', end_date: '2027-05-02' })
+  const b = withBars('b', 3, { start_date: '2027-09-01', end_date: '2027-09-02' })
+  const c = withBars('c', 3, { start_date: '2027-02-01', end_date: '2027-02-02' })
+  expect(sortEvents([a, b, c], 'signal').map((e) => e.id)).toEqual(['c', 'b', 'a'])
+})

@@ -120,3 +120,38 @@ test('mixed data: only sample rows are tagged and the footer counts them; real-o
   await screen.findByRole('heading', { name: '1 conference' })
   expect(screen.queryByText(/sample/i)).toBeNull()
 })
+
+const signal3 = { points: 3, bars: 3, flags: [], evidence: [{ label: 'Confirmed on the official site (ces.tech)', family: 'ces.tech', kind: 'official-site', points: 3, seenAt: '2026-11-10' }] }
+const withSignal = () => [{ ...raw[0], id: 'sig3', name: 'Sig Three', signal: signal3 }, ...raw]
+
+test('rows show signal bars (1 by default, 3 when the data says so)', async () => {
+  render(<App today={today} load={() => Promise.resolve(withSignal())} />)
+  await screen.findByRole('heading', { name: '25 conferences' })
+  const rows = screen.getAllByTestId('event-row')
+  const row = rows.find((r) => within(r).queryByText('Sig Three'))!
+  expect(within(row).getByRole('img', { name: /Signal strength 3 of 3/ })).toBeInTheDocument()
+  expect(within(rows.find((r) => within(r).queryByText('CES 2027'))!).getByRole('img', { name: /Signal strength 1 of 3/ })).toBeInTheDocument()
+})
+test('"Confirmed" signal filter keeps only 3-bar events and shows a chip', async () => {
+  render(<App today={today} load={() => Promise.resolve(withSignal())} />)
+  await screen.findByRole('heading', { name: '25 conferences' })
+  await userEvent.click(screen.getByRole('button', { name: /Confirmed \(3 bars\)/ }))
+  expect(screen.getByRole('heading', { name: '1 conference' })).toBeInTheDocument()
+  expect(window.location.search).toContain('signal=3')
+  await userEvent.click(within(screen.getByTestId('active-chips')).getByRole('button', { name: /Remove Signal 3\+ bars/ }))
+  expect(screen.getByRole('heading', { name: '25 conferences' })).toBeInTheDocument()
+})
+test('sorting by signal puts the strongest first', async () => {
+  render(<App today={today} load={() => Promise.resolve(withSignal())} />)
+  await screen.findByRole('heading', { name: '25 conferences' })
+  await userEvent.click(screen.getByRole('button', { name: 'Signal' }))
+  expect(within(screen.getAllByTestId('event-row')[0]).getByText('Sig Three')).toBeInTheDocument()
+})
+test('the drawer explains the evidence behind the bars', async () => {
+  render(<App today={today} load={() => Promise.resolve(withSignal())} />)
+  await screen.findByRole('heading', { name: '25 conferences' })
+  await userEvent.click(within(screen.getAllByTestId('event-row').find((r) => within(r).queryByText('Sig Three'))!).getByText('Sig Three'))
+  const dlg = screen.getByRole('dialog', { name: 'Sig Three' })
+  expect(within(dlg).getByText('Confirmed on the official site (ces.tech)')).toBeInTheDocument()
+  expect(within(dlg).getByText('+3')).toBeInTheDocument()
+})

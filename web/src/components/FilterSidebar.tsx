@@ -106,6 +106,13 @@ export function FilterSidebar({ events, filters: f, onChange, today }: Props) {
           ))}
         </div>
       </section>
+      <section><h3>Signal strength</h3>
+        <div className="chip-grid">
+          {([[1, 'Any'], [2, '2+ bars'], [3, 'Confirmed (3 bars)']] as [1 | 2 | 3, string][]).map(([n, label]) => (
+            <button key={n} className={`chip ${f.minSignal === n ? 'active' : ''}`} aria-pressed={f.minSignal === n} onClick={() => onChange({ ...f, minSignal: n })}>{label}</button>
+          ))}
+        </div>
+      </section>
     </aside>
   )
 }

@@ -12,6 +12,7 @@ const DROPS: { label: string; apply: (f: Filters) => Filters; active: (f: Filter
   { label: 'venue', apply: (f) => ({ ...f, venues: [] }), active: (f) => f.venues.length > 0 },
   { label: 'topic', apply: (f) => ({ ...f, topics: [] }), active: (f) => f.topics.length > 0 },
   { label: 'organizer', apply: (f) => ({ ...f, organizer: '' }), active: (f) => !!f.organizer },
+  { label: 'signal', apply: (f) => ({ ...f, minSignal: 1 }), active: (f) => f.minSignal > 1 },
   { label: 'attendance', apply: (f) => ({ ...f, sizes: [] }), active: (f) => f.sizes.length > 0 },
 ]
 

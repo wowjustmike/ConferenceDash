@@ -3,7 +3,7 @@ import L from 'leaflet'
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import { formatRange } from '../lib/dates'
 import { groupByCity } from '../lib/mapGroups'
-import { size } from './ResultsList'
+import { Bars, size } from './ResultsList'
 import type { ConfEvent } from '../lib/schema'
 
 interface Props { events: ConfEvent[]; onSelect: (e: ConfEvent) => void }
@@ -39,7 +39,7 @@ export function MapView({ events, onSelect }: Props) {
             {sel.events.map((e) => (
               <button key={e.id} className="row" onClick={() => onSelect(e)}>
                 <span><strong>{e.name}</strong><br /><small className="muted">{formatRange(e.start_date, e.end_date)}{e.dates_confirmed ? '' : ' · Dates TBC'}</small></span>
-                <span>{size(e.est_attendance)}</span>
+                <span><Bars ev={e} /> {size(e.est_attendance)}</span>
               </button>
             ))}
           </div>

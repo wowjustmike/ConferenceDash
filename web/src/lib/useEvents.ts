@@ -4,9 +4,23 @@ import { parseEvents, type ConfEvent } from './schema'
 export type Loader = () => Promise<unknown>
 
 export const defaultLoad: Loader = async () => {
-  const res = await fetch(`${import.meta.env.BASE_URL}events.json`)
+  const base = import.meta.env.BASE_URL
+  const res = await fetch(`${base}events.json`)
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  return res.json()
+  const data: unknown = await res.json()
+  // A large export is split into monthly shards listed in a manifest: { shards: ['events/2027-01.json', ...] }.
+  if (data && typeof data === 'object' && !Array.isArray(data) && Array.isArray((data as { shards?: unknown }).shards)) {
+    const parts = await Promise.all(
+      ((data as { shards: string[] }).shards).map(async (s) => {
+        const r = await fetch(`${base}${s}`)
+        if (!r.ok) throw new Error(`HTTP ${r.status} loading ${s}`)
+        const j: unknown = await r.json()
+        return Array.isArray(j) ? j : []
+      }),
+    )
+    return parts.flat()
+  }
+  return data
 }
 
 export function useEvents(load: Loader = defaultLoad) {

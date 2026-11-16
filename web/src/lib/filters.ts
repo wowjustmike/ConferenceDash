@@ -1,8 +1,9 @@
 import { overlaps, presetRange, type Preset } from './dates'
+import { signalFor } from './signal'
 import type { ConfEvent, Topic } from './schema'
 
 export type SizeBand = 'u10k' | '10-30k' | '30-75k' | '75k+'
-export type SortBy = 'date' | 'name' | 'attendance'
+export type SortBy = 'date' | 'name' | 'attendance' | 'signal'
 export type Facet = 'state' | 'city' | 'venue' | 'topic'
 
 export interface Filters {
@@ -16,10 +17,11 @@ export interface Filters {
   topics: Topic[]
   organizer: string
   sizes: SizeBand[]
+  minSignal: 1 | 2 | 3
 }
 
 export const EMPTY_FILTERS: Filters = {
-  q: '', preset: 'next12', states: [], cities: [], venues: [], topics: [], organizer: '', sizes: [],
+  q: '', preset: 'next12', states: [], cities: [], venues: [], topics: [], organizer: '', sizes: [], minSignal: 1,
 }
 
 function inBand(n: number, b: SizeBand): boolean {
@@ -52,6 +54,7 @@ function matches(e: ConfEvent, f: Filters, today: Date, skip?: Facet): boolean {
   if (skip !== 'venue' && f.venues.length && !f.venues.includes(e.venue)) return false
   if (skip !== 'topic' && f.topics.length && !e.topics.some((t) => f.topics.includes(t))) return false
   if (f.organizer && !e.organizer.toLowerCase().includes(f.organizer.toLowerCase())) return false
+  if (f.minSignal > 1 && signalFor(e).bars < f.minSignal) return false
   if (f.sizes.length) {
     if (e.est_attendance === null) return false
     const n = e.est_attendance
@@ -82,6 +85,7 @@ export function citiesForStates(events: ConfEvent[], states: string[]): string[]
 
 export function sortEvents(events: ConfEvent[], by: SortBy): ConfEvent[] {
   const l = [...events]
+  if (by === 'signal') return l.sort((a, b) => signalFor(b).bars - signalFor(a).bars || a.start_date.localeCompare(b.start_date) || a.name.localeCompare(b.name))
   if (by === 'name') return l.sort((a, b) => a.name.localeCompare(b.name))
   if (by === 'attendance')
     return l.sort((a, b) => (b.est_attendance ?? -1) - (a.est_attendance ?? -1) || a.start_date.localeCompare(b.start_date))

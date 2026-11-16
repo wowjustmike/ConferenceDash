@@ -8,6 +8,14 @@ export type Topic = (typeof TOPICS)[number]
 
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/)
 
+export const SignalSchema = z.object({
+  points: z.number(),
+  bars: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+  evidence: z.array(z.object({ label: z.string(), family: z.string(), kind: z.string(), points: z.number(), seenAt: z.string() })),
+  flags: z.array(z.string()),
+})
+export type Signal = z.infer<typeof SignalSchema>
+
 export const EventSchema = z
   .object({
     id: z.string().min(1),
@@ -26,6 +34,8 @@ export const EventSchema = z
     last_verified: isoDate,
     confidence: z.number().min(0).max(1),
     status: z.enum(['active', 'cancelled', 'past']),
+    signal: SignalSchema.optional(),
+    kind: z.string().optional(),
   })
   .refine((e) => e.end_date >= e.start_date, { message: 'end_date before start_date' })
 

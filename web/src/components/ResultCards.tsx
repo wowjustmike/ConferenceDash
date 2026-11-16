@@ -1,5 +1,5 @@
 import { formatRange } from '../lib/dates'
-import { VerifiedBadge, size, stateAbbr } from './ResultsList'
+import { Bars, VerifiedBadge, size, stateAbbr } from './ResultsList'
 import { isSample } from '../lib/sample'
 import type { ConfEvent } from '../lib/schema'
 
@@ -16,6 +16,7 @@ export function ResultCards({ events, today, onSelect }: Props) {
           <div className="bottom">
             {e.topics.map((t) => <span key={t} className="tag">{t}</span>)}
             {isSample(e) && <span className="tag sample">Sample</span>}
+            <Bars ev={e} />
             <VerifiedBadge ev={e} today={today} />
             <a style={{ marginLeft: 'auto' }} href={e.official_url} target="_blank" rel="noopener noreferrer" onClick={(k) => k.stopPropagation()}>Site ↗</a>
           </div>

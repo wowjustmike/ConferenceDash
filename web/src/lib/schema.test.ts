@@ -51,3 +51,19 @@ test('non-http(s) official_url is rejected', () => {
     expect(parseEvents([{ ...base, official_url: u }]).skipped).toBe(1)
   expect(parseEvents([{ ...base, official_url: 'http://ok.example' }]).skipped).toBe(0)
 })
+
+const sig = { points: 3, bars: 3, flags: [], evidence: [{ label: 'x', family: 'f', kind: 'official-site', points: 3, seenAt: '2026-11-10' }] }
+test('events without signal/kind still parse (backward compatible)', () => {
+  expect(parseEvents([base]).events[0].signal).toBeUndefined()
+})
+test('valid signal and kind are kept', () => {
+  const e = parseEvents([{ ...base, signal: sig, kind: 'trade_show' }]).events[0]
+  expect(e.signal?.bars).toBe(3)
+  expect(e.kind).toBe('trade_show')
+})
+test('an invalid signal skips only that event', () => {
+  vi.spyOn(console, 'warn').mockImplementation(() => {})
+  const r = parseEvents([{ ...base, id: 'good' }, { ...base, id: 'bad', signal: { ...sig, bars: 7 } }])
+  expect(r.events.map((e) => e.id)).toEqual(['good'])
+  expect(r.skipped).toBe(1)
+})

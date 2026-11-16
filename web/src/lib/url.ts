@@ -17,6 +17,7 @@ export function filtersToParams(f: Filters): URLSearchParams {
   }
   for (const k of LISTS) for (const v of f[k]) p.append(k, v)
   if (f.organizer) p.set('organizer', f.organizer)
+  if (f.minSignal > 1) p.set('signal', String(f.minSignal))
   return p
 }
 
@@ -33,5 +34,6 @@ export function paramsToFilters(p: URLSearchParams): Filters {
     topics: p.getAll('topics').filter((t): t is Topic => (TOPICS as readonly string[]).includes(t)),
     organizer: p.get('organizer') ?? '',
     sizes: p.getAll('sizes').filter((s): s is SizeBand => (SIZES as string[]).includes(s)),
+    minSignal: ({ '2': 2, '3': 3 } as Record<string, 2 | 3>)[p.get('signal') ?? ''] ?? 1,
   }
 }

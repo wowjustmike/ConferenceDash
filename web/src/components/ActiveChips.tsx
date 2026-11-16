@@ -8,7 +8,7 @@ interface Props { filters: Filters; onChange: (f: Filters) => void }
 
 export function activeFilterCount(f: Filters): number {
   return (
-    f.states.length + f.cities.length + f.venues.length + f.topics.length + f.sizes.length +
+    f.states.length + f.cities.length + f.venues.length + f.topics.length + f.sizes.length + (f.minSignal > 1 ? 1 : 0) +
     (f.q ? 1 : 0) + (f.organizer ? 1 : 0) + (f.preset !== EMPTY_FILTERS.preset ? 1 : 0)
   )
 }
@@ -22,6 +22,7 @@ export function ActiveChips({ filters: f, onChange }: Props) {
   list('states'); list('cities'); list('venues'); list('topics'); list('sizes')
   if (f.preset !== EMPTY_FILTERS.preset)
     chips.push({ key: 'preset', label: PRESET_LABEL[f.preset], remove: () => onChange({ ...f, preset: EMPTY_FILTERS.preset, from: undefined, to: undefined }) })
+  if (f.minSignal > 1) chips.push({ key: 'signal', label: `Signal ${f.minSignal}+ bars`, remove: () => onChange({ ...f, minSignal: 1 }) })
   if (f.q) chips.push({ key: 'q', label: `“${f.q}”`, remove: () => onChange({ ...f, q: '' }) })
   if (f.organizer) chips.push({ key: 'org', label: f.organizer, remove: () => onChange({ ...f, organizer: '' }) })
   return (

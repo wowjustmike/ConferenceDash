@@ -2,6 +2,8 @@ import { formatRange, startLabel } from '../lib/dates'
 import { badgesFor } from '../lib/badges'
 import type { SortBy } from '../lib/filters'
 import { isSample } from '../lib/sample'
+import { signalFor } from '../lib/signal'
+import { SignalBars } from './SignalBars'
 import type { ConfEvent } from '../lib/schema'
 
 interface Props { events: ConfEvent[]; today: Date; sort: SortBy; onSort: (s: SortBy) => void; onSelect: (e: ConfEvent) => void; selectedId?: string }
@@ -9,6 +11,11 @@ interface Props { events: ConfEvent[]; today: Date; sort: SortBy; onSort: (s: So
 export function size(n: number | null): string {
   if (n === null) return '—'
   return n >= 1000 ? `${Math.round(n / 1000)}K` : String(n)
+}
+
+export function Bars({ ev }: { ev: ConfEvent }) {
+  const s = signalFor(ev)
+  return <SignalBars bars={s.bars} evidence={s.evidence} flags={s.flags} />
 }
 
 export function VerifiedBadge({ ev, today }: { ev: ConfEvent; today: Date }) {
@@ -29,9 +36,9 @@ export function ResultsList({ events, today, sort, onSort, onSelect, selectedId 
       <div className="sortbar">
         <span className="muted">Sort by</span>
         <div className="seg">
-          {(['date', 'name', 'attendance'] as SortBy[]).map((s) => (
+          {(['date', 'name', 'attendance', 'signal'] as SortBy[]).map((s) => (
             <button key={s} className={sort === s ? 'on' : ''} aria-pressed={sort === s} onClick={() => onSort(s)}>
-              {s === 'date' ? 'Date' : s === 'name' ? 'Name' : 'Attendance'}
+              {s === 'date' ? 'Date' : s === 'name' ? 'Name' : s === 'attendance' ? 'Attendance' : 'Signal'}
             </button>
           ))}
         </div>
@@ -55,7 +62,7 @@ export function ResultsList({ events, today, sort, onSort, onSelect, selectedId 
               <td><strong>{e.city}, {stateAbbr(e.state)}</strong><div className="muted">{e.venue}</div></td>
               <td>{e.organizer}</td>
               <td className="num"><strong>{size(e.est_attendance)}</strong></td>
-              <td className="ver"><VerifiedBadge ev={e} today={today} /></td>
+              <td className="ver"><Bars ev={e} /> <VerifiedBadge ev={e} today={today} /></td>
               <td><a href={e.official_url} target="_blank" rel="noopener noreferrer" onClick={(ev) => ev.stopPropagation()}>Official site ↗</a></td>
             </tr>
           ))}

@@ -174,3 +174,10 @@ a { color: var(--accent); text-decoration: none; }
 }
 
 .tag.sample { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); }
+
+.signal { vertical-align: -2px; margin-right: 4px; }
+.signal rect.on { fill: var(--green); }
+.signal rect.off { fill: var(--border); }
+.evidence { list-style: none; margin: 0; padding: 0; }
+.evidence li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--border); }
+.evidence li.warn { color: var(--amber); }

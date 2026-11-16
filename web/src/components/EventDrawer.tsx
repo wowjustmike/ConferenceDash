@@ -2,7 +2,8 @@ import { useEffect, useRef } from 'react'
 import { daysUntil, formatRange, parseLocalDate, startLabel } from '../lib/dates'
 import { useDialogFocus } from '../lib/useDialogFocus'
 import { downloadIcs } from '../lib/ics'
-import { VerifiedBadge, size } from './ResultsList'
+import { Bars, VerifiedBadge, size } from './ResultsList'
+import { LEVEL_LABEL, signalFor } from '../lib/signal'
 import type { ConfEvent } from '../lib/schema'
 
 interface Props { event: ConfEvent; events: ConfEvent[]; today: Date; onClose: () => void; onSelect: (e: ConfEvent) => void }
@@ -52,7 +53,16 @@ export function EventDrawer({ event: e, events, today, onClose, onSelect }: Prop
           <dt>Organizer</dt><dd>{e.organizer}</dd>
           <dt>Expected attendance</dt><dd>{e.est_attendance === null ? '—' : `~${e.est_attendance.toLocaleString('en-US')} attendees`}</dd>
           <dt>Last verified</dt><dd><VerifiedBadge ev={e} today={today} /></dd>
+          <dt>Signal</dt><dd><Bars ev={e} /> <strong>{LEVEL_LABEL[signalFor(e).bars]}</strong></dd>
         </dl>
+        <h4>Why this rating</h4>
+        {signalFor(e).evidence.length ? (
+          <ul className="evidence">
+            {signalFor(e).evidence.map((x) => <li key={`${x.family}-${x.kind}`}><span>{x.label}</span><span className="muted">+{x.points}</span></li>)}
+            {signalFor(e).flags.includes('conflicting-dates') && <li className="warn">Sources disagree on the dates</li>}
+            {signalFor(e).flags.includes('stale') && <li className="warn">Not re-confirmed in 60+ days</li>}
+          </ul>
+        ) : <p className="muted">No evidence recorded yet.</p>}
         <h4>More at {e.venue}</h4>
         {atVenue.length ? <Related list={atVenue} testid="related-venue" /> : <p className="muted">No other events at this venue in the next 12 months.</p>}
         <h4>More from {e.organizer}</h4>
