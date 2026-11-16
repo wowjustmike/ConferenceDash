@@ -71,15 +71,17 @@ export async function probeUrl(url: string, deps: ProbeDeps, meta: ProbeMeta = {
     const status = deps.lastStatus()
     return { ...base, verdict: status !== null && BLOCKED_STATUS.has(status) ? 'blocked: bot protection' : 'unreachable', note: status !== null ? `HTTP ${status}` : undefined }
   }
-  let best = detectCalendar(html, url)[0]
+  const found = detectCalendar(html, url)
+  let best = found[0]
   let usedBrowser = false
-  if ((best.count < MIN_COUNT || best.needsBrowser) && deps.browser) {
+  // Render when the static page is thin, or when any platform fingerprint is present: its list is filled by script and pages further than any JSON-LD on the page.
+  if ((best.count < MIN_COUNT || found.some((d) => d.needsBrowser && d.kind !== 'none')) && deps.browser) {
     const r = await deps.browser.render(url, { scrolls: 3 })
     if (r) {
       usedBrowser = true
       html = r.html
       const rendered = detectCalendar(html, url)[0]
-      if (rendered.count >= best.count || best.kind === 'none') best = rendered
+      if (rendered.kind !== 'none') best = rendered
     }
   }
   if (best.kind === 'none') return { ...base, usedBrowser, detection: best }

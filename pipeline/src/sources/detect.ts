@@ -10,6 +10,9 @@ export interface Detection { kind: DetectedKind; count: number; evidence: string
 
 /** Families in priority order; ties on count resolve in this order. */
 const ORDER: DetectedKind[] = ['page', 'ical', 'loadmore', 'simpleview', 'simpleview-range', 'datatable', 'cards', 'none']
+/** Platform readers paginate the whole calendar, so a platform with items outranks a JSON-LD or card list (often only the first page). */
+const PLATFORM = new Set<DetectedKind>(['loadmore', 'simpleview', 'simpleview-range', 'datatable'])
+const rank = (d: Detection) => (PLATFORM.has(d.kind) && d.count > 0 ? 1 : 0)
 
 export function icalLink(html: string, base: string): string | null {
   const $ = cheerio.load(html)
@@ -109,6 +112,6 @@ export function detectCalendar(html: string, url: string): Detection[] {
   const cards = deriveCards(html)
   if (cards) out.push({ kind: 'cards', count: cards.count, evidence: `${cards.count} repeated ${cards.config.item} cards`, needsBrowser: false, cards: cards.config })
   if (out.length === 0) return [{ kind: 'none', count: 0, evidence: 'no calendar markup found', needsBrowser: true }]
-  return out.sort((a, b) => b.count - a.count || ORDER.indexOf(a.kind) - ORDER.indexOf(b.kind))
+  return out.sort((a, b) => rank(b) - rank(a) || b.count - a.count || ORDER.indexOf(a.kind) - ORDER.indexOf(b.kind))
 }
 

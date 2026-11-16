@@ -42,3 +42,11 @@ test('a bigger repeated group without links loses to a smaller linked group', ()
 test('nothing recognizable -> none', () => {
   expect(detectCalendar('<html><body><p>Hello</p></body></html>', 'https://x.example/')).toEqual([{ kind: 'none', count: 0, evidence: 'no calendar markup found', needsBrowser: true }])
 })
+test('a platform fingerprint outranks a smaller or equal JSON-LD list on the same page (JSON-LD is only the first page)', () => {
+  const page = fx('event-jsonld.html').replace('</html>', '') + fx('simpleview-items.html') + '<div class="filter date_end"></div></html>'
+  const [d] = detectCalendar(page, 'https://x.example/calendar')
+  expect(d.kind).toBe('simpleview')
+  // ...but a JSON-LD list that is clearly the full calendar still wins over an empty platform shell.
+  const many = '<html>' + Array.from({ length: 12 }, (_, i) => `<script type="application/ld+json">{"@type":"Event","name":"E${i}","startDate":"2027-05-0${(i % 9) + 1}"}</script>`).join('') + '<div class="filter date_end"></div></html>'
+  expect(detectCalendar(many, 'https://x.example/')[0].kind).toBe('page')
+})

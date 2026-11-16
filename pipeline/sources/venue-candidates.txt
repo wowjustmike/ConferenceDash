@@ -1,0 +1,52 @@
+# US convention centers and bureau calendars to probe: url | city | state | venue
+# Probe with: npm run probe -- --list sources/venue-candidates.txt   (then add sites one at a time with --add after reviewing the sample)
+# A URL here is a candidate only; nothing enters registry.yaml without a probe verdict of ok and a reviewed sample.
+
+https://www.grbhouston.com/events/ | Houston | TX | George R. Brown Convention Center
+https://denverconvention.com/events/ | Denver | CO | Colorado Convention Center
+https://eventsdc.com/events | Washington | DC | Walter E. Washington Convention Center
+https://visitsandiego.com/events/ | San Diego | CA | San Diego Convention Center
+https://www.nashvillemusiccitycenter.com/events | Nashville | TN | Music City Center
+https://www.signatureboston.com/events | Boston | MA | Boston Convention & Exhibition Center
+https://www.gwcca.org/events | Atlanta | GA | Georgia World Congress Center
+https://www.phoenixconventioncenter.com/events | Phoenix | AZ | Phoenix Convention Center
+https://seattleconventioncenter.com/events | Seattle | WA | Seattle Convention Center
+https://www.mccno.com/events/ | New Orleans | LA | New Orleans Ernest N. Morial Convention Center
+https://www.icclos.com/events/ | Indianapolis | IN | Indiana Convention Center
+https://www.paconvention.com/events | Philadelphia | PA | Pennsylvania Convention Center
+https://www.saltpalace.com/events/ | Salt Lake City | UT | Salt Palace Convention Center
+https://www.kcconvention.com/events | Kansas City | MO | Kansas City Convention Center
+https://www.minneapolisconventioncenter.com/events | Minneapolis | MN | Minneapolis Convention Center
+https://www.charlotteconventionctr.com/events/ | Charlotte | NC | Charlotte Convention Center
+https://www.sahbgcc.com/events | San Antonio | TX | Henry B. Gonzalez Convention Center
+https://www.austinconventioncenter.com/events | Austin | TX | Austin Convention Center
+https://www.huntingtonplacedetroit.com/events | Detroit | MI | Huntington Place
+https://www.miamibeachconvention.com/events/ | Miami Beach | FL | Miami Beach Convention Center
+https://www.ftlauderdalecc.com/events/ | Fort Lauderdale | FL | Broward County Convention Center
+https://www.tampaconventioncenter.com/events | Tampa | FL | Tampa Convention Center
+https://columbusconventions.com/events/ | Columbus | OH | Greater Columbus Convention Center
+https://www.clevelandconventions.com/events/ | Cleveland | OH | Huntington Convention Center of Cleveland
+https://www.pittsburghcc.com/events/ | Pittsburgh | PA | David L. Lawrence Convention Center
+https://www.bccenter.org/events | Baltimore | MD | Baltimore Convention Center
+https://www.kyconvention.com/kicc/events | Louisville | KY | Kentucky International Convention Center
+https://www.duke-energycenter.com/events/ | Cincinnati | OH | Duke Energy Convention Center
+https://www.bairdcenter.com/events | Milwaukee | WI | Baird Center
+https://www.explorestlouis.com/americas-center/events/ | St. Louis | MO | America's Center
+https://www.okcconventioncenter.com/events | Oklahoma City | OK | Oklahoma City Convention Center
+https://www.raleighconvention.com/events | Raleigh | NC | Raleigh Convention Center
+https://www.oregoncc.org/en/events | Portland | OR | Oregon Convention Center
+https://www.safecreditunionconventioncenter.com/events | Sacramento | CA | SAFE Credit Union Convention Center
+https://www.sanjose.org/events | San Jose | CA | San Jose McEnery Convention Center
+https://www.longbeachcc.com/events/ | Long Beach | CA | Long Beach Convention & Entertainment Center
+https://www.rscva.com/events/ | Reno | NV | Reno-Sparks Convention Center
+https://www.albuquerquecc.com/events | Albuquerque | NM | Albuquerque Convention Center
+https://www.chihealthcenteromaha.com/events | Omaha | NE | CHI Health Center Omaha
+https://www.hawaiiconvention.com/events | Honolulu | HI | Hawaii Convention Center
+
+# rejected (do not re-probe): robots.txt or bot protection, recorded in docs/SOURCING.md
+# https://www.anaheimconventioncenter.com/  (robots.txt disallows)
+# https://www.iaee.com/  (robots.txt disallows)
+# https://tech.vegas/  (robots.txt disallows)
+# https://www.javitscenter.com/events  (security checkpoint / 429)
+# https://www.tradeshowz.com/  (bot protection)
+# https://www.thetradeshowcalendar.com/  (robots.txt disallows the search page)

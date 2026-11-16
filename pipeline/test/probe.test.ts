@@ -45,6 +45,14 @@ test('script-filled list -> browser render, then cards detection', async () => {
   expect(r.entry).toMatchObject({ kind: 'cards', render: true, item: '.ev-card', title: '.ev-card__title', date: '.ev-card__when' })
   expect(r.sample[0]).toMatchObject({ name: 'Name 1', start_date: '2027-03-01', end_date: '2027-03-02', official_url: 'https://x.example/e/1' })
 })
+test('a JSON-LD subset next to an empty platform shell -> render, and the platform reader wins', async () => {
+  const shell = fx('event-jsonld.html').replace('</html>', '<div class="filter date_end"></div></html>')
+  const browser = { render: vi.fn(async () => ({ html: fx('simpleview-items.html') + '<div class="filter date_end"></div>', text: '', finalUrl: 'https://x.example/calendar' })), withPage: vi.fn(async () => null) }
+  const r = await probeUrl('https://x.example/calendar', deps({ html: shell, browser }), { city: 'Las Vegas', state: 'NV' })
+  expect(r.usedBrowser).toBe(true)
+  expect(r.entry).toMatchObject({ kind: 'simpleview', end_date: '2027-12-31', city: 'Las Vegas' })
+  expect(r.count).toBeGreaterThan(0)
+})
 test('cards without years -> needs reader', async () => {
   const html = '<div class="c"><span class="t">X</span><span class="d">Nov 20 - 29</span><a href="/x">x</a></div>'.repeat(3)
   const r = await probeUrl('https://x.example/', deps({ html }))
