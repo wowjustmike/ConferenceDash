@@ -57,7 +57,8 @@
     "venue": "MGM Grand Hotel and Casino",
     "organizer": "",
     "topics": [
-      "Other"
+      "Finance",
+      "Tech"
     ],
     "est_attendance": 1500,
     "official_url": "http://www.nmhc.org/",
@@ -738,47 +739,6 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "angeles-auto-los-2026-los-angeles",
-    "name": "Los Angeles Auto Show 2026",
-    "start_date": "2026-11-20",
-    "end_date": "2026-11-29",
-    "dates_confirmed": false,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Automotive"
-    ],
-    "est_attendance": null,
-    "official_url": "https://expoassist.net/event/los-angeles-auto-show",
-    "sources": [
-      {
-        "url": "https://expoassist.net/event/los-angeles-auto-show",
-        "type": "aggregator",
-        "fetched_at": "2026-11-16T01:43:04.270Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "trade_show",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Aggregator listing (expoassist.net)",
-          "family": "expoassist.net",
-          "kind": "aggregator",
-          "points": 1,
           "seenAt": "2026-11-16"
         }
       ]
@@ -2092,54 +2052,6 @@
     }
   },
   {
-    "id": "a-collect-con-2026-los-angeles",
-    "name": "Collect-A-Con",
-    "start_date": "2026-12-20",
-    "end_date": "2026-12-20",
-    "dates_confirmed": false,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "",
-    "topics": [
-      "Entertainment"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_S",
-    "sources": [
-      {
-        "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_S",
-        "type": "api",
-        "fetched_at": "2026-11-16T02:14:49.983Z"
-      },
-      {
-        "url": "https://www.ticketmaster.com/event/Z7r9jZ1A7OJ_w",
-        "type": "api",
-        "fetched_at": "2026-11-16T02:14:49.983Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.3,
-    "status": "active",
-    "kind": "fan_con",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Ticketing listing (ticketmaster)",
-          "family": "ticketmaster",
-          "kind": "ticketing",
-          "points": 3,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
     "id": "asi-orlando-2027-orlando",
     "name": "ASI Show Orlando Expo 2027",
     "start_date": "2027-01-05",
@@ -2635,7 +2547,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Education"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/modern-language-association-annual-convention-2027",
@@ -2717,7 +2629,8 @@
     "venue": "Kay Bailey Hutchison Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Sports",
+      "Retail"
     ],
     "est_attendance": null,
     "official_url": "https://ttha.com/outdoorsextravaganza/",
@@ -2887,7 +2800,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Entertainment"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/oddities-curiosities-expo-los-angeles-2027",
@@ -3924,7 +3837,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Sports"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/the-fit-expo-los-angeles-2027",
@@ -4251,7 +4164,7 @@
     "venue": "Kay Bailey Hutchison Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.txsha.org/Convention",
@@ -4330,46 +4243,6 @@
     }
   },
   {
-    "id": "angeles-competition-ibjjf-jitsu-jiu-los-2027-los-angeles",
-    "name": "Los Angeles IBJJF Jiu Jitsu Competition",
-    "start_date": "2027-01-30",
-    "end_date": "2027-01-31",
-    "dates_confirmed": true,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.laconventioncenter.com/events/detail/los-angeles-ibjjf-jiu-jitsu-competition",
-    "sources": [
-      {
-        "url": "https://www.laconventioncenter.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T02:41:18.867Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (laconventioncenter.com)",
-          "family": "laconventioncenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
     "id": "franchise-national-2027-dallas",
     "name": "National Franchise Show",
     "start_date": "2027-01-30",
@@ -4380,7 +4253,7 @@
     "venue": "Kay Bailey Hutchison Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Finance"
     ],
     "est_attendance": null,
     "official_url": "https://www.franchiseshowinfo.com/dallas-visitor",
@@ -6197,7 +6070,7 @@
     "venue": "Kay Bailey Hutchison Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Retail"
     ],
     "est_attendance": null,
     "official_url": "http://www.dallasbridalshow.com/",
@@ -6334,7 +6207,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Retail"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/makeup-luxe-pack-in-los-angeles-2027",
@@ -6503,7 +6376,7 @@
     "venue": "Kay Bailey Hutchison Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Automotive"
     ],
     "est_attendance": null,
     "official_url": "https://www.dallasrvsupersale.com/",
@@ -6775,86 +6648,6 @@
         {
           "label": "Venue calendar (occc.net)",
           "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "classic-gymnastics-victory-victory-2027-los-angeles",
-    "name": "Victory Gymnastics: Victory Classic",
-    "start_date": "2027-02-26",
-    "end_date": "2027-02-28",
-    "dates_confirmed": true,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.laconventioncenter.com/events/detail/victory-gymnastics-victory-classic-1",
-    "sources": [
-      {
-        "url": "https://www.laconventioncenter.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T02:41:18.867Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (laconventioncenter.com)",
-          "family": "laconventioncenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "de-el-metanoia-mujeres-sembrador-2027-los-angeles",
-    "name": "El Sembrador - Metanoia de Mujeres",
-    "start_date": "2027-02-27",
-    "end_date": "2027-02-28",
-    "dates_confirmed": true,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.laconventioncenter.com/events/detail/el-sembrador-metanoia-de-mujeres",
-    "sources": [
-      {
-        "url": "https://www.laconventioncenter.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T02:41:18.867Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (laconventioncenter.com)",
-          "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-16"
@@ -7832,7 +7625,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Tech"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/ofc-2027",
@@ -8262,7 +8055,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/sbmt-world-congress-2027",
@@ -9149,7 +8942,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Entertainment"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/star-wars-celebration-2027",
@@ -10148,7 +9941,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/acp-internal-medicine-meeting-2027",
@@ -10589,7 +10382,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/american-association-of-immunologists-immunology-2027",
@@ -10718,7 +10511,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/aats-annual-mtg-2027",
@@ -11371,7 +11164,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Education"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/los-angeles-career-forum-2027",
@@ -11705,7 +11498,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/acog-annual-clinical-and-scientific-meeting",
@@ -12078,7 +11871,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Education"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/nafsa-association-of-international-educators-annual-conference",
@@ -12559,7 +12352,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Healthcare"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/association-for-professionals-in-infection-control-and-epidemiology-apic27",
@@ -12759,46 +12552,6 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "cup-showcase-socal-2027-los-angeles",
-    "name": "The SoCal Cup: The Showcase 2027",
-    "start_date": "2027-06-19",
-    "end_date": "2027-06-21",
-    "dates_confirmed": true,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.laconventioncenter.com/events/detail/socal-cup-volleyball-showcase-2027",
-    "sources": [
-      {
-        "url": "https://www.laconventioncenter.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T02:41:18.867Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (laconventioncenter.com)",
-          "family": "laconventioncenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -13250,7 +13003,7 @@
     "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
-      "Other"
+      "Entertainment"
     ],
     "est_attendance": null,
     "official_url": "https://www.laconventioncenter.com/events/detail/horrorcon-los-angeles-2027",
