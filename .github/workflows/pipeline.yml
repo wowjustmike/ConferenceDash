@@ -1,8 +1,7 @@
 name: Pipeline
 
-# Manual only for now. The SQLite database (data/conferencedash.db) is git-ignored and is the source of truth, so a stateless
-# scheduled run would rebuild it from the filtered export every time and lose exclusions and observation history.
-# Re-enable the cron below once the database is persisted between runs (e.g. a cache or a release artifact).
+# The SQLite database (data/conferencedash.db) is the source of truth and is committed, so each run persists its state
+# (exclusions, observations, aliases, topic overrides) for the next one. Local sessions must `git pull` before `npm run update`.
 on:
   workflow_dispatch:
     inputs:
@@ -11,10 +10,10 @@ on:
         type: choice
         options: [daily, weekly, monthly]
         default: daily
-  # schedule:
-  #   - cron: '0 9 * * *'    # daily tier
-  #   - cron: '0 10 * * 0'   # weekly tier (Sunday)
-  #   - cron: '0 11 1 * *'   # monthly tier (1st)
+  schedule:
+    - cron: '0 9 * * *'    # daily tier
+    - cron: '0 10 * * 0'   # weekly tier (Sunday)
+    - cron: '0 11 1 * *'   # monthly tier (1st)
 
 permissions:
   contents: write
@@ -42,7 +41,14 @@ jobs:
         id: tier
         run: |
           t="${{ inputs.tier }}"
-          echo "tier=${t:-daily}" >> "$GITHUB_OUTPUT"
+          case "${{ github.event.schedule }}" in
+            '0 10 * * 0') tier=weekly ;;
+            '0 11 1 * *') tier=monthly ;;
+            *) tier="${t:-daily}" ;;
+          esac
+          echo "tier=$tier" >> "$GITHUB_OUTPUT"
+      - name: Database must come from the checkout
+        run: test -s data/conferencedash.db
       - name: Run pipeline
         run: npm run pipeline --prefix pipeline -- --tier "${{ steps.tier.outputs.tier }}"
         env:
@@ -57,6 +63,7 @@ jobs:
           if-no-files-found: ignore
       - name: Commit refreshed data
         run: |
+          rm -f data/conferencedash.db-wal data/conferencedash.db-shm
           git add -A data
           if git diff --cached --quiet; then
             echo "No data changes."

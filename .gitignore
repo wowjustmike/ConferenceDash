@@ -6,7 +6,7 @@ web/public/events/
 .superpowers/
 pipeline/out
 pipeline/.cache
-data/*.db
+# The SQLite database is committed: it is the source of truth and the scheduled CI run needs it. WAL/SHM side files are not.
 data/*.db-*
 .env
 pipeline/inbox

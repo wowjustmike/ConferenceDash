@@ -7,12 +7,13 @@ Window: events overlapping **2026-11-15 .. 2027-12-31** (`WINDOW_START` / `WINDO
 ## Layout
 
 - `web/`: the React app. It only reads `data/events.json` (or monthly shards if that file grows past 5 MB).
-- `pipeline/`: collects, merges, verifies, scores and exports. Source of truth is the SQLite file `data/conferencedash.db` (git-ignored). `data/events.json` is the committed export.
+- `pipeline/`: collects, merges, verifies, scores and exports. Source of truth is the SQLite file `data/conferencedash.db` (committed; WAL side files are not). `data/events.json` is the committed export.
 - `pipeline/sources/registry.yaml`: declared sources. `pipeline/sources/credibility.yaml`: signal-strength rules.
 - `docs/SOURCING.md`: probe results, rejected sources and why. `docs/superpowers/`: specs and plans.
 
 ## Update session (when the user says "update the database")
 
+0. `git pull` first: the database `data/conferencedash.db` is committed and the scheduled GitHub Actions run (`.github/workflows/pipeline.yml`) also writes it. Never force-push over a CI data commit.
 1. `cd pipeline && npm run update -- --tier weekly --dry-run` (reads sources, writes nothing). Review the summary.
 2. `npm run update -- --tier weekly` (writes the database and `data/events.json`). Tiers: `daily` re-verifies events starting within 30 days, `weekly` within 180, `monthly` everything.
 3. `npm run export` re-scores and re-exports from the database without fetching.
