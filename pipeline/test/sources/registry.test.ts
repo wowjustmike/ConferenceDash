@@ -113,3 +113,12 @@ test('expoassist entries use plain fetching and report their own id', async () =
   expect(r.health).toEqual({ id: 'ea', ok: true, count: 1 })
   expect(r.candidates[0]).toMatchObject({ name: 'Reg Expo', state: 'Texas' })
 }, 20000)
+
+test('moscone entries use the browser adapter and keep its candidates', async () => {
+  const fake = async () => ({ candidates: [{ name: 'Moscone Expo', start_date: '2027-03-08', end_date: '2027-03-10', source: { url: 'u', type: 'html' as const, fetched_at: 'x' } }], health: { id: 'moscone', ok: true, count: 1 } })
+  const d = { ...deps({}), browser: { withPage: async () => null }, moscone: fake as never }
+  const r = await runEntry(entry({ id: 'mo', kind: 'moscone' }), d)
+  expect(r.health).toEqual({ id: 'mo', ok: true, count: 1 })
+  expect(r.candidates).toHaveLength(1)
+  expect((await runEntry(entry({ kind: 'moscone' }), deps({}))).health.error).toBe('browser unavailable')
+})

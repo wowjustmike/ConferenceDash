@@ -8,6 +8,7 @@ import { parseEventItems } from '../extract/eventitems'
 import type { BrowserFetcher } from '../net/browser'
 import { fetchDataTable, parseDataTableRows } from './datatable'
 import { fetchExpoAssist } from './expoassist'
+import { fetchMoscone } from './moscone'
 import { fetchSimpleviewCalendar, parseSimpleviewItems } from './simpleview'
 import { parseJsonLd } from '../extract/jsonld'
 import { normalizeState } from '../normalize'
@@ -16,7 +17,7 @@ import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
   id: z.string().min(1),
-  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist']),
+  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone']),
   url: z.string().url(),
   type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
@@ -42,6 +43,7 @@ export interface RunDeps {
   browser?: Pick<BrowserFetcher, 'withPage'>
   simpleview?: typeof fetchSimpleviewCalendar
   datatable?: typeof fetchDataTable
+  moscone?: typeof fetchMoscone
 }
 
 function icalLink(html: string, base: string): string | null {
@@ -56,6 +58,11 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   const ref = (url: string, type: SourceRef['type']): SourceRef => ({ url, type, fetched_at: deps.now().toISOString() })
   let candidates: Candidate[] = []
   let fetchedAny = false
+  if (entry.kind === 'moscone') {
+    if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
+    const r = await (deps.moscone ?? fetchMoscone)(deps.browser, deps.fetchText, entry.url, defaults, deps.now)
+    return { candidates: r.candidates, health: { ...r.health, id: entry.id } }
+  }
   if (entry.kind === 'expoassist') {
     const r = await fetchExpoAssist(deps.fetchText, entry.url, entry.max_pages ?? 20)
     return { candidates: r.candidates.map((c) => ({ ...c, source: { ...c.source, fetched_at: deps.now().toISOString() } })), health: { ...r.health, id: entry.id } }

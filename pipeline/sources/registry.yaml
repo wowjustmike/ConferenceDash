@@ -38,8 +38,8 @@ sources:
     city: Austin
     state: TX
   - id: moscone
-    kind: page
-    type: jsonld
+    kind: moscone
+    type: html
     url: https://www.moscone.com/events
     venue: Moscone Center
     city: San Francisco
