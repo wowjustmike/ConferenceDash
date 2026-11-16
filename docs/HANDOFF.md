@@ -6,7 +6,8 @@ Last updated: 2026-11-15. Read this first in a fresh session, then `CLAUDE.md` (
 "A database of every conference going on in the US", filterable by state/city/venue/date/organizer, with a "signal strength" symbol showing how likely each event is real. In scope: professional conferences, expos, trade shows, conventions, fan cons (Comic-Con). Out: concerts, sports, festivals, Ren faires, private/social, non-US. Window: 2026-11-15 .. 2027-12-31.
 
 ## Live output
-- Dashboard (private Artifact, Version 4): https://claude.ai/artifact/As4fkRrQvheYc3FFY5prME
+- **Public site:** https://wowjustmike.github.io/ConferenceDash/ (GitHub Pages, deployed by `.github/workflows/deploy.yml` on every push to `main`). Repo: https://github.com/wowjustmike/ConferenceDash (public, created 2026-11-16). Pipeline runs on a cron (daily/weekly/monthly tiers) and commits `data/` including the SQLite database; `git pull` before local updates.
+- Dashboard mirror (private Artifact, Version 5): https://claude.ai/artifact/As4fkRrQvheYc3FFY5prME
 - 354 events: 56 at 3 bars, 165 at 2, 133 at 1. About 26 cities, 16 states (Las Vegas ~124, Orlando ~47, Chicago ~41).
 - Republish: `cd web && npm run artifact`, then publish `web/dist-artifact/dashboard.html` with the Artifact tool using the same file path (keeps the URL).
 - Known artifact limits: map pins show without tiles (CSP); "Add to calendar" download does nothing.
@@ -29,11 +30,12 @@ Respect robots.txt, never bypass blocks/CAPTCHAs/bot protection, 1 req/sec/host,
 
 ## To-do (in recommended order)
 1. ~~Fix duplicate detection~~ Done 2026-11-15: city-aware name matching plus alias-at-export (`pipeline/src/alias.ts`, `npm run unalias`). 5 pairs collapsed.
-2. **Go public (approved 2026-11-15):** public GitHub repo + Pages + weekly Actions refresh. Ask before creating the repo. Then coverage via platform-family adapters and a `probe` command, then data-volume checks, then shareable URLs/feedback link. Decisions are in memory `scale-roadmap-decisions`.
+2. ~~Go public~~ Done 2026-11-16 (see Live output). `ANTHROPIC_API_KEY` is not set as a repo secret yet; the user sets it with `gh secret set ANTHROPIC_API_KEY` when they want LLM extraction in CI.
+2a. **Coverage (next):** spec at `docs/superpowers/specs/2026-11-16-coverage-probe-design.md` (detect families, generic `cards` adapter, `npm run probe`). Then data-volume checks, then shareable URLs/feedback link. Decisions are in memory `scale-roadmap-decisions`.
 2b. **Second wave of venue readers:** Houston, Denver, Washington DC, San Diego, Nashville, Boston. Probe each first (robots, structure); skip blocked sites and record them in SOURCING.md.
 3. **Topic review:** about 25 events still "Other" (Pink27, Annual Conference 2027, ISSA, SYNERGY, RCMA, ALCC, ASLA, ...).
 4. **Dates TBC:** many events lack this year's confirmed dates; match organizer sites.
-5. **Scheduled refresh** needs a GitHub repo, secrets and Pages. Requires the user's OK; nothing created. (`.github/workflows/pipeline.yml` is manual-only for now.)
+5. ~~Scheduled refresh~~ Done 2026-11-16: crons in `.github/workflows/pipeline.yml`.
 6. **Ticketmaster key** was pasted in chat; advise rotating it (only the Consumer Key is used, stored in `.env`).
 7. After any data change: run both test suites, commit, `npm run artifact`, republish, report counts.
 
