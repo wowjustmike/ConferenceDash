@@ -2355,33 +2355,38 @@
   },
   {
     "id": "art-la-2027-los-angeles",
-    "name": "LA ART Show 2027",
+    "name": "LA Art Show 2027",
     "start_date": "2027-01-06",
     "end_date": "2027-01-10",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Los Angeles",
     "state": "California",
-    "venue": "",
+    "venue": "Los Angeles Convention Center",
     "organizer": "",
     "topics": [
       "Entertainment"
     ],
     "est_attendance": null,
-    "official_url": "https://expoassist.net/event/la-art-show",
+    "official_url": "https://www.laconventioncenter.com/events/detail/la-art-show-2027",
     "sources": [
       {
         "url": "https://expoassist.net/event/la-art-show",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.270Z"
+      },
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
       }
     ],
     "last_verified": "2026-11-16",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 3,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -2389,6 +2394,13 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -2613,6 +2625,47 @@
     }
   },
   {
+    "id": "association-convention-language-modern-2027-los-angeles",
+    "name": "Modern Language Association Annual Convention 2027",
+    "start_date": "2027-01-07",
+    "end_date": "2027-01-10",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/modern-language-association-annual-convention-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "atlanta-greater-rv-2027-atlanta",
     "name": "Greater Atlanta RV Show 2027",
     "start_date": "2027-01-08",
@@ -2649,6 +2702,53 @@
           "kind": "aggregator",
           "points": 1,
           "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "extravaganza-outdoors-2027-dallas",
+    "name": "Outdoors Extravaganza 2027",
+    "start_date": "2027-01-08",
+    "end_date": "2027-01-10",
+    "dates_confirmed": true,
+    "city": "Dallas",
+    "state": "Texas",
+    "venue": "Kay Bailey Hutchison Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://ttha.com/outdoorsextravaganza/",
+    "sources": [
+      {
+        "url": "https://www.dallasconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:27.693Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (dallasconventioncenter.com)",
+          "family": "dallasconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (ttha.com)",
+          "family": "ttha.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -2771,6 +2871,47 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "curiosities-oddities-2027-los-angeles",
+    "name": "Oddities & Curiosities Expo",
+    "start_date": "2027-01-09",
+    "end_date": "2027-01-10",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/oddities-curiosities-expo-los-angeles-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -3773,6 +3914,47 @@
     }
   },
   {
+    "id": "angeles-fit-los-2027-los-angeles",
+    "name": "The Fit Expo Los Angeles 2027",
+    "start_date": "2027-01-23",
+    "end_date": "2027-01-24",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/the-fit-expo-los-angeles-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "america-cosmoprof-miami-north-2027-miami",
     "name": "Cosmoprof North America Miami 2027",
     "start_date": "2027-01-26",
@@ -4059,6 +4241,54 @@
     }
   },
   {
+    "id": "convention-exhibition-tsha-2027-dallas",
+    "name": "TSHA 71st Annual Convention & Exhibition",
+    "start_date": "2027-01-29",
+    "end_date": "2027-01-30",
+    "dates_confirmed": true,
+    "city": "Dallas",
+    "state": "Texas",
+    "venue": "Kay Bailey Hutchison Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.txsha.org/Convention",
+    "sources": [
+      {
+        "url": "https://www.dallasconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:27.693Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (dallasconventioncenter.com)",
+          "family": "dallasconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (txsha.org)",
+          "family": "txsha.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "dallas-franchise-2027-dallas",
     "name": "Dallas Franchise Show 2027",
     "start_date": "2027-01-30",
@@ -4095,6 +4325,94 @@
           "kind": "aggregator",
           "points": 1,
           "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "angeles-competition-ibjjf-jitsu-jiu-los-2027-los-angeles",
+    "name": "Los Angeles IBJJF Jiu Jitsu Competition",
+    "start_date": "2027-01-30",
+    "end_date": "2027-01-31",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/los-angeles-ibjjf-jiu-jitsu-competition",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "franchise-national-2027-dallas",
+    "name": "National Franchise Show",
+    "start_date": "2027-01-30",
+    "end_date": "2027-01-31",
+    "dates_confirmed": true,
+    "city": "Dallas",
+    "state": "Texas",
+    "venue": "Kay Bailey Hutchison Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.franchiseshowinfo.com/dallas-visitor",
+    "sources": [
+      {
+        "url": "https://www.dallasconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:27.693Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (dallasconventioncenter.com)",
+          "family": "dallasconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (franchiseshowinfo.com)",
+          "family": "franchiseshowinfo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -5869,6 +6187,54 @@
     }
   },
   {
+    "id": "bridal-dallas-spring-2027-dallas",
+    "name": "Spring Dallas Bridal Show™ 2027",
+    "start_date": "2027-02-21",
+    "end_date": "2027-02-21",
+    "dates_confirmed": true,
+    "city": "Dallas",
+    "state": "Texas",
+    "venue": "Kay Bailey Hutchison Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "http://www.dallasbridalshow.com/",
+    "sources": [
+      {
+        "url": "https://www.dallasconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:27.693Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (dallasconventioncenter.com)",
+          "family": "dallasconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (dallasbridalshow.com)",
+          "family": "dallasbridalshow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "association-finance-sfvegas-structured-2027-las-vegas",
     "name": "Structured Finance Association - SFVegas Conference 2027",
     "start_date": "2027-02-21",
@@ -5952,6 +6318,46 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "angeles-in-los-luxe-makeup-pack-2027-los-angeles",
+    "name": "MakeUp + LUXE PACK in Los Angeles 2027",
+    "start_date": "2027-02-23",
+    "end_date": "2027-02-24",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/makeup-luxe-pack-in-los-angeles-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -6082,6 +6488,53 @@
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dallas-rv-supersale-2027-dallas",
+    "name": "Dallas RV SuperSale 2027",
+    "start_date": "2027-02-25",
+    "end_date": "2027-02-28",
+    "dates_confirmed": true,
+    "city": "Dallas",
+    "state": "Texas",
+    "venue": "Kay Bailey Hutchison Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.dallasrvsupersale.com/",
+    "sources": [
+      {
+        "url": "https://www.dallasconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:27.693Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (dallasconventioncenter.com)",
+          "family": "dallasconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (dallasrvsupersale.com)",
+          "family": "dallasrvsupersale.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -6322,6 +6775,86 @@
         {
           "label": "Venue calendar (occc.net)",
           "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "classic-gymnastics-victory-victory-2027-los-angeles",
+    "name": "Victory Gymnastics: Victory Classic",
+    "start_date": "2027-02-26",
+    "end_date": "2027-02-28",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/victory-gymnastics-victory-classic-1",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "de-el-metanoia-mujeres-sembrador-2027-los-angeles",
+    "name": "El Sembrador - Metanoia de Mujeres",
+    "start_date": "2027-02-27",
+    "end_date": "2027-02-28",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/el-sembrador-metanoia-de-mujeres",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-16"
@@ -7289,6 +7822,47 @@
     }
   },
   {
+    "id": "and-exhibition-ofc-2027-los-angeles",
+    "name": "OFC Conference and Exhibition 2027",
+    "start_date": "2027-03-09",
+    "end_date": "2027-03-11",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/ofc-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "home-inspired-2027-chicago",
     "name": "The Inspired Home Show",
     "start_date": "2027-03-09",
@@ -7672,6 +8246,47 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "convention-neurotech-sbmt-2027-los-angeles",
+    "name": "SBMT 24th Annual Neurotech Convention",
+    "start_date": "2027-03-14",
+    "end_date": "2027-03-17",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/sbmt-world-congress-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -8519,6 +9134,46 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "celebration-star-wars-2027-los-angeles",
+    "name": "Star Wars Celebration 2027",
+    "start_date": "2027-04-01",
+    "end_date": "2027-04-04",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/star-wars-celebration-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -9483,6 +10138,46 @@
     }
   },
   {
+    "id": "acp-internal-medicine-meeting-2027-los-angeles",
+    "name": "ACP Internal Medicine Meeting 2027",
+    "start_date": "2027-04-15",
+    "end_date": "2027-04-17",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/acp-internal-medicine-meeting-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "promat-2027-chicago",
     "name": "ProMat 2027",
     "start_date": "2027-04-19",
@@ -9884,6 +10579,46 @@
     }
   },
   {
+    "id": "american-association-immunologists-immunology-of-2027-los-angeles",
+    "name": "American Association of Immunologists - Immunology 2027",
+    "start_date": "2027-04-30",
+    "end_date": "2027-05-04",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/american-association-of-immunologists-immunology-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "c2e2-chicago-comic-entertainment-2027-chicago",
     "name": "C2E2 - Chicago Comic & Entertainment Expo 2027",
     "start_date": "2027-04-30",
@@ -9968,6 +10703,46 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "american-association-meeting-of-surgery-thoracic-2027-los-angeles",
+    "name": "American Association of Thoracic Surgery Annual Meeting",
+    "start_date": "2027-05-01",
+    "end_date": "2027-05-04",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/aats-annual-mtg-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -10586,6 +11361,47 @@
     }
   },
   {
+    "id": "angeles-career-forum-los-2027-los-angeles",
+    "name": "Los Angeles Career Forum 2027",
+    "start_date": "2027-05-15",
+    "end_date": "2027-05-16",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/los-angeles-career-forum-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "franchise-orlando-2027-orlando",
     "name": "Orlando Franchise Show 2027",
     "start_date": "2027-05-15",
@@ -10873,6 +11689,46 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "acog-and-clinical-meeting-scientific-2027-los-angeles",
+    "name": "ACOG Annual Clinical and Scientific Meeting",
+    "start_date": "2027-05-21",
+    "end_date": "2027-05-23",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/acog-annual-clinical-and-scientific-meeting",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -11206,6 +12062,47 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "association-educators-nafsa-of-2027-los-angeles",
+    "name": "NAFSA: Association of International Educators Annual Conference 2027",
+    "start_date": "2027-06-01",
+    "end_date": "2027-06-04",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/nafsa-association-of-international-educators-annual-conference",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -11652,6 +12549,46 @@
     }
   },
   {
+    "id": "apic27-2027-los-angeles",
+    "name": "APIC27",
+    "start_date": "2027-06-14",
+    "end_date": "2027-06-16",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/association-for-professionals-in-infection-control-and-epidemiology-apic27",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "holiday-kehe-2027-chicago",
     "name": "2027 KeHE Holiday Show",
     "start_date": "2027-06-16",
@@ -11822,6 +12759,46 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cup-showcase-socal-2027-los-angeles",
+    "name": "The SoCal Cup: The Showcase 2027",
+    "start_date": "2027-06-19",
+    "end_date": "2027-06-21",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/socal-cup-volleyball-showcase-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
@@ -12255,6 +13232,47 @@
         {
           "label": "Venue calendar (mccormickplace.com)",
           "family": "mccormickplace.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "angeles-horrorcon-los-2027-los-angeles",
+    "name": "HorrorCon Los Angeles 2027",
+    "start_date": "2027-07-17",
+    "end_date": "2027-07-18",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/horrorcon-los-angeles-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-16"
