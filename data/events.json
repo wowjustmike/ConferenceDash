@@ -1,52 +1,5 @@
 [
   {
-    "id": "academy-american-meeting-of-ophthalmology-2026-las-vegas",
-    "name": "American Academy of Ophthalmology Annual Meeting 2027",
-    "start_date": "2026-11-12",
-    "end_date": "2026-11-15",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Venetian Expo",
-    "organizer": "",
-    "topics": [
-      "Healthcare"
-    ],
-    "est_attendance": 25000,
-    "official_url": "http://www.aao.org/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:55.414Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-16"
-        },
-        {
-          "label": "Confirmed on the official site (aao.org)",
-          "family": "aao.org",
-          "kind": "official-site",
-          "points": 0,
-          "seenAt": "2026-11-15"
-        }
-      ]
-    }
-  },
-  {
     "id": "council-housing-multifamily-national-optech-2026-las-vegas",
     "name": "National Multifamily Housing Council - OPTECH Conference & Exposition - 2026",
     "start_date": "2026-11-14",
@@ -69,7 +22,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -90,7 +43,7 @@
           "family": "nmhc.org",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -159,7 +112,7 @@
         "fetched_at": "2026-11-16T00:27:10.297Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -180,7 +133,7 @@
           "family": "aicodingsummit.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -262,7 +215,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -326,7 +279,7 @@
           "family": "issashow.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -353,7 +306,7 @@
         "fetched_at": "2026-11-16T00:27:10.297Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -374,7 +327,7 @@
           "family": "jsnation.us",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -401,7 +354,7 @@
         "fetched_at": "2026-11-16T01:33:29.840Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -421,7 +374,7 @@
           "family": "svin.org",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -448,7 +401,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -468,7 +421,7 @@
           "family": "thomsonreuters.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -625,7 +578,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -665,7 +618,7 @@
         "fetched_at": "2026-11-16T01:33:29.840Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "convention",
@@ -686,7 +639,7 @@
           "family": "weddingmba.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -723,7 +676,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
@@ -778,7 +731,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -858,7 +811,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -939,7 +892,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -960,7 +913,7 @@
           "family": "aws.amazon.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -987,7 +940,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -1123,7 +1076,7 @@
         "fetched_at": "2026-11-16T00:27:32.329Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -1144,7 +1097,7 @@
           "family": "techleadersummit.io",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1194,7 +1147,7 @@
           "family": "rmef.org",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1383,7 +1336,7 @@
         "fetched_at": "2026-11-16T00:27:29.333Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -1403,7 +1356,7 @@
           "family": "devfest.mn",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1436,7 +1389,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -1457,7 +1410,7 @@
           "family": "ldishow.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
@@ -1531,7 +1484,7 @@
         "fetched_at": "2026-11-16T00:27:29.333Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -1552,7 +1505,7 @@
           "family": "archconf.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1579,7 +1532,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -1619,7 +1572,7 @@
         "fetched_at": "2026-11-16T00:27:29.333Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -1639,7 +1592,7 @@
           "family": "conversations.ctocraft.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1666,7 +1619,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -1686,7 +1639,7 @@
           "family": "acteonline.org",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1713,7 +1666,7 @@
         "fetched_at": "2026-11-16T01:33:29.840Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -1734,7 +1687,7 @@
           "family": "crwua.org",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1761,7 +1714,7 @@
         "fetched_at": "2026-11-16T01:33:29.840Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -1782,7 +1735,7 @@
           "family": "cter-tero.org",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1809,7 +1762,7 @@
         "fetched_at": "2026-11-16T01:33:29.840Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "expo",
@@ -1830,7 +1783,7 @@
           "family": "irrigation.org",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1880,7 +1833,7 @@
           "family": "ngwa.org",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -1989,7 +1942,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -2003,6 +1956,47 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a-angeles-ca-collect-con-los-2026-los-angeles",
+    "name": "Collect-A-Con (Los Angeles 2, CA)",
+    "start_date": "2026-12-19",
+    "end_date": "2026-12-19",
+    "dates_confirmed": false,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.universe.com/events/collect-a-con-los-angeles-2-ca-tickets-9NVCZT?ref=ticketmaster",
+    "sources": [
+      {
+        "url": "https://www.universe.com/events/collect-a-con-los-angeles-2-ca-tickets-9NVCZT?ref=ticketmaster",
+        "type": "api",
+        "fetched_at": "2026-11-16T16:41:28.252Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "fan_con",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Ticketing listing (universe.com)",
+          "family": "universe.com",
+          "kind": "ticketing",
+          "points": 3,
           "seenAt": "2026-11-16"
         }
       ]
@@ -2247,7 +2241,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -2341,7 +2335,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -2436,7 +2430,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -2477,7 +2471,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -2730,7 +2724,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2895,7 +2889,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2942,7 +2936,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -3022,7 +3016,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -3288,7 +3282,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -3730,7 +3724,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -3771,7 +3765,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -3900,7 +3894,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4023,7 +4017,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -4411,7 +4405,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4492,7 +4486,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4720,7 +4714,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -4808,7 +4802,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -4856,7 +4850,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5271,7 +5265,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -5358,7 +5352,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -5406,7 +5400,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5447,7 +5441,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5537,7 +5531,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -5715,7 +5709,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -5755,7 +5749,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6270,7 +6264,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -6318,7 +6312,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6406,7 +6400,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6446,7 +6440,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6486,7 +6480,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6526,7 +6520,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -6608,7 +6602,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6648,7 +6642,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7040,7 +7034,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7174,7 +7168,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7261,7 +7255,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -7519,7 +7513,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7653,7 +7647,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -7828,7 +7822,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7915,7 +7909,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -7956,7 +7950,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8167,7 +8161,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8207,7 +8201,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8358,7 +8352,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -8520,7 +8514,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -8829,7 +8823,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -9054,7 +9048,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -9273,7 +9267,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9313,7 +9307,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9360,7 +9354,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9714,7 +9708,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9969,7 +9963,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -10057,7 +10051,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10576,7 +10570,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10664,7 +10658,7 @@
         "fetched_at": "2026-11-16T01:42:55.414Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-16",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -11207,6 +11201,47 @@
     }
   },
   {
+    "id": "franchise-national-2027-orlando",
+    "name": "The National Franchise Show 2027",
+    "start_date": "2027-05-15",
+    "end_date": "2027-05-16",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/the-national-franchise-show-2027/980/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T16:42:45.343Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
     "id": "act-2027-las-vegas",
     "name": "ACT Expo 2027",
     "start_date": "2027-05-17",
@@ -11600,6 +11635,47 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-16"
+        }
+      ]
+    }
+  },
+  {
+    "id": "asug-sap-sapphire-2027-orlando",
+    "name": "SAP Sapphire & ASUG Annual Conference",
+    "start_date": "2027-05-24",
+    "end_date": "2027-05-26",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/sap-sapphire-%26-asug-annual-conference/979/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T16:42:45.343Z"
+      }
+    ],
+    "last_verified": "2026-11-16",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-16"
         }
       ]
