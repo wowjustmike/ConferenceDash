@@ -8,6 +8,12 @@ export interface Config {
   userAgent: string
   eventsPath: string
   outDir: string
+  dataDir: string
+  dbPath: string
+  windowStart: string
+  windowEnd: string
+  sampleDropThreshold: number
+  maxExportBytes: number
 }
 
 const num = (v: string | undefined, d: number) => {
@@ -24,6 +30,12 @@ export function loadConfig(env: Record<string, string | undefined> = process.env
     userAgent: 'ConferenceDashBot/1.0',
     eventsPath: resolve(import.meta.dirname, '../../data/events.json'),
     outDir: resolve(import.meta.dirname, '../out'),
+    dataDir: resolve(import.meta.dirname, '../../data'),
+    dbPath: env.DB_PATH || resolve(import.meta.dirname, '../../data/conferencedash.db'),
+    windowStart: env.WINDOW_START || '2026-11-15',
+    windowEnd: env.WINDOW_END || '2027-12-31',
+    sampleDropThreshold: num(env.SAMPLE_DROP_THRESHOLD, 100),
+    maxExportBytes: num(env.MAX_EXPORT_BYTES, 5 * 1024 * 1024),
   }
 }
 

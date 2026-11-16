@@ -3,9 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "pipeline": "tsx src/run.ts",
+    "pipeline": "tsx src/update.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "update": "tsx src/update.ts",
+    "export": "tsx src/update.ts export"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",
