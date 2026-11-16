@@ -17,12 +17,13 @@ sources:
     city: Los Angeles
     state: CA
   - id: occc
-    kind: page
-    type: jsonld
+    kind: simpleview-range
+    type: html
     url: https://www.occc.net/events/
     venue: Orange County Convention Center
     city: Orlando
     state: FL
+    end_date: '2027-12-31'
   - id: mccormick-place
     kind: datatable
     type: html

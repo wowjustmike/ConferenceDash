@@ -43,6 +43,36 @@ export function parseSimpleviewItems(items: string[], source: SourceRef, today: 
   return out
 }
 
+const LONG_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+
+/** Parses Simpleview list cards (`.item.isEvent`): title link, start month/day badge (no year), and an optional "until Month D, YYYY" end. */
+export function parseSimpleviewListItems(items: string[], source: SourceRef, today: Date, defaults: { venue?: string; city?: string; state?: string } = {}): Candidate[] {
+  const out: Candidate[] = []
+  for (const html of items) {
+    const $ = cheerio.load(html)
+    const a = $('a.title').first()
+    const name = a.text().replace(/\s+/g, ' ').trim()
+    const mon = MONTHS.indexOf($('.mini-date-container .month').first().text().trim().slice(0, 3).toUpperCase())
+    const day = Number($('.mini-date-container .day').first().text().trim())
+    if (!name || mon < 0 || !day) continue
+    let y = today.getFullYear()
+    if (new Date(y, mon, day).getTime() < today.getTime() - 45 * 864e5) y++
+    const start = iso(y, mon, day)
+    let end = start
+    const until = /until\s+([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})/i.exec($('.recurrence').first().text())
+    if (until) {
+      const m = LONG_MONTHS.indexOf(until[1].toLowerCase())
+      if (m >= 0) end = iso(Number(until[3]), m, Number(until[2]))
+    }
+    if (!start || !end || end < start) continue
+    let url: string | undefined
+    try { const u = new URL(a.attr('href') ?? '', source.url); if (u.protocol === 'http:' || u.protocol === 'https:') url = u.toString() } catch { /* none */ }
+    const c = toCandidateClean({ name, start_date: start, end_date: end, ...defaults, ...(url ? { official_url: url } : {}), source })
+    if (c) out.push(c)
+  }
+  return out
+}
+
 /** Clicks through a paged list, returning each item's HTML once (by id attribute), in order. */
 export async function collectPaged(
   page: Page, o: { itemSelector: string; nextSelector: string; idAttr: string; maxPages: number; settleMs?: number },
@@ -97,6 +127,29 @@ export async function fetchSimpleviewCalendar(
     const info = (await page.locator('li.info').first().textContent().catch(() => '')) ?? ''
     const total = /of\s+(\d+)/.exec(info)?.[1]
     const items = await collectPaged(page, { itemSelector: 'article.convention-item', nextSelector: '.pager a.nxt', idAttr: 'data-recid', maxPages: o.maxPages ?? 40 })
+    return { items, total: total ? Number(total) : null }
+  })
+}
+
+/**
+ * Orange County Convention Center style: sets a date range in the airbnb-style picker (start day, then the end day months later),
+ * then pages through every card.
+ */
+export async function fetchSimpleviewRange(
+  browser: BrowserFetcher, url: string, range: { start: string; end: string }, o: { maxPages?: number } = {},
+): Promise<{ items: string[]; total: number | null } | null> {
+  return browser.withPage(url, async (page) => {
+    await page.waitForSelector('.item.isEvent')
+    const cell = (d: string) => page.locator(`td[data-date="${d}"]`).first()
+    await cell(range.start).click({ force: true })
+    await page.waitForTimeout(400)
+    for (let i = 0; i < 24 && (await cell(range.end).count()) === 0; i++) await page.locator('.asd__change-month-button--next button').first().dispatchEvent('click')
+    await cell(range.end).click({ force: true })
+    await page.waitForFunction(() => /of\s+\d+/.test(document.querySelector('li.info')?.textContent ?? ''), undefined, { timeout: 10000 }).catch(() => {})
+    await page.waitForTimeout(2500)
+    const info = (await page.locator('li.info').first().textContent().catch(() => '')) ?? ''
+    const total = /of\s+(\d+)/.exec(info)?.[1]
+    const items = await collectPaged(page, { itemSelector: '.item.isEvent', nextSelector: '.pager a.nxt', idAttr: 'data-recid', maxPages: o.maxPages ?? 40 })
     return { items, total: total ? Number(total) : null }
   })
 }

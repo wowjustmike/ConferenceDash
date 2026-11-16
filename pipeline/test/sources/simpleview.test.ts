@@ -58,3 +58,21 @@ describe.skipIf(!existsSync(CHROME))('collectPaged (real Chrome)', () => {
     expect(r).toHaveLength(4)
   })
 })
+
+import { parseSimpleviewListItems } from '../../src/sources/simpleview'
+const occc = readFileSync(new URL('../fixtures/occc-items.html', import.meta.url), 'utf8')
+describe('Simpleview list items (Orange County Convention Center)', () => {
+  const osrc = { url: 'https://www.occc.net/events/', type: 'html' as const, fetched_at: '2026-11-15T00:00:00Z' }
+  test('parses title, start (year inferred), end from "until", and the venue detail link', () => {
+    const items = [...occc.matchAll(/<div data-type="events"[\s\S]*?(?=<div data-type="events"|$)/g)].map((m) => m[0])
+    const r = parseSimpleviewListItems(items, osrc, today, { venue: 'Orange County Convention Center', city: 'Orlando', state: 'FL' })
+    const iaapa = r.find((c) => c.name === 'IAAPA Expo')!
+    expect(iaapa).toMatchObject({ start_date: '2026-11-17', end_date: '2026-11-20', venue: 'Orange County Convention Center', state: 'Florida' })
+    expect(iaapa.official_url).toBe('https://www.occc.net/event/iaapa-expo/908/')
+  })
+  test('a card without a recurrence line is a single day; cards without a date are skipped', () => {
+    const card = (t: string, m: string, d: string, extra = '') => `<div class="item isEvent"><h4><a class="title" href="/event/x/1/">${t}</a></h4>${extra}<span class="mini-date-container"><span class="month">${m}</span><span class="day">${d}</span></span></div>`
+    const r = parseSimpleviewListItems([card('Single Day Expo', 'Mar', '5'), '<div class="item isEvent"><h4><a class="title" href="/e">No Date</a></h4></div>'], osrc, today, {})
+    expect(r.map((c) => [c.name, c.start_date, c.end_date])).toEqual([['Single Day Expo', '2027-03-05', '2027-03-05']])
+  })
+})

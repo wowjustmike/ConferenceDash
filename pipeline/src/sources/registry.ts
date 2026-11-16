@@ -9,7 +9,7 @@ import type { BrowserFetcher } from '../net/browser'
 import { fetchDataTable, parseDataTableRows } from './datatable'
 import { fetchExpoAssist } from './expoassist'
 import { fetchMoscone } from './moscone'
-import { fetchSimpleviewCalendar, parseSimpleviewItems } from './simpleview'
+import { fetchSimpleviewCalendar, fetchSimpleviewRange, parseSimpleviewItems, parseSimpleviewListItems } from './simpleview'
 import { parseJsonLd } from '../extract/jsonld'
 import { normalizeState } from '../normalize'
 import { htmlToText } from '../text'
@@ -17,7 +17,7 @@ import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
   id: z.string().min(1),
-  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone']),
+  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range']),
   url: z.string().url(),
   type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
@@ -44,6 +44,7 @@ export interface RunDeps {
   simpleview?: typeof fetchSimpleviewCalendar
   datatable?: typeof fetchDataTable
   moscone?: typeof fetchMoscone
+  simpleviewRange?: typeof fetchSimpleviewRange
 }
 
 function icalLink(html: string, base: string): string | null {
@@ -58,6 +59,16 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   const ref = (url: string, type: SourceRef['type']): SourceRef => ({ url, type, fetched_at: deps.now().toISOString() })
   let candidates: Candidate[] = []
   let fetchedAny = false
+  if (entry.kind === 'simpleview-range') {
+    if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
+    const start = deps.now().toISOString().slice(0, 10)
+    const r = await (deps.simpleviewRange ?? fetchSimpleviewRange)(deps.browser as BrowserFetcher, entry.url, { start, end: entry.end_date ?? '2027-12-31' }, { maxPages: entry.max_pages })
+    if (!r) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
+    const found = parseSimpleviewListItems(r.items, ref(entry.url, 'html'), deps.now(), defaults)
+    const partial = r.total !== null && r.items.length < r.total ? `partial: ${r.items.length} of ${r.total}` : undefined
+    if (found.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'no events found' } }
+    return { candidates: found, health: { id: entry.id, ok: true, count: found.length, ...(partial ? { error: partial } : {}) } }
+  }
   if (entry.kind === 'moscone') {
     if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
     const r = await (deps.moscone ?? fetchMoscone)(deps.browser, deps.fetchText, entry.url, defaults, deps.now)
