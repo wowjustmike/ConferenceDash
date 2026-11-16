@@ -1,6 +1,7 @@
 import type { ConfEvent } from '../../../web/src/lib/schema'
 import type { Evidence, EvidenceKind } from '../credibility'
 import { CLASSIFIER_VERSION, classifyKind } from '../classify'
+import { TOPICS } from '../../../web/src/lib/schema'
 import { withTransaction, type Db } from './db'
 
 /** The web app's event shape, including the optional computed `signal` and `kind`. */
@@ -141,4 +142,24 @@ export function unexclude(db: Db, key: string): boolean {
     found = found || e.changes > 0
   })
   return found
+}
+
+/** Records topics chosen in-session (event id -> topics). Unknown events or topics are rejected, never guessed. */
+export function setTopics(db: Db, map: Record<string, string[]>): { applied: number; rejected: string[] } {
+  const rejected: string[] = []
+  let applied = 0
+  const exists = db.prepare('select 1 from events where id = ?')
+  withTransaction(db, () => {
+    for (const [id, topics] of Object.entries(map)) {
+      if (!exists.get(id) || !Array.isArray(topics) || topics.length === 0 || !topics.every((t) => (TOPICS as readonly string[]).includes(t))) { rejected.push(id); continue }
+      db.prepare('insert into topic_overrides(event_id, topics_json, set_at) values (?, ?, ?) on conflict(event_id) do update set topics_json = excluded.topics_json, set_at = excluded.set_at')
+        .run(id, JSON.stringify(topics), new Date().toISOString())
+      applied++
+    }
+  })
+  return { applied, rejected: rejected.sort() }
+}
+
+export function topicOverrides(db: Db): Map<string, string[]> {
+  return new Map((db.prepare('select event_id i, topics_json j from topic_overrides').all() as { i: string; j: string }[]).map((r) => [r.i, JSON.parse(r.j)]))
 }

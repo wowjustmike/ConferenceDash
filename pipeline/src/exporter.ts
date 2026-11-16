@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs'
 import { join } from 'node:path'
 import { loadCredibility, scoreSignal } from './credibility'
 import type { Db } from './db/db'
-import { evidenceFor, loadEvents, type StoredEvent } from './db/store'
+import { evidenceFor, loadEvents, topicOverrides, type StoredEvent } from './db/store'
 import { inWindow } from './classify'
 import { atomicWrite, validateEvents } from './publish'
 import { isSampleEvent } from './sample'
@@ -26,7 +26,8 @@ export function recomputeSignals(db: Db, today: Date): number {
 }
 
 export function buildExport(db: Db, o: { windowStart: string; windowEnd: string; sampleDropThreshold: number; today: Date }): ExportEvent[] {
-  const inRange = loadEvents(db).filter((e) => e.status === 'active' && inWindow(e, { start: o.windowStart, end: o.windowEnd }))
+  const overrides = topicOverrides(db)
+  const inRange = loadEvents(db).map((e) => (overrides.has(e.id) ? { ...e, topics: overrides.get(e.id) as StoredEvent['topics'] } : e)).filter((e) => e.status === 'active' && inWindow(e, { start: o.windowStart, end: o.windowEnd }))
   const real = inRange.filter((e) => !isSampleEvent(e))
   const dropSamples = real.length >= o.sampleDropThreshold
   return inRange

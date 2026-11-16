@@ -1,7 +1,7 @@
 import { mkdirSync } from 'node:fs'
 import { dirname } from 'node:path'
 import { DatabaseSync } from 'node:sqlite'
-import { SCHEMA_V1, SCHEMA_V2, SCHEMA_V3, SCHEMA_VERSION } from './schema'
+import { SCHEMA_V1, SCHEMA_V2, SCHEMA_V3, SCHEMA_V4, SCHEMA_VERSION } from './schema'
 
 export type Db = DatabaseSync
 
@@ -23,6 +23,7 @@ export function migrate(db: Db): void {
     if (v < 1) db.exec(SCHEMA_V1)
     if (v < 2) db.exec(SCHEMA_V2)
     if (v < 3) db.exec(SCHEMA_V3)
+    if (v < 4) db.exec(SCHEMA_V4)
     db.exec(`pragma user_version = ${SCHEMA_VERSION}`)
     db.exec('commit')
   } catch (e) {

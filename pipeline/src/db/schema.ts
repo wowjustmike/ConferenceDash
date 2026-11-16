@@ -1,4 +1,4 @@
-export const SCHEMA_VERSION = 3
+export const SCHEMA_VERSION = 4
 
 /** v2: remember which classifier version made each exclusion so rule-made exclusions can be re-checked. */
 export const SCHEMA_V2 = 'alter table exclusions add column rule_version integer not null default 1'
@@ -49,3 +49,6 @@ create table ingested (
   id integer primary key autoincrement, key text not null unique, candidate_json text not null, ingested_at text not null
 );
 `
+
+/** v4: topics assigned in-session; applied at export so later automatic runs cannot overwrite them. */
+export const SCHEMA_V4 = `create table topic_overrides (event_id text primary key, topics_json text not null, set_at text not null)`

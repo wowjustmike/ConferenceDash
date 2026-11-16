@@ -106,3 +106,14 @@ test('a confirmation revoked by a later non-confirming check no longer earns poi
   const row = db.prepare('select signal_bars b, signal_points p from events').get() as { b: number; p: number }
   expect(row).toEqual({ b: 1, p: 0 })
 })
+
+import { setTopics } from '../src/db/store'
+test('topic overrides set in-session are applied at export and survive re-saving the event', () => {
+  const db = openDb(':memory:'); seedSources(db)
+  saveEvents(db, [mk('t1', { topics: ['Other'] }), mk('t2', { topics: ['Tech'] })])
+  expect(setTopics(db, { t1: ['Healthcare', 'Tech'], missing: ['Retail'], t2: ['NotATopic' as never] })).toEqual({ applied: 1, rejected: ['missing', 't2'] })
+  saveEvents(db, [mk('t1', { topics: ['Other'], venue: 'changed by a later run' })])
+  const ex = buildExport(db, win)
+  expect(ex.find((e) => e.id === 't1')!.topics).toEqual(['Healthcare', 'Tech'])
+  expect(ex.find((e) => e.id === 't2')!.topics).toEqual(['Tech'])
+})
