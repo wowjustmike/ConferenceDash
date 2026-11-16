@@ -30,4 +30,5 @@ export interface RunReport {
   archived: number
   llmCalls: number
   errors: string[]
+  allSourcesFailed: boolean
 }
