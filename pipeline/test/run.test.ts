@@ -71,3 +71,13 @@ test('a source that throws is reported, not fatal', async () => {
   expect(r.errors.join(' ')).toMatch(/venue-feed/)
   expect(r.sources.find((s) => s.id === 'venue-feed')?.ok).toBe(false)
 })
+
+test('events that have already ended are not published, verified or quarantined', async () => {
+  const old = JSON.stringify([{ name: 'Old Conf', url: 'https://old.example', startDate: '2026-03-01', endDate: '2026-03-02', city: 'Austin, TX', country: 'U.S.A.', online: false }])
+  const d = deps({ fetchText: async (u) => (u === CONFS ? old : u in pages ? pages[u] : null), registry: [] })
+  const r = await runPipeline({ tier: 'weekly', dryRun: true, deps: d })
+  expect(r.candidates).toBe(1)
+  expect(r.merged).toBe(0)
+  expect(r.verified).toBe(0)
+  expect(r.quarantined).toBe(0)
+})

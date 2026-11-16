@@ -60,7 +60,9 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   const pairs = findAmbiguous(candidates)
   const verdicts = await resolveAmbiguous(d.llm, d.budget, pairs)
   const judged = new Map(pairs.map((p, i) => [pairKey(p[0], p[1]), verdicts[i]]))
-  const merged = mergeCandidates(candidates, judged)
+  const todayIso = `${d.today.getFullYear()}-${String(d.today.getMonth() + 1).padStart(2, '0')}-${String(d.today.getDate()).padStart(2, '0')}`
+  // Already-ended events are of no use to an upcoming-events directory; existing ones are archived by the merge step.
+  const merged = mergeCandidates(candidates, judged).filter((m) => !m.candidate.end_date || m.candidate.end_date >= todayIso)
   report.merged = merged.length
 
   // Verify on the organizer's site: new events always, existing ones when due for this tier.
