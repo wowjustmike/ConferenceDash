@@ -9,6 +9,7 @@ export function openDb(path: string): Db {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true })
   const db = new DatabaseSync(path)
   db.exec('pragma foreign_keys = on')
+  db.exec('pragma busy_timeout = 8000')
   if (path !== ':memory:') db.exec('pragma journal_mode = wal')
   migrate(db)
   return db

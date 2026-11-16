@@ -89,6 +89,56 @@
     }
   },
   {
+    "id": "america-issa-north-2026-las-vegas",
+    "name": "ISSA Show North America - 2026",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-19",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 16500,
+    "official_url": "http://www.issashow.com/en/home.html",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.7,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (issashow.com)",
+          "family": "issashow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "jsnation-2026-new-york",
     "name": "JSNation US",
     "start_date": "2026-11-16",
@@ -129,6 +179,101 @@
         {
           "label": "Confirmed on the official site (jsnation.us)",
           "family": "jsnation.us",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "meeting-svin-2026-las-vegas",
+    "name": "SVIN 2026 Annual Meeting",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-20",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Resorts World Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1500,
+    "official_url": "https://www.svin.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (svin.org)",
+          "family": "svin.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "convention-mba-wedding-2026-las-vegas",
+    "name": "Wedding MBA Convention 2026",
+    "start_date": "2026-11-18",
+    "end_date": "2026-11-19",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 8000,
+    "official_url": "http://weddingmba.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (weddingmba.com)",
+          "family": "weddingmba.com",
           "kind": "official-site",
           "points": 0,
           "seenAt": "2026-11-15"
@@ -295,9 +440,11 @@
     "confidence": 0.9,
     "status": "active",
     "signal": {
-      "points": 0,
+      "points": 1,
       "bars": 1,
-      "flags": [],
+      "flags": [
+        "conflicting-dates"
+      ],
       "evidence": [
         {
           "label": "Sample data",
@@ -305,6 +452,13 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-11-11"
+        },
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
         }
       ]
     }
@@ -397,6 +551,54 @@
         {
           "label": "Confirmed on the official site (devfest.mn)",
           "family": "devfest.mn",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "design-ldi-live-2026-las-vegas",
+    "name": "Live Design International - LDI Show 2026",
+    "start_date": "2026-12-06",
+    "end_date": "2026-12-08",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 14000,
+    "official_url": "https://www.ldishow.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (ldishow.com)",
+          "family": "ldishow.com",
           "kind": "official-site",
           "points": 0,
           "seenAt": "2026-11-15"
@@ -500,6 +702,197 @@
     }
   },
   {
+    "id": "association-colorado-river-users-water-2026-las-vegas",
+    "name": "Colorado River Water Users Association - 2026 Annual Conference",
+    "start_date": "2026-12-09",
+    "end_date": "2026-12-11",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Caesars Palace",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1000,
+    "official_url": "http://www.crwua.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (crwua.org)",
+          "family": "crwua.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cter-indian-legal-preference-update-2026-las-vegas",
+    "name": "CTER Legal Update & Indian Preference Conference",
+    "start_date": "2026-12-09",
+    "end_date": "2026-12-11",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Orleans Hotel and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 300,
+    "official_url": "https://cter-tero.org/2026/09/28/2026-legal-update-indian-preference-conference/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (cter-tero.org)",
+          "family": "cter-tero.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "association-irrigation-2026-las-vegas",
+    "name": "Irrigation Association Expo 2026",
+    "start_date": "2026-12-09",
+    "end_date": "2026-12-10",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "http://www.irrigation.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (irrigation.org)",
+          "family": "irrigation.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "championships-gi-ibjff-jitsu-jiu-no-2026-las-vegas",
+    "name": "World IBJFF Jiu Jitsu No-Gi Championships 2026",
+    "start_date": "2026-12-10",
+    "end_date": "2026-12-12",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "http://www.ibjjf.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (ibjjf.com)",
+          "family": "ibjjf.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "a-angeles-collect-con-los-2026-los-angeles",
     "name": "Collect-A-Con Los Angeles",
     "start_date": "2026-12-19",
@@ -582,6 +975,388 @@
     }
   },
   {
+    "id": "association-ces-consumer-cta-technology-2027-las-vegas",
+    "name": "Consumer Technology Association (CTA) - CES 2027",
+    "start_date": "2027-01-06",
+    "end_date": "2027-01-09",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 148000,
+    "official_url": "http://www.cta.tech/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (cta.tech)",
+          "family": "cta.tech",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ppai-2027-las-vegas",
+    "name": "The PPAI Expo 2027",
+    "start_date": "2027-01-12",
+    "end_date": "2027-01-14",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 20000,
+    "official_url": "https://www.ppai.org/expo/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (ppai.org)",
+          "family": "ppai.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "city-classic-sin-2027-las-vegas",
+    "name": "Sin City Classic 2027",
+    "start_date": "2027-01-14",
+    "end_date": "2027-01-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Horseshoe Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://www.sincityclassic.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (sincityclassic.org)",
+          "family": "sincityclassic.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "experience-tbc-2027-las-vegas",
+    "name": "TBC Experience 2027",
+    "start_date": "2027-01-15",
+    "end_date": "2027-01-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Luxor Hotel and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 3000,
+    "official_url": "https://thebaseballconvention.com/tbc-experience-las-vegas-2027/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (thebaseballconvention.com)",
+          "family": "thebaseballconvention.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "get-on-teach-your-2027-las-vegas",
+    "name": "Get Your Teach On Conference 2027",
+    "start_date": "2027-01-16",
+    "end_date": "2027-01-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Westgate Las Vegas Resort & Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "http://www.getyourteachon.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (getyourteachon.com)",
+          "family": "getyourteachon.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "hunting-outdoor-shooting-shot-trade-2027-las-vegas",
+    "name": "Shooting, Hunting & Outdoor Trade Show (SHOT Show) - 2027",
+    "start_date": "2027-01-19",
+    "end_date": "2027-01-22",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Venetian Resort Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 61000,
+    "official_url": "http://www.nssf.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (nssf.org)",
+          "family": "nssf.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "concrete-of-2027-las-vegas",
+    "name": "World of Concrete Expo 2027",
+    "start_date": "2027-01-19",
+    "end_date": "2027-01-21",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 58000,
+    "official_url": "http://www.worldofconcrete.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (worldofconcrete.com)",
+          "family": "worldofconcrete.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "adult-avn-2027-las-vegas",
+    "name": "AVN Adult Expo 2027",
+    "start_date": "2027-01-20",
+    "end_date": "2027-01-23",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Virgin Hotels Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 15000,
+    "official_url": "http://www.adultentertainmentexpo.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (adultentertainmentexpo.com)",
+          "family": "adultentertainmentexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "pga-merchandise-show-2027",
     "name": "PGA Merchandise Show",
     "start_date": "2027-01-26",
@@ -618,6 +1393,101 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-10-21"
+        }
+      ]
+    }
+  },
+  {
+    "id": "association-grocers-national-nga-2027-las-vegas",
+    "name": "National Grocers Association - The NGA Show 2027",
+    "start_date": "2027-01-31",
+    "end_date": "2027-02-02",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "MGM Grand Hotel and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "https://www.thengashow.com/event-info",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (thengashow.com)",
+          "family": "thengashow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "experience-medallia-2027-las-vegas",
+    "name": "Medallia Experience 2027",
+    "start_date": "2027-02-02",
+    "end_date": "2027-02-05",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Wynn Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1250,
+    "official_url": "https://www.medallia.com/experience/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (medallia.com)",
+          "family": "medallia.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -809,6 +1679,245 @@
     }
   },
   {
+    "id": "cuesports-2027-las-vegas",
+    "name": "CueSports International EXPO 2027",
+    "start_date": "2027-02-17",
+    "end_date": "2027-03-01",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Westgate Las Vegas Resort & Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 8000,
+    "official_url": "http://www.playcsipool.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (playcsipool.com)",
+          "family": "playcsipool.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "convention-max-r4-re-2027-las-vegas",
+    "name": "RE/MAX R4 Convention 2027",
+    "start_date": "2027-02-21",
+    "end_date": "2027-02-27",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "MGM Grand Hotel and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 6000,
+    "official_url": "https://resources.remax.com/event/2027-r4-convention/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (resources.remax.com)",
+          "family": "resources.remax.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "association-finance-sfvegas-structured-2027-las-vegas",
+    "name": "Structured Finance Association - SFVegas Conference 2027",
+    "start_date": "2027-02-21",
+    "end_date": "2027-02-24",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "ARIA Resort & Casino",
+    "organizer": "",
+    "topics": [
+      "Finance"
+    ],
+    "est_attendance": 9000,
+    "official_url": "http://www.structuredfinance.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (structuredfinance.org)",
+          "family": "structuredfinance.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "group-vegas-viticus-wvc-2027-las-vegas",
+    "name": "Viticus Group WVC Vegas 2027",
+    "start_date": "2027-02-28",
+    "end_date": "2027-03-03",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 22000,
+    "official_url": "https://www.viticusgroup.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (viticusgroup.org)",
+          "family": "viticusgroup.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "america-bankers-community-convention-independent-live-of-2027-las-vegas",
+    "name": "Independent Community Bankers of America Convention - LIVE 2027",
+    "start_date": "2027-03-01",
+    "end_date": "2027-03-04",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Fontainebleau Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2500,
+    "official_url": "http://www.icba.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (icba.org)",
+          "family": "icba.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "natural-products-expo-west-2027",
     "name": "Natural Products Expo West",
     "start_date": "2027-03-02",
@@ -844,6 +1953,100 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-11-05"
+        }
+      ]
+    }
+  },
+  {
+    "id": "connection-hollywood-las-vegas-2027-las-vegas",
+    "name": "Hollywood Connection - Las Vegas 2027",
+    "start_date": "2027-03-05",
+    "end_date": "2027-03-07",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Hilton Lake Las Vegas Resort & Spa",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 400,
+    "official_url": "https://www.hcdance.com/event/las-vegas-nv-1/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (hcdance.com)",
+          "family": "hcdance.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "humanx-2027-las-vegas",
+    "name": "HumanX 2027",
+    "start_date": "2027-03-07",
+    "end_date": "2027-03-10",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 6000,
+    "official_url": "http://www.humanx.co/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (humanx.co)",
+          "family": "humanx.co",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -931,6 +2134,101 @@
     }
   },
   {
+    "id": "hardware-national-2027-las-vegas",
+    "name": "National Hardware Show 2027",
+    "start_date": "2027-03-09",
+    "end_date": "2027-03-11",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 4000,
+    "official_url": "http://www.nationalhardwareshow.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (nationalhardwareshow.com)",
+          "family": "nationalhardwareshow.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dice-tower-west-2027-las-vegas",
+    "name": "Dice Tower West 2027",
+    "start_date": "2027-03-10",
+    "end_date": "2027-03-14",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Westgate Las Vegas Resort & Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 3500,
+    "official_url": "http://www.dicetowerwest.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (dicetowerwest.com)",
+          "family": "dicetowerwest.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "sxsw-2027-2027",
     "name": "SXSW 2027",
     "start_date": "2027-03-12",
@@ -973,6 +2271,149 @@
     }
   },
   {
+    "id": "channel-partners-2027-las-vegas",
+    "name": "Channel Partners Conference & Expo 2027",
+    "start_date": "2027-03-15",
+    "end_date": "2027-03-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Venetian Resort Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://channelpartnersconference.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (channelpartnersconference.com)",
+          "family": "channelpartnersconference.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "america-building-intelligent-light-north-2027-las-vegas",
+    "name": "Light + Intelligent Building North America 2027",
+    "start_date": "2027-03-16",
+    "end_date": "2027-03-18",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 8500,
+    "official_url": "http://www.lightfair.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (lightfair.com)",
+          "family": "lightfair.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "bridal-march-nevada-wedding-2027-las-vegas",
+    "name": "Nevada Bridal & Wedding Expo - March 2027",
+    "start_date": "2027-03-21",
+    "end_date": "2027-03-21",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "https://bridalshowsnv-lv.com/free-passes/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (bridalshowsnv-lv.com)",
+          "family": "bridalshowsnv-lv.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "ceraweek-2027-2027",
     "name": "CERAWeek 2027",
     "start_date": "2027-03-22",
@@ -1008,6 +2449,53 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-11-04"
+        }
+      ]
+    }
+  },
+  {
+    "id": "shoptalk-2027-las-vegas",
+    "name": "Shoptalk 2027",
+    "start_date": "2027-03-22",
+    "end_date": "2027-03-24",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 10000,
+    "official_url": "http://shoptalk.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (shoptalk.com)",
+          "family": "shoptalk.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -1149,6 +2637,291 @@
     }
   },
   {
+    "id": "association-broadcasters-nab-national-of-2027-las-vegas",
+    "name": "National Association of Broadcasters - NAB 2027",
+    "start_date": "2027-04-04",
+    "end_date": "2027-04-07",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Media"
+    ],
+    "est_attendance": 58000,
+    "official_url": "http://www.nabshow.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (nabshow.com)",
+          "family": "nabshow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "isc-security-west-2027-las-vegas",
+    "name": "International Security Conference (ISC) West 2027",
+    "start_date": "2027-04-05",
+    "end_date": "2027-04-09",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Venetian Resort Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 20000,
+    "official_url": "https://www.discoverisc.com/west/en-us.html",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (discoverisc.com)",
+          "family": "discoverisc.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "program-transform-2027-las-vegas",
+    "name": "Transform Annual Program",
+    "start_date": "2027-04-10",
+    "end_date": "2027-04-14",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Fontainebleau Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "https://transform.us/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (transform.us)",
+          "family": "transform.us",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "executive-expana-2027-las-vegas",
+    "name": "Expana Executive Conference 2027",
+    "start_date": "2027-04-11",
+    "end_date": "2027-04-15",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Wynn Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 400,
+    "official_url": "https://www.expanamarkets.com/events/executive-conference/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (expanamarkets.com)",
+          "family": "expanamarkets.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "medicarians-2027-las-vegas",
+    "name": "Medicarians 2027",
+    "start_date": "2027-04-12",
+    "end_date": "2027-04-14",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "CAESARS FORUM Conference Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 6000,
+    "official_url": "https://medicarians.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (medicarians.com)",
+          "family": "medicarians.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "toyfest-2027-las-vegas",
+    "name": "ToyFest 2027",
+    "start_date": "2027-04-14",
+    "end_date": "2027-04-16",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Expo at World Market Center Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1600,
+    "official_url": "https://toyfestus.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (toyfestus.com)",
+          "family": "toyfestus.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "nab-show-2027-2027",
     "name": "NAB Show 2027",
     "start_date": "2027-04-17",
@@ -1230,6 +3003,292 @@
     }
   },
   {
+    "id": "convention-gaming-indian-tradeshow-2027-las-vegas",
+    "name": "Indian Gaming Tradeshow & Convention 2027",
+    "start_date": "2027-04-21",
+    "end_date": "2027-04-22",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Gaming"
+    ],
+    "est_attendance": 7500,
+    "official_url": "http://www.indiangaming.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (indiangaming.org)",
+          "family": "indiangaming.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "franchise-national-2027-las-vegas",
+    "name": "The National Franchise Show",
+    "start_date": "2027-04-30",
+    "end_date": "2027-05-01",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Expo at World Market Center Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "https://www.franchiseshowinfo.com/las-vegas-visitor",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (franchiseshowinfo.com)",
+          "family": "franchiseshowinfo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "carwash-2027-las-vegas",
+    "name": "The Carwash Show 2027",
+    "start_date": "2027-05-03",
+    "end_date": "2027-05-05",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 9500,
+    "official_url": "http://www.carwash.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (carwash.org)",
+          "family": "carwash.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "waste-2027-las-vegas",
+    "name": "Waste Expo 2027",
+    "start_date": "2027-05-04",
+    "end_date": "2027-05-06",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 12000,
+    "official_url": "http://www.wasteexpo.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (wasteexpo.com)",
+          "family": "wasteexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "institute-2027-las-vegas",
+    "name": "Global Institute 2027",
+    "start_date": "2027-05-10",
+    "end_date": "2027-05-13",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "ARIA Resort & Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2500,
+    "official_url": "https://globalinstitute.cloc.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (globalinstitute.cloc.org)",
+          "family": "globalinstitute.cloc.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "of-workato-wow-2027-las-vegas",
+    "name": "World of Workato (WOW) 2027",
+    "start_date": "2027-05-18",
+    "end_date": "2027-05-20",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Resorts World Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1000,
+    "official_url": "http://www.workato.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (workato.com)",
+          "family": "workato.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "national-restaurant-association-show-2027",
     "name": "National Restaurant Association Show",
     "start_date": "2027-05-22",
@@ -1266,6 +3325,149 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-09-18"
+        }
+      ]
+    }
+  },
+  {
+    "id": "las-licensing-vegas-2027-las-vegas",
+    "name": "Las Vegas Licensing Expo 2027",
+    "start_date": "2027-05-25",
+    "end_date": "2027-05-27",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 25000,
+    "official_url": "https://www.licensingexpo.com/en/home.html",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (licensingexpo.com)",
+          "family": "licensingexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jck-trade-2027-las-vegas",
+    "name": "JCK Annual Trade Show 2027",
+    "start_date": "2027-06-04",
+    "end_date": "2027-06-07",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Venetian Resort Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 20000,
+    "official_url": "https://lasvegas.jckonline.com/en-us.html",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (lasvegas.jckonline.com)",
+          "family": "lasvegas.jckonline.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "be-well-2027-las-vegas",
+    "name": "Be+Well 2027",
+    "start_date": "2027-06-12",
+    "end_date": "2027-06-14",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 13000,
+    "official_url": "http://www.iecsc.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (iecsc.com)",
+          "family": "iecsc.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -1365,6 +3567,54 @@
     }
   },
   {
+    "id": "bowl-2027-las-vegas",
+    "name": "International Bowl Expo 2027",
+    "start_date": "2027-06-30",
+    "end_date": "2027-07-01",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 3000,
+    "official_url": "http://www.bowlexpo.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (bowlexpo.com)",
+          "family": "bowlexpo.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "anime-expo-2027-2027",
     "name": "Anime Expo 2027",
     "start_date": "2027-07-01",
@@ -1401,6 +3651,197 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-10-31"
+        }
+      ]
+    }
+  },
+  {
+    "id": "america-cosmoprof-north-2027-las-vegas",
+    "name": "Cosmoprof North America 2027",
+    "start_date": "2027-07-13",
+    "end_date": "2027-07-15",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 35000,
+    "official_url": "https://cosmoprofnorthamerica.com/las-vegas/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (cosmoprofnorthamerica.com)",
+          "family": "cosmoprofnorthamerica.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "clean-2027-las-vegas",
+    "name": "Clean Show 2027",
+    "start_date": "2027-07-15",
+    "end_date": "2027-07-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 15000,
+    "official_url": "http://www.cleanshow.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (cleanshow.com)",
+          "family": "cleanshow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "deafnation-2027-las-vegas",
+    "name": "DeafNation World Expo 2027",
+    "start_date": "2027-07-20",
+    "end_date": "2027-07-23",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Westgate Las Vegas Resort & Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 15000,
+    "official_url": "https://www.deafnation.com/expo/2027-deafnation-world-expo-las-vegas",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (deafnation.com)",
+          "family": "deafnation.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "and-dance-teacher-web-2027-las-vegas",
+    "name": "Dance Teacher Web Conference and Expo 2027",
+    "start_date": "2027-07-24",
+    "end_date": "2027-07-29",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "CAESARS FORUM Conference Center",
+    "organizer": "",
+    "topics": [
+      "Education"
+    ],
+    "est_attendance": 1500,
+    "official_url": "http://www.danceteachersummerexpo.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (danceteachersummerexpo.com)",
+          "family": "danceteachersummerexpo.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
         }
       ]
     }
@@ -1446,6 +3887,195 @@
     }
   },
   {
+    "id": "agency-convention-national-php-2027-las-vegas",
+    "name": "PHP Agency 2027 National Convention",
+    "start_date": "2027-08-02",
+    "end_date": "2027-08-05",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "MGM Grand Hotel and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 15000,
+    "official_url": "https://phpagency.com/php-events/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (phpagency.com)",
+          "family": "phpagency.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "travcon-2027-las-vegas",
+    "name": "TRAVCON 2027",
+    "start_date": "2027-09-08",
+    "end_date": "2027-09-17",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Paris Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1212,
+    "official_url": "https://travcon.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (travcon.org)",
+          "family": "travcon.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "avance-2027-las-vegas",
+    "name": "Avance Global 2027",
+    "start_date": "2027-09-13",
+    "end_date": "2027-09-15",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Bellagio",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 7000,
+    "official_url": "https://avanceglobal.com/event/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (avanceglobal.com)",
+          "family": "avanceglobal.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "groceryshop-2027-las-vegas",
+    "name": "Groceryshop 2027",
+    "start_date": "2027-09-13",
+    "end_date": "2027-09-15",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center, Resort and Casino",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 5000,
+    "official_url": "http://www.groceryshop.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (groceryshop.com)",
+          "family": "groceryshop.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
     "id": "re-2027-2027",
     "name": "RE+ 2027",
     "start_date": "2027-09-13",
@@ -1481,6 +4111,54 @@
           "kind": "seed",
           "points": 0,
           "seenAt": "2026-09-26"
+        }
+      ]
+    }
+  },
+  {
+    "id": "pack-2027-las-vegas",
+    "name": "PACK EXPO 2027",
+    "start_date": "2027-09-27",
+    "end_date": "2027-09-29",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 60000,
+    "official_url": "http://www.packexpo.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-16"
+        },
+        {
+          "label": "Confirmed on the official site (packexpo.com)",
+          "family": "packexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-15"
         }
       ]
     }
