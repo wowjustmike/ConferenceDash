@@ -37,9 +37,21 @@ test('co-located events with different names/sites stay separate', () => {
   expect(mergeCandidates([a, b])).toHaveLength(2)
   expect(findAmbiguous([a, b])).toHaveLength(1) // 0.5 <= similarity < 0.8 -> goes to adjudication
 })
-test('same official_url merges even with different names', () => {
-  const m = mergeCandidates([c('Global Expo', { official_url: 'https://expo.example/2027' }), c('The Big Expo Week', { official_url: 'https://expo.example/2027' }, 'jsonld')])
+test('same official_url merges related names', () => {
+  const m = mergeCandidates([c('Tech Expo', { official_url: 'https://expo.example/2027' }), c('Tech Expo Week', { official_url: 'https://expo.example/2027' }, 'jsonld')])
   expect(m).toHaveLength(1)
+})
+test('a shared organizer homepage does NOT merge unrelated co-located events', () => {
+  const m = mergeCandidates([
+    c('Black Hat USA', { official_url: 'https://www.informatech.com/' }, 'jsonld', 'https://v.example/1'),
+    c('Cybersecurity Leadership Summit', { official_url: 'https://www.informatech.com/' }, 'jsonld', 'https://v.example/2'),
+  ])
+  expect(m).toHaveLength(2)
+})
+test('edition numbers and spacing variants do not split an event', () => {
+  expect(matchKey(c('DEF CON 35'))).toBe(matchKey(c('DEF CON')))
+  expect(mergeCandidates([c('DEF CON 35'), c('DEF CON')])).toHaveLength(1)
+  expect(mergeCandidates([c('ReactConf'), c('React Conf')], undefined)).toHaveLength(1)
 })
 test('conflicting dates are flagged; official-url record wins', () => {
   const m = mergeCandidates([

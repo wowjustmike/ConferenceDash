@@ -50,3 +50,17 @@ test('unresolved case (year seen, no date match) asks the LLM once and honors it
   const none = await verifyOfficialSite(page('CES 2027 — early next year in Las Vegas'), llm({ confirms: true }), new LlmBudget(0), ev)
   expect(none.datesConfirmed).toBe(false)
 })
+
+test('conditional or unrelated cancellation wording does not count as cancelled', async () => {
+  const refund = await verifyOfficialSite(page('January 6-9, 2027 Las Vegas. If the event is cancelled, fees are refunded.'), llm(), new LlmBudget(5), ev)
+  expect(refund.cancelled).toBe(false)
+  expect(refund.datesConfirmed).toBe(true)
+  const history = await verifyOfficialSite(page('The 2020 show was cancelled. CES 2027: January 6-9, 2027 Las Vegas'), llm(), new LlmBudget(5), ev)
+  expect(history.cancelled).toBe(false)
+  const orders = await verifyOfficialSite(page('Unpaid orders are cancelled after 7 days. January 6-9, 2027 Las Vegas 2027'), llm(), new LlmBudget(5), ev)
+  expect(orders.cancelled).toBe(false)
+})
+test('an explicit cancellation of this edition is detected', async () => {
+  expect((await verifyOfficialSite(page('We regret that CES 2027 has been cancelled.'), llm(), new LlmBudget(5), ev)).cancelled).toBe(true)
+  expect((await verifyOfficialSite(page('The 2027 edition is cancelled. Las Vegas'), llm(), new LlmBudget(5), ev)).cancelled).toBe(true)
+})

@@ -6,7 +6,7 @@ import { config } from './config'
 import { findAmbiguous, mergeCandidates, pairKey, resolveAmbiguous } from './dedupe'
 import { createAnthropicClient, LlmBudget, type LlmClient } from './extract/llm'
 import { createFetcher } from './net/http'
-import { mergeIntoExisting, toConfEvent, writeEventsAtomic } from './publish'
+import { mergeIntoExisting, reuseId, toConfEvent, writeEventsAtomic } from './publish'
 import { dueForVerification, type Tier } from './schedule'
 import { fetchConfsTech } from './sources/confsTech'
 import { loadRegistry, runEntry, type RegistryEntry } from './sources/registry'
@@ -70,7 +70,8 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   const fresh: ConfEvent[] = []
   const incomplete: unknown[] = []
   for (const m of merged) {
-    const prelim = toConfEvent(m, undefined, d.today)
+    const id = reuseId(m.candidate, d.existing)
+    const prelim = toConfEvent(m, undefined, d.today, id)
     if (!prelim) { incomplete.push(m.candidate); continue }
     let v: Verification | undefined
     if (!known.has(prelim.id) || dueForVerification(prelim, d.today, args.tier)) {
@@ -81,11 +82,11 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
         report.errors.push(`verify ${prelim.id}: ${(e as Error).message}`)
       }
     }
-    const final = toConfEvent(m, v, d.today)
+    const final = toConfEvent(m, v, d.today, id)
     if (final) fresh.push(final)
   }
 
-  const result = mergeIntoExisting(d.existing, fresh, { today: d.today, healthy: !report.allSourcesFailed, dropSeed: true })
+  const result = mergeIntoExisting(d.existing, fresh, { today: d.today, healthy: !report.allSourcesFailed, dropSeed: report.sources.filter((x) => usable(x) && x.count > 0).length >= 3 ? 'all' : 'matched' })
   report.published = fresh.filter((f) => f.confidence >= config.publishThreshold).length
   report.quarantined = result.quarantined.length
   report.archived = result.archived

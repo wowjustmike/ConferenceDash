@@ -1,7 +1,7 @@
 import { renameSync, writeFileSync } from 'node:fs'
 import { EventSchema, TOPICS, type ConfEvent } from '../../web/src/lib/schema'
 import { config } from './config'
-import { matchKey, type MergedEvent } from './dedupe'
+import { looksSame, matchKey, type MergedEvent } from './dedupe'
 import { guessTopics } from './normalize'
 import { confidence } from './score'
 import type { Candidate } from './types'
@@ -17,13 +17,20 @@ export function eventId(c: Candidate): string {
 
 const isoDay = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 
-export function toConfEvent(m: MergedEvent, v: Verification | undefined, today: Date): ConfEvent | null {
+const asCandidate = (e: ConfEvent): Candidate => ({ name: e.name, start_date: e.start_date, end_date: e.end_date, city: e.city, state: e.state, official_url: e.official_url, source: { url: e.official_url, type: 'jsonld', fetched_at: e.last_verified } })
+
+/** Existing event id for the same real-world event (so an id never changes because a different name won this run). */
+export function reuseId(c: Candidate, existing: ConfEvent[]): string | null {
+  return existing.find((e) => looksSame(c, asCandidate(e)))?.id ?? null
+}
+
+export function toConfEvent(m: MergedEvent, v: Verification | undefined, today: Date, idOverride?: string | null): ConfEvent | null {
   const c = m.candidate
   if (!c.start_date || !c.end_date || !c.city || !c.state || !c.official_url) return null
   const earliestFetch = m.sources.map((s) => s.fetched_at.slice(0, 10)).sort()[0] ?? isoDay(today)
   const age = Math.max(0, Math.round((today.getTime() - new Date(earliestFetch).getTime()) / 864e5))
   const ev = {
-    id: eventId(c), name: c.name, start_date: c.start_date, end_date: c.end_date, dates_confirmed: v?.reachable === true && v.datesConfirmed && !v.cancelled,
+    id: idOverride ?? eventId(c), name: c.name, start_date: c.start_date, end_date: c.end_date, dates_confirmed: v?.reachable === true && v.datesConfirmed && !v.cancelled,
     city: c.city, state: c.state, venue: c.venue ?? '', organizer: c.organizer ?? '',
     topics: (c.topics?.length ? c.topics : guessTopics(c.name)).filter((t) => (TOPICS as readonly string[]).includes(t)),
     est_attendance: c.est_attendance ?? null, official_url: c.official_url, sources: m.sources,
@@ -35,7 +42,7 @@ export function toConfEvent(m: MergedEvent, v: Verification | undefined, today: 
   return r.success ? r.data : null
 }
 
-export interface MergeOpts { today: Date; healthy: boolean; dropSeed?: boolean }
+export interface MergeOpts { today: Date; healthy: boolean; dropSeed?: 'matched' | 'all' | 'none' }
 const MAX_SOURCES = 10
 
 export function mergeIntoExisting(existing: ConfEvent[], fresh: ConfEvent[], opts: MergeOpts): { events: ConfEvent[]; quarantined: ConfEvent[]; archived: number } {
@@ -44,6 +51,12 @@ export function mergeIntoExisting(existing: ConfEvent[], fresh: ConfEvent[], opt
   let published = 0
   if (opts.healthy) {
     for (const f of fresh) {
+      if (f.status === 'cancelled') {
+        // A cancellation found on the official site is applied even though such records score low; never published as new.
+        const e = byId.get(f.id)
+        if (e) byId.set(e.id, { ...e, status: 'cancelled', last_verified: f.last_verified > e.last_verified ? f.last_verified : e.last_verified })
+        continue
+      }
       if (f.confidence < config.publishThreshold) { quarantined.push(f); continue }
       published++
       const e = byId.get(f.id)
@@ -57,8 +70,14 @@ export function mergeIntoExisting(existing: ConfEvent[], fresh: ConfEvent[], opt
         ...(keepDates ? { dates_confirmed: true, start_date: e.start_date, end_date: e.end_date } : {}),
       })
     }
-    if (opts.dropSeed !== false && published > 0)
-      for (const [id, e] of byId) if (e.sources.length > 0 && e.sources.every((s) => s.type === 'seed')) byId.delete(id)
+    const policy = opts.dropSeed ?? 'matched'
+    if (policy !== 'none' && published > 0) {
+      const realFresh = fresh.filter((f) => f.status === 'active' && f.confidence >= config.publishThreshold)
+      for (const [id, e] of byId) {
+        const isSeed = e.sources.length > 0 && e.sources.every((s) => s.type === 'seed')
+        if (isSeed && (policy === 'all' || realFresh.some((f) => looksSame(asCandidate(f), asCandidate(e))))) byId.delete(id)
+      }
+    }
   }
   const today = isoDay(opts.today)
   let archived = 0

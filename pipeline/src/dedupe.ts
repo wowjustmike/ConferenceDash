@@ -9,12 +9,13 @@ const NON_OFFICIAL = new Set(['aggregator', 'api'])
 
 function tokens(name: string): string[] {
   const all = name.toLowerCase().replace(/\b(19|20)\d{2}\b/g, ' ').replace(/[^a-z0-9+]+/g, ' ').split(' ').filter(Boolean)
-  const kept = all.filter((t) => !NOISE.has(t))
+  const kept = all.filter((t) => !NOISE.has(t) && !/^\d{1,2}(?:st|nd|rd|th)?$/.test(t))
   return kept.length ? kept : all
 }
 const year = (c: Candidate) => c.start_date?.slice(0, 4) ?? (/\b(20\d{2})\b/.exec(c.name)?.[1] ?? 'na')
 const city = (c: Candidate) => c.city?.trim().toLowerCase() ?? 'na'
 const nameKey = (c: Candidate) => tokens(c.name).sort().join('-')
+const compact = (c: Candidate) => tokens(c.name).sort().join('').replace(/(?:conference|conf|expo|summit)$/, '')
 
 export function matchKey(c: Candidate): string {
   return `${nameKey(c)}|${year(c)}|${city(c)}`
@@ -27,14 +28,23 @@ function similarity(a: Candidate, b: Candidate): number {
   return union ? inter / union : 0
 }
 
+function subset(a: Candidate, b: Candidate): boolean {
+  const A = new Set(tokens(a.name)), B = new Set(tokens(b.name))
+  return [...A].every((t) => B.has(t)) || [...B].every((t) => A.has(t))
+}
+
 const urlKey = (u?: string) => { try { const x = new URL(u ?? ''); return `${x.host}${x.pathname}`.replace(/\/$/, '').toLowerCase() } catch { return null } }
 export const pairKey = (a: Candidate, b: Candidate) => [matchKey(a) + '#' + a.source.url, matchKey(b) + '#' + b.source.url].sort().join(' <> ')
+
+export const looksSame = (a: Candidate, b: Candidate): boolean => sameEvent(a, b)
 
 function sameEvent(a: Candidate, b: Candidate, judged?: Map<string, boolean>): boolean {
   if (year(a) !== year(b) || city(a) !== city(b)) return false
   if (matchKey(a) === matchKey(b)) return true
+  if (compact(a) === compact(b)) return true
   const ua = urlKey(a.official_url), ub = urlKey(b.official_url)
-  if (ua && ua === ub) return true
+  // A shared URL only counts when the names are related; organizer homepages are shared by unrelated co-located events.
+  if (ua && ua === ub && (similarity(a, b) >= 0.5 || subset(a, b))) return true
   const s = similarity(a, b)
   if (s >= 0.8) return true
   if (s >= 0.5 && judged?.get(pairKey(a, b))) return true
@@ -47,8 +57,7 @@ export function findAmbiguous(list: Candidate[]): [Candidate, Candidate][] {
     for (let j = i + 1; j < list.length; j++) {
       const a = list[i], b = list[j]
       if (year(a) !== year(b) || city(a) !== city(b) || matchKey(a) === matchKey(b)) continue
-      const ua = urlKey(a.official_url), ub = urlKey(b.official_url)
-      if (ua && ua === ub) continue
+      if (compact(a) === compact(b)) continue
       const s = similarity(a, b)
       if (s >= 0.5 && s < 0.8) out.push([a, b])
     }

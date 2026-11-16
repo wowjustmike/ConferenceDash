@@ -19,7 +19,8 @@ function setup(routes: Record<string, (init?: RequestInit) => Response | Promise
   })
   const f = createFetcher({
     userAgent: UA, minIntervalMs: 1000, fetchImpl: fetchImpl as unknown as typeof fetch,
-    sleep: async (ms: number) => { sleeps.push(ms); t += ms }, now: () => t, ...extra,
+    sleep: async (ms: number) => { sleeps.push(ms); t += ms }, now: () => t,
+    resolveHost: async (h: string) => (h === 'internal.example' ? ['10.0.0.5'] : h === 'loop.example' ? ['127.0.0.1'] : ['93.184.216.34']), ...extra,
   })
   return { f, calls, sleeps, fetchImpl }
 }
@@ -79,4 +80,46 @@ test('non-http(s) urls are refused', async () => {
   expect(await f.fetchText('file:///etc/passwd')).toBeNull()
   expect(await f.fetchText('javascript:alert(1)')).toBeNull()
   expect(fetchImpl).not.toHaveBeenCalled()
+})
+
+test('private, loopback and link-local targets are refused before any request', async () => {
+  const { f, fetchImpl } = setup({})
+  for (const u of ['http://127.0.0.1/x', 'http://localhost/x', 'http://10.1.2.3/x', 'http://192.168.0.1/x', 'http://169.254.169.254/latest/meta-data', 'http://[::1]/x', 'http://[fd00::1]/x', 'http://internal.example/x', 'http://loop.example/x'])
+    expect(await f.fetchText(u), u).toBeNull()
+  expect(fetchImpl).not.toHaveBeenCalled()
+})
+test('redirects are followed manually, re-checking robots on the new host', async () => {
+  const { f, calls } = setup({
+    'https://a.example/old': () => res(302, '', { location: 'https://b.example/new' }),
+    'https://b.example/robots.txt': () => res(200, 'User-agent: *\nDisallow: /new'),
+    'https://b.example/new': () => res(200, 'should not be fetched'),
+  })
+  expect(await f.fetchText('https://a.example/old')).toBeNull()
+  expect(calls).not.toContain('https://b.example/new')
+})
+test('a redirect to a private address is refused', async () => {
+  const { f, calls } = setup({ 'https://a.example/old': () => res(302, '', { location: 'http://169.254.169.254/latest' }) })
+  expect(await f.fetchText('https://a.example/old')).toBeNull()
+  expect(calls.some((c) => c.includes('169.254'))).toBe(false)
+})
+test('a redirect to a non-http scheme is refused', async () => {
+  const { f } = setup({ 'https://a.example/old': () => res(302, '', { location: 'file:///etc/passwd' }) })
+  expect(await f.fetchText('https://a.example/old')).toBeNull()
+})
+test('a normal redirect is followed to the final body', async () => {
+  const { f } = setup({ 'https://a.example/old': () => res(301, '', { location: '/new' }), 'https://a.example/new': () => res(200, 'final') })
+  expect(await f.fetchText('https://a.example/old')).toBe('final')
+})
+test('more than 3 redirect hops gives up', async () => {
+  const { f } = setup({
+    'https://a.example/1': () => res(302, '', { location: '/2' }), 'https://a.example/2': () => res(302, '', { location: '/3' }),
+    'https://a.example/3': () => res(302, '', { location: '/4' }), 'https://a.example/4': () => res(302, '', { location: '/5' }), 'https://a.example/5': () => res(200, 'too far'),
+  })
+  expect(await f.fetchText('https://a.example/1')).toBeNull()
+})
+test('oversized bodies are refused (content-length and streamed)', async () => {
+  const big = 'x'.repeat(5 * 1024 * 1024 + 10)
+  const { f } = setup({ 'https://a.example/big': () => res(200, big), 'https://a.example/ok': () => res(200, 'x'.repeat(1000)) })
+  expect(await f.fetchText('https://a.example/big')).toBeNull()
+  expect((await f.fetchText('https://a.example/ok'))!.length).toBe(1000)
 })
