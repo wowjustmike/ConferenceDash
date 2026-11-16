@@ -14,7 +14,7 @@ npm run build    # type-check + production build into web/dist
 
 ## Data
 
-The app reads one file, `data/events.json` (schema: `web/src/lib/schema.ts`). Today it holds **sample seed data**: dates and attendance are placeholders and the UI says so. The planned automated pipeline (Plan 2) will replace this file on a schedule; see:
+The app reads one file, `data/events.json` (schema: `web/src/lib/schema.ts`), exported from the SQLite database `data/conferencedash.db` (see `CLAUDE.md` for the update procedure). Each event carries a `signal` (1-3 bars of credibility with its evidence). Today it holds **sample seed data**: dates and attendance are placeholders and the UI says so. The planned automated pipeline (Plan 2) will replace this file on a schedule; see:
 
 - `docs/superpowers/specs/2026-11-15-conferencedash-design.md` — design spec
 - `docs/SOURCING.md` — where and how events are sourced and verified
