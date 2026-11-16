@@ -5,6 +5,7 @@ import { extractWithLlm, type LlmBudget, type LlmClient } from '../extract/llm'
 import { parseIcs } from '../extract/ical'
 import { parseEventItems } from '../extract/eventitems'
 import type { BrowserFetcher } from '../net/browser'
+import { fetchCards, parseCards } from './cards'
 import { fetchDataTable, parseDataTableRows } from './datatable'
 import { icalLink } from './detect'
 import { fetchExpoAssist } from './expoassist'
@@ -18,7 +19,7 @@ import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
   id: z.string().min(1),
-  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range', 'loadmore']),
+  kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range', 'loadmore', 'cards']),
   url: z.string().url(),
   type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
@@ -28,7 +29,10 @@ const Entry = z.object({
   end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
   max_pages: z.number().int().positive().optional(),
   exclude_categories: z.array(z.string()).optional(),
-})
+  /** cards only: CSS selectors for the card, its title and its date block (link defaults to the first a[href]); render/scrolls/next drive the browser. */
+  item: z.string().optional(), title: z.string().optional(), date: z.string().optional(), link: z.string().optional(),
+  render: z.boolean().optional(), scrolls: z.number().int().nonnegative().optional(), next: z.string().optional(),
+}).refine((e) => e.kind !== 'cards' || (e.item && e.title && e.date), { message: 'cards entries need item, title and date selectors' })
 export type RegistryEntry = z.infer<typeof Entry>
 
 export function loadRegistry(path: string): RegistryEntry[] {
@@ -55,6 +59,20 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   const ref = (url: string, type: SourceRef['type']): SourceRef => ({ url, type, fetched_at: deps.now().toISOString() })
   let candidates: Candidate[] = []
   let fetchedAny = false
+  if (entry.kind === 'cards') {
+    const cfg = { item: entry.item!, title: entry.title!, date: entry.date!, link: entry.link }
+    let html: string | null
+    if (entry.render || entry.next) {
+      if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
+      const r = await fetchCards(deps.browser as BrowserFetcher, entry.url, { scrolls: entry.scrolls, next: entry.next, item: cfg.item, maxPages: entry.max_pages })
+      html = r?.html ?? null
+    } else html = await deps.fetchText(entry.url)
+    if (html === null) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
+    const p = parseCards(html, cfg, ref(entry.url, 'html'), defaults, entry.exclude)
+    const yearNote = p.missingYear > 0 ? ` (${p.missingYear} cards without a year)` : ''
+    if (p.candidates.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: `no events found${yearNote}` } }
+    return { candidates: p.candidates, health: { id: entry.id, ok: true, count: p.candidates.length, ...(yearNote ? { error: yearNote.trim().slice(1, -1) } : {}) } }
+  }
   if (entry.kind === 'loadmore') {
     if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
     const r = await (deps.loadmore ?? fetchLoadMore)(deps.browser, entry.url, { maxClicks: entry.max_pages })

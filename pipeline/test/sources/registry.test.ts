@@ -1,4 +1,4 @@
-import { mkdtempSync, writeFileSync } from 'node:fs'
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { loadRegistry, runEntry, type RegistryEntry } from '../../src/sources/registry'
@@ -137,4 +137,22 @@ test('loadmore entries parse every loaded card and honor category exclusions', a
   const r = await runEntry(entry({ kind: 'loadmore', exclude_categories: ['sporting event'] }), d)
   expect(r.candidates.map((c) => c.name)).toEqual(['Good Show'])
   expect(r.health).toEqual({ id: 'lvcc', ok: true, count: 1 })
+})
+
+const cardsHtml = () => readFileSync(new URL('../fixtures/cards-time.html', import.meta.url), 'utf8')
+test('cards entries parse selectors and run through the DOM reader without the LLM', async () => {
+  const llm = { extract: async () => { throw new Error('must not be called') } }
+  const d = deps({ 'https://venue.example/events': cardsHtml() }, llm as never)
+  const r = await runEntry(entry({ kind: 'cards', type: 'html', item: '.ev-card', title: '.ev-card__title', date: '.ev-card__when', city: 'Denver', state: 'CO' }), d)
+  expect(r.health).toEqual({ id: 'lvcc', ok: true, count: 4 })
+  expect(r.candidates[0]).toMatchObject({ name: 'Name 1', start_date: '2027-03-01', state: 'Colorado', official_url: 'https://venue.example/e/1' })
+})
+test('cards entry with render uses the browser render, and reports cards without a year', async () => {
+  let renders = 0
+  const browser = { withPage: async () => null, render: async () => { renders++; return { html: cardsHtml().replace(/<time datetime="[^"]+">/g, '<time>').replace(/, 2027/g, ''), text: '', finalUrl: 'u' } } }
+  const d = { ...deps({}), browser }
+  const r = await runEntry(entry({ kind: 'cards', type: 'html', item: '.ev-card', title: '.ev-card__title', date: '.ev-card__when', render: true }), d)
+  expect(renders).toBe(1)
+  expect(r.health).toEqual({ id: 'lvcc', ok: false, count: 0, error: 'no events found (4 cards without a year)' })
+  expect((await runEntry(entry({ kind: 'cards', type: 'html', item: '.x', render: true }), deps({}))).health.error).toBe('browser unavailable')
 })
