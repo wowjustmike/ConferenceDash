@@ -44,3 +44,11 @@ test('toCandidateClean', () => {
   expect(c).toMatchObject({ name: 'CES', start_date: '2027-01-06', end_date: '2027-01-06', city: 'Las Vegas', state: 'Nevada', venue: 'Las Vegas Convention Center' })
   expect(toCandidateClean(cand({ state: 'Atlantis' }))!.state).toBeUndefined()
 })
+
+test('cityToState resolves common US conference cities and refuses unknown ones', async () => {
+  const { cityToState } = await import('../src/normalize')
+  expect(cityToState('Las Vegas')).toBe('Nevada')
+  expect(cityToState('new york')).toBe('New York')
+  expect(cityToState('St. Louis')).toBe('Missouri')
+  expect(cityToState('Atlantis')).toBeNull()
+})

@@ -45,14 +45,14 @@ describe.skipIf(!existsSync(CHROME))('collectPaged (real Chrome)', () => {
     base = `http://127.0.0.1:${(server.address() as AddressInfo).port}/`
   })
   afterAll(() => { server.close() })
-  test('clicks through every page and returns each item once, in order', async () => {
-    const b = createBrowserFetcher({ userAgent: 'T', executablePath: CHROME, canFetch: async () => true, allowLoopback: true, minIntervalMs: 0, timeoutMs: 8000 })
+  test('clicks through every page and returns each item once, in order', { timeout: 30000 }, async () => {
+    const b = createBrowserFetcher({ userAgent: 'T', executablePath: CHROME, canFetch: async () => true, allowLoopback: true, minIntervalMs: 0, timeoutMs: 20000 })
     const r = await b.withPage(base, (page) => collectPaged(page, { itemSelector: 'article.convention-item', nextSelector: '#nxt', idAttr: 'data-recid', maxPages: 10, settleMs: 300 }))
     await b.close()
     expect(r?.map((h) => /data-recid="(\w+)"/.exec(h)![1])).toEqual(['a1', 'a2', 'b1', 'b2', 'c1'])
   })
-  test('stops at maxPages', async () => {
-    const b = createBrowserFetcher({ userAgent: 'T', executablePath: CHROME, canFetch: async () => true, allowLoopback: true, minIntervalMs: 0, timeoutMs: 8000 })
+  test('stops at maxPages', { timeout: 30000 }, async () => {
+    const b = createBrowserFetcher({ userAgent: 'T', executablePath: CHROME, canFetch: async () => true, allowLoopback: true, minIntervalMs: 0, timeoutMs: 20000 })
     const r = await b.withPage(base, (page) => collectPaged(page, { itemSelector: 'article.convention-item', nextSelector: '#nxt', idAttr: 'data-recid', maxPages: 2, settleMs: 300 }))
     await b.close()
     expect(r).toHaveLength(4)

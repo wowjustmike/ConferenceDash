@@ -51,3 +51,8 @@ sources:
     city: Las Vegas
     state: NV
     end_date: '2027-12-31'
+  - id: expoassist-us
+    kind: expoassist
+    type: aggregator
+    url: https://expoassist.net/events/country/united-states-of-america
+    max_pages: 12

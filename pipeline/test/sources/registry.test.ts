@@ -105,3 +105,11 @@ test('datatable entries use the browser adapter', async () => {
   expect(r.candidates[0]).toMatchObject({ name: 'Chi Expo', start_date: '2027-03-08', end_date: '2027-03-10', state: 'Illinois' })
   expect(r.health.error).toBe('partial: 1 of 40')
 })
+
+test('expoassist entries use plain fetching and report their own id', async () => {
+  const card = '<div class="grid-inner"><h3><b>Reg Expo</b></h3><span>05.03.2027 - 07.03.2027</span><a href="/events/city/x">Austin</a><a href="/event/reg-expo">d</a></div>'
+  const d = deps({ 'https://expoassist.net/events/country/united-states-of-america?page=1': `<div>${card}</div>` })
+  const r = await runEntry(entry({ id: 'ea', kind: 'expoassist', type: 'aggregator', url: 'https://expoassist.net/events/country/united-states-of-america' }), d)
+  expect(r.health).toEqual({ id: 'ea', ok: true, count: 1 })
+  expect(r.candidates[0]).toMatchObject({ name: 'Reg Expo', state: 'Texas' })
+}, 20000)

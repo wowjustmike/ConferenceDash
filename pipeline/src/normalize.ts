@@ -16,6 +16,16 @@ const STATES: Record<string, string> = {
   PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah',
   VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming',
 }
+const CITY_STATE = new Map(
+  Object.entries(JSON.parse(readFileSync(new URL('../sources/cities.json', import.meta.url), 'utf8')) as Record<string, string>).map(([c, st]) => [c.toLowerCase(), st]),
+)
+
+/** State for a well-known US conference city (used when a source gives a city but no state). */
+export function cityToState(city: string): string | null {
+  const st = CITY_STATE.get(city.trim().toLowerCase().replace(/\s+/g, ' '))
+  return st ? normalizeState(st) : null
+}
+
 const STATE_NAMES = new Map(Object.values(STATES).map((n) => [n.toLowerCase(), n]))
 
 export function normalizeState(s: string): string | null {
