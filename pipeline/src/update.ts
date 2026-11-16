@@ -7,6 +7,7 @@ import { unexclude } from './db/store'
 import { buildExport, planShards, recomputeSignals, writeExport } from './exporter'
 import { createAnthropicClient, LlmBudget, type LlmClient } from './extract/llm'
 import { createFetcher } from './net/http'
+import { createBrowserFetcher } from './net/browser'
 import { runPipeline, type RunDeps } from './run'
 import type { Tier } from './schedule'
 import { loadRegistry } from './sources/registry'
@@ -92,17 +93,20 @@ async function main() {
   const read = <T,>(p: string, dflt: T): T => { try { return JSON.parse(readFileSync(p, 'utf8')) as T } catch { return dflt } }
   const here = new URL('.', import.meta.url).pathname
   const existing = readExistingExport(config.eventsPath)
+  const registry = loadRegistry(join(here, '../sources/registry.yaml'))
+  const browser = registry.some((e) => e.kind === 'simpleview') ? createBrowserFetcher({ userAgent: config.userAgent, canFetch: fetcher.canFetch }) : undefined
   const summary = await runUpdate({
     db, exportDir: config.dataDir, tier, dryRun: argv.includes('--dry-run'), today, exportOpts,
     deps: {
       fetchText: fetcher.fetchText, llm, budget: new LlmBudget(config.maxLlmCalls), now: () => new Date(), today,
       fetchJson: async (u) => { const t = await fetcher.fetchText(u); try { return t ? JSON.parse(t) : null } catch { return null } },
-      registry: loadRegistry(join(here, '../sources/registry.yaml')), existing,
+      registry, existing, browser,
       confsYears: [today.getFullYear(), today.getFullYear() + 1], tmKey: process.env.TICKETMASTER_KEY,
       tmVenues: read(join(here, '../sources/ticketmaster-venues.json'), []),
       writeOut: (name, data) => { mkdirSync(config.outDir, { recursive: true }); writeFileSync(join(config.outDir, name), JSON.stringify(data, null, 2)) },
     },
   })
+  await browser?.close()
   console.log(JSON.stringify(summary, null, 2))
   if (summary.report?.allSourcesFailed || summary.failed) process.exit(1)
 }

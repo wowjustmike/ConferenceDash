@@ -8,7 +8,8 @@
     "typecheck": "tsc --noEmit",
     "update": "tsx src/update.ts",
     "export": "tsx src/update.ts export",
-    "unexclude": "tsx src/update.ts unexclude"
+    "unexclude": "tsx src/update.ts unexclude",
+    "capture": "tsx src/tools/capture.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

@@ -9,3 +9,4 @@ pipeline/.cache
 data/*.db
 data/*.db-*
 .env
+pipeline/inbox

@@ -5,6 +5,8 @@ import { z } from 'zod'
 import { extractWithLlm, type LlmBudget, type LlmClient } from '../extract/llm'
 import { parseIcs } from '../extract/ical'
 import { parseEventItems } from '../extract/eventitems'
+import type { BrowserFetcher } from '../net/browser'
+import { fetchSimpleviewCalendar, parseSimpleviewItems } from './simpleview'
 import { parseJsonLd } from '../extract/jsonld'
 import { normalizeState } from '../normalize'
 import { htmlToText } from '../text'
@@ -12,12 +14,15 @@ import type { Candidate, SourceHealth, SourceRef } from '../types'
 
 const Entry = z.object({
   id: z.string().min(1),
-  kind: z.enum(['ical', 'page']),
+  kind: z.enum(['ical', 'page', 'simpleview']),
   url: z.string().url(),
   type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
   pages: z.array(z.string().url()).optional(),
   exclude: z.array(z.string()).optional(),
+  /** simpleview only: last date to list (YYYY-MM-DD), set through the page's date picker. */
+  end_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  max_pages: z.number().int().positive().optional(),
 })
 export type RegistryEntry = z.infer<typeof Entry>
 
@@ -29,7 +34,12 @@ export function loadRegistry(path: string): RegistryEntry[] {
   return r.data.sources
 }
 
-export interface RunDeps { fetchText: (url: string) => Promise<string | null>; llm: LlmClient; budget: LlmBudget; now: () => Date }
+export interface RunDeps {
+  fetchText: (url: string) => Promise<string | null>; llm: LlmClient; budget: LlmBudget; now: () => Date
+  /** Needed for `simpleview` entries (JavaScript calendars). */
+  browser?: Pick<BrowserFetcher, 'withPage'>
+  simpleview?: typeof fetchSimpleviewCalendar
+}
 
 function icalLink(html: string, base: string): string | null {
   const $ = cheerio.load(html)
@@ -43,6 +53,16 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   const ref = (url: string, type: SourceRef['type']): SourceRef => ({ url, type, fetched_at: deps.now().toISOString() })
   let candidates: Candidate[] = []
   let fetchedAny = false
+  if (entry.kind === 'simpleview') {
+    if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
+    const [y, m, d] = (entry.end_date ?? '2027-12-31').split('-').map(Number)
+    const r = await (deps.simpleview ?? fetchSimpleviewCalendar)(deps.browser as BrowserFetcher, entry.url, { year: y, month: m, day: d }, { maxPages: entry.max_pages })
+    if (!r) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
+    const found = parseSimpleviewItems(r.items, ref(entry.url, 'html'), deps.now(), defaults)
+    const partial = r.total !== null && r.items.length < r.total ? `partial: ${r.items.length} of ${r.total}` : undefined
+    if (found.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'no events found' } }
+    return { candidates: found, health: { id: entry.id, ok: true, count: found.length, ...(partial ? { error: partial } : {}) } }
+  }
   for (const url of [entry.url, ...(entry.pages ?? [])]) {
     const text = await deps.fetchText(url)
     if (text === null) continue

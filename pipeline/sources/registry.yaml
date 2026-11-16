@@ -44,3 +44,10 @@ sources:
     venue: Moscone Center
     city: San Francisco
     state: CA
+  - id: vegas-convention-calendar
+    kind: simpleview
+    type: html
+    url: https://www.vegasmeansbusiness.com/destination-calendar/
+    city: Las Vegas
+    state: NV
+    end_date: '2027-12-31'

@@ -79,3 +79,21 @@ test('loadRegistry validates the file', () => {
   expect(shipped.length).toBeGreaterThan(0)
   expect(new Set(shipped.map((e) => e.id)).size).toBe(shipped.length)
 })
+
+test('simpleview entries use the browser adapter and report partial results', async () => {
+  const card = (id: string, n: string) => `<article class="item convention-item" data-recid="${id}"><div class="mini-date-container"><div class="month">MAR</div><div class="day">8-11</div></div><h4 class="title">${n}</h4><h5 class="host"><a href="https://${id}.example">Org</a></h5><a class="button-default" href="https://${id}.example">Visit Website</a></article>`
+  const fake = async () => ({ items: [card('a', 'HIMSS 2027'), card('b', 'Adobe Summit')], total: 5 })
+  const d = { ...deps({}), browser: { withPage: async () => null }, simpleview: fake as never }
+  const r = await runEntry(entry({ kind: 'simpleview', end_date: '2027-12-31' }), d)
+  expect(r.candidates.map((c) => c.name)).toEqual(['HIMSS 2027', 'Adobe Summit'])
+  expect(r.candidates[0]).toMatchObject({ start_date: '2027-03-08', city: 'Las Vegas', state: 'Nevada', official_url: 'https://a.example/' })
+  expect(r.health).toEqual({ id: 'lvcc', ok: true, count: 2, error: 'partial: 2 of 5' })
+})
+test('simpleview entries without a browser are reported unhealthy, not thrown', async () => {
+  const r = await runEntry(entry({ kind: 'simpleview' }), deps({}))
+  expect(r.health).toMatchObject({ ok: false, error: 'browser unavailable' })
+})
+test('simpleview fetch failure is unhealthy', async () => {
+  const d = { ...deps({}), browser: { withPage: async () => null }, simpleview: (async () => null) as never }
+  expect((await runEntry(entry({ kind: 'simpleview' }), d)).health).toMatchObject({ ok: false, error: 'fetch failed' })
+})

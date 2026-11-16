@@ -32,6 +32,8 @@ export interface RunDeps {
   tmVenues: { id: string; venue: string; city?: string; state?: string }[]
   db: Db
   writeOut: (name: string, data: unknown) => void
+  /** Optional headless browser for JavaScript-driven calendars. */
+  browser?: Pick<import('./net/browser').BrowserFetcher, 'withPage'>
 }
 
 const usable = (h: SourceHealth) => h.ok && !h.error?.startsWith('skipped')
@@ -67,7 +69,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
 
   await collect('confs.tech', () => fetchConfsTech(d.fetchText, d.confsYears, d.confsTopics))
   await collect('ticketmaster', () => fetchTicketmaster(d.fetchJson, d.tmKey, d.tmVenues))
-  for (const entry of d.registry) await collect(entry.id, () => runEntry(entry, { fetchText: d.fetchText, llm: d.llm, budget: d.budget, now: d.now }))
+  for (const entry of d.registry) await collect(entry.id, () => runEntry(entry, { fetchText: d.fetchText, llm: d.llm, budget: d.budget, now: d.now, browser: d.browser }))
   report.candidates = candidates.length
   report.allSourcesFailed = !report.sources.some(usable)
 

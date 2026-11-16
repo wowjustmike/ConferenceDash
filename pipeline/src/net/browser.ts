@@ -1,5 +1,5 @@
 import { isIP } from 'node:net'
-import { chromium, type Browser } from 'playwright-core'
+import { chromium, type Browser, type Page } from 'playwright-core'
 import { isPrivateIp } from './http'
 
 export interface BrowserOptions {
@@ -29,7 +29,14 @@ export interface Rendered { html: string; text: string; finalUrl: string }
 
 const BLOCKED_TYPES = new Set(['image', 'media', 'font'])
 
-export function createBrowserFetcher(opts: BrowserOptions): { render(url: string, o?: RenderOptions): Promise<Rendered | null>; close(): Promise<void> } {
+export interface BrowserFetcher {
+  render(url: string, o?: RenderOptions): Promise<Rendered | null>
+  /** Opens the page (after the robots/address guard and rate limit) and lets `fn` interact with it, e.g. fill filters and click through pages. Returns null on any failure. */
+  withPage<T>(url: string, fn: (page: Page) => Promise<T>): Promise<T | null>
+  close(): Promise<void>
+}
+
+export function createBrowserFetcher(opts: BrowserOptions): BrowserFetcher {
   const interval = opts.minIntervalMs ?? 1000
   const timeout = opts.timeoutMs ?? 20000
   const maxHtml = opts.maxHtmlBytes ?? 8 * 1024 * 1024
@@ -50,49 +57,56 @@ export function createBrowserFetcher(opts: BrowserOptions): { render(url: string
     return !(isIP(host) && isPrivateIp(host))
   }
 
-  return {
-    async render(url, o = {}) {
+  async function open<T>(url: string, fn: (page: Page) => Promise<T>): Promise<T | null> {
+    try {
+      const u = new URL(url)
+      if (u.protocol !== 'http:' && u.protocol !== 'https:') return null
+      if (!(await opts.canFetch(url))) return null
+      const wait = (lastAt.get(u.host) ?? -Infinity) + interval - now()
+      if (wait > 0) await sleep(wait)
+      lastAt.set(u.host, now())
+      const b = await launch()
+      const ctx = await b.newContext({ userAgent: opts.userAgent, acceptDownloads: false, serviceWorkers: 'block' })
       try {
-        const u = new URL(url)
-        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null
-        if (!(await opts.canFetch(url))) return null
-        const wait = (lastAt.get(u.host) ?? -Infinity) + interval - now()
-        if (wait > 0) await sleep(wait)
-        lastAt.set(u.host, now())
-        const b = await launch()
-        const ctx = await b.newContext({ userAgent: opts.userAgent, acceptDownloads: false, serviceWorkers: 'block' })
-        try {
-          await ctx.route('**/*', (route) => {
-            const req = route.request()
-            if (BLOCKED_TYPES.has(req.resourceType()) || !subrequestOk(req.url())) return route.abort()
-            return route.continue()
-          })
-          const page = await ctx.newPage()
-          page.setDefaultTimeout(timeout)
-          await page.goto(url, { waitUntil: 'domcontentloaded', timeout })
-          await page.waitForLoadState('networkidle', { timeout: Math.min(timeout, 8000) }).catch(() => {})
-          if (o.waitForSelector) await page.waitForSelector(o.waitForSelector, { timeout })
-          if (o.waitForText !== undefined) {
-            const w = o.waitForText
-            await page.waitForFunction(
-              ([needle, isRe]) => (isRe ? new RegExp(needle as string).test(document.body.innerText) : document.body.innerText.includes(needle as string)),
-              [w instanceof RegExp ? w.source : w, w instanceof RegExp] as const, { timeout },
-            )
-          }
-          for (let i = 0; i < (o.scrolls ?? 0); i++) {
-            await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
-            await page.waitForTimeout(o.settleMs ?? 600)
-          }
-          const html = await page.content()
-          if (Buffer.byteLength(html) > maxHtml) return null
-          const text = (await page.evaluate(() => document.body.innerText)).replace(/\s+/g, ' ').trim()
-          return { html, text, finalUrl: page.url() }
-        } finally {
-          await ctx.close().catch(() => {})
-        }
-      } catch {
-        return null
+        await ctx.route('**/*', (route) => {
+          const req = route.request()
+          if (BLOCKED_TYPES.has(req.resourceType()) || !subrequestOk(req.url())) return route.abort()
+          return route.continue()
+        })
+        const page = await ctx.newPage()
+        page.setDefaultTimeout(timeout)
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout })
+        await page.waitForLoadState('networkidle', { timeout: Math.min(timeout, 8000) }).catch(() => {})
+        return await fn(page)
+      } finally {
+        await ctx.close().catch(() => {})
       }
+    } catch {
+      return null
+    }
+  }
+
+  return {
+    withPage: open,
+    render(url, o = {}) {
+      return open(url, async (page) => {
+        if (o.waitForSelector) await page.waitForSelector(o.waitForSelector, { timeout })
+        if (o.waitForText !== undefined) {
+          const w = o.waitForText
+          await page.waitForFunction(
+            ([needle, isRe]) => (isRe ? new RegExp(needle as string).test(document.body.innerText) : document.body.innerText.includes(needle as string)),
+            [w instanceof RegExp ? w.source : w, w instanceof RegExp] as const, { timeout },
+          )
+        }
+        for (let i = 0; i < (o.scrolls ?? 0); i++) {
+          await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
+          await page.waitForTimeout(o.settleMs ?? 600)
+        }
+        const html = await page.content()
+        if (Buffer.byteLength(html) > maxHtml) throw new Error('page too large')
+        const text = (await page.evaluate(() => document.body.innerText)).replace(/\s+/g, ' ').trim()
+        return { html, text, finalUrl: page.url() }
+      })
     },
     async close() { await browser?.close().catch(() => {}); browser = null },
   }
