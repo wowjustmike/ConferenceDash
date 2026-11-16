@@ -1,5 +1,6 @@
 import type { ConfEvent } from '../../../web/src/lib/schema'
 import type { Evidence, EvidenceKind } from '../credibility'
+import { CLASSIFIER_VERSION, classifyKind } from '../classify'
 import { withTransaction, type Db } from './db'
 
 /** The web app's event shape, including the optional computed `signal` and `kind`. */
@@ -107,4 +108,37 @@ export function deleteMissingEvents(db: Db, keepIds: Set<string>): number {
     }
   })
   return gone.length
+}
+
+export function recordExclusion(db: Db, key: string, reason: string, name: string, seenAt: string): void {
+  db.prepare('insert or ignore into exclusions(event_key, reason, name, seen_at, rule_version) values (?, ?, ?, ?, ?)').run(key, reason, name, seenAt, CLASSIFIER_VERSION)
+}
+
+/** Re-checks exclusions made by older classifier rules; releases (and un-hides) any the current rules would not make. Returns the released keys. */
+export function reevaluateExclusions(db: Db): string[] {
+  const old = db.prepare('select event_key k, name from exclusions where rule_version < ?').all(CLASSIFIER_VERSION) as { k: string; name: string }[]
+  const released: string[] = []
+  withTransaction(db, () => {
+    for (const r of old) {
+      if ('excluded' in classifyKind(r.name)) {
+        db.prepare('update exclusions set rule_version = ? where event_key = ?').run(CLASSIFIER_VERSION, r.k)
+      } else {
+        db.prepare('delete from exclusions where event_key = ?').run(r.k)
+        db.prepare('update events set excluded_reason = null where id = ?').run(r.k)
+        released.push(r.k)
+      }
+    }
+  })
+  return released
+}
+
+/** Manual recovery from a wrong exclusion. */
+export function unexclude(db: Db, key: string): boolean {
+  let found = false
+  withTransaction(db, () => {
+    found = db.prepare('delete from exclusions where event_key = ?').run(key).changes > 0
+    const e = db.prepare('update events set excluded_reason = null where id = ? and excluded_reason is not null').run(key)
+    found = found || e.changes > 0
+  })
+  return found
 }

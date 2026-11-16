@@ -3,7 +3,7 @@ import { config } from './config'
 import { classifyKind } from './classify'
 import { familyOf, loadCredibility } from './credibility'
 import { withTransaction, type Db } from './db/db'
-import { addObservation, deleteMissingEvents, linkObservation, loadEvents, markExcluded, saveEvents, upsertSource, type ObservationInput, type StoredEvent } from './db/store'
+import { addObservation, deleteMissingEvents, linkObservation, loadEvents, markExcluded, recordExclusion, reevaluateExclusions, saveEvents, upsertSource, type ObservationInput, type StoredEvent } from './db/store'
 import { hostOf, importEventsJson, KIND } from './importer'
 import { isSampleEvent } from './sample'
 import { findAmbiguous, mergeCandidates, pairKey, resolveAmbiguous } from './dedupe'
@@ -55,6 +55,8 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
     }
   }
 
+  // Exclusions made by older classifier rules are re-checked first, so a rule fix can bring wrongly excluded events back.
+  if (!args.dryRun) reevaluateExclusions(db)
   // The database is the source of truth; a previous export seeds an empty one.
   let existing: StoredEvent[] = loadEvents(db)
   if (existing.length === 0 && d.existing.length > 0) {
@@ -165,8 +167,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
         }
         saveEvents(db, result.events, Object.fromEntries(result.events.map((e) => [e.id, { isSample: isSampleEvent(e) }])))
         deleteMissingEvents(db, new Set(result.events.map((e) => e.id)))
-        for (const x of newExclusions)
-          db.prepare('insert or ignore into exclusions(event_key, reason, name, seen_at) values (?, ?, ?, ?)').run(x.key, x.reason, x.name, todayIso)
+        for (const x of newExclusions) recordExclusion(db, x.key, x.reason, x.name, todayIso)
         for (const x of excludeExisting) markExcluded(db, x.id, x.reason)
         const present = new Set(result.events.map((e) => e.id))
         for (const l of links) if (present.has(l.eventId)) linkObservation(db, l.eventId, l.obs, 'rule')

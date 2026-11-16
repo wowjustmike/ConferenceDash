@@ -1,8 +1,9 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { dirname, join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { config } from './config'
 import { openDb, type Db } from './db/db'
+import { unexclude } from './db/store'
 import { buildExport, planShards, recomputeSignals, writeExport } from './exporter'
 import { createAnthropicClient, LlmBudget, type LlmClient } from './extract/llm'
 import { createFetcher } from './net/http'
@@ -13,7 +14,7 @@ import type { ConfEvent } from '../../web/src/lib/schema'
 import type { RunReport } from './types'
 
 export interface ExportOpts { windowStart: string; windowEnd: string; sampleDropThreshold: number; maxBytes: number }
-export interface Summary { report?: RunReport; exported: number; byBars: Record<1 | 2 | 3, number>; signalsChanged: number }
+export interface Summary { report?: RunReport; exported: number; byBars: Record<1 | 2 | 3, number>; signalsChanged: number; failed?: boolean }
 
 export async function runExport(a: { db: Db; exportDir: string; today: Date; exportOpts: ExportOpts }): Promise<Summary> {
   const signalsChanged = recomputeSignals(a.db, a.today)
@@ -28,11 +29,32 @@ export async function runUpdate(a: {
   db: Db; exportDir: string; tier: Tier; dryRun: boolean; deps: Omit<RunDeps, 'db'>; today: Date; exportOpts: ExportOpts
 }): Promise<Summary> {
   const report = await runPipeline({ tier: a.tier, dryRun: a.dryRun, deps: { ...a.deps, db: a.db } })
+  if (report.errors.some((e) => e.startsWith('save:'))) {
+    // The database was rolled back; exporting now would only republish old state as if the run had succeeded.
+    return { report, exported: 0, byBars: { 1: 0, 2: 0, 3: 0 }, signalsChanged: 0, failed: true }
+  }
   if (a.dryRun || report.allSourcesFailed) {
     const empty = { 1: 0, 2: 0, 3: 0 } as Summary['byBars']
     return { report, exported: 0, byBars: empty, signalsChanged: 0 }
   }
   return { report, ...(await runExport({ db: a.db, exportDir: a.exportDir, today: a.today, exportOpts: a.exportOpts })) }
+}
+
+/** Reads the previous export: a plain array, or a shard manifest ({ shards: [...] }); never throws. */
+export function readExistingExport(path: string): ConfEvent[] {
+  try {
+    const data: unknown = JSON.parse(readFileSync(path, 'utf8'))
+    if (Array.isArray(data)) return data as ConfEvent[]
+    const shards = (data as { shards?: unknown } | null)?.shards
+    if (!Array.isArray(shards)) return []
+    const out: ConfEvent[] = []
+    for (const s of shards) {
+      try { const j: unknown = JSON.parse(readFileSync(join(dirname(path), String(s)), 'utf8')); if (Array.isArray(j)) out.push(...(j as ConfEvent[])) } catch { /* skip a missing shard */ }
+    }
+    return out
+  } catch {
+    return []
+  }
 }
 
 /** Loads KEY=VALUE lines from a .env file into the environment (values are never printed). */
@@ -47,6 +69,13 @@ function loadDotEnv(path: string): void {
 async function main() {
   const argv = process.argv.slice(2)
   loadDotEnv(join(config.dataDir, '../.env'))
+  if (argv[0] === 'unexclude') {
+    const key = argv[1]
+    if (!key) throw new Error('usage: npm run unexclude -- <event-key>')
+    const ok = unexclude(openDb(config.dbPath), key)
+    console.log(ok ? `Released ${key}. Run: npm run export` : `No exclusion found for ${key}`)
+    return
+  }
   const i = argv.indexOf('--tier')
   const tier = (i >= 0 ? argv[i + 1] : 'daily') as Tier
   if (!['daily', 'weekly', 'monthly'].includes(tier)) throw new Error(`Unknown --tier ${tier}`)
@@ -62,20 +91,20 @@ async function main() {
   const llm: LlmClient = key ? createAnthropicClient(key) : { extract: async () => { throw new Error('no AI key configured') } }
   const read = <T,>(p: string, dflt: T): T => { try { return JSON.parse(readFileSync(p, 'utf8')) as T } catch { return dflt } }
   const here = new URL('.', import.meta.url).pathname
-  const existing = read<unknown>(config.eventsPath, [])
+  const existing = readExistingExport(config.eventsPath)
   const summary = await runUpdate({
     db, exportDir: config.dataDir, tier, dryRun: argv.includes('--dry-run'), today, exportOpts,
     deps: {
       fetchText: fetcher.fetchText, llm, budget: new LlmBudget(config.maxLlmCalls), now: () => new Date(), today,
       fetchJson: async (u) => { const t = await fetcher.fetchText(u); try { return t ? JSON.parse(t) : null } catch { return null } },
-      registry: loadRegistry(join(here, '../sources/registry.yaml')), existing: Array.isArray(existing) ? (existing as ConfEvent[]) : [],
+      registry: loadRegistry(join(here, '../sources/registry.yaml')), existing,
       confsYears: [today.getFullYear(), today.getFullYear() + 1], tmKey: process.env.TICKETMASTER_KEY,
       tmVenues: read(join(here, '../sources/ticketmaster-venues.json'), []),
       writeOut: (name, data) => { mkdirSync(config.outDir, { recursive: true }); writeFileSync(join(config.outDir, name), JSON.stringify(data, null, 2)) },
     },
   })
   console.log(JSON.stringify(summary, null, 2))
-  if (summary.report?.allSourcesFailed) process.exit(1)
+  if (summary.report?.allSourcesFailed || summary.failed) process.exit(1)
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

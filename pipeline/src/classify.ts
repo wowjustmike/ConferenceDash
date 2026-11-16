@@ -1,3 +1,6 @@
+/** Bump when the rules change so earlier rule-made exclusions are re-checked. */
+export const CLASSIFIER_VERSION = 2
+
 export type Kind = 'conference' | 'trade_show' | 'expo' | 'convention' | 'fan_con'
 export type Classification = { kind: Kind } | { excluded: string } | { unknown: true }
 
@@ -13,16 +16,20 @@ const FAN_CON = /\b(comic[- ]?con|comiccon|fan ?expo|anime|manga|cosplay|collect
 const TRADE_SHOW = /\btrade ?show\b|\b[a-z]+ show\b/i
 const EXPO = /\bexpo(sition)?\b/i
 const CONVENTION = /\bconvention\b/i
-const CONFERENCE = /\b[a-z]*(conf|summit|symposium|congress|forum)\b|\b(black hat|def con|kubecon|re:invent|reinvent|sxsw|dreamforce|money20\/20|cloud next|devfest|jsnation|mjbizcon|cybersecuritycon)\b|\bcon\b/i
+// Words that make something a professional event even when it also contains a sports/music/festival word ("Boxing Industry Expo").
+const PRO = /\b(conference|conf|summit|symposium|congress|forum|expo|exposition|convention|trade ?show|industry)\b/i
+const CONFERENCE = /\b[a-z]*(conf|conference|summit|symposium|congress|forum)\b|\b(black hat|def con|kubecon|re:invent|reinvent|sxsw|dreamforce|money20\/20|cloud next|devfest|jsnation|mjbizcon|cybersecuritycon)\b|\bcon\b/i
 // CamelCase "...Con" brands (KubeCon, PyCon, MJBizCon) but not words that merely end in -con (Beacon).
 const CAMEL_CON = /\b[A-Za-z]*[a-z]Con\b/
 
 export function classifyKind(name: string, hint = ''): Classification {
   const s = `${name} ${hint}`
-  if (t(FAIRE, s)) return { excluded: 'faire' }
-  if (t(FESTIVAL, s)) return { excluded: 'festival' }
-  if (t(CONCERT, s)) return { excluded: 'concert' }
-  if (t(SPORTS, s)) return { excluded: 'sports' }
+  if (!t(PRO, s)) {
+    if (t(FAIRE, s)) return { excluded: 'faire' }
+    if (t(FESTIVAL, s)) return { excluded: 'festival' }
+    if (t(CONCERT, s)) return { excluded: 'concert' }
+    if (t(SPORTS, s)) return { excluded: 'sports' }
+  }
   if (t(FAN_CON, s)) return { kind: 'fan_con' }
   if (t(CONVENTION, s)) return { kind: 'convention' }
   if (t(EXPO, s)) return { kind: 'expo' }

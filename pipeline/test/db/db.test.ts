@@ -16,7 +16,7 @@ const obs = (db: ReturnType<typeof openDb>, o: Record<string, unknown> = {}) => 
 test('openDb creates all tables and sets user_version 1', () => {
   const db = openDb(':memory:')
   expect(tables(db)).toEqual(['event_observations', 'events', 'exclusions', 'fetches', 'inbox', 'observations', 'runs', 'sources'])
-  expect((db.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(1)
+  expect((db.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(2)
 })
 test('migrate is idempotent and keeps data', () => {
   const db = openDb(':memory:')
@@ -62,4 +62,18 @@ test('file databases are created, including parent directories, and persist', ()
   a.close()
   const b = openDb(path)
   expect((b.prepare('select count(*) c from sources').get() as { c: number }).c).toBe(1)
+})
+
+test('schema version 2 adds exclusions.rule_version; a v1 database migrates in place', async () => {
+  const { DatabaseSync } = await import('node:sqlite')
+  const { SCHEMA_V1 } = await import('../../src/db/schema')
+  const raw = new DatabaseSync(':memory:')
+  raw.exec(SCHEMA_V1)
+  raw.exec('pragma user_version = 1')
+  raw.prepare("insert into exclusions(event_key, reason, name, seen_at) values ('k', 'sports', 'N', '2026-11-01')").run()
+  migrate(raw)
+  expect((raw.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(2)
+  expect(raw.prepare('select rule_version v from exclusions').get()).toEqual({ v: 1 })
+  const fresh = openDb(':memory:')
+  expect((fresh.prepare('pragma user_version').get() as { user_version: number }).user_version).toBe(2)
 })

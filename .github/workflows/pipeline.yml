@@ -1,10 +1,9 @@
 name: Pipeline
 
+# Manual only for now. The SQLite database (data/conferencedash.db) is git-ignored and is the source of truth, so a stateless
+# scheduled run would rebuild it from the filtered export every time and lose exclusions and observation history.
+# Re-enable the cron below once the database is persisted between runs (e.g. a cache or a release artifact).
 on:
-  schedule:
-    - cron: '0 9 * * *'    # daily tier
-    - cron: '0 10 * * 0'   # weekly tier (Sunday)
-    - cron: '0 11 1 * *'   # monthly tier (1st)
   workflow_dispatch:
     inputs:
       tier:
@@ -12,6 +11,10 @@ on:
         type: choice
         options: [daily, weekly, monthly]
         default: daily
+  # schedule:
+  #   - cron: '0 9 * * *'    # daily tier
+  #   - cron: '0 10 * * 0'   # weekly tier (Sunday)
+  #   - cron: '0 11 1 * *'   # monthly tier (1st)
 
 permissions:
   contents: write
@@ -38,12 +41,7 @@ jobs:
       - name: Pick tier
         id: tier
         run: |
-          case "${{ github.event.schedule }}" in
-            "0 10 * * 0") t=weekly ;;
-            "0 11 1 * *") t=monthly ;;
-            "") t="${{ inputs.tier }}" ;;
-            *) t=daily ;;
-          esac
+          t="${{ inputs.tier }}"
           echo "tier=${t:-daily}" >> "$GITHUB_OUTPUT"
       - name: Run pipeline
         run: npm run pipeline --prefix pipeline -- --tier "${{ steps.tier.outputs.tier }}"
@@ -59,12 +57,12 @@ jobs:
           if-no-files-found: ignore
       - name: Commit refreshed data
         run: |
-          if git diff --quiet -- data/events.json; then
+          git add -A data
+          if git diff --cached --quiet; then
             echo "No data changes."
           else
             git config user.name "conferencedash-bot"
             git config user.email "bot@users.noreply.github.com"
-            git add data/events.json
             git commit -m "data: refresh ${{ steps.tier.outputs.tier }}"
             git push
           fi

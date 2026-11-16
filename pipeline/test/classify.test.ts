@@ -42,3 +42,18 @@ test('inWindow is inclusive and overlap-based', () => {
   expect(inWindow({ start_date: '2028-01-01', end_date: '2028-01-02' }, w)).toBe(false)
   expect(inWindow({ start_date: '2027-03-01', end_date: '2027-03-02' }, w)).toBe(true)
 })
+
+test.each([
+  ['Craft Brewers Conference', { kind: 'conference' }],
+  ['Esports Championship Summit', { kind: 'conference' }],
+  ['National Cheer Coaches Conference', { kind: 'conference' }],
+  ['Pollstar Live! Concert Industry Conference', { kind: 'conference' }],
+  ['Boxing Industry Expo', { kind: 'expo' }],
+  ['Wine Industry Network Wine Festival Expo', { kind: 'expo' }],
+  ['World Tour Operators Summit', { kind: 'conference' }],
+  ['Marathon Oil Investor Forum', { kind: 'conference' }],
+  ['Texas Renaissance Festival', { excluded: 'faire' }],
+  ['NFL Draft', { excluded: 'sports' }],
+])('professional-event words beat exclusion words: %s', (name, expected) => {
+  expect(classifyKind(name as string)).toEqual(expected)
+})

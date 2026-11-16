@@ -4,7 +4,7 @@ import { join } from 'node:path'
 import { openDb } from '../src/db/db'
 import { LlmBudget, type LlmClient } from '../src/extract/llm'
 import type { RunDeps } from '../src/run'
-import { runExport, runUpdate } from '../src/update'
+import { readExistingExport, runExport, runUpdate } from '../src/update'
 import type { ConfEvent } from '../../web/src/lib/schema'
 
 const NOW = new Date('2026-11-15T12:00:00Z')
@@ -66,4 +66,35 @@ test('runExport alone re-scores and exports from the database', async () => {
   const s = await runExport({ db: o.db, exportDir: dir, today, exportOpts: o.exportOpts })
   expect(s.exported).toBe(2)
   expect(JSON.parse(readFileSync(join(dir, 'events.json'), 'utf8'))).toHaveLength(2)
+})
+
+test('readExistingExport reads a plain array, a shard manifest, and tolerates missing/garbage files', async () => {
+  const { mkdirSync } = await import('node:fs')
+  const dir = mkdtempSync(join(tmpdir(), 'rd-'))
+  expect(readExistingExport(join(dir, 'events.json'))).toEqual([])
+  writeFileSync(join(dir, 'events.json'), 'not json')
+  expect(readExistingExport(join(dir, 'events.json'))).toEqual([])
+  writeFileSync(join(dir, 'events.json'), JSON.stringify([{ id: 'a' }]))
+  expect(readExistingExport(join(dir, 'events.json'))).toEqual([{ id: 'a' }])
+  mkdirSync(join(dir, 'events'))
+  writeFileSync(join(dir, 'events', '2027-01.json'), JSON.stringify([{ id: 'jan' }]))
+  writeFileSync(join(dir, 'events', '2027-02.json'), JSON.stringify([{ id: 'feb' }]))
+  writeFileSync(join(dir, 'events.json'), JSON.stringify({ shards: ['events/2027-01.json', 'events/2027-02.json', 'events/missing.json'] }))
+  expect(readExistingExport(join(dir, 'events.json'))).toEqual([{ id: 'jan' }, { id: 'feb' }])
+})
+test('a failed save is reported as failed and nothing is exported', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'upd-'))
+  const real = openDb(':memory:')
+  const failing = new Proxy(real, {
+    get(t, p) {
+      if (p === 'prepare') return (sql: string) => { if (/insert into events/.test(sql)) throw new Error('disk full'); return t.prepare(sql) }
+      const v = (t as never)[p as never] as unknown
+      return typeof v === 'function' ? (v as (...a: unknown[]) => unknown).bind(t) : v
+    },
+  })
+  const o = opts(dir, failing)
+  const s = await runUpdate({ ...o, deps: { ...deps(), existing: [] } })
+  expect(s.failed).toBe(true)
+  expect(s.exported).toBe(0)
+  expect(() => readFileSync(join(dir, 'events.json'))).toThrow()
 })

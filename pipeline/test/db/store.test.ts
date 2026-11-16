@@ -76,3 +76,27 @@ test('evidenceFor returns only linked observations, mapped to Evidence', () => {
   expect(ev.find((x) => x.kind === 'official-site')).toMatchObject({ family: 'ces.tech', confirmsEdition: true, seenAt: '2026-11-10' })
   expect(ev.find((x) => x.kind === 'directory')).toMatchObject({ family: 'confs.tech', confirmsEdition: false })
 })
+
+import { CLASSIFIER_VERSION } from '../../src/classify'
+import { recordExclusion, reevaluateExclusions, unexclude } from '../../src/db/store'
+
+test('recordExclusion stores the rule version; reevaluateExclusions releases exclusions the current rules would not make', () => {
+  const db = setup()
+  saveEvents(db, [mk({ id: 'brew', name: 'Craft Brewers Conference' }), mk({ id: 'fest', name: 'Summer Music Festival' })])
+  markExcluded(db, 'brew', 'sports'); markExcluded(db, 'fest', 'festival')
+  db.prepare("insert into exclusions(event_key, reason, name, seen_at, rule_version) values ('brew', 'sports', 'Craft Brewers Conference', '2026-11-01', 1)").run()
+  recordExclusion(db, 'fest', 'festival', 'Summer Music Festival', '2026-11-01')
+  expect((db.prepare("select rule_version v from exclusions where event_key = 'fest'").get() as { v: number }).v).toBe(CLASSIFIER_VERSION)
+  expect(reevaluateExclusions(db)).toEqual(['brew'])
+  expect(loadEvents(db).map((e) => e.id)).toEqual(['brew'])
+  expect((db.prepare('select count(*) c from exclusions').get() as { c: number }).c).toBe(1)
+})
+test('unexclude removes a manual or rule exclusion and restores the event', () => {
+  const db = setup()
+  saveEvents(db, [mk()])
+  markExcluded(db, 'ces-2027-las-vegas', 'social')
+  recordExclusion(db, 'ces-2027-las-vegas', 'social', 'CES 2027', '2026-11-01')
+  expect(unexclude(db, 'ces-2027-las-vegas')).toBe(true)
+  expect(loadEvents(db)).toHaveLength(1)
+  expect(unexclude(db, 'ces-2027-las-vegas')).toBe(false)
+})

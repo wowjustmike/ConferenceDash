@@ -1,4 +1,7 @@
-export const SCHEMA_VERSION = 1
+export const SCHEMA_VERSION = 2
+
+/** v2: remember which classifier version made each exclusion so rule-made exclusions can be re-checked. */
+export const SCHEMA_V2 = 'alter table exclusions add column rule_version integer not null default 1'
 
 export const SCHEMA_V1 = `
 create table sources (
