@@ -1,5 +1,4 @@
 import { readFileSync } from 'node:fs'
-import * as cheerio from 'cheerio'
 import { parse } from 'yaml'
 import { z } from 'zod'
 import { extractWithLlm, type LlmBudget, type LlmClient } from '../extract/llm'
@@ -7,6 +6,7 @@ import { parseIcs } from '../extract/ical'
 import { parseEventItems } from '../extract/eventitems'
 import type { BrowserFetcher } from '../net/browser'
 import { fetchDataTable, parseDataTableRows } from './datatable'
+import { icalLink } from './detect'
 import { fetchExpoAssist } from './expoassist'
 import { fetchLoadMore } from './loadmore'
 import { fetchMoscone } from './moscone'
@@ -48,13 +48,6 @@ export interface RunDeps {
   moscone?: typeof fetchMoscone
   loadmore?: typeof fetchLoadMore
   simpleviewRange?: typeof fetchSimpleviewRange
-}
-
-function icalLink(html: string, base: string): string | null {
-  const $ = cheerio.load(html)
-  const href = $('link[rel="alternate"][type="text/calendar"]').attr('href') ?? $('a[href*="ical=1"], a[href$=".ics"]').first().attr('href')
-  if (!href) return null
-  try { return new URL(href, base).toString() } catch { return null }
 }
 
 export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ candidates: Candidate[]; health: SourceHealth }> {
