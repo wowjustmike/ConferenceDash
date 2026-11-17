@@ -895,6 +895,54 @@
     }
   },
   {
+    "id": "cities-city-league-national-of-2026-nashville",
+    "name": "National League of Cities 2026 City Summit",
+    "start_date": "2026-11-18",
+    "end_date": "2026-11-21",
+    "dates_confirmed": true,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 4200,
+    "official_url": "https://www.nlc.org/events/city-summit-2026/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (nlc.org)",
+          "family": "nlc.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "convention-mba-wedding-2026-las-vegas",
     "name": "Wedding MBA Convention 2026",
     "start_date": "2026-11-18",
@@ -1058,6 +1106,46 @@
         {
           "label": "Venue calendar (charlottemeetings.com)",
           "family": "charlottemeetings.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "athletes-christian-fellowship-of-2026-nashville",
+    "name": "Fellowship of Christian Athletes",
+    "start_date": "2026-11-19",
+    "end_date": "2026-11-19",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 600,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -1726,6 +1814,87 @@
     }
   },
   {
+    "id": "docks-2026-nashville",
+    "name": "The DOCKS Expo",
+    "start_date": "2026-12-01",
+    "end_date": "2026-12-03",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1300,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "showcase-south-travel-2026-nashville",
+    "name": "Travel South USA International Showcase",
+    "start_date": "2026-12-01",
+    "end_date": "2026-12-02",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 500,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "diego-san-stem-workshops-x-2026-san-diego",
     "name": "X-STEM WORKSHOPS SAN DIEGO 2026",
     "start_date": "2026-12-01",
@@ -1758,6 +1927,46 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "holiday-showcase-2026-chicago",
+    "name": "2026 Holiday Showcase",
+    "start_date": "2026-12-02",
+    "end_date": "2026-12-03",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.mccormickplace.com/events/?eventId=46683&orgCode=10",
+    "sources": [
+      {
+        "url": "https://www.mccormickplace.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:32.469Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (mccormickplace.com)",
+          "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -2972,6 +3181,46 @@
     }
   },
   {
+    "id": "brothers-hunt-pizza-2026-nashville",
+    "name": "Hunt Brothers Pizza",
+    "start_date": "2026-12-11",
+    "end_date": "2026-12-11",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1250,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "classic-magic-mega-2026-detroit",
     "name": "Mega Magic Classic",
     "start_date": "2026-12-11",
@@ -3004,6 +3253,46 @@
         {
           "label": "Venue calendar (huntingtonplacedetroit.com)",
           "family": "huntingtonplacedetroit.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "education-of-score-state-2026-nashville",
+    "name": "SCORE State of Education",
+    "start_date": "2026-12-11",
+    "end_date": "2026-12-11",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Education"
+    ],
+    "est_attendance": 300,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -3216,6 +3505,46 @@
     }
   },
   {
+    "id": "holiday-matsuri-2026-orlando",
+    "name": "Holiday Matsuri 2026",
+    "start_date": "2026-12-18",
+    "end_date": "2026-12-20",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/holiday-matsuri-2026/919/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "a-angeles-ca-collect-con-los-2026-los-angeles",
     "name": "Collect-A-Con (Los Angeles 2, CA)",
     "start_date": "2026-12-19",
@@ -3369,6 +3698,49 @@
     }
   },
   {
+    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2026-anaheim",
+    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
+    "start_date": "2026-12-30",
+    "end_date": "2026-12-30",
+    "dates_confirmed": false,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+    "sources": [
+      {
+        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.044Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.3,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Ticketing listing (universe.com)",
+          "family": "universe.com",
+          "kind": "ticketing",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "auto-diego-san-2026-san-diego",
     "name": "SAN DIEGO INTERNATIONAL AUTO SHOW 2026",
     "start_date": "2026-12-31",
@@ -3404,6 +3776,49 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2027-anaheim",
+    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
+    "start_date": "2027-01-02",
+    "end_date": "2027-01-02",
+    "dates_confirmed": false,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+    "sources": [
+      {
+        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
+        "type": "api",
+        "fetched_at": "2026-11-16T02:14:49.044Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.3,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Ticketing listing (universe.com)",
+          "family": "universe.com",
+          "kind": "ticketing",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -3785,6 +4200,47 @@
     }
   },
   {
+    "id": "antiques-garden-nashville-of-2027-nashville",
+    "name": "Antiques & Garden Show of Nashville",
+    "start_date": "2027-01-07",
+    "end_date": "2027-01-10",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 15500,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "archery-association-trade-trade-2027-indianapolis",
     "name": "Archery Trade Association Annual Trade Show",
     "start_date": "2027-01-07",
@@ -4031,6 +4487,46 @@
           "family": "atlanticunionbankconventioncenter.com",
           "kind": "official-site",
           "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "florida-gold-series-usav-2027-orlando",
+    "name": "Florida USAV Gold Series 2027",
+    "start_date": "2027-01-08",
+    "end_date": "2027-01-10",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/florida-usav-gold-series-2027/925/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -4601,6 +5097,53 @@
     }
   },
   {
+    "id": "city-classic-sin-2027-las-vegas",
+    "name": "Sin City Classic 2027",
+    "start_date": "2027-01-14",
+    "end_date": "2027-01-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Horseshoe Las Vegas",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://www.sincityclassic.org/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:33:29.840Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (sincityclassic.org)",
+          "family": "sincityclassic.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "home-indianapolis-2027-indianapolis",
     "name": "Indianapolis Home Show 2027",
     "start_date": "2027-01-15",
@@ -4636,6 +5179,46 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "classic-presidential-2027-orlando",
+    "name": "Presidential Classic",
+    "start_date": "2027-01-15",
+    "end_date": "2027-01-17",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/presidential-classic/929/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -4683,6 +5266,86 @@
           "family": "thebaseballconvention.com",
           "kind": "official-site",
           "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "mlk-open-2027-chicago",
+    "name": "2027 MLK Open",
+    "start_date": "2027-01-16",
+    "end_date": "2027-01-18",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.mccormickplace.com/events/?eventId=48151&orgCode=10",
+    "sources": [
+      {
+        "url": "https://www.mccormickplace.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:32.469Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (mccormickplace.com)",
+          "family": "mccormickplace.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "all-grand-nation-out-2027-orlando",
+    "name": "All Out Grand Nation",
+    "start_date": "2027-01-16",
+    "end_date": "2027-01-17",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/all-out-grand-nation/928/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -4932,6 +5595,46 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "day-meal-million-mlk-of-pack-service-2027-orlando",
+    "name": "MLK Day of Service Million Meal Pack",
+    "start_date": "2027-01-18",
+    "end_date": "2027-01-18",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/mlk-day-of-service-million-meal-pack/931/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -5197,8 +5900,8 @@
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 5,
-      "bars": 3,
+      "points": 2,
+      "bars": 2,
       "flags": [],
       "evidence": [
         {
@@ -5212,7 +5915,7 @@
           "label": "Confirmed on the official site (adultentertainmentexpo.com)",
           "family": "adultentertainmentexpo.com",
           "kind": "official-site",
-          "points": 3,
+          "points": 0,
           "seenAt": "2026-11-17"
         }
       ]
@@ -5254,6 +5957,54 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "club-convention-safari-2027-nashville",
+    "name": "Safari Club International Annual Convention",
+    "start_date": "2027-01-20",
+    "end_date": "2027-01-23",
+    "dates_confirmed": true,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 18000,
+    "official_url": "https://convention.safariclub.org/?_gl=1*1awyjjb*_gcl_au*ODgyNzc3MDE0LjE3ODczMzQyOTU.*_ga*NjM2NjIwNjY3LjE3ODczMzQyOTY.*_ga_3SX4MCWXV0*czE3ODczMzQyOTUkbzEkZzAkdDE3ODczMzQyOTUkajYwJGwwJGgw",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (convention.safariclub.org)",
+          "family": "convention.safariclub.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -5383,6 +6134,46 @@
     }
   },
   {
+    "id": "fest-florida-in-jnq-2027-orlando",
+    "name": "Florida Fest JNQ in",
+    "start_date": "2027-01-23",
+    "end_date": "2027-01-25",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/florida-fest-jnq-in/933/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "apartment-nmhc-strategies-2027-las-vegas",
     "name": "NMHC Apartment Strategies Conference 2027",
     "start_date": "2027-01-23",
@@ -5464,6 +6255,47 @@
         {
           "label": "Venue calendar (laconventioncenter.com)",
           "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "and-consilio-kickoff-leader-meetings-sales-2027-nashville",
+    "name": "Consilio Leader Summit and Sales Kickoff Meetings",
+    "start_date": "2027-01-26",
+    "end_date": "2027-01-29",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 250,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -6205,7 +7037,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6218,7 +7050,48 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cattle-convention-industry-ncba-trade-2027-nashville",
+    "name": "2027 Cattle Industry Convention & NCBA Trade Show",
+    "start_date": "2027-02-01",
+    "end_date": "2027-02-04",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 9000,
+    "official_url": "https://https//convention.ncba.org/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -6555,7 +7428,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -6569,7 +7442,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -7252,6 +8125,87 @@
     }
   },
   {
+    "id": "pool-southeast-spa-2027-nashville",
+    "name": "Southeast Pool & Spa Show",
+    "start_date": "2027-02-09",
+    "end_date": "2027-02-10",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1000,
+    "official_url": "https://https//southeastshow.com/attend/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "tnhc-2027-nashville",
+    "name": "TNHC 2027",
+    "start_date": "2027-02-09",
+    "end_date": "2027-02-10",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 500,
+    "official_url": "https://https//thda.org/news/thda-announces-2027-tennessee-housing-conference/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "anaheim-westpack-2027-anaheim",
     "name": "WestPack Anaheim 2027",
     "start_date": "2027-02-09",
@@ -7396,7 +8350,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -7410,7 +8364,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -7551,6 +8505,46 @@
     }
   },
   {
+    "id": "dance-drill-s-tea-u-2027-orlando",
+    "name": "U.S. Dance/Drill Tea",
+    "start_date": "2027-02-13",
+    "end_date": "2027-02-13",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/u-s-dance-drill-tea/941/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "bicsi-winter-2027-orlando",
     "name": "BICSI 2027 Winter Conference",
     "start_date": "2027-02-14",
@@ -7572,7 +8566,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -7586,7 +8580,47 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "3dexperience-dassault-systemes-2027-nashville",
+    "name": "Dassault Systemes 2027 3DEXPERIENCE World",
+    "start_date": "2027-02-14",
+    "end_date": "2027-02-17",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 4500,
+    "official_url": "https://https//www.3dexperienceworld.com/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -7921,7 +8955,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7934,7 +8968,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -8414,6 +9448,46 @@
     }
   },
   {
+    "id": "company-supply-tractor-2027-nashville",
+    "name": "Tractor Supply Company",
+    "start_date": "2027-02-21",
+    "end_date": "2027-02-24",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 4500,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "wwett-2027-indianapolis",
     "name": "WWETT Show 2027",
     "start_date": "2027-02-22",
@@ -8734,7 +9808,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8747,7 +9821,47 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "florida-junior-state-2027-orlando",
+    "name": "Florida State Junior",
+    "start_date": "2027-02-25",
+    "end_date": "2027-02-27",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/florida-state-junior/945/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -8774,7 +9888,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8787,7 +9901,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -8814,7 +9928,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8827,7 +9941,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -8854,7 +9968,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -8868,7 +9982,54 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "classic-las-vegas-2027-las-vegas",
+    "name": "Las Vegas Classic - 2027",
+    "start_date": "2027-02-26",
+    "end_date": "2027-02-28",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 45000,
+    "official_url": "https://www.kcsportsandmarketing.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:55.414Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (kcsportsandmarketing.com)",
+          "family": "kcsportsandmarketing.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -8976,7 +10137,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-16",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8989,7 +10150,87 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-16"
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "century-one21-2027-nashville",
+    "name": "Century 21 One21",
+    "start_date": "2027-02-27",
+    "end_date": "2027-03-01",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "de-el-metanoia-mujeres-sembrador-2027-los-angeles",
+    "name": "El Sembrador - Metanoia de Mujeres",
+    "start_date": "2027-02-27",
+    "end_date": "2027-02-28",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/el-sembrador-metanoia-de-mujeres",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -9601,6 +10842,53 @@
     }
   },
   {
+    "id": "association-barbecue-hearth-patio-2027-nashville",
+    "name": "Hearth, Patio & Barbecue Association",
+    "start_date": "2027-03-04",
+    "end_date": "2027-03-06",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 10000,
+    "official_url": "https://www.hpba.org/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (hpba.org)",
+          "family": "hpba.org",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "best-do-it-market-spring-2027-orlando",
     "name": "Do it Best Spring Market 2027",
     "start_date": "2027-03-05",
@@ -9615,6 +10903,46 @@
     ],
     "est_attendance": null,
     "official_url": "https://www.occc.net/event/do-it-best-spring-market-2027/951/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dtu-nationals-2027-orlando",
+    "name": "DTU Nationals 2027",
+    "start_date": "2027-03-05",
+    "end_date": "2027-03-07",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/dtu-nationals-2027/955/",
     "sources": [
       {
         "url": "https://www.occc.net/events/",
@@ -9680,6 +11008,55 @@
         {
           "label": "Confirmed on the official site (hcdance.com)",
           "family": "hcdance.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "march-rave-red-rock-2027-las-vegas",
+    "name": "Red Rock Rave 1 - 2027 (March)",
+    "start_date": "2027-03-05",
+    "end_date": "2027-03-07",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 60000,
+    "official_url": "https://www.kcsportsandmarketing.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:55.414Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.3,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (kcsportsandmarketing.com)",
+          "family": "kcsportsandmarketing.com",
           "kind": "official-site",
           "points": 0,
           "seenAt": "2026-11-17"
@@ -10029,6 +11406,46 @@
     }
   },
   {
+    "id": "america-and-beautillion-biennial-chapter-inc-jack-jill-nashville-of-of-2027-nashville",
+    "name": "The Nashville Chapter of Jack and Jill of America, Inc. 2027 Biennial Beautillion",
+    "start_date": "2027-03-07",
+    "end_date": "2027-03-07",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 700,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "ata-council-exhibition-maintenance-meeting-s-s-technology-technology-transportation-2027-orlando",
     "name": "ATA's Technology & Maintenance Council's 2027 Annual Meeting & Transportation Technology Exhibition",
     "start_date": "2027-03-08",
@@ -10329,6 +11746,46 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aau-spring-tournamen-2027-orlando",
+    "name": "AAU Spring Tournamen",
+    "start_date": "2027-03-12",
+    "end_date": "2027-03-14",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/aau-spring-tournamen/960/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -10702,6 +12159,47 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "vive-2027-nashville",
+    "name": "ViVE Conference",
+    "start_date": "2027-03-14",
+    "end_date": "2027-03-17",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 6000,
+    "official_url": "https://https//www.viveevent.com/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -11313,6 +12811,46 @@
     }
   },
   {
+    "id": "american-open-2027-orlando",
+    "name": "The American Open -",
+    "start_date": "2027-03-20",
+    "end_date": "2027-03-21",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/the-american-open/964/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "american-association-group-medical-2027-las-vegas",
     "name": "American Medical Group Association - Annual Conference 2027",
     "start_date": "2027-03-21",
@@ -11444,6 +12982,46 @@
           "family": "bridalshowsnv-lv.com",
           "kind": "official-site",
           "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "american-college-executives-healthcare-of-2027-nashville",
+    "name": "American College of Healthcare Executives",
+    "start_date": "2027-03-22",
+    "end_date": "2027-03-25",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": 6000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -11585,7 +13163,7 @@
     "name": "Bar & Restaurant Expo 2027",
     "start_date": "2027-03-23",
     "end_date": "2027-03-24",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Las Vegas",
     "state": "Nevada",
     "venue": "Las Vegas Convention Center",
@@ -11603,12 +13181,12 @@
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 2,
-      "bars": 2,
+      "points": 5,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -11616,6 +13194,13 @@
           "family": "vegasmeansbusiness.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (ncbshow.com)",
+          "family": "ncbshow.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -11662,6 +13247,46 @@
     }
   },
   {
+    "id": "adidas-city-national-qualifier-windy-2027-chicago",
+    "name": "Adidas Windy City National Qualifier 2027",
+    "start_date": "2027-03-26",
+    "end_date": "2027-03-28",
+    "dates_confirmed": false,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.mccormickplace.com/events/?eventId=32621&orgCode=10",
+    "sources": [
+      {
+        "url": "https://www.mccormickplace.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:32.469Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (mccormickplace.com)",
+          "family": "mccormickplace.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "auto-new-york-2027-new-york",
     "name": "New York International Auto Show 2027",
     "start_date": "2027-03-26",
@@ -11697,6 +13322,167 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aau-b-classic-easter-2027-orlando",
+    "name": "AAU Easter Classic B",
+    "start_date": "2027-03-27",
+    "end_date": "2027-03-28",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/aau-easter-classic-b/967/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "5k-and-autism-day-family-fun-2027-orlando",
+    "name": "Autism 5K and Family Fun Day 2027",
+    "start_date": "2027-03-27",
+    "end_date": "2027-03-27",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/autism-5k-and-family-fun-day-2027/970/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fl-mind-odyssey-of-2027-orlando",
+    "name": "FL Odyssey of the Mind",
+    "start_date": "2027-03-27",
+    "end_date": "2027-03-27",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/fl-odyssey-of-the-mind/968/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "gadget-repair-2027-nashville",
+    "name": "Gadget Repair Expo 7.0",
+    "start_date": "2027-03-30",
+    "end_date": "2027-03-31",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 800,
+    "official_url": "https://https//gadgetrepairexpo.com/exhibitors",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -11974,6 +13760,46 @@
     }
   },
   {
+    "id": "fetch-2027-nashville",
+    "name": "Fetch 2027",
+    "start_date": "2027-04-02",
+    "end_date": "2027-04-03",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 600,
+    "official_url": "https://https//www.dvm360events.com/event/fetch-nashville-veterinary-conference-2027/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "apex-2027-anaheim",
     "name": "APEX Expo 2027",
     "start_date": "2027-04-03",
@@ -12186,6 +14012,54 @@
     }
   },
   {
+    "id": "convention-npga-propane-southeastern-2027-nashville",
+    "name": "NPGA Southeastern Convention & International Propane Expo",
+    "start_date": "2027-04-04",
+    "end_date": "2027-04-06",
+    "dates_confirmed": true,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 4700,
+    "official_url": "https://www.npga.org/news-resources/npga-expo/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (npga.org)",
+          "family": "npga.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "snac-2027-charlotte",
     "name": "SNAC International",
     "start_date": "2027-04-04",
@@ -12309,6 +14183,93 @@
           "family": "discoverisc.com",
           "kind": "official-site",
           "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "central-meeting-members-paretohealth-2027-nashville",
+    "name": "ParetoHealth Members' Meeting - Central",
+    "start_date": "2027-04-05",
+    "end_date": "2027-04-06",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2000,
+    "official_url": "https://www.paretohealth.com/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (paretohealth.com)",
+          "family": "paretohealth.com",
+          "kind": "official-site",
+          "points": 0,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nashville-performance-2027-nashville",
+    "name": "Performance Nashville",
+    "start_date": "2027-04-05",
+    "end_date": "2027-04-06",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -12612,6 +14573,46 @@
     }
   },
   {
+    "id": "classic-college-dtu-2027-orlando",
+    "name": "DTU College Classic 2027",
+    "start_date": "2027-04-10",
+    "end_date": "2027-04-11",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/dtu-college-classic-2027/977/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "program-transform-2027-las-vegas",
     "name": "Transform Annual Program",
     "start_date": "2027-04-10",
@@ -12877,6 +14878,95 @@
     }
   },
   {
+    "id": "convention-rema-2027-nashville",
+    "name": "ReMA Convention & Expo",
+    "start_date": "2027-04-12",
+    "end_date": "2027-04-15",
+    "dates_confirmed": true,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 6000,
+    "official_url": "https://www.rema2027.org/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 5,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (rema2027.org)",
+          "family": "rema2027.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "live-sodexo-2027-nashville",
+    "name": "Sodexo Live Summit 2027",
+    "start_date": "2027-04-12",
+    "end_date": "2027-04-15",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 300,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "academy-care-managed-meeting-of-pharmacy-2027-san-francisco",
     "name": "Academy of Managed Care Pharmacy Annual Meeting 2027",
     "start_date": "2027-04-13",
@@ -13038,6 +15128,46 @@
     }
   },
   {
+    "id": "allstar-champi-2027-orlando",
+    "name": "Allstar World Champi",
+    "start_date": "2027-04-14",
+    "end_date": "2027-04-18",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/allstar-world-champi/974/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "b2b-marketing-2027-miami",
     "name": "B2B Marketing Expo US 2027",
     "start_date": "2027-04-14",
@@ -13166,6 +15296,47 @@
     }
   },
   {
+    "id": "401k-american-assn-napa-retirement-2027-nashville",
+    "name": "American Retirement Assn - NAPA 401K Summit",
+    "start_date": "2027-04-18",
+    "end_date": "2027-04-20",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 2500,
+    "official_url": "https://www.usaretirement.org/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "promat-2027-chicago",
     "name": "ProMat 2027",
     "start_date": "2027-04-19",
@@ -13259,6 +15430,48 @@
     }
   },
   {
+    "id": "innovators-insurance-2027-nashville",
+    "name": "Insurance Innovators Summit 2027",
+    "start_date": "2027-04-20",
+    "end_date": "2027-04-21",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Finance",
+      "Tech"
+    ],
+    "est_attendance": 500,
+    "official_url": "https://https//insurance-innovators.com/events/usa/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "future-of-production-protein-2027-chicago",
     "name": "The Future of Protein Production",
     "start_date": "2027-04-20",
@@ -13292,6 +15505,47 @@
         {
           "label": "Venue calendar (mccormickplace.com)",
           "family": "mccormickplace.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nashville-security-2027-nashville",
+    "name": "2027 Nashville Security Summit",
+    "start_date": "2027-04-21",
+    "end_date": "2027-04-22",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 200,
+    "official_url": "https://https//groupnine.us/nashville-2026-security-summit/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -13480,6 +15734,46 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "jude-n-nashville-rock-roll-saint-2027-nashville",
+    "name": "Saint Jude Rock 'n' Roll Nashville",
+    "start_date": "2027-04-22",
+    "end_date": "2027-04-23",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 27000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -13736,6 +16030,46 @@
     }
   },
   {
+    "id": "polsinelli-retreat-shareholder-2027-nashville",
+    "name": "Polsinelli 2027 Shareholder Retreat",
+    "start_date": "2027-05-01",
+    "end_date": "2027-05-01",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 700,
+    "official_url": "https://https//www.polsinelli.com/office-locations/nashville",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "association-for-in-ophthalmology-research-vision-2027-san-diego",
     "name": "ASSOCIATION FOR RESEARCH IN VISION & OPHTHALMOLOGY ANNUAL",
     "start_date": "2027-05-02",
@@ -13768,6 +16102,46 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aistech-2027-nashville",
+    "name": "AISTech",
+    "start_date": "2027-05-03",
+    "end_date": "2027-05-05",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 9000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -14152,6 +16526,47 @@
     }
   },
   {
+    "id": "inc-inland-journal-marine-waterways-2027-nashville",
+    "name": "The Waterways Journal, Inc. - Inland Marine Expo",
+    "start_date": "2027-05-09",
+    "end_date": "2027-05-11",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "automate-2027-las-vegas",
     "name": "Automate 2027",
     "start_date": "2027-05-10",
@@ -14280,6 +16695,46 @@
     }
   },
   {
+    "id": "informa-magic-2027-nashville",
+    "name": "Informa MAGIC",
+    "start_date": "2027-05-11",
+    "end_date": "2027-05-12",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 7000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "boston-medevice-2027-boston",
     "name": "MEDevice Boston 2027",
     "start_date": "2027-05-11",
@@ -14314,6 +16769,46 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cities-designing-nacto-2027-nashville",
+    "name": "NACTO Designing Cities 2027",
+    "start_date": "2027-05-11",
+    "end_date": "2027-05-13",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1200,
+    "official_url": "https://https//designingcities.org/2027",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -14515,6 +17010,46 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "barry-law-of-school-university-2027-orlando",
+    "name": "Barry University School of Law",
+    "start_date": "2027-05-14",
+    "end_date": "2027-05-14",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.occc.net/event/barry-university-school-of-law/978/",
+    "sources": [
+      {
+        "url": "https://www.occc.net/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:52:10.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (occc.net)",
+          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -15602,6 +18137,47 @@
     }
   },
   {
+    "id": "innovation-slate-technolutions-2027-nashville",
+    "name": "Technolutions Slate Innovation Summit",
+    "start_date": "2027-06-02",
+    "end_date": "2027-06-04",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 4500,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "antique-jewelry-las-vegas-watch-2027-las-vegas",
     "name": "Las Vegas Antique Jewelry & Watch Show - Annual Show 2027",
     "start_date": "2027-06-03",
@@ -15900,6 +18476,48 @@
         {
           "label": "Venue calendar (paconvention.com)",
           "family": "paconvention.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "healthcare-leadership-nashville-2027-nashville",
+    "name": "Nashville Healthcare Leadership Summit 2027",
+    "start_date": "2027-06-07",
+    "end_date": "2027-06-09",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Healthcare",
+      "Tech"
+    ],
+    "est_attendance": 400,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -16334,6 +18952,86 @@
     }
   },
   {
+    "id": "meeting-siim-2027-nashville",
+    "name": "SIIM 2027 Annual Meeting",
+    "start_date": "2027-06-17",
+    "end_date": "2027-06-19",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1500,
+    "official_url": "https://https//siim.org/event/siim27-annual-meeting-informaticstech-expo/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cup-showcase-socal-2027-los-angeles",
+    "name": "The SoCal Cup: The Showcase 2027",
+    "start_date": "2027-06-19",
+    "end_date": "2027-06-21",
+    "dates_confirmed": true,
+    "city": "Los Angeles",
+    "state": "California",
+    "venue": "Los Angeles Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.laconventioncenter.com/events/detail/socal-cup-volleyball-showcase-2027",
+    "sources": [
+      {
+        "url": "https://www.laconventioncenter.com/events/",
+        "type": "html",
+        "fetched_at": "2026-11-16T02:41:18.867Z"
+      }
+    ],
+    "last_verified": "2026-11-15",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (laconventioncenter.com)",
+          "family": "laconventioncenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "nasfaa-2027-san-diego",
     "name": "NASFAA 2027",
     "start_date": "2027-06-20",
@@ -16406,6 +19104,169 @@
         {
           "label": "Venue calendar (vegasmeansbusiness.com)",
           "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dealers-inc-sports-team-2027-nashville",
+    "name": "Sports, Inc. 2027 Team Dealers Show",
+    "start_date": "2027-06-21",
+    "end_date": "2027-06-23",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Sports"
+    ],
+    "est_attendance": 1500,
+    "official_url": "https://https//www.sportsinc.us/about-sports-inc",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "subsummit-2027-nashville",
+    "name": "SubSummit 2027",
+    "start_date": "2027-06-21",
+    "end_date": "2027-06-23",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2500,
+    "official_url": "https://https//annual.subsummit.com/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dbc-med-pri-2027-nashville",
+    "name": "DBC Pri-Med",
+    "start_date": "2027-06-23",
+    "end_date": "2027-06-25",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 500,
+    "official_url": "https://https//www.pri-med.com/cme-conferences/regional-conference-nashville",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "boma-2027-nashville",
+    "name": "BOMA International Annual Conference & Expo",
+    "start_date": "2027-06-27",
+    "end_date": "2027-06-29",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 4200,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -16888,6 +19749,47 @@
     }
   },
   {
+    "id": "bitcoin-2027-nashville",
+    "name": "The Bitcoin Conference",
+    "start_date": "2027-07-15",
+    "end_date": "2027-07-17",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 20000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "aaic-alzheimer-association-s-2027-chicago",
     "name": "Alzheimer's Association 2027 International Conference - AAIC",
     "start_date": "2027-07-17",
@@ -17331,6 +20233,47 @@
     }
   },
   {
+    "id": "build-nashville-2027-nashville",
+    "name": "2027 Nashville Build Expo",
+    "start_date": "2027-07-28",
+    "end_date": "2027-07-29",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1200,
+    "official_url": "https://https//buildexpousa.com/nashville-build-expo/",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "american-meeting-of-retina-society-specialists-2027-san-francisco",
     "name": "American Society of Retina Specialists Annual Meeting 2027",
     "start_date": "2027-07-28",
@@ -17599,6 +20542,46 @@
     }
   },
   {
+    "id": "associated-grocers-wholesale-2027-nashville",
+    "name": "Associated Wholesale Grocers",
+    "start_date": "2027-08-04",
+    "end_date": "2027-08-05",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 1000,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "con-def-2027-las-vegas",
     "name": "Def Con 2027",
     "start_date": "2027-08-06",
@@ -17721,6 +20704,88 @@
     }
   },
   {
+    "id": "convention-thca-tncal-trade-2027-nashville",
+    "name": "2027 THCA/TNCAL Convention & Trade Show",
+    "start_date": "2027-08-10",
+    "end_date": "2027-08-13",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 600,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "convention",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "healthtrust-university-2027-nashville",
+    "name": "HealthTrust University Conference",
+    "start_date": "2027-08-16",
+    "end_date": "2027-08-18",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": 3200,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "outdoor-retailer-2027-minneapolis",
     "name": "Outdoor Retailer Expo 2027",
     "start_date": "2027-08-18",
@@ -17797,6 +20862,53 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nashville-wvc-2027-nashville",
+    "name": "WVC Nashville",
+    "start_date": "2027-08-22",
+    "end_date": "2027-08-24",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 9000,
+    "official_url": "https://www.viticusgroup.org/wvc-nashville#form?utm_referrer=https%3A%2F%2Fwww.viticusgroup.org%2Fwvc-nashville",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (viticusgroup.org)",
+          "family": "viticusgroup.org",
+          "kind": "official-site",
+          "points": 0,
           "seenAt": "2026-11-17"
         }
       ]
@@ -17883,6 +20995,47 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "natda-trailer-2027-nashville",
+    "name": "NATDA Trailer Show",
+    "start_date": "2027-09-01",
+    "end_date": "2027-09-03",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 2758,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -17994,6 +21147,47 @@
     }
   },
   {
+    "id": "basics-be-brilliant-in-leadership-2027-nashville",
+    "name": "Be Brilliant In The Basics Leadership Summit 2027",
+    "start_date": "2027-09-08",
+    "end_date": "2027-09-09",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": 3000,
+    "official_url": "https://https//www.bebrilliantinthebasics.com/retailcertification",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "biotechx-2027-boston",
     "name": "BioTechX USA 2027",
     "start_date": "2027-09-08",
@@ -18028,6 +21222,87 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "infosec-2027-nashville",
+    "name": "Infosec Conference",
+    "start_date": "2027-09-08",
+    "end_date": "2027-09-09",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": 600,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "education-foundation-nashville-public-2027-nashville",
+    "name": "Nashville Public Education Foundation",
+    "start_date": "2027-09-08",
+    "end_date": "2027-09-08",
+    "dates_confirmed": false,
+    "city": "Nashville",
+    "state": "Tennessee",
+    "venue": "Music City Center",
+    "organizer": "",
+    "topics": [
+      "Education"
+    ],
+    "est_attendance": 600,
+    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
+    "sources": [
+      {
+        "url": "https://www.nashvillemusiccitycenter.com/calendar",
+        "type": "html",
+        "fetched_at": "2026-11-17T19:57:19.428Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (nashvillemusiccitycenter.com)",
+          "family": "nashvillemusiccitycenter.com",
+          "kind": "venue-calendar",
+          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
