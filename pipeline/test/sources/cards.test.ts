@@ -84,3 +84,21 @@ describe('yearless dates with infer_year', () => {
     expect(parseCards(card('Nov 20 - 22, 2027'), cfgY, src, {}, [], today).candidates[0]).toMatchObject({ start_date: '2027-11-20', end_date: '2027-11-22' })
   })
 })
+test('a date selector that also matches the location line reads the line that is a date', () => {
+  const card = (n: string) => `<div class="c"><h5 class="t">${n}</h5><ul><li class="li">Colorado Convention Center</li><li class="li">Nov 16, 2026 to Nov 18, 2026</li></ul><a href="/x">x</a></div>`
+  const r = parseCards(card('A') + card('B'), { item: '.c', title: '.t', date: '.li' }, src)
+  expect(r.candidates.map((c) => [c.name, c.start_date, c.end_date])).toEqual([['A', '2026-11-16', '2026-11-18'], ['B', '2026-11-16', '2026-11-18']])
+  expect(r.missingYear).toBe(0)
+})
+describe('split dates and attendance in titles', () => {
+  const today = new Date('2026-11-16T00:00:00Z')
+  test('separate start and end date blocks matched by one selector combine into a range (San Diego layout)', () => {
+    const card = (s: string, e: string, n: string) => `<div class="item"><div class="caldate startmo">${s}</div><div class="caldate endmo">${e}</div><h2><a href="/c/${n}">${n}</a></h2></div>`
+    const r = parseCards(card('Nov 19', 'Nov 20', 'A') + card('Dec 30', 'Jan 2', 'B'), { item: '.item', title: 'h2', date: '.caldate', infer_year: true }, src, {}, [], today)
+    expect(r.candidates.map((c) => [c.name, c.start_date, c.end_date])).toEqual([['A', '2026-11-19', '2026-11-20'], ['B', '2026-12-30', '2027-01-02']])
+  })
+  test('a trailing "Attendance: N" leaves the name and becomes est_attendance', () => {
+    const card = '<li class="e"><a href="https://x.example/s"><h5 class="d">Nov 18 - 21, 2026</h5><h3 class="t"> City Summit <span>Attendance: <span>4,200</span></span></h3></a></li>'
+    expect(parseCards(card, { item: '.e', title: '.t', date: '.d' }, src).candidates[0]).toMatchObject({ name: 'City Summit', est_attendance: 4200 })
+  })
+})

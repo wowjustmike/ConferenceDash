@@ -3,13 +3,14 @@ import { normalizeDate, toCandidateClean } from '../normalize'
 import type { Candidate, SourceRef } from '../types'
 
 const MONTH = '(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)'
-const DASH = '\\s*[-–—]\\s*'
+const DASH = '(?:\\s*[-–—]\\s*|\\s+(?:to|through|thru)\\s+)'
 const mk = (m: string, d: string | number, y: string | number) => normalizeDate(`${m} ${d}, ${y}`)
 
 /** Parses "Nov 20 - 29, 2026", "Dec 5, 2026", "Nov 30 - Dec 4, 2026", "Dec 30, 2026 - Jan 2, 2027". */
 export function parseDateRangeText(text: string): { start: string; end: string } | null {
-  const t = text.replace(/\s+/g, ' ').trim()
-  let m = new RegExp(`^(${MONTH})\\.?\\s+(\\d{1,2}),?\\s+(\\d{4})${DASH}(${MONTH})\\.?\\s+(\\d{1,2}),?\\s+(\\d{4})$`, 'i').exec(t)
+  // "Nov 19 - 22 / 2026": a slash before the year reads like a comma.
+  const t = text.replace(/\s+/g, ' ').trim().replace(/\s*\/\s*(\d{4})\b/g, ', $1')
+  let m =new RegExp(`^(${MONTH})\\.?\\s+(\\d{1,2}),?\\s+(\\d{4})${DASH}(${MONTH})\\.?\\s+(\\d{1,2}),?\\s+(\\d{4})$`, 'i').exec(t)
   if (m) return pair(mk(m[1], m[2], m[3]), mk(m[4], m[5], m[6]))
   m = new RegExp(`^(${MONTH})\\.?\\s+(\\d{1,2})${DASH}(${MONTH})\\.?\\s+(\\d{1,2}),?\\s+(\\d{4})$`, 'i').exec(t)
   if (m) return pair(mk(m[1], m[2], m[5]), mk(m[3], m[4], m[5]))

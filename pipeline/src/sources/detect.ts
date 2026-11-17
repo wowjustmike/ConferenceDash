@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio'
 import type { Element } from 'domhandler'
-import { parseEventItems, parseDateRangeText } from '../extract/eventitems'
+import { parseEventItems, parseDateRangeText, parseMonthDayRange } from '../extract/eventitems'
 import { parseJsonLd } from '../extract/jsonld'
 import type { SourceRef } from '../types'
 
@@ -43,14 +43,41 @@ function inspect($: cheerio.CheerioAPI, item: Element): Member {
     const holder = time.parents().toArray().find((p) => p !== item && classSelector(p as Element)) as Element | undefined
     date = holder ? classSelector(holder) : null
   } else {
-    // Deepest classed element whose own text is a date (or a month-day range without a year).
+    // Deepest classed element whose own text is a date (or a month-day range without a year)...
+    const kindOf = (e: Element): 'dated' | 'yearless' | null => {
+      const text = clean($(e).text())
+      if (text.length > 60) return null
+      if (parseDateRangeText(text)) return 'dated'
+      if (MONTH_DAY.test(text) && !/\d{4}/.test(text) && parseMonthDayRange(text, new Date())) return 'yearless'
+      return null
+    }
     const candidates = node.find('*').toArray().filter((e): e is Element => e.type === 'tag')
     for (const e of candidates.reverse()) {
       const sel = classSelector(e)
       if (!sel) continue
       const text = clean($(e).text())
-      if (parseDateRangeText(text)) { date = sel; break }
-      if (MONTH_DAY.test(text) && !/\d{4}/.test(text) && text.length <= 40) { date = sel; yearless = true; break }
+      let k = kindOf(e)
+      if (!k && MONTH_DAY.test(text) && !/\d{4}/.test(text) && text.length <= 40) k = 'yearless'
+      if (!k) continue
+      // ...widened to the outermost classed ancestor inside the card that still reads as a date, so "Nov 19" | " - " | "22 / 2026"
+      // spans resolve to the block holding the whole range (a dated ancestor beats a yearless one).
+      let best = { sel, k, el: e }
+      for (const p of $(e).parents().toArray() as Element[]) {
+        if (p === item) break
+        const pk = kindOf(p)
+        if (!pk) break
+        const ps = classSelector(p)
+        if (ps && !(best.k === 'dated' && pk === 'yearless')) best = { sel: ps, k: pk, el: p }
+      }
+      date = best.sel; yearless = best.k === 'yearless'
+      // Start and end in sibling blocks ("caldate startmo" | "caldate endmo"): read both through the class they share.
+      const own = new Set(best.sel.slice(1).split('.'))
+      for (const sib of $(best.el).siblings().toArray() as Element[]) {
+        const ss = classSelector(sib)
+        const common = ss ? ss.slice(1).split('.').filter((c) => own.has(c)) : []
+        if (common.length && kindOf(sib)) { date = '.' + common.sort().join('.'); break }
+      }
+      break
     }
   }
   let title: string | null = null
@@ -66,21 +93,38 @@ function inspect($: cheerio.CheerioAPI, item: Element): Member {
 /** Finds the repeated block that looks most like an events list and the class selectors that read it. */
 export function deriveCards(html: string): { config: CardsConfig; count: number; missingYear: number } | null {
   const $ = cheerio.load(html)
-  const groups = new Map<string, Element[]>()
+  // Cards are grouped by their full class list and, when they have several classes, by each single class too, so
+  // "event-item" and "event-item no-link" cards land in one group.
+  const groups = new Map<string, { sel: string; members: Element[] }>()
+  const add = (key: string, sel: string, el: Element) => { const g = groups.get(key) ?? { sel, members: [] }; g.members.push(el); groups.set(key, g) }
   $('[class]').each((_, el) => {
-    const sel = classSelector(el as Element)
+    const e = el as Element
+    const sel = classSelector(e)
     if (!sel) return
-    const key = `${(el as Element).tagName}${sel}`
-    groups.set(key, [...(groups.get(key) ?? []), el as Element])
+    add(`${e.tagName}${sel}`, sel, e)
+    const parts = sel.slice(1).split('.')
+    if (parts.length > 1) for (const c of parts) add(`${e.tagName}.${c}`, '.' + c, e)
   })
   let best: { config: CardsConfig; count: number; missingYear: number; size: number } | null = null
-  for (const [, members] of groups) {
+  for (const [, { sel: itemSel, members }] of groups) {
     if (members.length < 3) continue
+    // Card lists never nest: a class that marks both a card and blocks inside it would read every event twice.
+    const set = new Set(members)
+    if (members.some((m) => $(m).parents().toArray().some((p) => set.has(p as Element)))) continue
     const seen = members.map((m) => inspect($, m))
     const good = seen.filter((m) => m.date && m.title && m.link)
     if (good.length < 3) continue
     const pick = (f: (m: Member) => string | null) => { const c = new Map<string, number>(); for (const m of good) { const v = f(m)!; c.set(v, (c.get(v) ?? 0) + 1) } return [...c.entries()].sort((a, b) => b[1] - a[1])[0][0] }
-    const config: CardsConfig = { item: classSelector(members[0])!, title: pick((m) => m.title), date: pick((m) => m.date), link: 'a' }
+    // Title classes can differ between cards ("long_title title" vs "title"): try every observed selector and each of its
+    // single classes, and keep the one that finds a titled element in the most cards (the more specific wins a tie).
+    const shared = (f: (m: Member) => string | null) => {
+      const tried = new Set<string>()
+      for (const m of good) { const v = f(m)!; tried.add(v); if (v.startsWith('.')) for (const c of v.slice(1).split('.')) tried.add('.' + c) }
+      const cards = members.filter((_, i) => seen[i].date && seen[i].title && seen[i].link)
+      const hits = (sel: string) => cards.filter((c) => clean($(c).find(sel).first().text()).length > 0).length
+      return [...tried].map((sel) => ({ sel, n: hits(sel) })).sort((x, y) => y.n - x.n || y.sel.length - x.sel.length)[0].sel
+    }
+    const config: CardsConfig = { item: itemSel, title: shared((m) => m.title), date: pick((m) => m.date), link: 'a' }
     const cand = { config, count: good.length, missingYear: good.filter((m) => m.yearless).length, size: members.length }
     if (!best || cand.count > best.count || (cand.count === best.count && cand.size < best.size)) best = cand
   }
@@ -110,7 +154,9 @@ export function detectCalendar(html: string, url: string): Detection[] {
     out.push({ kind: 'datatable', count: rows, evidence: `${rows} table rows`, needsBrowser: true })
   }
   const cards = deriveCards(html)
-  if (cards) out.push({ kind: 'cards', count: cards.count, evidence: `${cards.count} repeated ${cards.config.item} cards`, needsBrowser: false, cards: cards.config })
+  // Cards that a platform reader already covers (.eventItem, Simpleview items) stay with that reader.
+  const platform = $(cards?.config.item ?? '*').filter('.eventItem, .convention-item, .isEvent').length > 0
+  if (cards && !platform) out.push({ kind: 'cards', count: cards.count, evidence: `${cards.count} repeated ${cards.config.item} cards`, needsBrowser: false, cards: cards.config })
   if (out.length === 0) return [{ kind: 'none', count: 0, evidence: 'no calendar markup found', needsBrowser: true }]
   return out.sort((a, b) => rank(b) - rank(a) || b.count - a.count || ORDER.indexOf(a.kind) - ORDER.indexOf(b.kind))
 }

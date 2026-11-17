@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { detectCalendar } from '../../src/sources/detect'
+import { parseCards } from '../../src/sources/cards'
 
 const fx = (f: string) => readFileSync(new URL(`../fixtures/${f}`, import.meta.url), 'utf8')
 
@@ -49,4 +50,35 @@ test('a platform fingerprint outranks a smaller or equal JSON-LD list on the sam
   // ...but a JSON-LD list that is clearly the full calendar still wins over an empty platform shell.
   const many = '<html>' + Array.from({ length: 12 }, (_, i) => `<script type="application/ld+json">{"@type":"Event","name":"E${i}","startDate":"2027-05-0${(i % 9) + 1}"}</script>`).join('') + '<div class="filter date_end"></div></html>'
   expect(detectCalendar(many, 'https://x.example/')[0].kind).toBe('page')
+})
+test('a date split into nested parts reads from the block that holds the whole range (start and end in sibling spans)', () => {
+  const pa = (d1: string, d2: string, n: string) => `<div class="info clearfix"><div class="date"><span class="m-date__rangeFirst"><span class="m-date__month">Nov </span><span class="m-date__day">${d1}</span></span><span class="m-date__separator"> - </span><span class="m-date__rangeLast"><span class="m-date__day">${d2}</span><span class="m-date__year"> / 2026</span></span></div><h3 class="title"><a href="/e/${n}">${n}</a></h3></div>`
+  const [d] = detectCalendar(pa('19', '22', 'A') + pa('20', '21', 'B') + pa('23', '25', 'C'), 'https://x.example/')
+  expect(d).toMatchObject({ kind: 'cards', count: 3, cards: { item: '.clearfix.info', date: '.date' } })
+  const ky = (s: string, e: string, n: string) => `<div class="upcoming-event"><div class="dateDiv"><div class="start-date">${s}</div><div class="separator">-</div><div class="end-date">${e}</div></div><div class="infoDiv"><a href="event?id=${n}" class="event-title">${n}</a></div></div>`
+  const [k] = detectCalendar(ky('Feb 23', 'Feb 25', 'A') + ky('Jul 13', 'Jul 16', 'B') + ky('Sep 12', 'Sep 18', 'C'), 'https://x.example/')
+  expect(k).toMatchObject({ kind: 'cards', cards: { item: '.upcoming-event', date: '.dateDiv' } })
+})
+test('title selectors that vary between cards ("title" vs "long_title title") use the classes every card shares', () => {
+  const c = (t: string, n: string) => `<div class="ev"><span class="d">Nov 20 - 22, 2026</span><h3 class="${t}"><a href="/e/${n}">${n}</a></h3></div>`
+  const [d] = detectCalendar(c('long_title title', 'A long name') + c('long_title title', 'B long name') + c('title', 'C') + c('long_title title', 'D'), 'https://x.example/')
+  expect(d.cards!.title).toBe('.title')
+})
+test('cards whose class lists differ ("event-item" vs "event-item no-link") are read as one group by their shared class', () => {
+  const li = (extra: string, n: string, href: string) => `<li class="event-item ${extra}"><a href="${href}"><h5 class="d">Nov ${n} - 21, 2026</h5><h3 class="t">Ev ${n}</h3></a></li>`
+  const html = '<ul>' + li('', '10', '/a') + li('', '11', '/b') + li('no-link', '12', '//') + li('no-link', '13', '//') + li('no-link', '14', '//') + li('', '15', '/c') + '</ul>'
+  expect(detectCalendar(html, 'https://x.example/')[0]).toMatchObject({ kind: 'cards', count: 6, cards: { item: '.event-item' } })
+})
+test('start and end date blocks that share a class are read together (".caldate", not ".caldate.endmo")', () => {
+  const card = (s: string, e: string, n: string) => `<div class="item"><div class="caldate startmo"><span class="m">Nov</span> <span class="d">${s}</span></div><div class="caldate endmo"><span class="m">Nov</span> <span class="d">${e}</span></div><h2><a href="/c/${n}">${n}</a></h2></div>`
+  const [d] = detectCalendar(card('19', '20', 'A') + card('21', '23', 'B') + card('24', '25', 'C'), 'https://x.example/')
+  expect(d.cards).toMatchObject({ item: '.item', date: '.caldate' })
+})
+test('a class that also marks blocks nested inside each card (".row" on the card and on its inner rows) is not a card list (San Diego markup)', () => {
+  const [d] = detectCalendar(fx('cards-split-dates.html'), 'https://x.example/')
+  expect(d.cards).toMatchObject({ item: '.item', date: '.caldate.col-md-1' })
+  expect(d.count).toBe(4)
+  const p = parseCards(fx('cards-split-dates.html'), { ...d.cards!, infer_year: true }, { url: 'https://x.example/', type: 'html', fetched_at: '' }, {}, [], new Date('2026-11-16T00:00:00Z'))
+  expect(p.candidates[0]).toMatchObject({ name: 'FINTECH NERDCON', start_date: '2026-11-19', end_date: '2026-11-20' })
+  expect(new Set(p.candidates.map((c) => c.name)).size).toBe(p.candidates.length)
 })

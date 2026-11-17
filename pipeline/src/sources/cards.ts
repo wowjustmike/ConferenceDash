@@ -25,24 +25,40 @@ export function parseCards(html: string, cfg: CardsOptions, source: SourceRef, d
   $(cfg.item).each((_, el) => {
     const card = $(el)
     out.seen++
-    const name = clean(card.find(cfg.title).first().text())
-    const dateEl = card.find(cfg.date).first()
-    const times = dateEl.find('time[datetime]').toArray().map((t) => $(t).attr('datetime') ?? '')
+    // "City Summit Attendance: 4,200": the count leaves the name and becomes the size.
+    let name = clean(card.find(cfg.title).first().text())
+    let est_attendance: number | undefined
+    const att = /\s*\(?attendance:?\s*([\d,]+)\)?$/i.exec(name)
+    if (att) { name = name.slice(0, att.index).trim(); const n = Number(att[1].replace(/,/g, '')); if (n > 0) est_attendance = n }
+    // The date selector can also match sibling lines (location, time): the first element that reads as a date wins,
+    // and a later single day right after a single-day start ends the range (separate start and end blocks).
     let range: { start: string; end: string } | null = null
-    if (times.length) {
-      const start = normalizeDate(times[0]); const end = normalizeDate(times[1] ?? times[0])
-      if (start && end) range = { start, end }
-    } else {
-      const text = clean(dateEl.text())
-      if (!/\b\d{4}\b/.test(text)) {
-        if (cfg.infer_year) range = parseMonthDayRange(text, today)
-        if (!range) { if (text) out.missingYear++; return }
-      } else range = parseDateRangeText(text)
+    let yearless = false
+    for (const d of card.find(cfg.date).toArray()) {
+      const dateEl = $(d)
+      let r: { start: string; end: string } | null = null
+      const times = dateEl.find('time[datetime]').toArray().map((t) => $(t).attr('datetime') ?? '')
+      if (times.length) {
+        const start = normalizeDate(times[0]); const end = normalizeDate(times[1] ?? times[0])
+        if (start && end) r = { start, end }
+      } else {
+        const text = clean(dateEl.text())
+        if (!/\b\d{4}\b/.test(text)) {
+          if (cfg.infer_year) r = parseMonthDayRange(text, today)
+          if (!r && text) yearless = true
+        } else r = parseDateRangeText(text)
+      }
+      if (!r) continue
+      if (!range) { range = r; if (r.start !== r.end) break; continue }
+      const days = (Date.parse(r.start) - Date.parse(range.start)) / 864e5
+      if (r.start === r.end && days > 0 && days <= 60) range = { start: range.start, end: r.end }
+      break
     }
+    if (!range) { if (yearless) out.missingYear++; return }
     if (!name || !range || bad.some((re) => re.test(name))) return
     const link = card.find(cfg.link ?? 'a[href]').first().attr('href')
     const official_url = httpUrl(link, source.url)
-    const c = toCandidateClean({ name, start_date: range.start, end_date: range.end, ...defaults, ...(official_url ? { official_url } : {}), source })
+    const c = toCandidateClean({ name, start_date: range.start, end_date: range.end, ...defaults, ...(est_attendance ? { est_attendance } : {}), ...(official_url ? { official_url } : {}), source })
     if (c) out.candidates.push(c)
   })
   return out

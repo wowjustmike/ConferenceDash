@@ -52,3 +52,8 @@ test('cityToState resolves common US conference cities and refuses unknown ones'
   expect(cityToState('St. Louis')).toBe('Missouri')
   expect(cityToState('Atlantis')).toBeNull()
 })
+test('toCandidateClean decodes HTML entities left in names, venues and organizers (WordPress JSON-LD)', () => {
+  const c = toCandidateClean({ name: 'Creighton Men&#8217;s Day &#8211; Dec &amp; More&nbsp;', venue: 'Hall &#x41;', organizer: 'A &quot;B&quot;', source: { url: 'https://x', type: 'html', fetched_at: '2026-11-17' } } as never)
+  expect(c).toMatchObject({ name: 'Creighton Men’s Day – Dec & More', organizer: 'A "B"' })
+  expect(c!.venue).toContain('Hall A')
+})

@@ -46,3 +46,11 @@ describe('Carbonhouse-style cards with categories and organizer websites (Dallas
     expect(r.some((c) => /OUTDOORS EXTRAVAGANZA/i.test(c.name))).toBe(true)
   })
 })
+test('parseDateRangeText accepts a slash before the year ("Nov 19 - 22 / 2026")', () => {
+  expect(parseDateRangeText('Nov 19 - 22 / 2026')).toEqual({ start: '2026-11-19', end: '2026-11-22' })
+  expect(parseDateRangeText('Jan 30 - Feb 2 / 2027')).toEqual({ start: '2027-01-30', end: '2027-02-02' })
+})
+test('parseDateRangeText accepts "to" and "through" between the dates', () => {
+  expect(parseDateRangeText('Oct 23, 2026 to Nov 22, 2026')).toEqual({ start: '2026-10-23', end: '2026-11-22' })
+  expect(parseDateRangeText('Nov 16 through 18, 2026')).toEqual({ start: '2026-11-16', end: '2026-11-18' })
+})
