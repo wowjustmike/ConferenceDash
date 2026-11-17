@@ -9,7 +9,7 @@ import { normalizeDate, normalizeState, toCandidateClean } from './normalize'
 import { eventId } from './publish'
 import type { Candidate, SourceType } from './types'
 
-const KINDS = { 'venue-calendar': 'claude-venue-calendar', directory: 'claude-directory', aggregator: 'claude-aggregator' } as const
+const KINDS = { 'venue-calendar': 'claude-venue-calendar', directory: 'claude-directory', aggregator: 'claude-aggregator', organizer: 'claude-organizer' } as const
 
 const Record_ = z.object({
   name: z.string().min(1), start_date: z.string(), end_date: z.string().optional(), city: z.string().min(1), state: z.string().min(1),
@@ -27,7 +27,7 @@ const squash = (s: string) => s.replace(/\s+/g, ' ').trim().toLowerCase()
 export function ingestBatch(db: Db, raw: unknown, o: { window: { start: string; end: string }; today: Date }): IngestResult {
   const b = Batch.parse(raw)
   const sourceType: SourceType | undefined = (KINDS as Record<string, SourceType>)[b.source.kind]
-  if (!sourceType) throw new Error(`Unknown source kind "${b.source.kind}" (use venue-calendar, directory or aggregator)`)
+  if (!sourceType) throw new Error(`Unknown source kind "${b.source.kind}" (use venue-calendar, directory, aggregator or organizer)`)
   const page = db.prepare("select path from inbox where url = ? order by id desc limit 1").get(b.source.url) as { path: string } | undefined
   if (!page) throw new Error(`No saved page for ${b.source.url}: capture it into the inbox first (npm run capture)`)
   const pageText = squash(readFileSync(page.path, 'utf8'))
@@ -53,7 +53,7 @@ export function ingestBatch(db: Db, raw: unknown, o: { window: { start: string; 
     const topics = (e.topics ?? []).filter((t): t is Topic => (TOPICS as readonly string[]).includes(t))
     const cand = toCandidateClean({
       name: e.name, start_date: start, end_date: end, city: e.city, state: e.state, ...(e.venue ? { venue: e.venue } : {}), ...(e.organizer ? { organizer: e.organizer } : {}),
-      ...(e.official_url && /^https?:\/\//i.test(e.official_url) ? { official_url: e.official_url } : {}), ...(topics.length ? { topics } : {}),
+      ...(e.official_url && /^https?:\/\//i.test(e.official_url) ? { official_url: e.official_url } : sourceType === 'claude-organizer' ? { official_url: b.source.url } : {}), ...(topics.length ? { topics } : {}),
       ...(e.est_attendance !== undefined ? { est_attendance: e.est_attendance } : {}), source: { url: b.source.url, type: sourceType, fetched_at },
     })
     if (!cand) { reject(e.name, 'invalid record'); continue }

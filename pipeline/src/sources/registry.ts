@@ -21,7 +21,7 @@ export const EntrySchema = z.object({
   id: z.string().min(1),
   kind: z.enum(['ical', 'page', 'simpleview', 'datatable', 'expoassist', 'moscone', 'simpleview-range', 'loadmore', 'cards']),
   url: z.string().url(),
-  type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'api', 'aggregator', 'seed', 'submission']),
+  type: z.enum(['confs.tech', 'ical', 'jsonld', 'html', 'llm', 'claude-venue-calendar', 'claude-directory', 'claude-aggregator', 'claude-organizer', 'api', 'aggregator', 'seed', 'submission']),
   venue: z.string().optional(), city: z.string().optional(), state: z.string().optional(),
   pages: z.array(z.string().url()).optional(),
   exclude: z.array(z.string()).optional(),

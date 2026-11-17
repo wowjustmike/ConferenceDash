@@ -30,6 +30,16 @@ test('valid records are stored with normalized fields and the right evidence kin
   expect(c[0]).toMatchObject({ name: 'Craft Brewers Conference', state: 'Tennessee', venue: 'Music City Center', start_date: '2027-04-12' })
   expect(c[0].source).toMatchObject({ url: URL1, type: 'claude-venue-calendar' })
 })
+test('organizer pages link the event to the page itself so the update can verify it there', () => {
+  const db = setup()
+  ingestBatch(db, batch([ev()], 'organizer'), { window: win, today: new Date('2026-11-15T12:00:00Z') })
+  const [c] = loadIngested(db)
+  expect(c.source).toMatchObject({ url: URL1, type: 'claude-organizer' })
+  expect(c.official_url).toBe(URL1)
+  // An explicit official link still wins.
+  ingestBatch(db, batch([ev({ name: 'Craft Brewers Conference', official_url: 'https://cbc.example/' })], 'organizer'), { window: win, today: new Date('2026-11-15T12:00:00Z') })
+  expect(loadIngested(db)[0].official_url).toBe('https://cbc.example/')
+})
 test('rejects records whose evidence quote is not on the saved page, or does not contain the event name', () => {
   const db = setup()
   const r = ingestBatch(db, batch([ev({ evidence: 'a quote that is not on the page' }), ev({ name: 'Other Expo', evidence: 'Craft Brewers Conference Apr 12-15, 2027' })]), { window: win, today: new Date() })

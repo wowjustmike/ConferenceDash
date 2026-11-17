@@ -84,3 +84,43 @@ test('events that have already ended are not published, verified or quarantined'
   expect(r.verified).toBe(0)
   expect(r.quarantined).toBe(0)
 })
+
+test('an organizer page read in-session is verified on that page and earns organizer-site points', async () => {
+  const { saveToInbox } = await import('../src/inbox')
+  const { ingestBatch } = await import('../src/ingest')
+  const { mkdtempSync } = await import('node:fs')
+  const { tmpdir } = await import('node:os')
+  const { join } = await import('node:path')
+  const ORG = 'https://summit.example/'
+  const html = '<html><body><h1>Widget Summit 2027</h1><p>June 7-10, 2027 | Boston, MA</p></body></html>'
+  const db = openDb(':memory:')
+  saveToInbox(db, mkdtempSync(join(tmpdir(), 'org-')), { url: ORG, sourceId: 'summit.example', text: 'Widget Summit 2027 June 7-10, 2027 | Boston, MA' })
+  ingestBatch(db, { source: { url: ORG, kind: 'organizer' }, events: [{ name: 'Widget Summit 2027', start_date: '2027-06-07', end_date: '2027-06-10', city: 'Boston', state: 'MA', evidence: 'Widget Summit 2027 June 7-10, 2027' }] }, { window: { start: '2026-11-15', end: '2027-12-31' }, today: NOW })
+  const d = deps({ db, registry: [], fetchText: async (u) => (u === ORG ? html : null) })
+  const r = await runPipeline({ tier: 'daily', dryRun: false, deps: d })
+  expect(r.verified).toBe(1)
+  const ev = loadEvents(d.db).find((e) => e.name === 'Widget Summit 2027')
+  expect(ev?.dates_confirmed).toBe(true)
+  const off = d.db.prepare("select confirms_edition c from observations where evidence_kind = 'official-site' and raw_name = 'Widget Summit 2027'").get() as { c: number } | undefined
+  expect(off?.c).toBe(1)
+})
+
+test('an already-known organizer-page event that is still unconfirmed is re-checked on the next daily run', async () => {
+  const { saveToInbox } = await import('../src/inbox')
+  const { ingestBatch } = await import('../src/ingest')
+  const { mkdtempSync } = await import('node:fs')
+  const { tmpdir } = await import('node:os')
+  const { join } = await import('node:path')
+  const ORG = 'https://expo.example/'
+  const db = openDb(':memory:')
+  saveToInbox(db, mkdtempSync(join(tmpdir(), 'org2-')), { url: ORG, sourceId: 'expo.example', text: 'Gadget Expo 2027 September 8-10, 2027 Boston' })
+  ingestBatch(db, { source: { url: ORG, kind: 'organizer' }, events: [{ name: 'Gadget Expo 2027', start_date: '2027-09-08', end_date: '2027-09-10', city: 'Boston', state: 'MA', evidence: 'Gadget Expo 2027 September 8-10, 2027' }] }, { window: { start: '2026-11-15', end: '2027-12-31' }, today: NOW })
+  // First run: the page is down, so the event is stored unconfirmed.
+  await runPipeline({ tier: 'daily', dryRun: false, deps: deps({ db, registry: [], fetchText: async () => null }) })
+  expect(loadEvents(db).find((e) => e.name === 'Gadget Expo 2027')?.dates_confirmed).toBe(false)
+  // Next daily run (event is 300 days out, outside the daily window): it is still checked, and confirms.
+  const html = '<html><body><h1>Gadget Expo 2027</h1><p>September 8-10, 2027, Boston</p></body></html>'
+  const r = await runPipeline({ tier: 'daily', dryRun: false, deps: deps({ db, registry: [], fetchText: async (u) => (u === ORG ? html : null) }) })
+  expect(r.verified).toBe(1)
+  expect(loadEvents(db).find((e) => e.name === 'Gadget Expo 2027')?.dates_confirmed).toBe(true)
+})

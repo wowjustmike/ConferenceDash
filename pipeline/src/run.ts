@@ -87,6 +87,7 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
   report.merged = merged.length
 
   const known = new Set(existing.map((e) => e.id))
+  const knownConfirmed = new Map(existing.map((e) => [e.id, e.dates_confirmed]))
   const fresh: StoredEvent[] = []
   const incomplete: unknown[] = []
   const newExclusions: { key: string; reason: string; name: string }[] = []
@@ -110,8 +111,11 @@ export async function runPipeline(args: { tier: Tier; dryRun: boolean; deps: Run
     const prelim = toConfEvent(m, undefined, d.today, id, listing)
     if (!prelim) { incomplete.push(m.candidate); continue }
     let v: Verification | undefined
-    const selfListed = m.members.some((c) => c.source.url === prelim.official_url)
-    if (!selfListed && (!known.has(prelim.id) || dueForVerification(prelim, d.today, args.tier))) {
+    // A venue's listing page never verifies itself; an organizer page read in-session is the organizer's site, so it may.
+    const selfListed = m.members.some((c) => c.source.url === prelim.official_url && c.source.type !== 'claude-organizer')
+    // An organizer page read in-session is checked on every run until it confirms the dates, instead of waiting for the tier window.
+    const organizerPending = m.members.some((c) => c.source.type === 'claude-organizer') && knownConfirmed.get(prelim.id) !== true
+    if (!selfListed && (!known.has(prelim.id) || organizerPending || dueForVerification(prelim, d.today, args.tier))) {
       try {
         v = await verifyOfficialSite(d.fetchText, d.llm, d.budget, { name: prelim.name, official_url: prelim.official_url, start_date: prelim.start_date, end_date: prelim.end_date, city: prelim.city })
         if (v.reachable) { report.verified++; verifications.set(prelim.id, v) }
