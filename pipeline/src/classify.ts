@@ -9,10 +9,10 @@ const t = (re: RegExp, s: string) => re.test(s)
 const FAIRE = /\b(renaissance|ren)\s+(faire|fair|festival)\b|\bfaire\b/i
 const FESTIVAL = /\b(music|food|wine|beer|film|arts?|jazz|rock|blues|country|craft)\s+festival\b|\b(coachella|lollapalooza|bonnaroo|burning man|electric daisy)\b/i
 const CONCERT = /\b(concert|symphony|orchestra|dj set|live in concert|world tour)\b/i
-const SPORTS = /\b(nfl|nba|mlb|nhl|mls|wnba|ufc|wwe|super bowl|championships?|tournament|marathon|grand prix|playoffs?|rodeo|boxing|wrestling|cheer(leading)?|futsal|bowl game|volleyball|fencing|gymnastics|bjj|jiu[- ]?jitsu|table tennis|hyrox|grand nationals|regional qualifier)\b/i
+const SPORTS = /\b(nfl|nba|mlb|nhl|mls|wnba|ufc|wwe|super bowl|championships?|tournament|marathon|grand prix|playoffs?|rodeo|boxing|wrestling|cheer(leading)?|futsal|bowl game|volleyball|fencing|gymnastics|bjj|jiu[- ]?jitsu|table tennis|hyrox|grand nation\w*|nationals|\w*qualifier|aau|usav|jnq|5k|classic|drill team|dance\/drill)\b|\b(tournamen|champi)\w*/i
 // Youth dance and Irish-dance competitions call themselves "conventions"; they are checked before the professional words.
 const COMPETITION = /\b(dance (convention|competition|nationals)|talent competition|dancefest|danceone|feis|winterfeis|oireachtas)\b/i
-const SOCIAL = /\b(party|wedding|banquet|gala|reunion|graduation|quincea\w+|prom|birthday|fundraiser|holiday celebration|luncheon|dinner|breakfast|masked ball|ball|cotillion|feast|awards)\b/i
+const SOCIAL = /\b(party|wedding|banquet|gala|reunion|graduation|quincea\w+|prom|birthday|fundraiser|holiday celebration|luncheon|dinner|breakfast|masked ball|ball|cotillion|beautillion|feast|awards)\b/i
 const SHOW = /\b(an evening with|cirque|film tour|(holiday|craft|christmas) market)\b|\bart \+ craft market\b/i
 
 const FAN_CON = /\b(comic[- ]?con|comiccon|fan ?expo|anime|manga|cosplay|collect-a-con|dragon ?con|gen ?con|otakon|pax)\b/i

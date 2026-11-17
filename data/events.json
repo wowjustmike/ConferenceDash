@@ -3221,46 +3221,6 @@
     }
   },
   {
-    "id": "classic-magic-mega-2026-detroit",
-    "name": "Mega Magic Classic",
-    "start_date": "2026-12-11",
-    "end_date": "2026-12-13",
-    "dates_confirmed": false,
-    "city": "Detroit",
-    "state": "Michigan",
-    "venue": "Huntington Place",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.huntingtonplacedetroit.com/event/mega-magic-classic/61/",
-    "sources": [
-      {
-        "url": "https://www.huntingtonplacedetroit.com/events",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:37:27.237Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.65,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (huntingtonplacedetroit.com)",
-          "family": "huntingtonplacedetroit.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "education-of-score-state-2026-nashville",
     "name": "SCORE State of Education",
     "start_date": "2026-12-11",
@@ -3698,49 +3658,6 @@
     }
   },
   {
-    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2026-anaheim",
-    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
-    "start_date": "2026-12-30",
-    "end_date": "2026-12-30",
-    "dates_confirmed": false,
-    "city": "Anaheim",
-    "state": "California",
-    "venue": "Anaheim Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-    "sources": [
-      {
-        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-        "type": "api",
-        "fetched_at": "2026-11-16T02:14:49.044Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.3,
-    "status": "active",
-    "kind": "convention",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Ticketing listing (universe.com)",
-          "family": "universe.com",
-          "kind": "ticketing",
-          "points": 3,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "auto-diego-san-2026-san-diego",
     "name": "SAN DIEGO INTERNATIONAL AUTO SHOW 2026",
     "start_date": "2026-12-31",
@@ -3776,49 +3693,6 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "anaheim-anaheim-ca-center-convention-jurassic-quest-2027-anaheim",
-    "name": "Jurassic Quest – Anaheim, CA | Anaheim Convention Center",
-    "start_date": "2027-01-02",
-    "end_date": "2027-01-02",
-    "dates_confirmed": false,
-    "city": "Anaheim",
-    "state": "California",
-    "venue": "Anaheim Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-    "sources": [
-      {
-        "url": "https://www.universe.com/events/jurassic-quest-anaheim-ca-anaheim-convention-center-tickets-ZY0Q1P?ref=ticketmaster",
-        "type": "api",
-        "fetched_at": "2026-11-16T02:14:49.044Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.3,
-    "status": "active",
-    "kind": "convention",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Ticketing listing (universe.com)",
-          "family": "universe.com",
-          "kind": "ticketing",
-          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -4493,46 +4367,6 @@
     }
   },
   {
-    "id": "florida-gold-series-usav-2027-orlando",
-    "name": "Florida USAV Gold Series 2027",
-    "start_date": "2027-01-08",
-    "end_date": "2027-01-10",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/florida-usav-gold-series-2027/925/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "atlanta-greater-rv-2027-atlanta",
     "name": "Greater Atlanta RV Show 2027",
     "start_date": "2027-01-08",
@@ -5097,53 +4931,6 @@
     }
   },
   {
-    "id": "city-classic-sin-2027-las-vegas",
-    "name": "Sin City Classic 2027",
-    "start_date": "2027-01-14",
-    "end_date": "2027-01-18",
-    "dates_confirmed": true,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Horseshoe Las Vegas",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": 10000,
-    "official_url": "https://www.sincityclassic.org/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:33:29.840Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 5,
-      "bars": 3,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        },
-        {
-          "label": "Confirmed on the official site (sincityclassic.org)",
-          "family": "sincityclassic.org",
-          "kind": "official-site",
-          "points": 3,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "home-indianapolis-2027-indianapolis",
     "name": "Indianapolis Home Show 2027",
     "start_date": "2027-01-15",
@@ -5179,46 +4966,6 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "classic-presidential-2027-orlando",
-    "name": "Presidential Classic",
-    "start_date": "2027-01-15",
-    "end_date": "2027-01-17",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/presidential-classic/929/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -5266,86 +5013,6 @@
           "family": "thebaseballconvention.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "mlk-open-2027-chicago",
-    "name": "2027 MLK Open",
-    "start_date": "2027-01-16",
-    "end_date": "2027-01-18",
-    "dates_confirmed": false,
-    "city": "Chicago",
-    "state": "Illinois",
-    "venue": "McCormick Place",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.mccormickplace.com/events/?eventId=48151&orgCode=10",
-    "sources": [
-      {
-        "url": "https://www.mccormickplace.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:32.469Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (mccormickplace.com)",
-          "family": "mccormickplace.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "all-grand-nation-out-2027-orlando",
-    "name": "All Out Grand Nation",
-    "start_date": "2027-01-16",
-    "end_date": "2027-01-17",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/all-out-grand-nation/928/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -5595,46 +5262,6 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "day-meal-million-mlk-of-pack-service-2027-orlando",
-    "name": "MLK Day of Service Million Meal Pack",
-    "start_date": "2027-01-18",
-    "end_date": "2027-01-18",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/mlk-day-of-service-million-meal-pack/931/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -6126,46 +5753,6 @@
         {
           "label": "Venue calendar (mccormickplace.com)",
           "family": "mccormickplace.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "fest-florida-in-jnq-2027-orlando",
-    "name": "Florida Fest JNQ in",
-    "start_date": "2027-01-23",
-    "end_date": "2027-01-25",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/florida-fest-jnq-in/933/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -7624,46 +7211,6 @@
     }
   },
   {
-    "id": "city-classic-queen-2027-charlotte",
-    "name": "Queen City Classic",
-    "start_date": "2027-02-05",
-    "end_date": "2027-02-06",
-    "dates_confirmed": true,
-    "city": "Charlotte",
-    "state": "North Carolina",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.charlottemeetings.com/events/sports/queen-city-classic",
-    "sources": [
-      {
-        "url": "https://www.charlottemeetings.com/convention-event-calendar",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:37:59.811Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (charlottemeetings.com)",
-          "family": "charlottemeetings.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "con-scg-2027-san-diego",
     "name": "SCG CON",
     "start_date": "2027-02-05",
@@ -8497,46 +8044,6 @@
         {
           "label": "Venue calendar (mccormickplace.com)",
           "family": "mccormickplace.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "dance-drill-s-tea-u-2027-orlando",
-    "name": "U.S. Dance/Drill Tea",
-    "start_date": "2027-02-13",
-    "end_date": "2027-02-13",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/u-s-dance-drill-tea/941/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -9988,53 +9495,6 @@
     }
   },
   {
-    "id": "classic-las-vegas-2027-las-vegas",
-    "name": "Las Vegas Classic - 2027",
-    "start_date": "2027-02-26",
-    "end_date": "2027-02-28",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Las Vegas Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": 45000,
-    "official_url": "https://www.kcsportsandmarketing.com/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:55.414Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        },
-        {
-          "label": "Confirmed on the official site (kcsportsandmarketing.com)",
-          "family": "kcsportsandmarketing.com",
-          "kind": "official-site",
-          "points": 0,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "detroit-magicon-2027-detroit",
     "name": "Magicon Detroit",
     "start_date": "2027-02-26",
@@ -10929,46 +10389,6 @@
     }
   },
   {
-    "id": "dtu-nationals-2027-orlando",
-    "name": "DTU Nationals 2027",
-    "start_date": "2027-03-05",
-    "end_date": "2027-03-07",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/dtu-nationals-2027/955/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "connection-hollywood-las-vegas-2027-las-vegas",
     "name": "Hollywood Connection - Las Vegas 2027",
     "start_date": "2027-03-05",
@@ -11008,55 +10428,6 @@
         {
           "label": "Confirmed on the official site (hcdance.com)",
           "family": "hcdance.com",
-          "kind": "official-site",
-          "points": 0,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "march-rave-red-rock-2027-las-vegas",
-    "name": "Red Rock Rave 1 - 2027 (March)",
-    "start_date": "2027-03-05",
-    "end_date": "2027-03-07",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Las Vegas Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": 60000,
-    "official_url": "https://www.kcsportsandmarketing.com/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:55.414Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.3,
-    "status": "active",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        },
-        {
-          "label": "Confirmed on the official site (kcsportsandmarketing.com)",
-          "family": "kcsportsandmarketing.com",
           "kind": "official-site",
           "points": 0,
           "seenAt": "2026-11-17"
@@ -11406,46 +10777,6 @@
     }
   },
   {
-    "id": "america-and-beautillion-biennial-chapter-inc-jack-jill-nashville-of-of-2027-nashville",
-    "name": "The Nashville Chapter of Jack and Jill of America, Inc. 2027 Biennial Beautillion",
-    "start_date": "2027-03-07",
-    "end_date": "2027-03-07",
-    "dates_confirmed": false,
-    "city": "Nashville",
-    "state": "Tennessee",
-    "venue": "Music City Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": 700,
-    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
-    "sources": [
-      {
-        "url": "https://www.nashvillemusiccitycenter.com/calendar",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:57:19.428Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (nashvillemusiccitycenter.com)",
-          "family": "nashvillemusiccitycenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "ata-council-exhibition-maintenance-meeting-s-s-technology-technology-transportation-2027-orlando",
     "name": "ATA's Technology & Maintenance Council's 2027 Annual Meeting & Transportation Technology Exhibition",
     "start_date": "2027-03-08",
@@ -11746,46 +11077,6 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "aau-spring-tournamen-2027-orlando",
-    "name": "AAU Spring Tournamen",
-    "start_date": "2027-03-12",
-    "end_date": "2027-03-14",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/aau-spring-tournamen/960/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -13247,46 +12538,6 @@
     }
   },
   {
-    "id": "adidas-city-national-qualifier-windy-2027-chicago",
-    "name": "Adidas Windy City National Qualifier 2027",
-    "start_date": "2027-03-26",
-    "end_date": "2027-03-28",
-    "dates_confirmed": false,
-    "city": "Chicago",
-    "state": "Illinois",
-    "venue": "McCormick Place",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.mccormickplace.com/events/?eventId=32621&orgCode=10",
-    "sources": [
-      {
-        "url": "https://www.mccormickplace.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:32.469Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (mccormickplace.com)",
-          "family": "mccormickplace.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "auto-new-york-2027-new-york",
     "name": "New York International Auto Show 2027",
     "start_date": "2027-03-26",
@@ -13322,126 +12573,6 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "aau-b-classic-easter-2027-orlando",
-    "name": "AAU Easter Classic B",
-    "start_date": "2027-03-27",
-    "end_date": "2027-03-28",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/aau-easter-classic-b/967/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "5k-and-autism-day-family-fun-2027-orlando",
-    "name": "Autism 5K and Family Fun Day 2027",
-    "start_date": "2027-03-27",
-    "end_date": "2027-03-27",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/autism-5k-and-family-fun-day-2027/970/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "fl-mind-odyssey-of-2027-orlando",
-    "name": "FL Odyssey of the Mind",
-    "start_date": "2027-03-27",
-    "end_date": "2027-03-27",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/fl-odyssey-of-the-mind/968/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -14573,46 +13704,6 @@
     }
   },
   {
-    "id": "classic-college-dtu-2027-orlando",
-    "name": "DTU College Classic 2027",
-    "start_date": "2027-04-10",
-    "end_date": "2027-04-11",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/dtu-college-classic-2027/977/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "program-transform-2027-las-vegas",
     "name": "Transform Annual Program",
     "start_date": "2027-04-10",
@@ -15122,46 +14213,6 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "allstar-champi-2027-orlando",
-    "name": "Allstar World Champi",
-    "start_date": "2027-04-14",
-    "end_date": "2027-04-18",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/allstar-world-champi/974/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
           "seenAt": "2026-11-17"
         }
       ]
@@ -15740,46 +14791,6 @@
     }
   },
   {
-    "id": "jude-n-nashville-rock-roll-saint-2027-nashville",
-    "name": "Saint Jude Rock 'n' Roll Nashville",
-    "start_date": "2027-04-22",
-    "end_date": "2027-04-23",
-    "dates_confirmed": false,
-    "city": "Nashville",
-    "state": "Tennessee",
-    "venue": "Music City Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": 27000,
-    "official_url": "https://www.nashvillemusiccitycenter.com/calendar",
-    "sources": [
-      {
-        "url": "https://www.nashvillemusiccitycenter.com/calendar",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:57:19.428Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (nashvillemusiccitycenter.com)",
-          "family": "nashvillemusiccitycenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "agntcon-america-mcpcon-north-2027-san-francisco",
     "name": "AGNTCon + MCPCon North America 2027",
     "start_date": "2027-04-28",
@@ -16022,46 +15033,6 @@
         {
           "label": "Venue calendar (laconventioncenter.com)",
           "family": "laconventioncenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "polsinelli-retreat-shareholder-2027-nashville",
-    "name": "Polsinelli 2027 Shareholder Retreat",
-    "start_date": "2027-05-01",
-    "end_date": "2027-05-01",
-    "dates_confirmed": false,
-    "city": "Nashville",
-    "state": "Tennessee",
-    "venue": "Music City Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": 700,
-    "official_url": "https://https//www.polsinelli.com/office-locations/nashville",
-    "sources": [
-      {
-        "url": "https://www.nashvillemusiccitycenter.com/calendar",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:57:19.428Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (nashvillemusiccitycenter.com)",
-          "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -17010,46 +15981,6 @@
         {
           "label": "Venue calendar (visitsandiego.com)",
           "family": "visitsandiego.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "barry-law-of-school-university-2027-orlando",
-    "name": "Barry University School of Law",
-    "start_date": "2027-05-14",
-    "end_date": "2027-05-14",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/barry-university-school-of-law/978/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
@@ -18984,46 +17915,6 @@
         {
           "label": "Venue calendar (nashvillemusiccitycenter.com)",
           "family": "nashvillemusiccitycenter.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "cup-showcase-socal-2027-los-angeles",
-    "name": "The SoCal Cup: The Showcase 2027",
-    "start_date": "2027-06-19",
-    "end_date": "2027-06-21",
-    "dates_confirmed": true,
-    "city": "Los Angeles",
-    "state": "California",
-    "venue": "Los Angeles Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.laconventioncenter.com/events/detail/socal-cup-volleyball-showcase-2027",
-    "sources": [
-      {
-        "url": "https://www.laconventioncenter.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T02:41:18.867Z"
-      }
-    ],
-    "last_verified": "2026-11-15",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (laconventioncenter.com)",
-          "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
           "seenAt": "2026-11-17"
