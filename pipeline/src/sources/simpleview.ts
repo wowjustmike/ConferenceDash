@@ -1,6 +1,7 @@
 import * as cheerio from 'cheerio'
-import type { Page } from 'playwright-core'
 import type { BrowserFetcher } from '../net/browser'
+import { collectPaged } from './paging'
+export { collectPaged } from './paging'
 import { normalizeDate, toCandidateClean } from '../normalize'
 import type { Candidate, SourceRef } from '../types'
 
@@ -69,32 +70,6 @@ export function parseSimpleviewListItems(items: string[], source: SourceRef, tod
     try { const u = new URL(a.attr('href') ?? '', source.url); if (u.protocol === 'http:' || u.protocol === 'https:') url = u.toString() } catch { /* none */ }
     const c = toCandidateClean({ name, start_date: start, end_date: end, ...defaults, ...(url ? { official_url: url } : {}), source })
     if (c) out.push(c)
-  }
-  return out
-}
-
-/** Clicks through a paged list, returning each item's HTML once (by id attribute), in order. */
-export async function collectPaged(
-  page: Page, o: { itemSelector: string; nextSelector: string; idAttr: string; maxPages: number; settleMs?: number },
-): Promise<string[]> {
-  const seen = new Set<string>()
-  const out: string[] = []
-  const snapshot = () => page.locator(o.itemSelector).evaluateAll((els, attr) => els.map((e) => ({ id: e.getAttribute(attr as string) ?? '', html: e.outerHTML })), o.idAttr)
-  for (let p = 0; p < o.maxPages; p++) {
-    const items = await snapshot()
-    for (const it of items) if (it.id && !seen.has(it.id)) { seen.add(it.id); out.push(it.html) }
-    const next = page.locator(o.nextSelector).first()
-    if ((await next.count()) === 0) break
-    const hidden = await next.evaluate((el) => getComputedStyle(el).display === 'none' || (el as HTMLElement).hasAttribute('disabled')).catch(() => true)
-    if (hidden) break
-    const firstId = items[0]?.id
-    await next.dispatchEvent('click')
-    const changed = await page.waitForFunction(
-      ([sel, attr, prev]) => { const el = document.querySelector(sel as string); return !!el && el.getAttribute(attr as string) !== prev },
-      [o.itemSelector, o.idAttr, firstId ?? ''] as const, { timeout: 6000 },
-    ).then(() => true).catch(() => false)
-    if (!changed) break
-    await page.waitForTimeout(o.settleMs ?? 400)
   }
   return out
 }

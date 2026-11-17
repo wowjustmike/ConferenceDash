@@ -55,3 +55,135 @@ sources:
     type: aggregator
     url: https://expoassist.net/events/country/united-states-of-america
     max_pages: 12
+  - id: denverconvention
+    kind: cards
+    type: html
+    url: https://denverconvention.com/events/
+    venue: Colorado Convention Center
+    city: Denver
+    state: CO
+    item: '.border-0.card.h-100.overflow-hidden.rounded-4.shadow'
+    title: '.card-title'
+    date: '.align-items-start.d-flex.list-group-item'
+    link: a
+    render: true
+  - id: icclos
+    kind: page
+    type: html
+    url: https://www.icclos.com/events/
+    venue: Indiana Convention Center
+    city: Indianapolis
+    state: IN
+  - id: paconvention
+    kind: cards
+    type: html
+    url: https://www.paconvention.com/events
+    venue: Pennsylvania Convention Center
+    city: Philadelphia
+    state: PA
+    item: '.clearfix.info'
+    title: h3
+    date: '.date'
+    link: a
+    render: true
+  - id: huntingtonplacedetroit
+    kind: cards
+    type: html
+    url: https://www.huntingtonplacedetroit.com/events
+    venue: Huntington Place
+    city: Detroit
+    state: MI
+    item: '.item'
+    title: h2
+    date: '.daterange'
+    link: a
+    render: true
+  - id: clevelandconventions
+    kind: cards
+    type: html
+    url: https://www.clevelandconventions.com/events/
+    venue: Huntington Convention Center of Cleveland
+    city: Cleveland
+    state: OH
+    item: '.item'
+    title: h2
+    date: '.daterange'
+    link: a
+    render: true
+  - id: kyconvention
+    kind: cards
+    type: html
+    url: https://www.kyconvention.com/kicc/events
+    venue: Kentucky International Convention Center
+    city: Louisville
+    state: KY
+    item: '.upcoming-event'
+    title: '.event-title'
+    date: '.dateDiv'
+    link: a
+    render: true
+    infer_year: true
+  - id: raleighconvention
+    kind: page
+    type: html
+    url: https://www.raleighconvention.com/events
+    venue: Raleigh Convention Center
+    city: Raleigh
+    state: NC
+  - id: oregoncc
+    kind: cards
+    type: html
+    url: https://www.oregoncc.org/en/events
+    venue: Oregon Convention Center
+    city: Portland
+    state: OR
+    item: '.views-row'
+    title: '.event-card__title.h4'
+    date: '.date-tag'
+    link: a
+    render: true
+    infer_year: true
+  - id: visitsandiego
+    kind: cards
+    type: html
+    url: https://visitsandiego.com/calendar
+    city: San Diego
+    state: CA
+    item: '.item'
+    title: h2
+    date: '.caldate.col-md-1'
+    link: a
+    render: true
+    infer_year: true
+    exclude: ['^private event']
+  - id: charlotte-crva
+    kind: cards
+    type: html
+    url: https://www.charlottemeetings.com/convention-event-calendar
+    city: Charlotte
+    state: NC
+    item: '.ais-InfiniteHits-item.py-3'
+    title: '.font-bold.font-display.text-dark-text'
+    date: '.font-normal.mt-2.uppercase'
+    link: a
+    render: true
+  - id: music-city-center
+    kind: cards
+    type: html
+    url: https://www.nashvillemusiccitycenter.com/calendar
+    venue: Music City Center
+    city: Nashville
+    state: TN
+    item: '.event-item'
+    title: '.excerpt-title'
+    date: '.excerpt-event__details'
+    link: a
+    render: true
+    infer_year: true
+  - id: baird-center
+    kind: page
+    type: html
+    url: https://bairdcenter.com/calendar/
+    venue: Baird Center
+    city: Milwaukee
+    state: WI

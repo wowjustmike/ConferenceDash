@@ -118,3 +118,37 @@ The browser tool is Playwright driving the installed Google Chrome (no separate 
 | Ticketmaster | Needs the user's free key | Pending |
 
 Tools added: `npm run capture -- <url>` (render a page into `pipeline/inbox/`), `npm run inbox`, `npm run ingest -- <batch.json>` (validated import of events read in-session; every record needs a verbatim quote from the saved page containing the event name), `npm run topics -- <map.json>`, `npm run exclude -- <map.json>`.
+
+## Probe results (2026-11-16 .. 11-17): top US convention centers
+
+Run with `npm run probe -- --list pipeline/sources/venue-candidates.txt`; reports in `pipeline/out/probes/`. "Count" is upcoming events the reader found. Where a venue's `/events` path returned 404, the real calendar link was read from the venue's own homepage (robots-checked), never guessed into the registry.
+
+| Venue (city) | Verdict | Reader | Count | Decision |
+|---|---|---|---|---|
+| Pennsylvania CC (Philadelphia) | ok | cards | 26 | **Added** `paconvention` |
+| Music City Center (Nashville) | ok | cards, year inferred | 62 | **Added** `music-city-center`; "Attendance: N" in titles becomes the size |
+| Visit San Diego convention calendar | ok | cards, split start/end, year inferred | 65 | **Added** `visitsandiego`, no venue label (multi-venue), excludes "Private Event" |
+| Charlotte CRVA convention calendar | ok | cards | 20 | **Added** `charlotte-crva`, no venue label (multi-venue) |
+| Huntington Convention Center (Cleveland) | ok | cards | 16 | **Added** `clevelandconventions` |
+| Raleigh CC | ok | page (JSON-LD) | 7-16 | **Added** `raleighconvention` |
+| Indiana CC (Indianapolis) | ok | page (JSON-LD) | 12 | **Added** `icclos` |
+| Oregon CC (Portland) | ok | cards, year inferred | 12 | **Added** `oregoncc` (many local breakfasts/awards; the classifier screens scope) |
+| Baird Center (Milwaukee) | ok | page (JSON-LD) | 12 | **Added** `baird-center` |
+| Colorado CC (Denver) | ok | cards | 8 | **Added** `denverconvention` |
+| Huntington Place (Detroit) | ok | cards | 4 | **Added** `huntingtonplacedetroit` |
+| Kentucky International CC (Louisville) | ok | cards, year inferred | 3 | **Added** `kyconvention` |
+| CHI Health Center (Omaha) | ok | page | 12 | Skipped: arena calendar (basketball, Monster Jam) |
+| San Jose (sanjose.org) | ok | cards | 9 | Skipped: tourism calendar (shows, holiday lights), open-ended dates |
+| Long Beach Entertainment Center | ok | cards | 15 | Skipped: arts/speaker calendar, title selector reads the date |
+| Kansas City CC | ok | cards | 1 | Skipped: one NCAA event |
+| Broward County CC (Fort Lauderdale) | nothing found on re-probe | - | 0 | Retry later |
+| Moscone (San Francisco) | nothing found | - | - | Expected: covered by its dedicated `moscone` reader |
+| Columbus, Salt Palace, Minneapolis, Sacramento | nothing found at the real calendar URL | - | 0 | Need a dedicated reader (JavaScript calendars) |
+| Tampa CC | 404 at `/tcc/calendar` too | - | 0 | Retry with the homepage "All Events" link |
+| Washington DC, Phoenix, New Orleans, Seattle, Pittsburgh, Baltimore, Boston, Austin, Oklahoma City | nothing found | - | 0 | Need a dedicated reader or another listing page |
+| Hawaii CC, Reno-Sparks, St. Louis | no usable calendar link (fetch failed / none / citywide only) | - | 0 | Not used |
+| George R. Brown (Houston) | HTTP 403 on every page | - | - | **Rejected** (not bypassed) |
+| Georgia World Congress Center, Miami Beach CC | bot protection (403) | - | - | **Rejected** (not bypassed) |
+| Albuquerque CC, Duke Energy CC (Cincinnati), Henry B. Gonzalez (San Antonio) | robots.txt disallows | - | - | **Rejected** |
+
+Generic reader improvements found by this wave: whole-range date blocks ("Nov 19 - 22 / 2026", "Oct 23, 2026 to Nov 22, 2026"), split start/end blocks, yearless dates (`infer_year`, 45-day grace like Simpleview), title classes that vary between cards, cards whose class lists differ, HTML entities in JSON-LD names.

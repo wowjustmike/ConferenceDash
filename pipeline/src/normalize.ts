@@ -92,10 +92,20 @@ export function guessTopics(name: string, hint = ''): Topic[] {
   return found.length ? found : ['Other']
 }
 
+const NAMED: Record<string, string> = { amp: '&', quot: '"', apos: "'", lt: '<', gt: '>', nbsp: ' ', ndash: '–', mdash: '—', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“', hellip: '…' }
+/** Decodes the HTML entities some sites leave in JSON-LD strings ("Men&#8217;s", "&amp;"). */
+export function decodeEntities(s: string): string {
+  return s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e: string) => {
+    if (e[0] === '#') { const n = e[1] === 'x' || e[1] === 'X' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10); return n > 0 && n < 0x110000 ? String.fromCodePoint(n) : m }
+    return NAMED[e.toLowerCase()] ?? m
+  }).replace(/\u00a0/g, ' ')
+}
+
 export function toCandidateClean(c: Candidate): Candidate | null {
-  const name = c.name?.trim()
+  const name = c.name ? decodeEntities(c.name).replace(/\s+/g, ' ').trim() : ''
   if (!name) return null
   const out: Candidate = { ...c, name }
+  if (c.organizer) out.organizer = decodeEntities(c.organizer).trim()
   if (c.start_date !== undefined) {
     const s = normalizeDate(c.start_date)
     if (!s) return null
@@ -112,6 +122,6 @@ export function toCandidateClean(c: Candidate): Candidate | null {
     else delete out.state
   }
   if (c.city) out.city = normalizeCity(c.city)
-  if (c.venue) out.venue = normalizeVenue(c.venue)
+  if (c.venue) out.venue = normalizeVenue(decodeEntities(c.venue))
   return out
 }

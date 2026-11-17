@@ -131,3 +131,12 @@ test('canFetch combines the public-address guard with robots.txt', async () => {
   expect(await f.canFetch('http://127.0.0.1/x')).toBe(false)
   expect(await f.canFetch('file:///etc/passwd')).toBe(false)
 })
+
+test('lastStatus reports the final response status; null after a network error or a refused target', async () => {
+  const { f } = setup({ 'https://a.example/ok': () => res(200, 'hi'), 'https://a.example/forbidden': () => res(403), 'https://a.example/boom': () => { throw new Error('net') } })
+  expect(f.lastStatus()).toBeNull()
+  await f.fetchText('https://a.example/ok'); expect(f.lastStatus()).toBe(200)
+  await f.fetchText('https://a.example/forbidden'); expect(f.lastStatus()).toBe(403)
+  await f.fetchText('https://a.example/boom'); expect(f.lastStatus()).toBeNull()
+  await f.fetchText('https://internal.example/x'); expect(f.lastStatus()).toBeNull()
+})

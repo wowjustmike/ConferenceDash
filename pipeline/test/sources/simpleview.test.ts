@@ -34,17 +34,26 @@ describe.skipIf(!existsSync(CHROME))('collectPaged (real Chrome)', () => {
   beforeAll(async () => {
     server = createServer((_q, res) => {
       res.setHeader('content-type', 'text/html')
+      // ?ignore=1: the first click on next does nothing (the Las Vegas list ignores a click that lands while results settle).
+      const ignore = (_q.url ?? '').includes('ignore=1')
       res.end(`<html><body><div id="list"></div><ul class="pager"><li class="info" id="info"></li><li><a class="nxt" id="nxt">next</a></li></ul>
         <script>
           const pages = [['a1','a2'],['b1','b2'],['c1']]; let i = 0;
           function draw(){ list.innerHTML = pages[i].map(id => '<article class="convention-item" data-recid="'+id+'"><h4 class="title">'+id+'</h4></article>').join(''); info.textContent = (i*2+1)+' - '+(i*2+pages[i].length)+' of 5'; nxt.style.display = i===pages.length-1 ? 'none':'inline'; }
-          nxt.onclick = () => { setTimeout(()=>{ i++; draw() }, 120) }; draw();
+          let skip = ${ignore ? 1 : 0};
+          nxt.onclick = () => { if (skip > 0) { skip--; return } setTimeout(()=>{ i++; draw() }, 120) }; draw();
         </script></body></html>`)
     })
     await new Promise<void>((r) => server.listen(0, '127.0.0.1', r))
     base = `http://127.0.0.1:${(server.address() as AddressInfo).port}/`
   })
   afterAll(() => { server.close() })
+  test('an ignored click on next is retried before the list is taken as finished', { timeout: 60000 }, async () => {
+    const b = createBrowserFetcher({ userAgent: 'T', executablePath: CHROME, canFetch: async () => true, allowLoopback: true, minIntervalMs: 0, timeoutMs: 40000 })
+    const r = await b.withPage(base + '?ignore=1', (page) => collectPaged(page, { itemSelector: 'article.convention-item', nextSelector: '#nxt', idAttr: 'data-recid', maxPages: 10, settleMs: 300, waitMs: 1500 }))
+    await b.close()
+    expect(r?.map((h) => /data-recid="(\w+)"/.exec(h)![1])).toEqual(['a1', 'a2', 'b1', 'b2', 'c1'])
+  })
   test('clicks through every page and returns each item once, in order', { timeout: 30000 }, async () => {
     const b = createBrowserFetcher({ userAgent: 'T', executablePath: CHROME, canFetch: async () => true, allowLoopback: true, minIntervalMs: 0, timeoutMs: 20000 })
     const r = await b.withPage(base, (page) => collectPaged(page, { itemSelector: 'article.convention-item', nextSelector: '#nxt', idAttr: 'data-recid', maxPages: 10, settleMs: 300 }))
