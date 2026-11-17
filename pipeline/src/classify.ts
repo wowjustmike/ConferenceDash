@@ -1,5 +1,5 @@
 /** Bump when the rules change so earlier rule-made exclusions are re-checked. */
-export const CLASSIFIER_VERSION = 2
+export const CLASSIFIER_VERSION = 3
 
 export type Kind = 'conference' | 'trade_show' | 'expo' | 'convention' | 'fan_con'
 export type Classification = { kind: Kind } | { excluded: string } | { unknown: true }
@@ -9,8 +9,11 @@ const t = (re: RegExp, s: string) => re.test(s)
 const FAIRE = /\b(renaissance|ren)\s+(faire|fair|festival)\b|\bfaire\b/i
 const FESTIVAL = /\b(music|food|wine|beer|film|arts?|jazz|rock|blues|country|craft)\s+festival\b|\b(coachella|lollapalooza|bonnaroo|burning man|electric daisy)\b/i
 const CONCERT = /\b(concert|symphony|orchestra|dj set|live in concert|world tour)\b/i
-const SPORTS = /\b(nfl|nba|mlb|nhl|mls|wnba|ufc|wwe|super bowl|championship|tournament|marathon|grand prix|playoffs?|rodeo|boxing|wrestling|cheer|futsal|bowl game)\b/i
-const SOCIAL = /\b(party|wedding|banquet|gala|reunion|graduation|quincea\w+|prom|birthday|fundraiser|holiday celebration)\b/i
+const SPORTS = /\b(nfl|nba|mlb|nhl|mls|wnba|ufc|wwe|super bowl|championships?|tournament|marathon|grand prix|playoffs?|rodeo|boxing|wrestling|cheer(leading)?|futsal|bowl game|volleyball|fencing|gymnastics|bjj|jiu[- ]?jitsu|table tennis|hyrox|grand nationals|regional qualifier)\b/i
+// Youth dance and Irish-dance competitions call themselves "conventions"; they are checked before the professional words.
+const COMPETITION = /\b(dance (convention|competition|nationals)|talent competition|dancefest|danceone|feis|winterfeis|oireachtas)\b/i
+const SOCIAL = /\b(party|wedding|banquet|gala|reunion|graduation|quincea\w+|prom|birthday|fundraiser|holiday celebration|luncheon|dinner|breakfast|masked ball|ball|cotillion|feast|awards)\b/i
+const SHOW = /\b(an evening with|cirque|film tour|(holiday|craft|christmas) market)\b|\bart \+ craft market\b/i
 
 const FAN_CON = /\b(comic[- ]?con|comiccon|fan ?expo|anime|manga|cosplay|collect-a-con|dragon ?con|gen ?con|otakon|pax)\b/i
 const TRADE_SHOW = /\btrade ?show\b|\b[a-z]+ show\b/i
@@ -24,7 +27,9 @@ const CAMEL_CON = /\b[A-Za-z]*[a-z]Con\b/
 
 export function classifyKind(name: string, hint = ''): Classification {
   const s = `${name} ${hint}`
+  if (t(COMPETITION, s)) return { excluded: 'competition' }
   if (!t(PRO, s)) {
+    if (t(SHOW, s)) return { excluded: 'performance' }
     if (t(FAIRE, s)) return { excluded: 'faire' }
     if (t(FESTIVAL, s)) return { excluded: 'festival' }
     if (t(CONCERT, s)) return { excluded: 'concert' }
