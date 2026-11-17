@@ -1,0 +1,147 @@
+# Major company (vendor/partner) and trade-association conferences that venue calendars miss.
+# One per line: name | organizer page. Re-check every few months: npm run capture -- <url>, then ingest with a verbatim quote.
+# Pages that refuse automated visitors are listed under "# blocked" and stay out.
+
+# Vendor / partner conferences (tech)
+Oracle AI World | https://www.oracle.com/ai-world/
+Workday Rising | https://www.workday.com/en-us/company/latest/events/workday-rising.html
+Splunk .conf | https://conf.splunk.com/
+Nutanix .NEXT | https://www.nutanix.com/next
+Pure//Accelerate | https://www.purestorage.com/events/accelerate.html
+VMware Explore | https://www.vmware.com/explore
+Oktane | https://www.okta.com/oktane/
+CrowdStrike Fal.Con | https://www.crowdstrike.com/events/fal-con/
+Zenith Live | https://www.zscaler.com/zenith-live
+Informatica World | https://www.informatica.com/informatica-world.html
+Twilio SIGNAL | https://signal.twilio.com/
+MongoDB.local NYC | https://www.mongodb.com/events/mongodb-local/nyc
+Atlassian Team | https://www.atlassian.com/company/events/team
+GitHub Universe | https://githubuniverse.com/
+NVIDIA GTC | https://www.nvidia.com/gtc/
+Microsoft Build | https://build.microsoft.com/
+IBM Think | https://www.ibm.com/events/think
+VeeamON | https://www.veeam.com/veeamon
+Qualtrics X4 | https://www.qualtrics.com/x4/
+Procore Groundbreak | https://www.procore.com/groundbreak
+AVEVA World | https://www.aveva.com/en/perspectives/events/aveva-world/
+Emerson Exchange | https://www.emerson.com/en-us/exchange
+PTC LiveWorx | https://www.ptc.com/en/liveworx
+Tableau Conference | https://www.salesforce.com/tableau-conference/
+Snowflake Summit | https://www.snowflake.com/en/summit/
+Gartner IT Symposium/Xpo | https://www.gartner.com/en/conferences/na/symposium-us
+Gartner Security & Risk Management Summit | https://www.gartner.com/en/conferences/na/security-risk-management-us
+RSAC | https://www.rsaconference.com/usa
+Black Hat USA | https://www.blackhat.com/
+DEF CON | https://defcon.org/
+GDC | https://gdconf.com/
+Money20/20 USA | https://us.money2020.com/
+J.P. Morgan Healthcare Conference | https://www.jpmorgan.com/about-us/events-conferences/health-care-conference
+
+# Trade associations and industry shows
+NRF Big Show | https://nrfbigshow.nrf.com/
+SHRM Annual Conference | https://annual.shrm.org/
+HIMSS Global Health Conference | https://www.himssconference.com/
+ASCO Annual Meeting | https://conferences.asco.org/am/
+RSNA Annual Meeting | https://www.rsna.org/annual-meeting
+AACR Annual Meeting | https://www.aacr.org/meeting/aacr-annual-meeting-2027/
+ASH Annual Meeting | https://www.hematology.org/meetings/annual-meeting
+ACC Scientific Session | https://accscientificsession.acc.org/
+AAN Annual Meeting | https://www.aan.com/events/annual-meeting
+ADA Scientific Sessions | https://professional.diabetes.org/scientific-sessions
+DDW | https://ddw.org/
+AGU Annual Meeting | https://www.agu.org/annual-meeting
+SEMA Show | https://www.semashow.com/
+AAPEX | https://www.aapexshow.com/
+NADA Show | https://www.nadashow.org/
+PACK EXPO Las Vegas | https://www.packexpolasvegas.com/
+ProMat | https://www.promatshow.com/
+FABTECH | https://www.fabtechexpo.com/
+World of Concrete | https://www.worldofconcrete.com/
+International Builders' Show | https://www.buildersshow.com/
+KBIS | https://kbis.com/
+AHR Expo | https://www.ahrexpo.com/
+NAMM Show | https://www.namm.org/thenammshow
+SHOT Show | https://shotshow.org/
+National Restaurant Association Show | https://www.nationalrestaurantshow.com/
+IFT FIRST | https://www.iftevent.org/
+InfoComm | https://www.infocommshow.org/
+ISC West | https://www.iscwest.com/
+OFC | https://www.ofcconference.org/
+SPIE Photonics West | https://spie.org/conferences-and-exhibitions/photonics-west
+CERAWeek | https://ceraweek.com/
+Offshore Technology Conference | https://www.otcnet.org/
+WasteExpo | https://www.wasteexpo.com/
+ASAE Annual Meeting | https://annual.asaecenter.org/
+IMEX America | https://www.imexamerica.com/
+PCMA Convening Leaders | https://www.pcma.org/convening-leaders/
+
+# Batch 2 (2026-11-17)
+Datadog DASH | https://www.dashcon.io/
+Confluent Current | https://current.confluent.io/
+NetSuite SuiteWorld | https://www.netsuite.com/portal/suiteworld/
+Epicor Insights | https://www.epicor.com/en-us/insights/
+Figma Config | https://config.figma.com/
+NetApp INSIGHT | https://www.netapp.com/insight/
+F5 AppWorld | https://www.f5.com/appworld
+Trimble Dimensions | https://dimensions.trimble.com/
+Cvent CONNECT | https://www.cvent.com/en/connect
+UiPath FORWARD | https://www.uipath.com/events/forward
+SaaStr Annual | https://www.saastrannual.com/
+TechCrunch Disrupt | https://techcrunch.com/events/tc-disrupt-2027/
+CES | https://www.ces.tech/
+Shoptalk | https://shoptalk.com/us
+Groceryshop | https://groceryshop.com/
+Content Marketing World | https://www.contentmarketingworld.com/
+Advertising Week New York | https://advertisingweek.com/
+AAOS Annual Meeting | https://www.aaos.org/annual
+AAD Annual Meeting | https://www.aad.org/member/meetings-education/am27
+APA Annual Meeting | https://www.psychiatry.org/annual-meeting
+ASGCT Annual Meeting | https://annualmeeting.asgct.org/
+AHIP | https://www.ahip.org/conferences
+Pittcon | https://pittcon.org/
+NeoCon | https://neocon.com/
+High Point Market | https://www.highpointmarket.org/
+ICSC Las Vegas | https://www.icsc.com/attend-and-learn/events/icsc-las-vegas
+AIA Conference on Architecture | https://conferenceonarchitecture.com/
+Greenbuild | https://informaconnect.com/greenbuild/
+WEFTEC | https://www.weftec.org/
+POWERGEN | https://www.powergen.com/
+DistribuTECH | https://www.distributech.com/
+NPE | https://www.npe.org/
+Automate | https://www.automateshow.com/
+IPC APEX EXPO | https://www.ipcapexexpo.org/
+SEMICON West | https://www.semiconwest.org/
+DAC | https://www.dac.com/
+World Ag Expo | https://www.worldagexpo.com/
+Commodity Classic | https://commodityclassic.com/
+IPPE | https://www.ippexpo.org/
+Summer Fancy Food Show | https://www.specialtyfood.com/fancy-food-show/
+Global Pet Expo | https://globalpetexpo.org/
+Toy Fair New York | https://www.toyfairny.com/
+JCK Las Vegas | https://lasvegas.jckonline.com/
+Cosmoprof North America | https://www.cosmoprofnorthamerica.com/
+Licensing Expo | https://www.licensingexpo.com/
+NACS Show | https://www.nacsshow.com/
+Mid-America Trucking Show | https://www.truckingshow.com/
+ACT Expo | https://www.actexpo.com/
+NBAA-BACE | https://nbaa.org/events/business-aviation-convention-exhibition/
+AUSA Annual Meeting | https://www.ausa.org/annual
+Sea-Air-Space | https://seaairspace.org/
+GEOINT Symposium | https://geoint.org/
+Space Symposium | https://www.spacesymposium.org/
+XPONENTIAL | https://www.xponential.org/
+I/ITSEC | https://www.iitsec.org/
+VidCon | https://www.vidcon.com/
+TwitchCon | https://www.twitchcon.com/
+Gen Con | https://www.gencon.com/
+Dragon Con | https://www.dragoncon.org/
+New York Comic Con | https://www.newyorkcomiccon.com/
+Emerald City Comic Con | https://www.emeraldcitycomiccon.com/
+C2E2 | https://www.c2e2.com/
+WonderCon | https://www.comic-con.org/wc/
+
+# blocked (Access Denied to automated visitors, 2026-11-17)
+# ServiceNow Knowledge | https://www.servicenow.com/events.html
+# HPE Discover | https://www.hpe.com/us/en/discover/pgs.html
+# Adobe Summit | https://www.adobe.com/summit.html
+# Rockwell Automation Fair | https://www.rockwellautomation.com/en-ca/events/automation-fair/attend/faq.html

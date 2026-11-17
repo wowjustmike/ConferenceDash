@@ -1542,6 +1542,51 @@
     }
   },
   {
+    "id": "rsna-2026-chicago",
+    "name": "RSNA 2026",
+    "start_date": "2026-11-29",
+    "end_date": "2026-12-03",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "RSNA",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.rsna.org/annual-meeting",
+    "sources": [
+      {
+        "url": "https://www.rsna.org/annual-meeting",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:12.703Z"
+      },
+      {
+        "url": "https://www.rsna.org/annual-meeting",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:23.608Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (rsna.org)",
+          "family": "rsna.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "and-field-meeting-track-2026-portland",
     "name": "USA Track and Field Annual Meeting",
     "start_date": "2026-11-29",
@@ -2596,6 +2641,51 @@
           "family": "atlanticunionbankconventioncenter.com",
           "kind": "official-site",
           "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "agu26-2026-san-francisco",
+    "name": "AGU26",
+    "start_date": "2026-12-07",
+    "end_date": "2026-12-11",
+    "dates_confirmed": false,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "AGU",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.agu.org/annual-meeting",
+    "sources": [
+      {
+        "url": "https://www.agu.org/annual-meeting",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:18.945Z"
+      },
+      {
+        "url": "https://www.agu.org/annual-meeting",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:29.827Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (agu.org)",
+          "family": "agu.org",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -4661,6 +4751,51 @@
     }
   },
   {
+    "id": "nrf-2027-new-york",
+    "name": "NRF 2027",
+    "start_date": "2027-01-10",
+    "end_date": "2027-01-12",
+    "dates_confirmed": true,
+    "city": "New York",
+    "state": "New York",
+    "venue": "Jacob K. Javits Convention Center",
+    "organizer": "National Retail Federation",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": null,
+    "official_url": "https://nrfbigshow.nrf.com/",
+    "sources": [
+      {
+        "url": "https://nrfbigshow.nrf.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:10.189Z"
+      },
+      {
+        "url": "https://nrfbigshow.nrf.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:21.118Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (nrfbigshow.nrf.com)",
+          "family": "nrfbigshow.nrf.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "big-nrf-retail-s-2027-new-york",
     "name": "Retail’s Big Show - NRF 2027",
     "start_date": "2027-01-10",
@@ -4744,6 +4879,53 @@
           "family": "bldr.com",
           "kind": "official-site",
           "points": 0,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "healthcare-j-morgan-p-2027-san-francisco",
+    "name": "J.P. Morgan Healthcare Conference",
+    "start_date": "2027-01-11",
+    "end_date": "2027-01-14",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "J.P. Morgan",
+    "topics": [
+      "Healthcare",
+      "Finance"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.jpmorgan.com/about-us/events-conferences/health-care-conference",
+    "sources": [
+      {
+        "url": "https://www.jpmorgan.com/about-us/events-conferences/health-care-conference",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:08.941Z"
+      },
+      {
+        "url": "https://www.jpmorgan.com/about-us/events-conferences/health-care-conference",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:19.872Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (jpmorgan.com)",
+          "family": "jpmorgan.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -5311,6 +5493,51 @@
     }
   },
   {
+    "id": "powergen-2027-salt-lake-city",
+    "name": "POWERGEN",
+    "start_date": "2027-01-18",
+    "end_date": "2027-01-21",
+    "dates_confirmed": true,
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "venue": "Salt Palace Convention Center",
+    "organizer": "Clarion Events",
+    "topics": [
+      "Energy"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.powergen.com/",
+    "sources": [
+      {
+        "url": "https://www.powergen.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:07.370Z"
+      },
+      {
+        "url": "https://www.powergen.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:03.504Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (powergen.com)",
+          "family": "powergen.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "advanced-therapies-week-2027-san-diego",
     "name": "ADVANCED THERAPIES WEEK 2027",
     "start_date": "2027-01-19",
@@ -5441,33 +5668,43 @@
   },
   {
     "id": "shot-2027-las-vegas",
-    "name": "SHOT Show 2027",
+    "name": "SHOT Show",
     "start_date": "2027-01-19",
     "end_date": "2027-01-22",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Las Vegas",
     "state": "Nevada",
-    "venue": "",
-    "organizer": "",
+    "venue": "Venetian Expo",
+    "organizer": "NSSF",
     "topics": [
       "Sports"
     ],
     "est_attendance": null,
-    "official_url": "https://expoassist.net/event/shot-show",
+    "official_url": "https://shotshow.org/",
     "sources": [
       {
         "url": "https://expoassist.net/event/shot-show",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.270Z"
+      },
+      {
+        "url": "https://shotshow.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:28.888Z"
+      },
+      {
+        "url": "https://shotshow.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:39.792Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 4,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -5475,6 +5712,13 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (shotshow.org)",
+          "family": "shotshow.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -5932,6 +6176,51 @@
     }
   },
   {
+    "id": "america-cosmoprof-north-2027-miami-beach",
+    "name": "Cosmoprof North America",
+    "start_date": "2027-01-26",
+    "end_date": "2027-01-28",
+    "dates_confirmed": true,
+    "city": "Miami Beach",
+    "state": "Florida",
+    "venue": "Miami Beach Convention Center",
+    "organizer": "Cosmoprof",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": null,
+    "official_url": "https://cosmoprofnorthamerica.com/",
+    "sources": [
+      {
+        "url": "https://cosmoprofnorthamerica.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:17.295Z"
+      },
+      {
+        "url": "https://cosmoprofnorthamerica.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:13.454Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (cosmoprofnorthamerica.com)",
+          "family": "cosmoprofnorthamerica.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "america-cosmoprof-miami-north-2027-miami",
     "name": "Cosmoprof North America Miami 2027",
     "start_date": "2027-01-26",
@@ -6006,6 +6295,51 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ippe-2027-atlanta",
+    "name": "IPPE",
+    "start_date": "2027-01-26",
+    "end_date": "2027-01-28",
+    "dates_confirmed": true,
+    "city": "Atlanta",
+    "state": "Georgia",
+    "venue": "Georgia World Congress Center",
+    "organizer": "U.S. Poultry & Egg Association",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.ippexpo.org/",
+    "sources": [
+      {
+        "url": "https://www.ippexpo.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:13.591Z"
+      },
+      {
+        "url": "https://www.ippexpo.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:09.714Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (ippexpo.org)",
+          "family": "ippexpo.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -6095,6 +6429,67 @@
     }
   },
   {
+    "id": "namm-2027-anaheim",
+    "name": "The NAMM Show",
+    "start_date": "2027-01-26",
+    "end_date": "2027-01-30",
+    "dates_confirmed": true,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "Anaheim Convention Center",
+    "organizer": "NAMM",
+    "topics": [
+      "Media",
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.namm.org/thenammshow/attend",
+    "sources": [
+      {
+        "url": "https://expoassist.net/event/namm-show",
+        "type": "aggregator",
+        "fetched_at": "2026-11-16T01:43:04.270Z"
+      },
+      {
+        "url": "https://www.namm.org/thenammshow/attend",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:27.652Z"
+      },
+      {
+        "url": "https://www.namm.org/thenammshow/attend",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:38.543Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.7,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Aggregator listing (expoassist.net)",
+          "family": "expoassist.net",
+          "kind": "aggregator",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (namm.org)",
+          "family": "namm.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "pga-2027-orlando",
     "name": "PGA Show 2027",
     "start_date": "2027-01-27",
@@ -6130,48 +6525,6 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "namm-2027-anaheim",
-    "name": "NAMM Show 2027",
-    "start_date": "2027-01-28",
-    "end_date": "2027-01-30",
-    "dates_confirmed": false,
-    "city": "Anaheim",
-    "state": "California",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Media",
-      "Entertainment"
-    ],
-    "est_attendance": null,
-    "official_url": "https://expoassist.net/event/namm-show",
-    "sources": [
-      {
-        "url": "https://expoassist.net/event/namm-show",
-        "type": "aggregator",
-        "fetched_at": "2026-11-16T01:43:04.270Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "trade_show",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Aggregator listing (expoassist.net)",
-          "family": "expoassist.net",
-          "kind": "aggregator",
-          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -6848,6 +7201,96 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "builders-2027-las-vegas",
+    "name": "International Builders’ Show",
+    "start_date": "2027-02-02",
+    "end_date": "2027-02-04",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "",
+    "organizer": "NAHB",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.buildersshow.com/",
+    "sources": [
+      {
+        "url": "https://www.buildersshow.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:25.166Z"
+      },
+      {
+        "url": "https://www.buildersshow.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:36.052Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (buildersshow.com)",
+          "family": "buildersshow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "kbis-2027-las-vegas",
+    "name": "KBIS 2027",
+    "start_date": "2027-02-02",
+    "end_date": "2027-02-04",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "",
+    "organizer": "NKBA",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://kbis.com/",
+    "sources": [
+      {
+        "url": "https://kbis.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:26.422Z"
+      },
+      {
+        "url": "https://kbis.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:37.298Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (kbis.com)",
+          "family": "kbis.com",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -7835,6 +8278,52 @@
     }
   },
   {
+    "id": "ag-2027-tulare",
+    "name": "World Ag Expo 2027",
+    "start_date": "2027-02-09",
+    "end_date": "2027-02-11",
+    "dates_confirmed": true,
+    "city": "Tulare",
+    "state": "California",
+    "venue": "",
+    "organizer": "International Agri-Center",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.worldagexpo.com/",
+    "sources": [
+      {
+        "url": "https://www.worldagexpo.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:12.346Z"
+      },
+      {
+        "url": "https://www.worldagexpo.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:08.476Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (worldagexpo.com)",
+          "family": "worldagexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "american-cancers-clinical-gu-of-oncology-society-symposium-2027-san-francisco",
     "name": "American Society of Clinical Oncology GU Cancers Symposium 2027",
     "start_date": "2027-02-11",
@@ -8766,6 +9255,51 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fair-toy-2027-new-york",
+    "name": "Toy Fair",
+    "start_date": "2027-02-20",
+    "end_date": "2027-02-23",
+    "dates_confirmed": true,
+    "city": "New York",
+    "state": "New York",
+    "venue": "Jacob K. Javits Center",
+    "organizer": "The Toy Association",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": null,
+    "official_url": "https://toyassociation.org/tf",
+    "sources": [
+      {
+        "url": "https://toyassociation.org/tf",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:16.065Z"
+      },
+      {
+        "url": "https://toyassociation.org/tf",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:12.211Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (toyassociation.org)",
+          "family": "toyassociation.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -10251,6 +10785,51 @@
     }
   },
   {
+    "id": "aaos-2027-las-vegas",
+    "name": "AAOS 2027",
+    "start_date": "2027-03-03",
+    "end_date": "2027-03-06",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "",
+    "organizer": "American Academy of Orthopaedic Surgeons",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.aaos.org/annual",
+    "sources": [
+      {
+        "url": "https://www.aaos.org/annual",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:57.259Z"
+      },
+      {
+        "url": "https://www.aaos.org/annual",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:53.521Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (aaos.org)",
+          "family": "aaos.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "aimexpo-2027-orlando",
     "name": "AIMEXPO 2027",
     "start_date": "2027-03-03",
@@ -10337,6 +10916,52 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "city-comic-con-emerald-2027-seattle",
+    "name": "Emerald City Comic Con",
+    "start_date": "2027-03-04",
+    "end_date": "2027-03-07",
+    "dates_confirmed": true,
+    "city": "Seattle",
+    "state": "Washington",
+    "venue": "Seattle Convention Center",
+    "organizer": "ReedPop",
+    "topics": [
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.emeraldcitycomiccon.com/",
+    "sources": [
+      {
+        "url": "https://www.emeraldcitycomiccon.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:30.975Z"
+      },
+      {
+        "url": "https://www.emeraldcitycomiccon.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:27.135Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "fan_con",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (emeraldcitycomiccon.com)",
+          "family": "emeraldcitycomiccon.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -11669,6 +12294,51 @@
     }
   },
   {
+    "id": "appworld-2027-las-vegas",
+    "name": "AppWorld",
+    "start_date": "2027-03-16",
+    "end_date": "2027-03-18",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Fontainebleau Las Vegas",
+    "organizer": "F5",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.f5.com/appworld",
+    "sources": [
+      {
+        "url": "https://www.f5.com/appworld",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:53.519Z"
+      },
+      {
+        "url": "https://www.f5.com/appworld",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:49.766Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (f5.com)",
+          "family": "f5.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "bpi-west-2027-san-diego",
     "name": "BPI WEST 2027",
     "start_date": "2027-03-16",
@@ -11861,33 +12531,43 @@
   },
   {
     "id": "pet-2027-orlando",
-    "name": "Global Pet Expo 2027",
+    "name": "Global Pet Expo",
     "start_date": "2027-03-17",
     "end_date": "2027-03-19",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Orlando",
     "state": "Florida",
     "venue": "Orange County Convention Center",
-    "organizer": "",
+    "organizer": "American Pet Products Association",
     "topics": [
       "Retail"
     ],
     "est_attendance": null,
-    "official_url": "https://www.occc.net/event/global-pet-expo-2027/958/",
+    "official_url": "https://globalpetexpo.org/",
     "sources": [
       {
         "url": "https://www.occc.net/events/",
         "type": "html",
         "fetched_at": "2026-11-16T01:52:10.410Z"
+      },
+      {
+        "url": "https://globalpetexpo.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:14.852Z"
+      },
+      {
+        "url": "https://globalpetexpo.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:10.962Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 2,
-      "bars": 2,
+      "points": 5,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -11895,6 +12575,13 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (globalpetexpo.org)",
+          "family": "globalpetexpo.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -11935,6 +12622,52 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "america-mid-trucking-2027-louisville",
+    "name": "Mid-America Trucking Show",
+    "start_date": "2027-03-18",
+    "end_date": "2027-03-20",
+    "dates_confirmed": true,
+    "city": "Louisville",
+    "state": "Kentucky",
+    "venue": "Kentucky Expo Center",
+    "organizer": "MATS",
+    "topics": [
+      "Automotive"
+    ],
+    "est_attendance": null,
+    "official_url": "https://truckingshow.com/",
+    "sources": [
+      {
+        "url": "https://truckingshow.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:21.024Z"
+      },
+      {
+        "url": "https://truckingshow.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:17.203Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (truckingshow.com)",
+          "family": "truckingshow.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -12016,6 +12749,51 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aad-meeting-2027-san-francisco",
+    "name": "AAD Annual Meeting",
+    "start_date": "2027-03-19",
+    "end_date": "2027-03-23",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "American Academy of Dermatology",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.aad.org/member/meetings-education/am27",
+    "sources": [
+      {
+        "url": "https://www.aad.org/member/meetings-education/am27",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:58.512Z"
+      },
+      {
+        "url": "https://www.aad.org/member/meetings-education/am27",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:54.769Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (aad.org)",
+          "family": "aad.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -12449,6 +13227,51 @@
     }
   },
   {
+    "id": "shoptalk-spring-2027-las-vegas",
+    "name": "SHOPTALK SPRING",
+    "start_date": "2027-03-22",
+    "end_date": "2027-03-24",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "",
+    "organizer": "Shoptalk",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": null,
+    "official_url": "https://groceryshop.com/home",
+    "sources": [
+      {
+        "url": "https://groceryshop.com/home",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:56.018Z"
+      },
+      {
+        "url": "https://groceryshop.com/home",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:52.265Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (groceryshop.com)",
+          "family": "groceryshop.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "amec-education-medical-2027-las-vegas",
     "name": "2027 Annual Medical Education Conference (AMEC)",
     "start_date": "2027-03-23",
@@ -12620,6 +13443,97 @@
     }
   },
   {
+    "id": "wondercon-2027-anaheim",
+    "name": "WonderCon 2027",
+    "start_date": "2027-03-26",
+    "end_date": "2027-03-28",
+    "dates_confirmed": true,
+    "city": "Anaheim",
+    "state": "California",
+    "venue": "",
+    "organizer": "Comic-Con International",
+    "topics": [
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.comic-con.org/wc/",
+    "sources": [
+      {
+        "url": "https://www.comic-con.org/wc/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:33.468Z"
+      },
+      {
+        "url": "https://www.comic-con.org/wc/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:29.621Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (comic-con.org)",
+          "family": "comic-con.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "next-2027-las-vegas",
+    "name": ".NEXT 2027",
+    "start_date": "2027-03-29",
+    "end_date": "2027-04-01",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "",
+    "organizer": "Nutanix",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.nutanix.com/next",
+    "sources": [
+      {
+        "url": "https://www.nutanix.com/next",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:58:55.260Z"
+      },
+      {
+        "url": "https://www.nutanix.com/next",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:06.158Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (nutanix.com)",
+          "family": "nutanix.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "gadget-repair-2027-nashville",
     "name": "Gadget Repair Expo 7.0",
     "start_date": "2027-03-30",
@@ -12655,6 +13569,51 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "semicon-west-2027-phoenix",
+    "name": "SEMICON West",
+    "start_date": "2027-03-30",
+    "end_date": "2027-04-01",
+    "dates_confirmed": false,
+    "city": "Phoenix",
+    "state": "Arizona",
+    "venue": "Phoenix Convention Center",
+    "organizer": "SEMI",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.semiconwest.org/",
+    "sources": [
+      {
+        "url": "https://www.semiconwest.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:09.852Z"
+      },
+      {
+        "url": "https://www.semiconwest.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:05.996Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (semiconwest.org)",
+          "family": "semiconwest.org",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -12837,6 +13796,51 @@
         {
           "label": "Confirmed on the official site (sunseccon.org)",
           "family": "sunseccon.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aacr-meeting-2027-orlando",
+    "name": "AACR ANNUAL MEETING 2027",
+    "start_date": "2027-04-02",
+    "end_date": "2027-04-07",
+    "dates_confirmed": true,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "Orange County Convention Center",
+    "organizer": "AACR",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.aacr.org/meeting/aacr-annual-meeting-2027/",
+    "sources": [
+      {
+        "url": "https://www.aacr.org/meeting/aacr-annual-meeting-2027/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:15.206Z"
+      },
+      {
+        "url": "https://www.aacr.org/meeting/aacr-annual-meeting-2027/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:26.087Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (aacr.org)",
+          "family": "aacr.org",
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-17"
@@ -13232,6 +14236,51 @@
     }
   },
   {
+    "id": "air-sea-space-2027-national-harbor",
+    "name": "Sea-Air-Space 2027",
+    "start_date": "2027-04-04",
+    "end_date": "2027-04-07",
+    "dates_confirmed": true,
+    "city": "National Harbor",
+    "state": "Maryland",
+    "venue": "Gaylord National Resort & Convention Center",
+    "organizer": "Navy League",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://seaairspace.org/",
+    "sources": [
+      {
+        "url": "https://seaairspace.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:23.528Z"
+      },
+      {
+        "url": "https://seaairspace.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:19.667Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (seaairspace.org)",
+          "family": "seaairspace.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "snac-2027-charlotte",
     "name": "SNAC International",
     "start_date": "2027-04-04",
@@ -13273,33 +14322,43 @@
   },
   {
     "id": "exhibition-health-himss-2027-chicago",
-    "name": "HIMSS Global Health Conference & Exhibition 2027",
+    "name": "HIMSS Global Health Conference & Exhibition",
     "start_date": "2027-04-05",
     "end_date": "2027-04-08",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Chicago",
     "state": "Illinois",
-    "venue": "",
-    "organizer": "",
+    "venue": "McCormick Place",
+    "organizer": "HIMSS",
     "topics": [
       "Healthcare"
     ],
     "est_attendance": null,
-    "official_url": "https://expoassist.net/event/himss-global-health-conference-exhibition",
+    "official_url": "https://www.himssconference.com/",
     "sources": [
       {
         "url": "https://expoassist.net/event/himss-global-health-conference-exhibition",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.himssconference.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:11.441Z"
+      },
+      {
+        "url": "https://www.himssconference.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:22.351Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "conference",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 4,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -13307,6 +14366,13 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (himssconference.com)",
+          "family": "himssconference.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -13483,6 +14549,51 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "rsac-2027-san-francisco",
+    "name": "RSAC 2027",
+    "start_date": "2027-04-05",
+    "end_date": "2027-04-08",
+    "dates_confirmed": false,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "Moscone Center",
+    "organizer": "RSAC",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.rsaconference.com/usa",
+    "sources": [
+      {
+        "url": "https://www.rsaconference.com/usa",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:05.220Z"
+      },
+      {
+        "url": "https://www.rsaconference.com/usa",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:16.121Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (rsaconference.com)",
+          "family": "rsaconference.com",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -13704,6 +14815,51 @@
     }
   },
   {
+    "id": "acc-2027-houston",
+    "name": "ACC.27",
+    "start_date": "2027-04-10",
+    "end_date": "2027-04-12",
+    "dates_confirmed": true,
+    "city": "Houston",
+    "state": "Texas",
+    "venue": "",
+    "organizer": "American College of Cardiology",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://accscientificsession.acc.org/",
+    "sources": [
+      {
+        "url": "https://accscientificsession.acc.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:16.450Z"
+      },
+      {
+        "url": "https://accscientificsession.acc.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:27.338Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (accscientificsession.acc.org)",
+          "family": "accscientificsession.acc.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "aorn-surgical-2027-philadelphia",
     "name": "AORN Global Surgical Conference & Expo 2027",
     "start_date": "2027-04-10",
@@ -13739,6 +14895,51 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "high-market-point-2027-high-point",
+    "name": "High Point Market",
+    "start_date": "2027-04-10",
+    "end_date": "2027-04-14",
+    "dates_confirmed": true,
+    "city": "High Point",
+    "state": "North Carolina",
+    "venue": "",
+    "organizer": "High Point Market Authority",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.highpointmarket.org/",
+    "sources": [
+      {
+        "url": "https://www.highpointmarket.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:03.614Z"
+      },
+      {
+        "url": "https://www.highpointmarket.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:59.752Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (highpointmarket.org)",
+          "family": "highpointmarket.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -14099,6 +15300,52 @@
     }
   },
   {
+    "id": "space-symposium-2027-colorado-springs",
+    "name": "SPACE SYMPOSIUM",
+    "start_date": "2027-04-12",
+    "end_date": "2027-04-15",
+    "dates_confirmed": false,
+    "city": "Colorado Springs",
+    "state": "Colorado",
+    "venue": "The Broadmoor",
+    "organizer": "Space Foundation",
+    "topics": [
+      "Aviation"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.spacefoundation.org/events/space-symposium/",
+    "sources": [
+      {
+        "url": "https://www.spacefoundation.org/events/space-symposium/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:24.763Z"
+      },
+      {
+        "url": "https://www.spacefoundation.org/events/space-symposium/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:20.914Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (spacefoundation.org)",
+          "family": "spacefoundation.org",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "academy-care-managed-meeting-of-pharmacy-2027-san-francisco",
     "name": "Academy of Managed Care Pharmacy Annual Meeting 2027",
     "start_date": "2027-04-13",
@@ -14192,7 +15439,7 @@
       "Tech"
     ],
     "est_attendance": null,
-    "official_url": "https://cloud.withgoogle.com/next",
+    "official_url": "https://reg.googlecloudevents.com/flow/googlecloud/next27/vegas/page/home",
     "sources": [
       {
         "url": "https://cloud.withgoogle.com/next",
@@ -14203,10 +15450,15 @@
         "url": "https://reg.googlecloudevents.com/flow/googlecloud/next27/vegas/page/home",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:15:19.244Z"
+      },
+      {
+        "url": "https://reg.googlecloudevents.com/flow/googlecloud/next27/vegas/page/home",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:34.589Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.65,
     "status": "active",
     "kind": "conference",
     "signal": {
@@ -14307,6 +15559,51 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "signal-2027-san-francisco",
+    "name": "SIGNAL 2027",
+    "start_date": "2027-04-13",
+    "end_date": "2027-04-14",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "Twilio",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://signal.twilio.com/",
+    "sources": [
+      {
+        "url": "https://signal.twilio.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:58:57.758Z"
+      },
+      {
+        "url": "https://signal.twilio.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:08.639Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (signal.twilio.com)",
+          "family": "signal.twilio.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -14483,20 +15780,20 @@
   },
   {
     "id": "promat-2027-chicago",
-    "name": "ProMat 2027",
+    "name": "ProMat",
     "start_date": "2027-04-19",
     "end_date": "2027-04-21",
     "dates_confirmed": false,
     "city": "Chicago",
     "state": "Illinois",
     "venue": "McCormick Place",
-    "organizer": "",
+    "organizer": "MHI",
     "topics": [
       "Retail",
       "Other"
     ],
     "est_attendance": null,
-    "official_url": "https://www.mccormickplace.com/events/?eventId=29092&orgCode=10",
+    "official_url": "https://www.promatshow.com/",
     "sources": [
       {
         "url": "https://www.mccormickplace.com/events/",
@@ -14507,13 +15804,23 @@
         "url": "https://expoassist.net/event/promat-expo",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.promatshow.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:22.678Z"
+      },
+      {
+        "url": "https://www.promatshow.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:33.579Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.65,
+    "confidence": 0.7000000000000001,
     "status": "active",
     "signal": {
-      "points": 3,
+      "points": 4,
       "bars": 3,
       "flags": [],
       "evidence": [
@@ -14528,6 +15835,13 @@
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Directory listing (promatshow.com)",
+          "family": "promatshow.com",
+          "kind": "directory",
           "points": 1,
           "seenAt": "2026-11-17"
         }
@@ -14611,6 +15925,51 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "team-2027-san-francisco",
+    "name": "Team ’27",
+    "start_date": "2027-04-20",
+    "end_date": "2027-04-22",
+    "dates_confirmed": false,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "Atlassian",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.atlassian.com/company/events",
+    "sources": [
+      {
+        "url": "https://www.atlassian.com/company/events",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:58:59.007Z"
+      },
+      {
+        "url": "https://www.atlassian.com/company/events",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:09.898Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (atlassian.com)",
+          "family": "atlassian.com",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -14885,6 +16244,51 @@
     }
   },
   {
+    "id": "pittcon-2027-pittsburgh",
+    "name": "Pittcon",
+    "start_date": "2027-04-24",
+    "end_date": "2027-04-28",
+    "dates_confirmed": true,
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "venue": "David L. Lawrence Convention Center",
+    "organizer": "Pittcon",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://pittcon.org/",
+    "sources": [
+      {
+        "url": "https://pittcon.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:01.013Z"
+      },
+      {
+        "url": "https://pittcon.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:57.260Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (pittcon.org)",
+          "family": "pittcon.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "agntcon-america-mcpcon-north-2027-san-francisco",
     "name": "AGNTCon + MCPCon North America 2027",
     "start_date": "2027-04-28",
@@ -15000,6 +16404,51 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c2e2-2027-chicago",
+    "name": "C2E2",
+    "start_date": "2027-04-30",
+    "end_date": "2027-05-02",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "ReedPop",
+    "topics": [
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.c2e2.com/",
+    "sources": [
+      {
+        "url": "https://www.c2e2.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:32.229Z"
+      },
+      {
+        "url": "https://www.c2e2.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:28.389Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (c2e2.com)",
+          "family": "c2e2.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -15215,6 +16664,51 @@
     }
   },
   {
+    "id": "asgct2027-2027-philadelphia",
+    "name": "ASGCT2027",
+    "start_date": "2027-05-03",
+    "end_date": "2027-05-07",
+    "dates_confirmed": true,
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "venue": "",
+    "organizer": "ASGCT",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://annualmeeting.asgct.org/",
+    "sources": [
+      {
+        "url": "https://annualmeeting.asgct.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:59.780Z"
+      },
+      {
+        "url": "https://annualmeeting.asgct.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:56.008Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (annualmeeting.asgct.org)",
+          "family": "annualmeeting.asgct.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "npe-plastics-2027-orlando",
     "name": "NPE - The Plastics Show 2027",
     "start_date": "2027-05-03",
@@ -15292,6 +16786,52 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "offshore-technology-2027-houston",
+    "name": "Offshore Technology Conference",
+    "start_date": "2027-05-03",
+    "end_date": "2027-05-05",
+    "dates_confirmed": true,
+    "city": "Houston",
+    "state": "Texas",
+    "venue": "",
+    "organizer": "OTC",
+    "topics": [
+      "Energy"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.otcnet.org/",
+    "sources": [
+      {
+        "url": "https://www.otcnet.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:31.387Z"
+      },
+      {
+        "url": "https://www.otcnet.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:42.288Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (otcnet.org)",
+          "family": "otcnet.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -15419,6 +16959,16 @@
         "url": "https://expoassist.net/event/wasteexpo",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.wasteexpo.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:32.625Z"
+      },
+      {
+        "url": "https://www.wasteexpo.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:43.532Z"
       }
     ],
     "last_verified": "2026-11-17",
@@ -15426,9 +16976,11 @@
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 6,
+      "points": 5,
       "bars": 3,
-      "flags": [],
+      "flags": [
+        "conflicting-dates"
+      ],
       "evidence": [
         {
           "label": "Venue calendar (vegasmeansbusiness.com)",
@@ -15640,25 +17192,35 @@
     "city": "Las Vegas",
     "state": "Nevada",
     "venue": "Las Vegas Convention Center",
-    "organizer": "",
+    "organizer": "A3",
     "topics": [
       "Tech"
     ],
     "est_attendance": 42000,
-    "official_url": "http://www.automate.org/",
+    "official_url": "https://www.automateshow.com/",
     "sources": [
       {
         "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
         "type": "html",
         "fetched_at": "2026-11-16T01:42:55.414Z"
+      },
+      {
+        "url": "https://www.automateshow.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:08.611Z"
+      },
+      {
+        "url": "https://www.automateshow.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:04.750Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.65,
     "status": "active",
     "signal": {
-      "points": 2,
-      "bars": 2,
+      "points": 3,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -15666,6 +17228,58 @@
           "family": "vegasmeansbusiness.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Directory listing (automateshow.com)",
+          "family": "automateshow.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "epicor-insights-2027-las-vegas",
+    "name": "Epicor Insights 2027",
+    "start_date": "2027-05-10",
+    "end_date": "2027-05-13",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center",
+    "organizer": "Epicor",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.epicor.com/en-us/insights/",
+    "sources": [
+      {
+        "url": "https://www.epicor.com/en-us/insights/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:51.024Z"
+      },
+      {
+        "url": "https://www.epicor.com/en-us/insights/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:47.273Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (epicor.com)",
+          "family": "epicor.com",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -16251,31 +17865,41 @@
     "name": "ACT Expo 2027",
     "start_date": "2027-05-17",
     "end_date": "2027-05-20",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Las Vegas",
     "state": "Nevada",
     "venue": "Las Vegas Convention Center",
-    "organizer": "",
+    "organizer": "ACT Expo",
     "topics": [
       "Retail",
       "Other"
     ],
     "est_attendance": 10000,
-    "official_url": "http://www.gladstein.org/",
+    "official_url": "https://www.actexpo.com/",
     "sources": [
       {
         "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
         "type": "html",
         "fetched_at": "2026-11-16T01:42:55.414Z"
+      },
+      {
+        "url": "https://www.actexpo.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:22.277Z"
+      },
+      {
+        "url": "https://www.actexpo.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:18.418Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 2,
-      "bars": 2,
+      "points": 5,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -16283,6 +17907,59 @@
           "family": "vegasmeansbusiness.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (actexpo.com)",
+          "family": "actexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "xponential-2027-miami-beach",
+    "name": "XPONENTIAL",
+    "start_date": "2027-05-17",
+    "end_date": "2027-05-20",
+    "dates_confirmed": false,
+    "city": "Miami Beach",
+    "state": "Florida",
+    "venue": "Miami Beach Convention Center",
+    "organizer": "AUVSI",
+    "topics": [
+      "Tech",
+      "Aviation"
+    ],
+    "est_attendance": null,
+    "official_url": "https://xponential.org/",
+    "sources": [
+      {
+        "url": "https://xponential.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:26.013Z"
+      },
+      {
+        "url": "https://xponential.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:22.175Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.65,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (xponential.org)",
+          "family": "xponential.org",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -16372,6 +18049,52 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-15"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aia-architecture-design-on-2027-philadelphia",
+    "name": "AIA Conference on Architecture & Design",
+    "start_date": "2027-05-19",
+    "end_date": "2027-05-22",
+    "dates_confirmed": true,
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "venue": "",
+    "organizer": "American Institute of Architects",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://conferenceonarchitecture.com/",
+    "sources": [
+      {
+        "url": "https://conferenceonarchitecture.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:04.862Z"
+      },
+      {
+        "url": "https://conferenceonarchitecture.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:00.999Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (conferenceonarchitecture.com)",
+          "family": "conferenceonarchitecture.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -16649,7 +18372,7 @@
     "name": "Dell Technologies World 2027",
     "start_date": "2027-05-24",
     "end_date": "2027-05-27",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Las Vegas",
     "state": "Nevada",
     "venue": "Venetian Expo",
@@ -16658,27 +18381,32 @@
       "Tech"
     ],
     "est_attendance": null,
-    "official_url": "https://www.dell.com/en-us/dt/events/delltechnologiesworld/index.htm",
+    "official_url": "https://www.dell.com/en-us/learn/events/lp/dell-technologies-world/faq",
     "sources": [
       {
         "url": "https://www.dell.com/en-us/learn/events/lp/dell-technologies-world/faq",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:15:16.846Z"
+      },
+      {
+        "url": "https://www.dell.com/en-us/learn/events/lp/dell-technologies-world/faq",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:32.084Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 3,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
-          "label": "Directory listing (dell.com)",
+          "label": "Confirmed on the official site (dell.com)",
           "family": "dell.com",
-          "kind": "directory",
-          "points": 1,
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -16740,12 +18468,17 @@
       "Tech"
     ],
     "est_attendance": null,
-    "official_url": "https://www.redhat.com/en/summit",
+    "official_url": "https://www.redhat.com/en/blog/save-date-red-hat-summit-2027-coming-boston",
     "sources": [
       {
         "url": "https://www.redhat.com/en/blog/save-date-red-hat-summit-2027-coming-boston",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:15:20.444Z"
+      },
+      {
+        "url": "https://www.redhat.com/en/blog/save-date-red-hat-summit-2027-coming-boston",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:35.844Z"
       }
     ],
     "last_verified": "2026-11-17",
@@ -16856,6 +18589,51 @@
     }
   },
   {
+    "id": "config-2027-san-francisco",
+    "name": "CONFIG 2027",
+    "start_date": "2027-05-25",
+    "end_date": "2027-05-27",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "Pier 80",
+    "organizer": "Figma",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://config.figma.com/",
+    "sources": [
+      {
+        "url": "https://config.figma.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:52.272Z"
+      },
+      {
+        "url": "https://config.figma.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:48.528Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (config.figma.com)",
+          "family": "config.figma.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "delivery-home-2027-orlando",
     "name": "Home Delivery World USA Expo 2027",
     "start_date": "2027-05-25",
@@ -16945,33 +18723,43 @@
   },
   {
     "id": "las-licensing-vegas-2027-las-vegas",
-    "name": "Las Vegas Licensing Expo 2027",
+    "name": "Licensing Expo",
     "start_date": "2027-05-25",
     "end_date": "2027-05-27",
     "dates_confirmed": true,
     "city": "Las Vegas",
     "state": "Nevada",
-    "venue": "Mandalay Bay Convention Center, Resort and Casino",
-    "organizer": "",
+    "venue": "Mandalay Bay Convention Center",
+    "organizer": "Informa",
     "topics": [
       "Marketing",
       "Retail"
     ],
     "est_attendance": 25000,
-    "official_url": "https://www.licensingexpo.com/en/home.html",
+    "official_url": "https://www.brandlicensingexpo.com/",
     "sources": [
       {
         "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
         "type": "html",
         "fetched_at": "2026-11-16T01:33:29.840Z"
+      },
+      {
+        "url": "https://www.brandlicensingexpo.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:18.546Z"
+      },
+      {
+        "url": "https://www.brandlicensingexpo.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:14.708Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-17",
     "confidence": 0.9,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 5,
+      "points": 8,
       "bars": 3,
       "flags": [],
       "evidence": [
@@ -16988,6 +18776,13 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-15"
+        },
+        {
+          "label": "Confirmed on the official site (brandlicensingexpo.com)",
+          "family": "brandlicensingexpo.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
         }
       ]
     }
@@ -17590,6 +19385,51 @@
     }
   },
   {
+    "id": "ibm-think-2027-boston",
+    "name": "IBM Think",
+    "start_date": "2027-06-07",
+    "end_date": "2027-06-10",
+    "dates_confirmed": true,
+    "city": "Boston",
+    "state": "Massachusetts",
+    "venue": "",
+    "organizer": "IBM",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.ibm.com/events/think",
+    "sources": [
+      {
+        "url": "https://www.ibm.com/events/think",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:00.263Z"
+      },
+      {
+        "url": "https://www.ibm.com/events/think",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:11.146Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (ibm.com)",
+          "family": "ibm.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "healthcare-leadership-nashville-2027-nashville",
     "name": "Nashville Healthcare Leadership Summit 2027",
     "start_date": "2027-06-07",
@@ -17636,7 +19476,7 @@
     "name": "Realize LIVE Americas 2027",
     "start_date": "2027-06-07",
     "end_date": "2027-06-09",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Detroit",
     "state": "Michigan",
     "venue": "",
@@ -17651,19 +19491,70 @@
         "url": "https://events.sw.siemens.com/en-US/realizelive/americas/",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:11:32.385Z"
+      },
+      {
+        "url": "https://events.sw.siemens.com/en-US/realizelive/americas/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:38.323Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (events.sw.siemens.com)",
+          "family": "events.sw.siemens.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "snowflake-2027-san-francisco",
+    "name": "Snowflake Summit 27",
+    "start_date": "2027-06-07",
+    "end_date": "2027-06-10",
+    "dates_confirmed": false,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "Moscone Center",
+    "organizer": "Snowflake",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.snowflake.com/en/events/summit/",
+    "sources": [
+      {
+        "url": "https://www.snowflake.com/en/events/summit/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:01.499Z"
+      },
+      {
+        "url": "https://www.snowflake.com/en/events/summit/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:12.380Z"
       }
     ],
     "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
+    "kind": "conference",
     "signal": {
       "points": 1,
       "bars": 1,
       "flags": [],
       "evidence": [
         {
-          "label": "Directory listing (events.sw.siemens.com)",
-          "family": "events.sw.siemens.com",
+          "label": "Directory listing (snowflake.com)",
+          "family": "snowflake.com",
           "kind": "directory",
           "points": 1,
           "seenAt": "2026-11-17"
@@ -17842,6 +19733,52 @@
     }
   },
   {
+    "id": "neocon-2027-chicago",
+    "name": "NeoCon",
+    "start_date": "2027-06-13",
+    "end_date": "2027-06-16",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "The Mart",
+    "organizer": "NeoCon",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://neocon.com/",
+    "sources": [
+      {
+        "url": "https://neocon.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:02.270Z"
+      },
+      {
+        "url": "https://neocon.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:58.511Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (neocon.com)",
+          "family": "neocon.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "apic27-2027-los-angeles",
     "name": "APIC27",
     "start_date": "2027-06-14",
@@ -17916,6 +19853,52 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "cybersecurity-gartner-management-risk-2027-national-harbor",
+    "name": "Gartner Cybersecurity & Risk Management Summit",
+    "start_date": "2027-06-14",
+    "end_date": "2027-06-16",
+    "dates_confirmed": false,
+    "city": "National Harbor",
+    "state": "Maryland",
+    "venue": "",
+    "organizer": "Gartner",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.gartner.com/en/conferences/na/security-risk-management-us",
+    "sources": [
+      {
+        "url": "https://www.gartner.com/en/conferences/na/security-risk-management-us",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:03.970Z"
+      },
+      {
+        "url": "https://www.gartner.com/en/conferences/na/security-risk-management-us",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:14.875Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (gartner.com)",
+          "family": "gartner.com",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -18138,6 +20121,51 @@
     }
   },
   {
+    "id": "american-association-diabetes-of-scientific-sessions-2027-washington",
+    "name": "Scientific Sessions of the American Diabetes Association",
+    "start_date": "2027-06-18",
+    "end_date": "2027-06-21",
+    "dates_confirmed": true,
+    "city": "Washington",
+    "state": "District of Columbia",
+    "venue": "Walter E. Washington Convention Center",
+    "organizer": "American Diabetes Association",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://professional.diabetes.org/scientific-sessions",
+    "sources": [
+      {
+        "url": "https://professional.diabetes.org/scientific-sessions",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:17.697Z"
+      },
+      {
+        "url": "https://professional.diabetes.org/scientific-sessions",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:28.582Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (professional.diabetes.org)",
+          "family": "professional.diabetes.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "nasfaa-2027-san-diego",
     "name": "NASFAA 2027",
     "start_date": "2027-06-20",
@@ -18191,12 +20219,17 @@
       "Tech"
     ],
     "est_attendance": null,
-    "official_url": "https://www.databricks.com/dataaisummit/",
+    "official_url": "https://www.databricks.com/dataaisummit",
     "sources": [
       {
         "url": "https://www.databricks.com/dataaisummit",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:15:15.645Z"
+      },
+      {
+        "url": "https://www.databricks.com/dataaisummit",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:30.885Z"
       }
     ],
     "last_verified": "2026-11-17",
@@ -18638,6 +20671,51 @@
     }
   },
   {
+    "id": "dac-2027-san-jose",
+    "name": "DAC 2027",
+    "start_date": "2027-07-11",
+    "end_date": "2027-07-14",
+    "dates_confirmed": true,
+    "city": "San Jose",
+    "state": "California",
+    "venue": "San Jose Convention Center",
+    "organizer": "DAC",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://dac.com/2027",
+    "sources": [
+      {
+        "url": "https://dac.com/2027",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:11.106Z"
+      },
+      {
+        "url": "https://dac.com/2027",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:07.232Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (dac.com)",
+          "family": "dac.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "food-ift-meeting-2027-chicago",
     "name": "IFT Annual Meeting & Food Expo 2027",
     "start_date": "2027-07-11",
@@ -18680,33 +20758,43 @@
   },
   {
     "id": "first-ift-2027-chicago",
-    "name": "IFT FIRST Expo 2027",
+    "name": "IFT FIRST",
     "start_date": "2027-07-11",
     "end_date": "2027-07-14",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Chicago",
     "state": "Illinois",
     "venue": "",
-    "organizer": "",
+    "organizer": "Institute of Food Technologists",
     "topics": [
       "Other"
     ],
     "est_attendance": null,
-    "official_url": "https://expoassist.net/event/ift-first-expo",
+    "official_url": "https://www.ift.org/ift-first-event",
     "sources": [
       {
         "url": "https://expoassist.net/event/ift-first-expo",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.ift.org/ift-first-event",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:30.139Z"
+      },
+      {
+        "url": "https://www.ift.org/ift-first-event",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:41.037Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 4,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -18714,6 +20802,13 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (ift.org)",
+          "family": "ift.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -19729,6 +21824,52 @@
     }
   },
   {
+    "id": "con-gen-2027-indianapolis",
+    "name": "Gen Con",
+    "start_date": "2027-08-05",
+    "end_date": "2027-08-08",
+    "dates_confirmed": true,
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "venue": "",
+    "organizer": "Gen Con LLC",
+    "topics": [
+      "Gaming"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.gencon.com/",
+    "sources": [
+      {
+        "url": "https://www.gencon.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:27.263Z"
+      },
+      {
+        "url": "https://www.gencon.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:23.410Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "fan_con",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (gencon.com)",
+          "family": "gencon.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "con-def-2027-las-vegas",
     "name": "Def Con 2027",
     "start_date": "2027-08-06",
@@ -19748,6 +21889,16 @@
         "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
         "type": "html",
         "fetched_at": "2026-11-16T01:42:55.414Z"
+      },
+      {
+        "url": "https://defcon.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:06.457Z"
+      },
+      {
+        "url": "https://defcon.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:17.364Z"
       }
     ],
     "last_verified": "2026-11-17",
@@ -19757,13 +21908,68 @@
     "signal": {
       "points": 2,
       "bars": 2,
-      "flags": [],
+      "flags": [
+        "conflicting-dates"
+      ],
       "evidence": [
         {
           "label": "Venue calendar (vegasmeansbusiness.com)",
           "family": "vegasmeansbusiness.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Directory listing (defcon.org)",
+          "family": "defcon.org",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "asae-meeting-2027-charlotte",
+    "name": "ASAE Annual Meeting & Exposition",
+    "start_date": "2027-08-07",
+    "end_date": "2027-08-10",
+    "dates_confirmed": true,
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "venue": "",
+    "organizer": "ASAE",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://annual.asaecenter.org/",
+    "sources": [
+      {
+        "url": "https://annual.asaecenter.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:33.896Z"
+      },
+      {
+        "url": "https://annual.asaecenter.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:44.777Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "expo",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (annual.asaecenter.org)",
+          "family": "annual.asaecenter.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -20191,6 +22397,52 @@
     }
   },
   {
+    "id": "con-dragon-2027-atlanta",
+    "name": "Dragon Con",
+    "start_date": "2027-09-02",
+    "end_date": "2027-09-06",
+    "dates_confirmed": true,
+    "city": "Atlanta",
+    "state": "Georgia",
+    "venue": "",
+    "organizer": "Dragon Con",
+    "topics": [
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.dragoncon.org/",
+    "sources": [
+      {
+        "url": "https://www.dragoncon.org/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:28.496Z"
+      },
+      {
+        "url": "https://www.dragoncon.org/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:24.656Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "fan_con",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (dragoncon.org)",
+          "family": "dragoncon.org",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "anime-diego-san-2027-san-diego",
     "name": "ANIME SAN DIEGO 2027",
     "start_date": "2027-09-04",
@@ -20281,7 +22533,7 @@
           "family": "emeraldx.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-15"
+          "seenAt": "2026-11-17"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
@@ -20507,7 +22759,7 @@
     "name": "UNBOUND 2027",
     "start_date": "2027-09-08",
     "end_date": "2027-09-10",
-    "dates_confirmed": false,
+    "dates_confirmed": true,
     "city": "Boston",
     "state": "Massachusetts",
     "venue": "",
@@ -20517,27 +22769,32 @@
       "Tech"
     ],
     "est_attendance": null,
-    "official_url": "https://www.hubspot.com/unbound",
+    "official_url": "https://unbound.hubspot.com/",
     "sources": [
       {
         "url": "https://unbound.hubspot.com/",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:15:21.646Z"
+      },
+      {
+        "url": "https://unbound.hubspot.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:37.076Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.9,
     "status": "active",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 3,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
-          "label": "Directory listing (unbound.hubspot.com)",
+          "label": "Confirmed on the official site (unbound.hubspot.com)",
           "family": "unbound.hubspot.com",
-          "kind": "directory",
-          "points": 1,
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -20884,40 +23141,57 @@
   },
   {
     "id": "fabtech-2027-chicago",
-    "name": "FABTECH Expo 2027",
+    "name": "FABTECH USA",
     "start_date": "2027-09-13",
     "end_date": "2027-09-16",
     "dates_confirmed": false,
     "city": "Chicago",
     "state": "Illinois",
     "venue": "",
-    "organizer": "",
+    "organizer": "FABTECH",
     "topics": [
       "Retail",
       "Other"
     ],
     "est_attendance": null,
-    "official_url": "https://expoassist.net/event/fabtech-expo",
+    "official_url": "https://www.fabtechexpo.com/",
     "sources": [
       {
         "url": "https://expoassist.net/event/fabtech-expo",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.fabtechexpo.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:23.925Z"
+      },
+      {
+        "url": "https://www.fabtechexpo.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:34.815Z"
       }
     ],
     "last_verified": "2026-11-17",
-    "confidence": 0.5,
+    "confidence": 0.65,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 2,
+      "bars": 2,
       "flags": [],
       "evidence": [
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Directory listing (fabtechexpo.com)",
+          "family": "fabtechexpo.com",
+          "kind": "directory",
           "points": 1,
           "seenAt": "2026-11-17"
         }
@@ -21360,12 +23634,17 @@
       "Tech"
     ],
     "est_attendance": null,
-    "official_url": "https://www.salesforce.com/dreamforce/",
+    "official_url": "https://www.salesforce.com/dreamforce/faq/?bc=DB",
     "sources": [
       {
         "url": "https://www.salesforce.com/dreamforce/faq/?bc=DB",
         "type": "claude-directory",
         "fetched_at": "2026-11-17T21:15:18.041Z"
+      },
+      {
+        "url": "https://www.salesforce.com/dreamforce/faq/?bc=DB",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:33.336Z"
       }
     ],
     "last_verified": "2026-11-17",
@@ -21510,46 +23789,6 @@
     }
   },
   {
-    "id": "america-imex-2027-las-vegas",
-    "name": "IMEX America 2027",
-    "start_date": "2027-09-26",
-    "end_date": "2027-10-01",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Mandalay Bay Convention Center, Resort and Casino",
-    "organizer": "",
-    "topics": [
-      "Finance"
-    ],
-    "est_attendance": 18000,
-    "official_url": "https://m.eventsinamerica.com/events-trade-shows/imex-america-2027-2026-2027/business/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:55.414Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
     "id": "weftec-2027-chicago",
     "name": "WEFTEC 2027",
     "start_date": "2027-09-26",
@@ -21656,6 +23895,16 @@
         "url": "https://expoassist.net/event/pack-las-vegas-expo",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.packexpolasvegas.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:21.428Z"
+      },
+      {
+        "url": "https://www.packexpolasvegas.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:32.333Z"
       }
     ],
     "last_verified": "2026-11-15",
@@ -21663,7 +23912,7 @@
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 6,
+      "points": 7,
       "bars": 3,
       "flags": [],
       "evidence": [
@@ -21686,6 +23935,207 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Directory listing (packexpolasvegas.com)",
+          "family": "packexpolasvegas.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "america-imex-2027-las-vegas",
+    "name": "IMEX America",
+    "start_date": "2027-09-28",
+    "end_date": "2027-09-30",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center",
+    "organizer": "IMEX",
+    "topics": [
+      "Finance"
+    ],
+    "est_attendance": 18000,
+    "official_url": "https://america.imexevents.com/",
+    "sources": [
+      {
+        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
+        "type": "html",
+        "fetched_at": "2026-11-16T01:42:55.414Z"
+      },
+      {
+        "url": "https://america.imexevents.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:35.160Z"
+      },
+      {
+        "url": "https://america.imexevents.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:46.034Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.7,
+    "status": "active",
+    "signal": {
+      "points": 4,
+      "bars": 3,
+      "flags": [
+        "conflicting-dates"
+      ],
+      "evidence": [
+        {
+          "label": "Venue calendar (vegasmeansbusiness.com)",
+          "family": "vegasmeansbusiness.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-17"
+        },
+        {
+          "label": "Confirmed on the official site (america.imexevents.com)",
+          "family": "america.imexevents.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oktane-2027-las-vegas",
+    "name": "Oktane",
+    "start_date": "2027-09-28",
+    "end_date": "2027-09-30",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Caesars Forum",
+    "organizer": "Okta",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.okta.com/oktane/",
+    "sources": [
+      {
+        "url": "https://www.okta.com/oktane/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:58:56.509Z"
+      },
+      {
+        "url": "https://www.okta.com/oktane/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:07.396Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (okta.com)",
+          "family": "okta.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "conf27-2027-chicago",
+    "name": ".conf27",
+    "start_date": "2027-10-04",
+    "end_date": "2027-10-07",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "Splunk",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://conf.splunk.com/",
+    "sources": [
+      {
+        "url": "https://conf.splunk.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:58:54.020Z"
+      },
+      {
+        "url": "https://conf.splunk.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:04.903Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (conf.splunk.com)",
+          "family": "conf.splunk.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "nacs-2027-atlanta",
+    "name": "NACS",
+    "start_date": "2027-10-05",
+    "end_date": "2027-10-08",
+    "dates_confirmed": true,
+    "city": "Atlanta",
+    "state": "Georgia",
+    "venue": "Georgia World Congress Center",
+    "organizer": "NACS",
+    "topics": [
+      "Retail"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.nacsshow.com/",
+    "sources": [
+      {
+        "url": "https://www.nacsshow.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:19.783Z"
+      },
+      {
+        "url": "https://www.nacsshow.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:15.971Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (nacsshow.com)",
+          "family": "nacsshow.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -21815,6 +24265,51 @@
     }
   },
   {
+    "id": "nycc-2027-new-york",
+    "name": "NYCC",
+    "start_date": "2027-10-07",
+    "end_date": "2027-10-10",
+    "dates_confirmed": true,
+    "city": "New York",
+    "state": "New York",
+    "venue": "Javits Center",
+    "organizer": "ReedPop",
+    "topics": [
+      "Entertainment"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.newyorkcomiccon.com/",
+    "sources": [
+      {
+        "url": "https://www.newyorkcomiccon.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:29.732Z"
+      },
+      {
+        "url": "https://www.newyorkcomiccon.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:25.903Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (newyorkcomiccon.com)",
+          "family": "newyorkcomiccon.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "and-atce-spe-technical-2027-denver",
     "name": "SPE ATCE - Annual Technical Conference and Expo 2027",
     "start_date": "2027-10-11",
@@ -21897,6 +24392,102 @@
     }
   },
   {
+    "id": "gartner-it-symposium-xpo-2027",
+    "name": "Gartner IT Symposium/Xpo",
+    "start_date": "2027-10-18",
+    "end_date": "2027-10-21",
+    "dates_confirmed": false,
+    "city": "Orlando",
+    "state": "Florida",
+    "venue": "",
+    "organizer": "Gartner",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.gartner.com/en/conferences/na/symposium-us",
+    "sources": [
+      {
+        "url": "https://www.gartner.com/en/conferences",
+        "type": "seed",
+        "fetched_at": "2026-10-05T12:00:00Z"
+      },
+      {
+        "url": "https://www.gartner.com/en/conferences/na/symposium-us",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:02.739Z"
+      },
+      {
+        "url": "https://www.gartner.com/en/conferences/na/symposium-us",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:13.632Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (gartner.com)",
+          "family": "gartner.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "greenbuild-2027-chicago",
+    "name": "Greenbuild 2027",
+    "start_date": "2027-10-19",
+    "end_date": "2027-10-22",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "Informa",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://informaconnect.com/greenbuild/",
+    "sources": [
+      {
+        "url": "https://informaconnect.com/greenbuild/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:10:06.116Z"
+      },
+      {
+        "url": "https://informaconnect.com/greenbuild/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:21:02.260Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (informaconnect.com)",
+          "family": "informaconnect.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "and-greenbuild-2027-chicago",
     "name": "Greenbuild International Conference and Expo 2027",
     "start_date": "2027-10-19",
@@ -21933,6 +24524,57 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "money20-20-usa-2027-2027",
+    "name": "Money20/20 USA",
+    "start_date": "2027-10-19",
+    "end_date": "2027-10-21",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "Money20/20",
+    "topics": [
+      "Finance"
+    ],
+    "est_attendance": null,
+    "official_url": "https://us.money2020.com/",
+    "sources": [
+      {
+        "url": "https://us.money2020.com",
+        "type": "seed",
+        "fetched_at": "2026-10-18T12:00:00Z"
+      },
+      {
+        "url": "https://us.money2020.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:07.708Z"
+      },
+      {
+        "url": "https://us.money2020.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:18.613Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (us.money2020.com)",
+          "family": "us.money2020.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -22054,6 +24696,52 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dimensions-user-2027-las-vegas",
+    "name": "Dimensions User Conference",
+    "start_date": "2027-10-25",
+    "end_date": "2027-10-27",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "The Venetian Resort",
+    "organizer": "Trimble",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.trimble.com/en/our-company/events/dimensions/overview",
+    "sources": [
+      {
+        "url": "https://www.trimble.com/en/our-company/events/dimensions/overview",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T22:09:54.780Z"
+      },
+      {
+        "url": "https://www.trimble.com/en/our-company/events/dimensions/overview",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:51.004Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (trimble.com)",
+          "family": "trimble.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -22235,6 +24923,52 @@
     }
   },
   {
+    "id": "sema-2027-las-vegas",
+    "name": "SEMA Show",
+    "start_date": "2027-11-02",
+    "end_date": "2027-11-05",
+    "dates_confirmed": true,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Las Vegas Convention Center",
+    "organizer": "SEMA",
+    "topics": [
+      "Automotive"
+    ],
+    "est_attendance": null,
+    "official_url": "https://semashow.com/",
+    "sources": [
+      {
+        "url": "https://semashow.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:20.195Z"
+      },
+      {
+        "url": "https://semashow.com/",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:31.099Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "trade_show",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (semashow.com)",
+          "family": "semashow.com",
+          "kind": "official-site",
+          "points": 3,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "affordable-art-fair-2027-houston",
     "name": "Affordable Art Fair 2027",
     "start_date": "2027-11-04",
@@ -22310,6 +25044,51 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "rsna-2027-chicago",
+    "name": "RSNA 2027",
+    "start_date": "2027-11-14",
+    "end_date": "2027-11-18",
+    "dates_confirmed": true,
+    "city": "Chicago",
+    "state": "Illinois",
+    "venue": "McCormick Place",
+    "organizer": "RSNA",
+    "topics": [
+      "Healthcare"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.rsna.org/annual-meeting",
+    "sources": [
+      {
+        "url": "https://www.rsna.org/annual-meeting",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:59:13.956Z"
+      },
+      {
+        "url": "https://www.rsna.org/annual-meeting",
+        "type": "claude-organizer",
+        "fetched_at": "2026-11-17T22:20:24.837Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (rsna.org)",
+          "family": "rsna.org",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
