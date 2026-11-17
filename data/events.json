@@ -455,6 +455,47 @@
     }
   },
   {
+    "id": "americas-partner-siemens-2026-championsgate",
+    "name": "Siemens Americas Partner Conference 2027",
+    "start_date": "2026-11-16",
+    "end_date": "2026-11-20",
+    "dates_confirmed": false,
+    "city": "Championsgate",
+    "state": "Florida",
+    "venue": "Omni ChampionsGate Resort",
+    "organizer": "Siemens Digital Industries Software",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.indx.com/event/siemens-americas-partner-conference-2027",
+    "sources": [
+      {
+        "url": "https://www.indx.com/event/siemens-americas-partner-conference-2027",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:12:07.205Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (indx.com)",
+          "family": "indx.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "meeting-svin-2026-las-vegas",
     "name": "SVIN 2026 Annual Meeting",
     "start_date": "2026-11-16",
@@ -12123,7 +12164,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-15",
+    "last_verified": "2026-11-17",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -14132,6 +14173,59 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "google-cloud-next-2027",
+    "name": "Google Cloud Next",
+    "start_date": "2027-04-13",
+    "end_date": "2027-04-15",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Mandalay Bay Convention Center",
+    "organizer": "Google Cloud",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://cloud.withgoogle.com/next",
+    "sources": [
+      {
+        "url": "https://cloud.withgoogle.com/next",
+        "type": "seed",
+        "fetched_at": "2026-10-26T12:00:00Z"
+      },
+      {
+        "url": "https://reg.googlecloudevents.com/flow/googlecloud/next27/vegas/page/home",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:15:19.244Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Sample data",
+          "family": "cloud.withgoogle.com",
+          "kind": "seed",
+          "points": 0,
+          "seenAt": "2026-10-26"
+        },
+        {
+          "label": "Directory listing (reg.googlecloudevents.com)",
+          "family": "reg.googlecloudevents.com",
+          "kind": "directory",
+          "points": 1,
           "seenAt": "2026-11-17"
         }
       ]
@@ -16551,6 +16645,46 @@
     }
   },
   {
+    "id": "dell-technologies-2027-las-vegas",
+    "name": "Dell Technologies World 2027",
+    "start_date": "2027-05-24",
+    "end_date": "2027-05-27",
+    "dates_confirmed": false,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "venue": "Venetian Expo",
+    "organizer": "Dell Technologies",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.dell.com/en-us/dt/events/delltechnologiesworld/index.htm",
+    "sources": [
+      {
+        "url": "https://www.dell.com/en-us/learn/events/lp/dell-technologies-world/faq",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:15:16.846Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (dell.com)",
+          "family": "dell.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "distribution-eds-electronic-2027-las-vegas",
     "name": "EDS - Electronic Distribution Show 2027",
     "start_date": "2027-05-24",
@@ -16587,6 +16721,47 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "hat-red-2027-boston",
+    "name": "Red Hat Summit 2027",
+    "start_date": "2027-05-24",
+    "end_date": "2027-05-27",
+    "dates_confirmed": true,
+    "city": "Boston",
+    "state": "Massachusetts",
+    "venue": "Thomas M. Menino Convention & Exhibition Center",
+    "organizer": "Red Hat",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.redhat.com/en/summit",
+    "sources": [
+      {
+        "url": "https://www.redhat.com/en/blog/save-date-red-hat-summit-2027-coming-boston",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:15:20.444Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (redhat.com)",
+          "family": "redhat.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -17457,6 +17632,46 @@
     }
   },
   {
+    "id": "americas-live-realize-2027-detroit",
+    "name": "Realize LIVE Americas 2027",
+    "start_date": "2027-06-07",
+    "end_date": "2027-06-09",
+    "dates_confirmed": false,
+    "city": "Detroit",
+    "state": "Michigan",
+    "venue": "",
+    "organizer": "Siemens Digital Industries Software",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://events.sw.siemens.com/en-US/realizelive/americas/",
+    "sources": [
+      {
+        "url": "https://events.sw.siemens.com/en-US/realizelive/americas/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:11:32.385Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (events.sw.siemens.com)",
+          "family": "events.sw.siemens.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "dallas-fan-2027-dallas",
     "name": "Fan Expo Dallas 2027",
     "start_date": "2027-06-11",
@@ -17957,6 +18172,47 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "ai-data-2027-san-francisco",
+    "name": "Data + AI Summit",
+    "start_date": "2027-06-21",
+    "end_date": "2027-06-24",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "",
+    "organizer": "Databricks",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.databricks.com/dataaisummit/",
+    "sources": [
+      {
+        "url": "https://www.databricks.com/dataaisummit",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:15:15.645Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (databricks.com)",
+          "family": "databricks.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
@@ -20247,6 +20503,47 @@
     }
   },
   {
+    "id": "unbound-2027-boston",
+    "name": "UNBOUND 2027",
+    "start_date": "2027-09-08",
+    "end_date": "2027-09-10",
+    "dates_confirmed": false,
+    "city": "Boston",
+    "state": "Massachusetts",
+    "venue": "",
+    "organizer": "HubSpot",
+    "topics": [
+      "Marketing",
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.hubspot.com/unbound",
+    "sources": [
+      {
+        "url": "https://unbound.hubspot.com/",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:15:21.646Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.5,
+    "status": "active",
+    "signal": {
+      "points": 1,
+      "bars": 1,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Directory listing (unbound.hubspot.com)",
+          "family": "unbound.hubspot.com",
+          "kind": "directory",
+          "points": 1,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
     "id": "brightonseo-diego-diego-hero-san-san-2027-san-diego",
     "name": "BRIGHTONSEO SAN DIEGO & HERO CONF SAN DIEGO",
     "start_date": "2027-09-09",
@@ -21044,6 +21341,47 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
+          "seenAt": "2026-11-17"
+        }
+      ]
+    }
+  },
+  {
+    "id": "dreamforce-2027-san-francisco",
+    "name": "Dreamforce 2027",
+    "start_date": "2027-09-21",
+    "end_date": "2027-09-23",
+    "dates_confirmed": true,
+    "city": "San Francisco",
+    "state": "California",
+    "venue": "Moscone Center",
+    "organizer": "Salesforce",
+    "topics": [
+      "Tech"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.salesforce.com/dreamforce/",
+    "sources": [
+      {
+        "url": "https://www.salesforce.com/dreamforce/faq/?bc=DB",
+        "type": "claude-directory",
+        "fetched_at": "2026-11-17T21:15:18.041Z"
+      }
+    ],
+    "last_verified": "2026-11-17",
+    "confidence": 0.9,
+    "status": "active",
+    "kind": "conference",
+    "signal": {
+      "points": 3,
+      "bars": 3,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Confirmed on the official site (salesforce.com)",
+          "family": "salesforce.com",
+          "kind": "official-site",
+          "points": 3,
           "seenAt": "2026-11-17"
         }
       ]
