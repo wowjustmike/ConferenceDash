@@ -47,7 +47,7 @@ export function entryYaml(entry: Record<string, unknown>): string {
 const outer = ($: cheerio.CheerioAPI, sel: string) => $(sel).toArray().map((el) => $.html(el))
 
 /** Runs the family's parser on the HTML already in hand (only `ical` fetches again: its feed). */
-async function dryRun(d: Detection, html: string, url: string, deps: ProbeDeps, defaults: { city?: string; state?: string; venue?: string }): Promise<{ candidates: Candidate[]; missingYear: number }> {
+async function dryRun(d: Detection, html: string, url: string, deps: ProbeDeps, defaults: { city?: string; state?: string; venue?: string }): Promise<{ candidates: Candidate[]; missingYear: number; inferYear?: boolean }> {
   const src: SourceRef = { url, type: 'html', fetched_at: deps.now().toISOString() }
   const $ = cheerio.load(html)
   switch (d.kind) {
@@ -57,7 +57,13 @@ async function dryRun(d: Detection, html: string, url: string, deps: ProbeDeps, 
     case 'simpleview': return { candidates: parseSimpleviewItems(outer($, 'article.convention-item'), src, deps.now(), defaults), missingYear: 0 }
     case 'simpleview-range': return { candidates: parseSimpleviewListItems(outer($, '.item.isEvent'), src, deps.now(), defaults), missingYear: 0 }
     case 'datatable': return { candidates: parseDataTableRows(outer($, 'table.dataTable tbody tr'), src, defaults), missingYear: 0 }
-    case 'cards': { const p = parseCards(html, d.cards!, src, defaults); return { candidates: p.candidates, missingYear: p.missingYear } }
+    case 'cards': {
+      const p = parseCards(html, d.cards!, src, defaults, [], deps.now())
+      if (p.candidates.length > 0 || p.missingYear === 0) return { candidates: p.candidates, missingYear: p.missingYear }
+      // Every card lacks a year: try the Simpleview year rule; the entry records it so the reader does the same.
+      const inferred = parseCards(html, { ...d.cards!, infer_year: true }, src, defaults, [], deps.now())
+      return inferred.candidates.length > 0 ? { candidates: inferred.candidates, missingYear: 0, inferYear: true } : { candidates: [], missingYear: p.missingYear }
+    }
     default: return { candidates: [], missingYear: 0 }
   }
 }
@@ -88,7 +94,7 @@ export async function probeUrl(url: string, deps: ProbeDeps, meta: ProbeMeta = {
   }
   if (best.kind === 'none') return { ...base, usedBrowser, detection: best }
   const defaults = { city: meta.city, state: meta.state, venue: meta.venue }
-  const { candidates, missingYear } = await dryRun(best, html, url, deps, defaults)
+  const { candidates, missingYear, inferYear } = await dryRun(best, html, url, deps, defaults)
   const today = deps.now().toISOString().slice(0, 10)
   const horizon = `${deps.now().getUTCFullYear() + 2}${today.slice(4)}`
   const live = candidates.filter((c) => c.start_date && c.start_date <= horizon && (c.end_date ?? c.start_date) >= today)
@@ -100,7 +106,7 @@ export async function probeUrl(url: string, deps: ProbeDeps, meta: ProbeMeta = {
   if (meta.venue) entry.venue = meta.venue
   if (meta.city) entry.city = meta.city
   if (meta.state) entry.state = meta.state
-  if (best.kind === 'cards') { Object.assign(entry, best.cards); if (usedBrowser) entry.render = true }
+  if (best.kind === 'cards') { Object.assign(entry, best.cards); if (usedBrowser) entry.render = true; if (inferYear) entry.infer_year = true }
   if (best.kind === 'simpleview' || best.kind === 'simpleview-range') entry.end_date = '2027-12-31'
   return { ...out, verdict: 'ok', entry }
 }

@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import { parseDateRangeText } from '../extract/eventitems'
+import { parseDateRangeText, parseMonthDayRange } from '../extract/eventitems'
 import type { BrowserFetcher } from '../net/browser'
 import { normalizeDate, toCandidateClean } from '../normalize'
 import type { Candidate, SourceRef } from '../types'
@@ -16,7 +16,9 @@ function httpUrl(href: string | undefined, base: string): string | undefined {
 }
 
 /** Reads one card list from CSS selectors (derived by `deriveCards` or written in the registry). Cards without a year are counted, never guessed. */
-export function parseCards(html: string, cfg: CardsConfig, source: SourceRef, defaults: { venue?: string; city?: string; state?: string } = {}, exclude: string[] = []): CardsParse {
+export type CardsOptions = CardsConfig & { /** Resolve month-day dates without a year to their next occurrence (Simpleview rule). */ infer_year?: boolean }
+
+export function parseCards(html: string, cfg: CardsOptions, source: SourceRef, defaults: { venue?: string; city?: string; state?: string } = {}, exclude: string[] = [], today: Date = new Date()): CardsParse {
   const $ = cheerio.load(html)
   const bad = exclude.map((p) => new RegExp(p, 'i'))
   const out: CardsParse = { candidates: [], missingYear: 0, seen: 0 }
@@ -32,8 +34,10 @@ export function parseCards(html: string, cfg: CardsConfig, source: SourceRef, de
       if (start && end) range = { start, end }
     } else {
       const text = clean(dateEl.text())
-      if (!/\b\d{4}\b/.test(text)) { if (text) out.missingYear++; return }
-      range = parseDateRangeText(text)
+      if (!/\b\d{4}\b/.test(text)) {
+        if (cfg.infer_year) range = parseMonthDayRange(text, today)
+        if (!range) { if (text) out.missingYear++; return }
+      } else range = parseDateRangeText(text)
     }
     if (!name || !range || bad.some((re) => re.test(name))) return
     const link = card.find(cfg.link ?? 'a[href]').first().attr('href')

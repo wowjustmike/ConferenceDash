@@ -62,11 +62,16 @@ test('a JSON-LD subset next to an empty platform shell -> render, and the platfo
   expect(r.entry).toMatchObject({ kind: 'simpleview', end_date: '2027-12-31', city: 'Las Vegas' })
   expect(r.count).toBeGreaterThan(0)
 })
-test('cards without years -> needs reader', async () => {
+test('cards without years -> ok with infer_year when the inferred dates are upcoming; needs reader when they are not', async () => {
   const html = '<div class="c"><span class="t">X</span><span class="d">Nov 20 - 29</span><a href="/x">x</a></div>'.repeat(3)
   const r = await probeUrl('https://x.example/', deps({ html }))
-  expect(r.verdict).toBe('needs reader')
-  expect(r.entry).toBeNull()
+  expect(r.verdict).toBe('ok')
+  expect(r.entry).toMatchObject({ kind: 'cards', infer_year: true })
+  expect(r.sample[0]).toMatchObject({ start_date: '2026-11-20', end_date: '2026-11-29' })
+  const junk = '<div class="c"><span class="t">X</span><span class="d">Nov 20 - 19</span><a href="/x">x</a></div>'.repeat(3)
+  const r2 = await probeUrl('https://x.example/', deps({ html: junk }))
+  expect(r2.verdict).toBe('needs reader')
+  expect(r2.entry).toBeNull()
 })
 test('no markup and no browser -> nothing found; unreachable when fetch returns null with no status', async () => {
   expect((await probeUrl('https://x.example/', deps({ html: '<p>hi</p>' }))).verdict).toBe('nothing found')

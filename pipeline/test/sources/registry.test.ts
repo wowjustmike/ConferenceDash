@@ -156,3 +156,10 @@ test('cards entry with render uses the browser render, and reports cards without
   expect(r.health).toEqual({ id: 'lvcc', ok: false, count: 0, error: 'no events found (4 cards without a year)' })
   expect((await runEntry(entry({ kind: 'cards', type: 'html', item: '.x', render: true }), deps({}))).health.error).toBe('browser unavailable')
 })
+test('cards entries pass infer_year through to the reader', async () => {
+  const html = '<div class="c"><span class="t">Winter Expo</span><span class="d">Dec 1 - 3</span><a href="/x">x</a></div>'.repeat(3)
+  const d = deps({ 'https://venue.example/events': html })
+  const r = await runEntry(entry({ kind: 'cards', type: 'html', item: '.c', title: '.t', date: '.d', infer_year: true }), d)
+  expect(r.health.ok).toBe(true)
+  expect(r.candidates[0]).toMatchObject({ name: 'Winter Expo', start_date: '2026-12-01', end_date: '2026-12-03' })
+})

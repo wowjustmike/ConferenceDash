@@ -31,7 +31,7 @@ export const EntrySchema = z.object({
   exclude_categories: z.array(z.string()).optional(),
   /** cards only: CSS selectors for the card, its title and its date block (link defaults to the first a[href]); render/scrolls/next drive the browser. */
   item: z.string().optional(), title: z.string().optional(), date: z.string().optional(), link: z.string().optional(),
-  render: z.boolean().optional(), scrolls: z.number().int().nonnegative().optional(), next: z.string().optional(),
+  render: z.boolean().optional(), scrolls: z.number().int().nonnegative().optional(), next: z.string().optional(), infer_year: z.boolean().optional(),
 }).refine((e) => e.kind !== 'cards' || (e.item && e.title && e.date), { message: 'cards entries need item, title and date selectors' })
 export type RegistryEntry = z.infer<typeof EntrySchema>
 
@@ -60,7 +60,7 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
   let candidates: Candidate[] = []
   let fetchedAny = false
   if (entry.kind === 'cards') {
-    const cfg = { item: entry.item!, title: entry.title!, date: entry.date!, link: entry.link }
+    const cfg = { item: entry.item!, title: entry.title!, date: entry.date!, link: entry.link, infer_year: entry.infer_year }
     let html: string | null
     if (entry.render || entry.next) {
       if (!deps.browser) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'browser unavailable' } }
@@ -68,7 +68,7 @@ export async function runEntry(entry: RegistryEntry, deps: RunDeps): Promise<{ c
       html = r?.html ?? null
     } else html = await deps.fetchText(entry.url)
     if (html === null) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: 'fetch failed' } }
-    const p = parseCards(html, cfg, ref(entry.url, 'html'), defaults, entry.exclude)
+    const p = parseCards(html, cfg, ref(entry.url, 'html'), defaults, entry.exclude, deps.now())
     const yearNote = p.missingYear > 0 ? ` (${p.missingYear} cards without a year)` : ''
     if (p.candidates.length === 0) return { candidates: [], health: { id: entry.id, ok: false, count: 0, error: `no events found${yearNote}` } }
     return { candidates: p.candidates, health: { id: entry.id, ok: true, count: p.candidates.length, ...(yearNote ? { error: yearNote.trim().slice(1, -1) } : {}) } }

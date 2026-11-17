@@ -21,6 +21,27 @@ export function parseDateRangeText(text: string): { start: string; end: string }
 }
 const pair = (a: string | null, b: string | null) => (a && b && b >= a ? { start: a, end: b } : null)
 
+/**
+ * Parses "Nov 20 - 22", "Nov 30 - Dec 4", "Dec 30 - Jan 2", "Jan 6" (no year): the next occurrence that is not long past,
+ * the same rule the Simpleview readers use (45 days of grace), with an end that wraps into the next year when it precedes the start.
+ */
+export function parseMonthDayRange(text: string, today: Date): { start: string; end: string } | null {
+  const t = text.replace(/\s+/g, ' ').trim()
+  const m = new RegExp(`^(${MONTH})\\.?\\s+(\\d{1,2})(?:${DASH}(?:(${MONTH})\\.?\\s+)?(\\d{1,2}))?$`, 'i').exec(t)
+  if (!m) return null
+  let y = today.getFullYear()
+  const probe = normalizeDate(`${m[1]} ${m[2]}, ${y}`)
+  if (!probe) return null
+  if (new Date(`${probe}T12:00:00`).getTime() < today.getTime() - 45 * 864e5) y++
+  const start = mk(m[1], m[2], y)
+  if (!start) return null
+  if (!m[4]) return pair(start, start)
+  let end = mk(m[3] ?? m[1], m[4], y)
+  // Only a range that names a second month ("Dec 30 - Jan 2") may wrap into the next year; "Nov 20 - 19" stays invalid.
+  if (end && end < start && m[3]) end = mk(m[3], m[4], y + 1)
+  return pair(start, end)
+}
+
 /** Reads the common convention-center card layout: `.eventItem` with a `.date` line and an `h3.title a` link. */
 export function parseEventItems(
   html: string, source: SourceRef, defaults: { venue?: string; city?: string; state?: string } = {}, exclude: string[] = [], excludeCategories: string[] = [],

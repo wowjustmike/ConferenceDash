@@ -65,3 +65,22 @@ describe.skipIf(!existsSync(CHROME))('fetchCards (real Chrome)', () => {
     expect(parseCards(r!.html, { item: '.ev', title: '.t', date: '.d' }, { ...src, url: base }).candidates).toHaveLength(3)
   })
 })
+
+describe('yearless dates with infer_year', () => {
+  const today = new Date('2026-11-16T00:00:00Z')
+  const cfgY = { item: '.c', title: '.t', date: '.d', infer_year: true }
+  const card = (d: string, n = 'X') => `<div class="c"><span class="t">${n}</span><span class="d">${d}</span><a href="/x">x</a></div>`
+  test('month-day ranges get the next occurrence that is not long past; cross-month and cross-year ranges resolve', () => {
+    const r = parseCards(card('Nov 20 - 22') + card('Nov 30 - Dec 4') + card('Dec 30 - Jan 2') + card('Jan 6') + card('Sep 1 - 3'), cfgY, src, {}, [], today)
+    expect(r.candidates.map((c) => [c.start_date, c.end_date])).toEqual([
+      ['2026-11-20', '2026-11-22'], ['2026-11-30', '2026-12-04'], ['2026-12-30', '2027-01-02'], ['2027-01-06', '2027-01-06'], ['2027-09-01', '2027-09-03'],
+    ])
+    expect(r.missingYear).toBe(0)
+  })
+  test('without infer_year the same cards are counted as missing a year', () => {
+    expect(parseCards(card('Nov 20 - 22'), { item: '.c', title: '.t', date: '.d' }, src, {}, [], today)).toMatchObject({ candidates: [], missingYear: 1 })
+  })
+  test('a yearless card inside a dated card list still prefers the explicit year', () => {
+    expect(parseCards(card('Nov 20 - 22, 2027'), cfgY, src, {}, [], today).candidates[0]).toMatchObject({ start_date: '2027-11-20', end_date: '2027-11-22' })
+  })
+})
