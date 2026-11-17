@@ -1,6 +1,6 @@
 # ConferenceDash: handoff / current status
 
-Last updated: 2026-11-15. Read this first in a fresh session, then `CLAUDE.md` (procedures and rules) and `docs/SOURCING.md` (probe results).
+Last updated: 2026-11-17. Read this first in a fresh session, then `CLAUDE.md` (procedures and rules) and `docs/SOURCING.md` (probe results).
 
 ## Goal (user's words)
 "A database of every conference going on in the US", filterable by state/city/venue/date/organizer, with a "signal strength" symbol showing how likely each event is real. In scope: professional conferences, expos, trade shows, conventions, fan cons (Comic-Con). Out: concerts, sports, festivals, Ren faires, private/social, non-US. Window: 2026-11-15 .. 2027-12-31.
@@ -31,7 +31,8 @@ Respect robots.txt, never bypass blocks/CAPTCHAs/bot protection, 1 req/sec/host,
 ## To-do (in recommended order)
 1. ~~Fix duplicate detection~~ Done 2026-11-15: city-aware name matching plus alias-at-export (`pipeline/src/alias.ts`, `npm run unalias`). 5 pairs collapsed.
 2. ~~Go public~~ Done 2026-11-16 (see Live output). `ANTHROPIC_API_KEY` is not set as a repo secret yet; the user sets it with `gh secret set ANTHROPIC_API_KEY` when they want LLM extraction in CI.
-2a. **Coverage (next):** spec at `docs/superpowers/specs/2026-11-16-coverage-probe-design.md` (detect families, generic `cards` adapter, `npm run probe`). Then data-volume checks, then shareable URLs/feedback link. Decisions are in memory `scale-roadmap-decisions`.
+2a0. **Coverage status 2026-11-17:** branch `coverage-probe`, plan `docs/superpowers/plans/2026-11-16-coverage-probe.md` Tasks 1-5 done. 12 new venue readers in the registry (Philadelphia, Nashville, San Diego, Charlotte, Cleveland, Raleigh, Indianapolis, Portland, Milwaukee, Denver, Detroit, Louisville); weekly dry run: all ok, about 476 publishable events. Las Vegas paging bug fixed (it stopped at 12 of 142). **Next: Task 6** (git pull, real weekly update, both test suites, merge `coverage-probe` into `main`, push) once the user OKs publishing. Open question from the user: custom subdomain on mikedmonds.com (DNS on Netlify); the build already uses relative paths (`--base=./`).
+2a. **Coverage (spec):** spec at `docs/superpowers/specs/2026-11-16-coverage-probe-design.md` (detect families, generic `cards` adapter, `npm run probe`). Then data-volume checks, then shareable URLs/feedback link. Decisions are in memory `scale-roadmap-decisions`.
 2b. **Second wave of venue readers:** Houston, Denver, Washington DC, San Diego, Nashville, Boston. Probe each first (robots, structure); skip blocked sites and record them in SOURCING.md.
 3. **Topic review:** about 25 events still "Other" (Pink27, Annual Conference 2027, ISSA, SYNERGY, RCMA, ALCC, ASLA, ...).
 4. **Dates TBC:** many events lack this year's confirmed dates; match organizer sites.
