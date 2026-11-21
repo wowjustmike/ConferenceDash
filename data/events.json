@@ -21,7 +21,7 @@
         "fetched_at": "2026-11-17T19:37:16.333Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "signal": {
@@ -34,191 +34,7 @@
           "family": "denverconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
-        }
-      ]
-    }
-  },
-  {
-    "id": "iaapa-expo-2026",
-    "name": "IAAPA Expo",
-    "start_date": "2026-11-16",
-    "end_date": "2026-11-20",
-    "dates_confirmed": true,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "IAAPA",
-    "topics": [
-      "Entertainment",
-      "Hospitality"
-    ],
-    "est_attendance": 30000,
-    "official_url": "https://www.iaapa.org/expos",
-    "sources": [
-      {
-        "url": "https://www.iaapa.org/expos",
-        "type": "seed",
-        "fetched_at": "2026-11-12T12:00:00Z"
-      },
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-12",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Sample data",
-          "family": "iaapa.org",
-          "kind": "seed",
-          "points": 0,
-          "seenAt": "2026-11-12"
-        },
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ieee-sc-2026-chicago",
-    "name": "IEEE 2026 SC Conference",
-    "start_date": "2026-11-16",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "Chicago",
-    "state": "Illinois",
-    "venue": "McCormick Place",
-    "organizer": "",
-    "topics": [
-      "Tech"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.mccormickplace.com/events/?eventId=44055&orgCode=10",
-    "sources": [
-      {
-        "url": "https://www.mccormickplace.com/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:42:32.469Z"
-      }
-    ],
-    "last_verified": "2026-11-20",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "conference",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (mccormickplace.com)",
-          "family": "mccormickplace.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-20"
-        }
-      ]
-    }
-  },
-  {
-    "id": "americas-partner-siemens-2026-championsgate",
-    "name": "Siemens Americas Partner Conference 2027",
-    "start_date": "2026-11-16",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "Championsgate",
-    "state": "Florida",
-    "venue": "Omni ChampionsGate Resort",
-    "organizer": "Siemens Digital Industries Software",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.indx.com/event/siemens-americas-partner-conference-2027",
-    "sources": [
-      {
-        "url": "https://www.indx.com/event/siemens-americas-partner-conference-2027",
-        "type": "claude-directory",
-        "fetched_at": "2026-11-17T21:12:07.205Z"
-      }
-    ],
-    "last_verified": "2026-11-17",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "conference",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Directory listing (indx.com)",
-          "family": "indx.com",
-          "kind": "directory",
-          "points": 1,
-          "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "meeting-svin-2026-las-vegas",
-    "name": "SVIN 2026 Annual Meeting",
-    "start_date": "2026-11-16",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "Las Vegas",
-    "state": "Nevada",
-    "venue": "Resorts World Las Vegas",
-    "organizer": "",
-    "topics": [
-      "Healthcare"
-    ],
-    "est_attendance": 1500,
-    "official_url": "https://www.svin.org/",
-    "sources": [
-      {
-        "url": "https://www.vegasmeansbusiness.com/destination-calendar/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:33:29.840Z"
-      }
-    ],
-    "last_verified": "2026-11-19",
-    "confidence": 0.65,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (vegasmeansbusiness.com)",
-          "family": "vegasmeansbusiness.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-19"
-        },
-        {
-          "label": "Confirmed on the official site (svin.org)",
-          "family": "svin.org",
-          "kind": "official-site",
-          "points": 0,
-          "seenAt": "2026-11-19"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -269,128 +85,6 @@
           "kind": "official-site",
           "points": 3,
           "seenAt": "2026-11-17"
-        }
-      ]
-    }
-  },
-  {
-    "id": "aea-american-association-evaluation-evaluation-2026-charlotte",
-    "name": "American Evaluation Association (AEA) Evaluation 2026",
-    "start_date": "2026-11-18",
-    "end_date": "2026-11-20",
-    "dates_confirmed": true,
-    "city": "Charlotte",
-    "state": "North Carolina",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.charlottemeetings.com/events/convention/american-evaluation-association-aea-evaluation-2026",
-    "sources": [
-      {
-        "url": "https://www.charlottemeetings.com/convention-event-calendar",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:37:59.811Z"
-      }
-    ],
-    "last_verified": "2026-11-20",
-    "confidence": 0.9,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (charlottemeetings.com)",
-          "family": "charlottemeetings.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-20"
-        }
-      ]
-    }
-  },
-  {
-    "id": "athletic-business-sh-2026-orlando",
-    "name": "Athletic Business Sh",
-    "start_date": "2026-11-18",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Sports"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/athletic-business-sh/910/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:10.410Z"
-      }
-    ],
-    "last_verified": "2026-11-16",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-16"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ignite-microsoft-2026-san-francisco",
-    "name": "Microsoft Ignite 2026",
-    "start_date": "2026-11-18",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "San Francisco",
-    "state": "California",
-    "venue": "Moscone Center",
-    "organizer": "",
-    "topics": [
-      "Tech"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.moscone.com/node/852",
-    "sources": [
-      {
-        "url": "https://www.moscone.com/node/852",
-        "type": "html",
-        "fetched_at": "2026-11-16T01:52:47.375Z"
-      }
-    ],
-    "last_verified": "2026-11-20",
-    "confidence": 0.5,
-    "status": "active",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Venue calendar (moscone.com)",
-          "family": "moscone.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-18"
         }
       ]
     }
@@ -506,7 +200,7 @@
         "fetched_at": "2026-11-17T19:37:17.643Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "convention",
@@ -520,7 +214,7 @@
           "family": "icclos.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -547,7 +241,7 @@
         "fetched_at": "2026-11-17T19:37:59.811Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
@@ -561,90 +255,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
-        }
-      ]
-    }
-  },
-  {
-    "id": "fintech-nerdcon-2026-san-diego",
-    "name": "FINTECH NERDCON",
-    "start_date": "2026-11-19",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "San Diego",
-    "state": "California",
-    "venue": "",
-    "organizer": "",
-    "topics": [
-      "Finance"
-    ],
-    "est_attendance": null,
-    "official_url": "https://visitsandiego.com/calendar/2209238-fintech-nerdcon",
-    "sources": [
-      {
-        "url": "https://visitsandiego.com/calendar",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:37:50.910Z"
-      }
-    ],
-    "last_verified": "2026-11-20",
-    "confidence": 0.65,
-    "status": "active",
-    "signal": {
-      "points": 2,
-      "bars": 2,
-      "flags": [],
-      "evidence": [
-        {
-          "label": "Venue calendar (visitsandiego.com)",
-          "family": "visitsandiego.com",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-20"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ab-2026-orlando",
-    "name": "AB Show",
-    "start_date": "2026-11-20",
-    "end_date": "2026-11-20",
-    "dates_confirmed": false,
-    "city": "Orlando",
-    "state": "Florida",
-    "venue": "Orange County Convention Center",
-    "organizer": "",
-    "topics": [
-      "Other"
-    ],
-    "est_attendance": null,
-    "official_url": "https://www.occc.net/event/ab-show/910/",
-    "sources": [
-      {
-        "url": "https://www.occc.net/events/",
-        "type": "html",
-        "fetched_at": "2026-11-17T19:35:29.585Z"
-      }
-    ],
-    "last_verified": "2026-11-20",
-    "confidence": 0.5,
-    "status": "active",
-    "kind": "trade_show",
-    "signal": {
-      "points": 1,
-      "bars": 1,
-      "flags": [
-        "conflicting-dates"
-      ],
-      "evidence": [
-        {
-          "label": "Venue calendar (occc.net)",
-          "family": "occc.net",
-          "kind": "venue-calendar",
-          "points": 2,
-          "seenAt": "2026-11-18"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -686,9 +297,11 @@
     "status": "active",
     "kind": "trade_show",
     "signal": {
-      "points": 3,
-      "bars": 3,
-      "flags": [],
+      "points": 2,
+      "bars": 2,
+      "flags": [
+        "conflicting-dates"
+      ],
       "evidence": [
         {
           "label": "Sample data",
@@ -709,7 +322,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -736,7 +349,7 @@
         "fetched_at": "2026-11-17T19:37:16.333Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "signal": {
@@ -749,7 +362,7 @@
           "family": "denverconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -776,7 +389,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -789,7 +402,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -816,7 +429,7 @@
         "fetched_at": "2026-11-19T18:01:03.006Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -829,7 +442,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -856,7 +469,7 @@
         "fetched_at": "2026-11-17T19:37:50.910Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "convention",
@@ -870,7 +483,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -897,7 +510,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -910,7 +523,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -937,7 +550,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -950,7 +563,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -977,7 +590,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -991,7 +604,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1023,7 +636,7 @@
         "fetched_at": "2026-11-17T22:20:23.608Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "signal": {
@@ -1036,7 +649,7 @@
           "family": "rsna.org",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1063,7 +676,7 @@
         "fetched_at": "2026-11-17T19:37:48.836Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "signal": {
@@ -1076,7 +689,7 @@
           "family": "oregoncc.org",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1103,7 +716,7 @@
         "fetched_at": "2026-11-17T19:37:46.989Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -1117,14 +730,14 @@
           "family": "raleighconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (atlanticunionbankconventioncenter.com)",
           "family": "atlanticunionbankconventioncenter.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1199,7 +812,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -1213,7 +826,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1335,7 +948,7 @@
         "fetched_at": "2026-11-17T19:37:48.836Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -1349,7 +962,7 @@
           "family": "oregoncc.org",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1376,7 +989,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -1390,7 +1003,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1417,7 +1030,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -1430,7 +1043,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1457,7 +1070,7 @@
         "fetched_at": "2026-11-17T19:37:50.910Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "signal": {
@@ -1470,7 +1083,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1497,7 +1110,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -1510,7 +1123,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1537,7 +1150,7 @@
         "fetched_at": "2026-11-16T00:27:32.329Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -1551,14 +1164,14 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (techleadersummit.io)",
           "family": "techleadersummit.io",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1585,7 +1198,7 @@
         "fetched_at": "2026-11-17T19:37:50.910Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -1599,7 +1212,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1676,7 +1289,7 @@
         "fetched_at": "2026-11-17T19:37:16.333Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "signal": {
@@ -1689,7 +1302,7 @@
           "family": "denverconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1716,7 +1329,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -1729,7 +1342,47 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
+        }
+      ]
+    }
+  },
+  {
+    "id": "issues-legal-oapa-workshop-2026-portland",
+    "name": "OAPA Legal Issues Workshop",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-04",
+    "dates_confirmed": true,
+    "city": "Portland",
+    "state": "Oregon",
+    "venue": "Oregon Convention Center",
+    "organizer": "",
+    "topics": [
+      "Other"
+    ],
+    "est_attendance": null,
+    "official_url": "https://www.oregoncc.org/attend/events/2026/12/oapa-legal-issues-workshop",
+    "sources": [
+      {
+        "url": "https://www.oregoncc.org/en/events",
+        "type": "html",
+        "fetched_at": "2026-11-21T16:40:58.155Z"
+      }
+    ],
+    "last_verified": "2026-11-21",
+    "confidence": 0.9,
+    "status": "active",
+    "signal": {
+      "points": 2,
+      "bars": 2,
+      "flags": [],
+      "evidence": [
+        {
+          "label": "Venue calendar (oregoncc.org)",
+          "family": "oregoncc.org",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1756,7 +1409,7 @@
         "fetched_at": "2026-11-17T19:37:20.197Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "fan_con",
@@ -1772,7 +1425,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1799,7 +1452,7 @@
         "fetched_at": "2026-11-16T01:41:30.122Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -1813,7 +1466,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1880,7 +1533,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -1894,7 +1547,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -1921,7 +1574,7 @@
         "fetched_at": "2026-11-16T00:27:29.333Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -1934,14 +1587,14 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (devfest.mn)",
           "family": "devfest.mn",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2002,7 +1655,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2029,7 +1682,7 @@
         "fetched_at": "2026-11-17T19:37:46.989Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -2043,14 +1696,14 @@
           "family": "raleighconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (atlanticunionbankconventioncenter.com)",
           "family": "atlanticunionbankconventioncenter.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2077,7 +1730,7 @@
         "fetched_at": "2026-11-17T19:37:46.989Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
@@ -2091,14 +1744,14 @@
           "family": "raleighconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (atlanticunionbankconventioncenter.com)",
           "family": "atlanticunionbankconventioncenter.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2170,7 +1823,7 @@
         "fetched_at": "2026-11-16T01:52:49.380Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2183,7 +1836,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2210,7 +1863,7 @@
         "fetched_at": "2026-11-16T00:27:29.333Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -2224,14 +1877,14 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (archconf.com)",
           "family": "archconf.com",
           "kind": "official-site",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2258,7 +1911,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2271,7 +1924,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2298,7 +1951,7 @@
         "fetched_at": "2026-11-17T19:37:48.836Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "conference",
@@ -2312,7 +1965,7 @@
           "family": "oregoncc.org",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2339,7 +1992,7 @@
         "fetched_at": "2026-11-16T00:27:29.333Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -2352,14 +2005,14 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (conversations.ctocraft.com)",
           "family": "conversations.ctocraft.com",
           "kind": "official-site",
           "points": 0,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2427,7 +2080,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2440,7 +2093,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2749,7 +2402,7 @@
         "fetched_at": "2026-11-17T19:37:17.643Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.9,
     "status": "active",
     "kind": "trade_show",
@@ -2763,7 +2416,7 @@
           "family": "icclos.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2790,7 +2443,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2803,7 +2456,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2830,7 +2483,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -2843,7 +2496,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2870,7 +2523,7 @@
         "fetched_at": "2026-11-17T19:37:50.910Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -2883,7 +2536,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2910,7 +2563,7 @@
         "fetched_at": "2026-11-17T19:37:50.910Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -2924,7 +2577,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2951,7 +2604,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -2965,7 +2618,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -2992,7 +2645,7 @@
         "fetched_at": "2026-11-17T19:37:17.643Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -3006,7 +2659,7 @@
           "family": "icclos.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3033,7 +2686,7 @@
         "fetched_at": "2026-11-17T19:37:17.643Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -3047,7 +2700,7 @@
           "family": "icclos.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3074,7 +2727,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -3087,7 +2740,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3114,7 +2767,7 @@
         "fetched_at": "2026-11-16T16:41:28.252Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "fan_con",
@@ -3128,7 +2781,7 @@
           "family": "universe.com",
           "kind": "ticketing",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3186,21 +2839,21 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Ticketing listing (universe.com)",
           "family": "universe.com",
           "kind": "ticketing",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Ticketing listing (ticketmaster)",
           "family": "ticketmaster",
           "kind": "ticketing",
           "points": 3,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3240,7 +2893,7 @@
           "family": "icclos.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3321,7 +2974,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3370,14 +3023,14 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Venue calendar (occc.net)",
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3417,7 +3070,7 @@
           "family": "denverconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3444,7 +3097,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -3458,7 +3111,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3533,7 +3186,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -3547,7 +3200,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3593,14 +3246,14 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Venue calendar (laconventioncenter.com)",
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3627,7 +3280,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -3641,7 +3294,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3673,7 +3326,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "expo",
@@ -3687,14 +3340,14 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Venue calendar (occc.net)",
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3722,7 +3375,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -3736,7 +3389,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3763,7 +3416,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -3777,7 +3430,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3818,7 +3471,7 @@
           "family": "icclos.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3845,7 +3498,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -3859,7 +3512,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3886,7 +3539,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -3900,7 +3553,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3941,7 +3594,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -3982,7 +3635,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4022,7 +3675,7 @@
           "family": "raleighconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (atlanticunionbankconventioncenter.com)",
@@ -4056,7 +3709,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -4070,7 +3723,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4111,7 +3764,7 @@
           "family": "dallasconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (ttha.com)",
@@ -4145,7 +3798,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -4159,7 +3812,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4186,7 +3839,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4199,7 +3852,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4227,7 +3880,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -4241,7 +3894,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4282,7 +3935,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4354,7 +4007,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -4368,7 +4021,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4490,7 +4143,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4503,7 +4156,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4530,7 +4183,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4543,7 +4196,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4570,7 +4223,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4583,7 +4236,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4615,7 +4268,7 @@
         "fetched_at": "2026-11-17T19:37:27.237Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -4629,14 +4282,14 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Venue calendar (huntingtonplacedetroit.com)",
           "family": "huntingtonplacedetroit.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4712,7 +4365,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -4726,7 +4379,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4862,7 +4515,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4903,7 +4556,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4930,7 +4583,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4943,7 +4596,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -4970,7 +4623,7 @@
         "fetched_at": "2026-11-16T01:52:51.382Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -4983,7 +4636,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5024,7 +4677,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5110,7 +4763,7 @@
           "family": "raleighconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (atlanticunionbankconventioncenter.com)",
@@ -5157,7 +4810,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5184,7 +4837,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5198,7 +4851,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5297,7 +4950,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (shotshow.org)",
@@ -5365,7 +5018,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5440,7 +5093,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -5454,7 +5107,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5495,7 +5148,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (convention.safariclub.org)",
@@ -5570,7 +5223,7 @@
         "fetched_at": "2026-11-16T01:52:53.391Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5584,7 +5237,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5611,7 +5264,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -5625,7 +5278,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5652,7 +5305,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5666,7 +5319,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5755,7 +5408,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5782,7 +5435,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -5796,7 +5449,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5868,7 +5521,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -5881,7 +5534,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5908,7 +5561,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -5921,7 +5574,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -5994,7 +5647,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -6008,7 +5661,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6035,7 +5688,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -6049,7 +5702,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6103,7 +5756,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (namm.org)",
@@ -6137,7 +5790,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -6151,7 +5804,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6191,7 +5844,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6218,7 +5871,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6231,7 +5884,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6272,7 +5925,7 @@
           "family": "dallasconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (txsha.org)",
@@ -6306,7 +5959,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -6320,7 +5973,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6361,7 +6014,7 @@
           "family": "dallasconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (franchiseshowinfo.com)",
@@ -6409,7 +6062,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6449,7 +6102,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6476,7 +6129,7 @@
         "fetched_at": "2026-11-16T01:52:55.387Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6489,7 +6142,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6564,7 +6217,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6577,7 +6230,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6617,7 +6270,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6644,7 +6297,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -6657,7 +6310,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6684,7 +6337,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -6698,7 +6351,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6813,7 +6466,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -6827,7 +6480,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -6991,7 +6644,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -7005,7 +6658,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7033,7 +6686,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7046,7 +6699,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7091,7 +6744,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (compute.daytona.io)",
@@ -7125,7 +6778,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -7139,7 +6792,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7179,7 +6832,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7219,7 +6872,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (halfstackconf.com)",
@@ -7315,7 +6968,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7356,7 +7009,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7383,7 +7036,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -7397,7 +7050,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7424,7 +7077,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -7438,7 +7091,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7465,7 +7118,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7478,7 +7131,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7505,7 +7158,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7518,7 +7171,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7558,7 +7211,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7586,7 +7239,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -7600,7 +7253,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7640,7 +7293,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (developerweek.com)",
@@ -7674,7 +7327,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7687,7 +7340,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7715,7 +7368,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -7729,7 +7382,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7769,7 +7422,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (productworld.co)",
@@ -7803,7 +7456,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -7817,7 +7470,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7844,7 +7497,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7857,7 +7510,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7885,7 +7538,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -7898,7 +7551,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -7971,7 +7624,7 @@
         "fetched_at": "2026-11-16T01:52:57.396Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -7985,7 +7638,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8026,7 +7679,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8053,7 +7706,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8067,7 +7720,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8094,7 +7747,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8108,7 +7761,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8149,7 +7802,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8181,7 +7834,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8202,7 +7855,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8229,7 +7882,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -8243,7 +7896,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8270,7 +7923,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8283,7 +7936,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8358,7 +8011,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -8372,7 +8025,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8448,7 +8101,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -8462,7 +8115,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8489,7 +8142,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8503,7 +8156,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8543,7 +8196,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8618,7 +8271,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8631,7 +8284,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8705,7 +8358,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8719,7 +8372,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8746,7 +8399,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8760,7 +8413,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8787,7 +8440,7 @@
         "fetched_at": "2026-11-16T01:52:59.402Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8800,7 +8453,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8827,7 +8480,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -8841,7 +8494,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8881,7 +8534,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8953,7 +8606,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -8966,7 +8619,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -8993,7 +8646,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9006,7 +8659,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9095,7 +8748,7 @@
           "family": "dallasconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (dallasbridalshow.com)",
@@ -9177,7 +8830,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9190,7 +8843,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9217,7 +8870,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -9231,7 +8884,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9272,7 +8925,7 @@
           "family": "kyconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9312,7 +8965,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9339,7 +8992,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -9353,7 +9006,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9428,7 +9081,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9441,7 +9094,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9481,7 +9134,7 @@
           "family": "dallasconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (dallasrvsupersale.com)",
@@ -9516,7 +9169,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9529,7 +9182,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9556,7 +9209,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9569,7 +9222,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9596,7 +9249,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9609,7 +9262,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9636,7 +9289,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9649,7 +9302,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9676,7 +9329,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -9690,7 +9343,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9717,7 +9370,7 @@
         "fetched_at": "2026-11-17T19:37:27.237Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9730,7 +9383,7 @@
           "family": "huntingtonplacedetroit.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9757,7 +9410,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -9771,7 +9424,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9798,7 +9451,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9811,7 +9464,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9838,7 +9491,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9851,7 +9504,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9891,7 +9544,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -9918,7 +9571,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -9931,7 +9584,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10048,7 +9701,7 @@
         "fetched_at": "2026-11-16T01:53:01.405Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10061,7 +9714,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10149,7 +9802,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10176,7 +9829,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10189,7 +9842,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10216,7 +9869,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10229,7 +9882,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10281,7 +9934,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10309,7 +9962,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -10323,7 +9976,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10350,7 +10003,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10363,7 +10016,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10482,7 +10135,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -10495,14 +10148,14 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Venue calendar (occc.net)",
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10542,7 +10195,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10615,7 +10268,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10628,7 +10281,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (hpba.org)",
@@ -10662,7 +10315,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10675,7 +10328,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10810,7 +10463,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10837,7 +10490,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -10851,7 +10504,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10878,7 +10531,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -10891,7 +10544,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -10965,7 +10618,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -10979,7 +10632,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11049,7 +10702,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -11063,7 +10716,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11090,7 +10743,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -11103,7 +10756,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11183,7 +10836,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -11197,14 +10850,14 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11231,7 +10884,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -11244,7 +10897,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11318,7 +10971,7 @@
         "fetched_at": "2026-11-16T01:53:03.409Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -11331,7 +10984,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11371,7 +11024,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11398,7 +11051,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -11411,7 +11064,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11485,7 +11138,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "fan_con",
@@ -11499,7 +11152,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11526,7 +11179,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -11540,7 +11193,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11567,7 +11220,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -11580,7 +11233,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11607,7 +11260,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -11621,7 +11274,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11662,7 +11315,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11703,7 +11356,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11744,7 +11397,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11771,7 +11424,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -11785,7 +11438,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11901,7 +11554,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -11914,7 +11567,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -11999,7 +11652,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12108,7 +11761,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12201,7 +11854,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (globalpetexpo.org)",
@@ -12235,7 +11888,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -12248,7 +11901,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12321,7 +11974,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -12334,7 +11987,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12361,7 +12014,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -12375,7 +12028,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12447,7 +12100,7 @@
         "fetched_at": "2026-11-16T01:53:05.409Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -12460,7 +12113,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12500,7 +12153,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12527,7 +12180,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -12541,7 +12194,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12568,7 +12221,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -12581,7 +12234,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12670,7 +12323,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12745,7 +12398,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -12758,7 +12411,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -12785,7 +12438,7 @@
         "fetched_at": "2026-11-17T19:37:33.757Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -12799,7 +12452,7 @@
           "family": "clevelandconventions.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13009,7 +12662,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -13022,7 +12675,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13049,7 +12702,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -13063,7 +12716,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13181,7 +12834,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -13195,7 +12848,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13329,7 +12982,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (socallinuxexpo.org)",
@@ -13376,7 +13029,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13417,7 +13070,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (sunseccon.org)",
@@ -13509,7 +13162,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13536,7 +13189,7 @@
         "fetched_at": "2026-11-17T18:10:55.336Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -13549,7 +13202,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (devopsdays.org)",
@@ -13583,7 +13236,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -13596,7 +13249,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13624,7 +13277,7 @@
         "fetched_at": "2026-11-16T01:43:04.270Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -13638,7 +13291,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13679,7 +13332,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13706,7 +13359,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -13720,7 +13373,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13760,7 +13413,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13849,7 +13502,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (npga.org)",
@@ -13941,7 +13594,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -13992,7 +13645,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (himssconference.com)",
@@ -14074,7 +13727,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -14087,7 +13740,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (paretohealth.com)",
@@ -14121,7 +13774,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -14134,7 +13787,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14161,7 +13814,7 @@
         "fetched_at": "2026-11-16T01:53:07.415Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -14175,7 +13828,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14247,7 +13900,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -14260,7 +13913,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14395,7 +14048,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14435,7 +14088,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14521,7 +14174,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14777,7 +14430,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -14791,7 +14444,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14818,7 +14471,7 @@
         "fetched_at": "2026-11-17T19:37:27.237Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -14831,7 +14484,7 @@
           "family": "huntingtonplacedetroit.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14872,7 +14525,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (rema2027.org)",
@@ -14906,7 +14559,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -14920,7 +14573,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -14993,7 +14646,7 @@
         "fetched_at": "2026-11-16T01:53:09.420Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -15006,7 +14659,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15033,7 +14686,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -15046,7 +14699,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15083,7 +14736,7 @@
         "fetched_at": "2026-11-17T22:21:34.589Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "conference",
@@ -15131,7 +14784,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -15145,7 +14798,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15172,7 +14825,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -15185,7 +14838,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15257,7 +14910,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -15271,7 +14924,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15358,7 +15011,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15385,7 +15038,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -15399,7 +15052,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15442,7 +15095,7 @@
         "fetched_at": "2026-11-17T22:20:33.579Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.7000000000000001,
     "status": "active",
     "signal": {
@@ -15455,14 +15108,14 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Directory listing (promatshow.com)",
@@ -15496,7 +15149,7 @@
         "fetched_at": "2026-11-16T01:53:11.423Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -15509,7 +15162,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15537,7 +15190,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -15551,7 +15204,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15583,7 +15236,7 @@
         "fetched_at": "2026-11-17T22:20:09.898Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -15624,7 +15277,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -15637,7 +15290,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15664,7 +15317,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -15678,7 +15331,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15706,7 +15359,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -15720,7 +15373,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15747,7 +15400,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -15761,7 +15414,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15823,7 +15476,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15850,7 +15503,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "fan_con",
@@ -15864,7 +15517,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15905,7 +15558,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -15977,7 +15630,7 @@
         "fetched_at": "2026-11-16T01:53:13.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -15990,7 +15643,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16017,7 +15670,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -16031,7 +15684,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16071,7 +15724,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16143,7 +15796,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -16157,7 +15810,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16245,7 +15898,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16285,7 +15938,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16312,7 +15965,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -16325,7 +15978,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16398,7 +16051,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -16412,7 +16065,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16440,7 +16093,7 @@
         "fetched_at": "2026-11-16T01:52:10.410Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -16453,7 +16106,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16668,7 +16321,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16756,7 +16409,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (events.itrevolution.com)",
@@ -16790,7 +16443,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -16804,7 +16457,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -16831,7 +16484,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -16845,7 +16498,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17021,7 +16674,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -17035,7 +16688,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17062,7 +16715,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -17075,7 +16728,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17102,7 +16755,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -17115,7 +16768,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17142,7 +16795,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -17155,7 +16808,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17195,7 +16848,7 @@
           "family": "charlottemeetings.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17222,7 +16875,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -17236,7 +16889,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17263,7 +16916,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -17276,7 +16929,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17304,7 +16957,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -17317,7 +16970,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17358,7 +17011,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17399,7 +17052,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17426,7 +17079,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -17440,7 +17093,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17467,7 +17120,7 @@
         "fetched_at": "2026-11-16T16:42:45.343Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -17481,7 +17134,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17522,7 +17175,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17614,7 +17267,7 @@
         "fetched_at": "2026-11-17T22:21:22.175Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -17654,7 +17307,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -17668,7 +17321,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17788,7 +17441,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -17801,7 +17454,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17828,7 +17481,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -17842,7 +17495,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17869,7 +17522,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -17883,7 +17536,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17923,7 +17576,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -17964,7 +17617,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18001,7 +17654,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "kind": "trade_show",
@@ -18022,14 +17675,14 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18102,7 +17755,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -18116,7 +17769,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18189,7 +17842,7 @@
         "fetched_at": "2026-11-16T16:42:45.343Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -18203,7 +17856,7 @@
           "family": "occc.net",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18322,7 +17975,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -18336,7 +17989,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18456,7 +18109,7 @@
   },
   {
     "id": "build-charlotte-2027-charlotte",
-    "name": "Build Expo USA Charlotte 2027",
+    "name": "Build Expo 2027",
     "start_date": "2027-05-26",
     "end_date": "2027-05-27",
     "dates_confirmed": false,
@@ -18469,21 +18122,26 @@
       "Other"
     ],
     "est_attendance": null,
-    "official_url": "https://expoassist.net/event/build-expo-usa-charlotte-1136",
+    "official_url": "https://www.charlottemeetings.com/events/expo/build-expo",
     "sources": [
       {
         "url": "https://expoassist.net/event/build-expo-usa-charlotte-1136",
         "type": "aggregator",
         "fetched_at": "2026-11-16T01:43:04.271Z"
+      },
+      {
+        "url": "https://www.charlottemeetings.com/convention-event-calendar",
+        "type": "html",
+        "fetched_at": "2026-11-21T16:41:09.635Z"
       }
     ],
-    "last_verified": "2026-11-20",
-    "confidence": 0.5,
+    "last_verified": "2026-11-21",
+    "confidence": 0.65,
     "status": "active",
     "kind": "expo",
     "signal": {
-      "points": 1,
-      "bars": 1,
+      "points": 3,
+      "bars": 3,
       "flags": [],
       "evidence": [
         {
@@ -18491,7 +18149,14 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
+        },
+        {
+          "label": "Venue calendar (charlottemeetings.com)",
+          "family": "charlottemeetings.com",
+          "kind": "venue-calendar",
+          "points": 2,
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18532,7 +18197,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18572,7 +18237,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18699,7 +18364,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18726,7 +18391,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -18740,7 +18405,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18815,7 +18480,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -18828,7 +18493,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18903,7 +18568,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -18917,7 +18582,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -18958,7 +18623,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19046,7 +18711,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19119,7 +18784,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -19133,7 +18798,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19251,7 +18916,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "fan_con",
@@ -19265,7 +18930,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19339,7 +19004,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -19353,7 +19018,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19394,7 +19059,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19480,7 +19145,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19520,7 +19185,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19593,7 +19258,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -19607,7 +19272,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19647,7 +19312,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (datacentrecongress.com)",
@@ -19694,7 +19359,7 @@
           "family": "confs.tech",
           "kind": "directory",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (techexevent.com)",
@@ -19728,7 +19393,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -19742,7 +19407,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19769,7 +19434,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -19782,7 +19447,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19867,7 +19532,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -19980,7 +19645,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -19994,7 +19659,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20021,7 +19686,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -20035,7 +19700,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20062,7 +19727,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -20075,7 +19740,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20102,7 +19767,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -20116,7 +19781,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20156,7 +19821,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20183,7 +19848,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -20197,7 +19862,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20319,7 +19984,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -20332,7 +19997,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20404,7 +20069,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -20418,7 +20083,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20469,7 +20134,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (ift.org)",
@@ -20516,7 +20181,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20603,7 +20268,7 @@
           "family": "kyconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20679,7 +20344,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -20693,7 +20358,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20720,7 +20385,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -20734,7 +20399,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20775,7 +20440,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20816,7 +20481,7 @@
           "family": "laconventioncenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20892,7 +20557,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -20906,7 +20571,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -20947,7 +20612,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21069,7 +20734,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -21083,7 +20748,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21116,7 +20781,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -21129,14 +20794,14 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21163,7 +20828,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -21177,7 +20842,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21204,7 +20869,7 @@
         "fetched_at": "2026-11-16T01:53:15.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -21217,7 +20882,7 @@
           "family": "moscone.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21245,7 +20910,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -21259,7 +20924,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21347,7 +21012,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21472,7 +21137,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -21485,7 +21150,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21678,7 +21343,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21705,7 +21370,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -21718,7 +21383,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21745,7 +21410,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -21759,7 +21424,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21786,7 +21451,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -21800,7 +21465,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21827,7 +21492,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -21841,7 +21506,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21882,7 +21547,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -21922,7 +21587,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (viticusgroup.org)",
@@ -22017,7 +21682,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22044,7 +21709,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -22058,7 +21723,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22145,7 +21810,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22177,7 +21842,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -22207,7 +21872,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22234,7 +21899,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -22248,7 +21913,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22275,7 +21940,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -22288,7 +21953,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22315,7 +21980,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -22329,7 +21994,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22356,7 +22021,7 @@
         "fetched_at": "2026-11-17T19:57:19.428Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -22369,7 +22034,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22503,7 +22168,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22578,7 +22243,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -22592,7 +22257,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22619,7 +22284,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -22633,7 +22298,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22660,7 +22325,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -22673,7 +22338,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22713,7 +22378,7 @@
           "family": "kyconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22740,7 +22405,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -22754,7 +22419,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22853,7 +22518,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Directory listing (fabtechexpo.com)",
@@ -22948,7 +22613,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -22975,7 +22640,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -22989,7 +22654,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23106,7 +22771,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -23120,7 +22785,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23148,7 +22813,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -23161,7 +22826,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23188,7 +22853,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -23202,7 +22867,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23229,7 +22894,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -23242,7 +22907,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23282,7 +22947,7 @@
           "family": "visitsandiego.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23355,7 +23020,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -23369,7 +23034,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23396,7 +23061,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -23409,7 +23074,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23436,7 +23101,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -23450,7 +23115,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23477,7 +23142,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -23490,7 +23155,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23517,7 +23182,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -23531,7 +23196,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23602,7 +23267,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Directory listing (packexpolasvegas.com)",
@@ -23891,7 +23556,7 @@
           "family": "nashvillemusiccitycenter.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Confirmed on the official site (fall.shoptalk.com)",
@@ -23925,7 +23590,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "trade_show",
@@ -23939,7 +23604,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -23966,7 +23631,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -23980,7 +23645,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24007,7 +23672,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "fan_con",
@@ -24021,7 +23686,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24093,7 +23758,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -24107,7 +23772,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24135,7 +23800,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24148,7 +23813,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24272,7 +23937,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -24286,7 +23951,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24364,7 +24029,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -24378,7 +24043,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24405,7 +24070,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24418,7 +24083,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24458,7 +24123,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24531,7 +24196,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "expo",
@@ -24545,7 +24210,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24573,7 +24238,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24586,7 +24251,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24619,7 +24284,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.65,
     "status": "active",
     "signal": {
@@ -24632,14 +24297,14 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         },
         {
           "label": "Aggregator listing (expoassist.net)",
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24666,7 +24331,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24679,7 +24344,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24752,7 +24417,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24765,7 +24430,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24793,7 +24458,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24806,7 +24471,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24879,7 +24544,7 @@
         "fetched_at": "2026-11-16T01:43:04.271Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "signal": {
@@ -24892,7 +24557,7 @@
           "family": "expoassist.net",
           "kind": "aggregator",
           "points": 1,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24919,7 +24584,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "convention",
@@ -24933,7 +24598,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -24960,7 +24625,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -24974,7 +24639,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -25014,7 +24679,7 @@
           "family": "paconvention.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
@@ -25041,7 +24706,7 @@
         "fetched_at": "2026-11-16T01:42:32.469Z"
       }
     ],
-    "last_verified": "2026-11-20",
+    "last_verified": "2026-11-21",
     "confidence": 0.5,
     "status": "active",
     "kind": "conference",
@@ -25055,7 +24720,7 @@
           "family": "mccormickplace.com",
           "kind": "venue-calendar",
           "points": 2,
-          "seenAt": "2026-11-20"
+          "seenAt": "2026-11-21"
         }
       ]
     }
